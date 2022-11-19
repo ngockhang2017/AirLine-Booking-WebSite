@@ -1,0 +1,134 @@
+﻿
+@{
+     ViewBag.Title = "DanhSachDongHo";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+     var thuong_hieu = ViewBag.thuong_hieu;
+     var list_sanpham = ViewBag.list_SanPham;
+}
+
+@model List<VietMaxWatches.Models.SanPham>
+<!-- link -->
+<div class="breadcrumb-outer-container">
+     <div class="container">
+          <ul class="breadcrumb">
+               <li class="home">
+                    <a href="/Home/Index">Trang chủ</a>
+               </li>
+               <li class="category3">
+                    <strong>Đồng hồ @thuong_hieu</strong>
+               </li>
+          </ul>
+     </div>
+</div>
+<!-- ===== Image heading=====
+<div id="ctl00_plMainContainer_bg_brand" class="gray-background before-content brand-img" style="background-image:url(/IMG/219.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="hero">
+                info brand
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div id="brand-info" class="brand-info">
+                        <div class="brand-logo">
+                            <img src="IMG\brands\rolex.png" alt="logo Rolex">
+                        </div>
+                        <div class="short-description">
+                            Hans Wilsdorf founded the company we now know as Rolex in 1905.
+                            Born in Kulmbach, Germany in 1881, the company, Wilsdorf & Davies, was based in London.
+                            By 1908 it had become one of the leading watch companies in the UK. It was in this year
+                            that he coined the name Rolex.
+                        </div>
+                    </div>
+                </div>
+                image
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                    <div id="brand-large-image" class="brand-large-image">
+                        <img src="IMG\19.png" alt="logo Rolex">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- list watch -->
+<div class="main-container-wrapper" style="padding: 50px">
+     <div class="container no-intro">
+          <div class="layout layout-1-col layout-1-col-row">
+               <div role="main">
+                    <!-- heading -->
+                    <div class="brands-heading">
+                         <span class="title">
+                              <i class="strike"></i>
+                              @thuong_hieu Collection
+                              <i class="strike"></i>
+                         </span>
+                    </div>
+                    <!-- list image of watch -->
+                    <div class="amshopby-page-container" id="amshopby-page-container">
+                         <div class="category-products">
+                              <div class="scroller-container">
+                                   <div class="row product-list scroller" id="product-appended">
+                                        @foreach (var item in list_sanpham)
+                                         {
+                                                       
+                                             <div class="product-container scroller-item">
+                                                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                                       <div class="product">
+                                                            <div class="slight-zoom-hover">
+                                                                 <!-- image watch -->
+                                                                 <div class="product-info">
+                                                                      <div class="image-constrainer">
+                                                                           <a href="/Home/ChiTietSanPham/@item.MaSanPham" title="@item.TenSanPham" class="product-image">
+                                                                                <img src="/@item.Anh" alt="@item.TenSanPham">
+                                                                           </a>
+                                                                      </div>
+                                                                      <h2 class="product-name" title="@item.TenSanPham">
+                                                                           <a href="/Home/ChiTietSanPham/@item.MaSanPham">
+                                                                                <span class="msp">Mã SP: @item.MaSanPham</span>
+                                                                                <br>
+                                                                                @item.TenSanPham
+                                                                           </a>
+                                                                      </h2>
+                                                                 </div>
+                                                                 <!-- price -->
+                                                                 <span class="product-price">@double.Parse(@item.Gia.ToString()).ToString("##,###") VNĐ</span>
+                                                                 <!-- button -->
+                                                                 <div class="buttons">
+                                                                      <a href="/Home/ChiTietSanPham/@item.MaSanPham" class="btn adjust btn-default btn-float btn-120">Chi tiết</a>
+                                                                      <a rel="nofollow" class="btn adjust btn-orange-basic btn-float btn-120 btn-nudge-back item_add" href="javascript:;" onclick="ThemGioHang(@item.MaSanPham)">Đặt hàng</a>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        }
+                                        
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+<script type="text/javascript">
+
+     function ThemGioHang(masp) {
+
+          $.ajax({
+               url: '/GioHang/ThemVaoGioHang/?id=' + masp + '&soLuong=' + 1 + '',
+               type: 'POST',
+               dataType: 'json',
+               success: function (data) {
+                    var json = JSON.parse(data);
+                    alert(json);
+                    window.location.reload();
+               },
+               error: function (err) {
+                    alert("Đã xảy ra lỗi" + err.responseText);
+               }
+          });
+     };
+</script>
+

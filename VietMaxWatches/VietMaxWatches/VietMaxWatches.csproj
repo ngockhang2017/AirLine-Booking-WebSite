@@ -1,0 +1,905 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{658F90C6-3EBC-4111-A646-9AF2077D1C21}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VietMaxWatches</RootNamespace>
+    <AssemblyName>VietMaxWatches</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44332</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.5.2.4\lib\net451\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.2.4\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.2.4\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Services.Client.16.153.0\lib\net45\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Services.Client.16.153.0\lib\net45\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Services.Client.16.153.0\lib\net45\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList">
+      <HintPath>..\..\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\..\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.2.4\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminHomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QLHangController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QLHoaDonController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QLNguoiDungController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QLSanPhamController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QLTinTucController.cs" />
+    <Compile Include="Controllers\Admin1Controller.cs" />
+    <Compile Include="Controllers\CNTT_DinhVietController.cs" />
+    <Compile Include="Controllers\CNTT_TrongTienController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChiTietDatHang.cs" />
+    <Compile Include="Models\DanhMucSanPham.cs" />
+    <Compile Include="Models\Entities.cs" />
+    <Compile Include="Models\Funtions\DonHangViewModel.cs" />
+    <Compile Include="Models\Funtions\GioHang.cs" />
+    <Compile Include="Models\Funtions\GioHangViewModel.cs" />
+    <Compile Include="Models\GiaoTiep.cs" />
+    <Compile Include="Models\HoaDon.cs" />
+    <Compile Include="Models\NguoiDung.cs" />
+    <Compile Include="Models\NguonTinTuc.cs" />
+    <Compile Include="Models\PhanHoi.cs" />
+    <Compile Include="Models\SanPham.cs" />
+    <Compile Include="Models\Sliders.cs" />
+    <Compile Include="Models\Suport.cs" />
+    <Compile Include="Models\sysdiagrams.cs" />
+    <Compile Include="Models\ThuongHieuSanPham.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dataTables.bootstrap.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\metisMenu.css" />
+    <Content Include="Content\sb-admin-2.css" />
+    <Content Include="CSS\chi-tiet-dong-ho.css" />
+    <Content Include="CSS\DanhMuc.css" />
+    <Content Include="CSS\dat-hang.css" />
+    <Content Include="CSS\dong-ho-nam-nu.css" />
+    <Content Include="CSS\dong-ho-rolex.css" />
+    <Content Include="CSS\font-awesome.min.css" />
+    <Content Include="CSS\GioHang.css" />
+    <Content Include="CSS\jquery.carousel-3d.default.css" />
+    <Content Include="CSS\lien-he.css" />
+    <Content Include="CSS\logo_giohang.css" />
+    <Content Include="CSS\main.css" />
+    <Content Include="CSS\media.css" />
+    <Content Include="CSS\next.png" />
+    <Content Include="CSS\prev.png" />
+    <Content Include="CSS\style2.css" />
+    <Content Include="CSS\style3.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="IMG\adad.png" />
+    <Content Include="IMG\arrow.png" />
+    <Content Include="IMG\backtotop.png" />
+    <Content Include="IMG\bg_brand.png" />
+    <Content Include="IMG\brands\calvin-keil.png" />
+    <Content Include="IMG\brands\chanel.png" />
+    <Content Include="IMG\brands\gucci.png" />
+    <Content Include="IMG\brands\guess.png" />
+    <Content Include="IMG\brands\marc-jacobs.png" />
+    <Content Include="IMG\brands\michael-kors.png" />
+    <Content Include="IMG\brands\michele.png" />
+    <Content Include="IMG\brands\movado.png" />
+    <Content Include="IMG\brands\rado.png" />
+    <Content Include="IMG\brands\raymond-weil.png" />
+    <Content Include="IMG\brands\roberto-cavalli.png" />
+    <Content Include="IMG\brands\rolex.png" />
+    <Content Include="IMG\brands\vacheron-constantin.png" />
+    <Content Include="IMG\brands\versace.png" />
+    <Content Include="IMG\brands\vesus.png" />
+    <Content Include="IMG\brands\victorinox.png" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN BODY LADIES WATCH 30MM\CALVIN KLEIN BODY LADIES WATCH 30MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN BODY LADIES WATCH 30MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN BODY LADIES WATCH 30MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN BODY LADIES WATCH 30MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CHEERS BLACK WATCH 32MM\CALVIN KLEIN CHEERS BLACK WATCH 32MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CHEERS BLACK WATCH 32MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CHEERS BLACK WATCH 32MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CHEERS BLACK WATCH 32MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CHEERS WOMEN%27S WATCH 32MM\CALVIN KLEIN CHEERS WOMEN%27S WATCH 32MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CHEERS WOMEN%27S WATCH 32MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CHEERS WOMEN%27S WATCH 32MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY BEIGE WATCH 30.9MM\CALVIN KLEIN CITY BEIGE WATCH 30.9MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY BEIGE WATCH 30.9MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY BEIGE WATCH 30.9MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY BROWN WATCH 37MM\CALVIN KLEIN CITY BROWN WATCH 37MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY BROWN WATCH 37MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY BROWN WATCH 37MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY BROWN WATCH 37MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY MEN%27S WATCH 43MM\CALVIN KLEIN CITY MEN%27S WATCH 43MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY MEN%27S WATCH 43MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY MEN%27S WATCH 43MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY QUARTZ 43MM\CALVIN KLEIN CITY QUARTZ 43MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY QUARTZ 43MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CITY QUARTZ 43MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CLASS LADIES WATCH 32MM\CALVIN KLEIN CLASS LADIES WATCH 32MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CLASS LADIES WATCH 32MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CLASS LADIES WATCH 32MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN CLASS LADIES WATCH 32MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN DRESS WOMEN%27S WATCH 19MM\CALVIN KLEIN DRESS WOMEN%27S WATCH 19MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN DRESS WOMEN%27S WATCH 19MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN DRESS WOMEN%27S WATCH 19MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN DRESS WOMEN%27S WATCH 19MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EVEN BLACK WATCH 42MM\CALVIN KLEIN EVEN BLACK WATCH 42MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EVEN BLACK WATCH 42MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EVEN BLACK WATCH 42MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EVEN BLACK WATCH 42MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EVEN GREEN WATCH 42MM\CALVIN KLEIN EVEN GREEN WATCH 42MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EVEN GREEN WATCH 42MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EVEN GREEN WATCH 42MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EVEN GREEN WATCH 42MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EVEN LEATHER WATCH 42MM\CALVIN KLEIN EVEN LEATHER WATCH 42MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EVEN LEATHER WATCH 42MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EVEN LEATHER WATCH 42MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EVEN LEATHER WATCH 42MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EXCHANGE MEN%27S WATCH 44MM\CALVIN KLEIN EXCHANGE MEN%27S WATCH 44MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EXCHANGE MEN%27S WATCH 44MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EXCHANGE MEN%27S WATCH 44MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN EXCHANGE MEN%27S WATCH 44MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN HIGH NOON MESH BLUE WATCH 40MM\CALVIN KLEIN HIGH NOON MESH BLUE WATCH 40MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN HIGH NOON MESH BLUE WATCH 40MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN HIGH NOON MESH BLUE WATCH 40MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN HIGH NOON MESH BLUE WATCH 40MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN ORANGE SILICONE STRAP WATCH 40MM\CALVIN KLEIN ORANGE SILICONE STRAP WATCH 40MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN ORANGE SILICONE STRAP WATCH 40MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN ORANGE SILICONE STRAP WATCH 40MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN ORANGE SILICONE STRAP WATCH 40MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN SING WOMEN%27S WATCH 32MM\CALVIN KLEIN SING WOMEN%27S WATCH 32MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN SING WOMEN%27S WATCH 32MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN SING WOMEN%27S WATCH 32MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN SING WOMEN%27S WATCH 32MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN STEADFAST MEN%27S WATCH 42MM\CALVIN KLEIN STEADFAST MEN%27S WATCH 42MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN STEADFAST MEN%27S WATCH 42MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN STEADFAST MEN%27S WATCH 42MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN STEADFAST MEN%27S WATCH 42MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN STEP DARK GREEN WATCH 30MM\CALVIN KLEIN STEP DARK GREEN WATCH 30MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN STEP DARK GREEN WATCH 30MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN STEP DARK GREEN WATCH 30MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN STEP DARK GREEN WATCH 30MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN SURROUND MEN%27S WATCH 41MM\CALVIN KLEIN SURROUND MEN%27S WATCH 41MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN SURROUND MEN%27S WATCH 41MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN SURROUND MEN%27S WATCH 41MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN SURROUND MEN%27S WATCH 41MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN WINDOW MENS WATCH 31X46MM\CALVIN KLEIN WINDOW MENS WATCH 31X46MM.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN WINDOW MENS WATCH 31X46MM\picture1.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN WINDOW MENS WATCH 31X46MM\picture2.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\CALVIN KLEIN WINDOW MENS WATCH 31X46MM\picture3.jpg" />
+    <Content Include="IMG\Calvin Keil-Collection\Images\calvin-klein-image.png" />
+    <Content Include="IMG\Calvin Keil-Collection\Images\calvin-klein-logo.png" />
+    <Content Include="IMG\Calvin Keil-Collection\Images\calvin-klein-theme.png" />
+    <Content Include="IMG\center\email1.png" />
+    <Content Include="IMG\center\facebook1.png" />
+    <Content Include="IMG\center\gplus.png" />
+    <Content Include="IMG\center\twitter1.png" />
+    <Content Include="IMG\Chanel-Collection\CHANEL BOY-FRIEND H4315 LADIES WATCH 37 X 28.6 X 7.7 MM.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL J12 H2012 MENS AUTOMATIC CERAMIC WATCH 42.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL J12 H2181 WHITE CERAMIC UNISEX WATCH 33.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL J12 H2427 LADIES QUARTZ CERAMIC BLACK SAPPHIRE 33.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL J12 H2559 UNISEX RUBBER SAPPHIRE AUTOMATIC 38.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL J12 H2934 UNISEX AUTOMATIC WATCH 41.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL J12 H2978 QUARTZ UNISEX CERAMIC SAPPHIRE 33.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL J12 H3131 UNISEX AUTOMATIC WATCH 42.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL J12 H3404 MOON PHASE WATCH 38.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL J12 H3838 UNISEX AUTOMATIC WATCH 36.5.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL J12 H3839 UNISEX AUTOMATIC WATCH 36.5.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL J12 H6345 LADIES WATCH 33MM.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL J12·20 H6476 WHITE CERAMIC LIMITED 38MM.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL MADEMOISELLE PRIVÈ H4319 WATCH 37.5.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL MADEMOISELLE PRIVÉ H3567 WATCH 37.5.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL MADEMOISELLE PRIVÉ H3822 CAMÉLIA WATCH 37.5.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL PREMIERE H2146 LADIES CERAMIC GOLD 15.2 X 19.7.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL PREMIERE H3750 YELLOW GOLD WATCH16 X 22.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL PREMIÈRE H0451 WATCH 19.5 X 15.jpg" />
+    <Content Include="IMG\Chanel-Collection\CHANEL PREMIÈRE VELOURS WATCH 19.7 X 15.2 X 7.5 MM.jpg" />
+    <Content Include="IMG\Chanel-Collection\Images\chanel-image.png" />
+    <Content Include="IMG\Chanel-Collection\Images\chanel-logo.png" />
+    <Content Include="IMG\Chanel-Collection\Images\chanel-theme.png" />
+    <Content Include="IMG\dathongbao.png" />
+    <Content Include="IMG\facebook.png" />
+    <Content Include="IMG\Gucci-Collection\GUCCI 122 CHIODO WOMEN%27S DIAMOND WATCH 35MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI BAMBOO WOMEN%27S SWISS STAINLESS WATCH 35MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI G - TIMELESS WATCH 36MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI G-TIMELESS RED AND GREEN WATCH 27MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI G-TIMELESS TAN EMBROIDERED BUTTERFLY WATCH 38MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI G-TIMELESS WATCH 38MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI G-TIMELESS WOMEN WATCH 36MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI G-TIMELESS YA1264126 ICONIC UNISEX WATCH 38MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI HORSEBIT BLACK LEATHER LADIES WATCH 34MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI HORSEBIT COLLECTION BLACK LEATHER LADIES WATCH 34MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI HORSEBIT LADIES STAINLESS STEEL WATCH 30MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI HORSEBIT SILVER LADIES WATCH 34MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI INTERLOCKING G BROWN WOMEN%27S WATCH 37MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI INTERLOCKING WOMEN%27S BROWN WATCH 37MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI INTERLOCKING WOMEN%27S STAINLESS WATCH 37MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI INTERLOCKING WOMEN%27S WATCH 29MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI INTERLOCKING-G BLUE WATCH 37MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI SYNC WATCH 46MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI U-PAY WOMEN%27S RED &amp; WHITE NYLON WATCH 35MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\GUCCI U-PLAY STAINLESS STEEL LADIES WATCH 27MM.jpg" />
+    <Content Include="IMG\Gucci-Collection\Images\gucci-image.png" />
+    <Content Include="IMG\Gucci-Collection\Images\gucci-logo.png" />
+    <Content Include="IMG\Gucci-Collection\Images\gucci-theme.png" />
+    <Content Include="IMG\Guess-Collection\GUESS BROCADE MESH BRACELET WATCH 35MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS BURGUNDY WATCH 44MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS DAZZLING SPORTY WOMEN%27S 36MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS FRONTIER QUARTZ CRYSTAL WATCH 40MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS GEM WATCH 25MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS GOLD WATCH 39MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS GOLD-TONE ANALOG WATCH 35MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS GUNMETAL RIGOR MEN%27S WATCH 46MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS GUNMETAL RIGOR WATCH 39MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS LADIES ROSE GOLD WATCH 41MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS ORBIT BLACK DIAL MEN%27S WATCH 46MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS ORIGINALS DENIM LOGO WATCH 42MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS QUARTZ BLUE DIAL WATCH 42MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS RHINESTONE MULTIFUNCTION WATCH 40MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS ROSE GOLD-TONE WATCH 40MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS SILVER-TONE ANALOG WATCH 35MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS SOUTH HAMPTON ROSE GOLD WOMEN%27S WATCH 34MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS SPARKLING HI-ENERGY WOMEN%27S WATCH 37MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS VALENCIA QUARTZ BLACK WATCH 38MM.jpg" />
+    <Content Include="IMG\Guess-Collection\GUESS WATSON GENTS GOLD TONE WATCH 40MM.jpg" />
+    <Content Include="IMG\Guess-Collection\Images\Guess-image.png" />
+    <Content Include="IMG\Guess-Collection\Images\Guess-logo.png" />
+    <Content Include="IMG\Guess-Collection\Images\Guess-theme.png" />
+    <Content Include="IMG\hot-brand\bulova.png" />
+    <Content Include="IMG\hot-brand\bvlgari.png" />
+    <Content Include="IMG\hot-brand\fredeique-constant.png" />
+    <Content Include="IMG\hot-brand\gucci.png" />
+    <Content Include="IMG\hot-brand\guess.png" />
+    <Content Include="IMG\hot-brand\hamilton.png" />
+    <Content Include="IMG\hot-brand\longines.png" />
+    <Content Include="IMG\hot-brand\michael-kors.png" />
+    <Content Include="IMG\hot-brand\montblanc.png" />
+    <Content Include="IMG\hot-brand\movado.png" />
+    <Content Include="IMG\hot-brand\omega.png" />
+    <Content Include="IMG\hot-brand\rolex.png" />
+    <Content Include="IMG\hot-brand\tissot.png" />
+    <Content Include="IMG\hot-brand\vacheron-constantin.png" />
+    <Content Include="IMG\hot-brand\versace.png" />
+    <Content Include="IMG\hot-brand\zenith.png" />
+    <Content Include="IMG\icon-showrooms-white.png" />
+    <Content Include="IMG\icon-showrooms-yellow.png" />
+    <Content Include="IMG\icon.png" />
+    <Content Include="IMG\Image_danhmuc\army_watch_image.png" />
+    <Content Include="IMG\Image_danhmuc\couple_watch_image.png" />
+    <Content Include="IMG\Image_danhmuc\men_watch_image.png" />
+    <Content Include="IMG\Image_danhmuc\sale_watch_image.png" />
+    <Content Include="IMG\Image_danhmuc\sport_watch_image.png" />
+    <Content Include="IMG\Image_danhmuc\woman_watch_image.png" />
+    <Content Include="IMG\large-arrow-left.png" />
+    <Content Include="IMG\large-arrow-right.png" />
+    <Content Include="IMG\loading.gif" />
+    <Content Include="IMG\login.png" />
+    <Content Include="IMG\Main-Topic\20-thuong-hieu-dong-ho.png" />
+    <Content Include="IMG\Main-Topic\2000-midseason-sale2020-1-.png" />
+    <Content Include="IMG\Main-Topic\background-nobel.png" />
+    <Content Include="IMG\Main-Topic\cropped-7.png" />
+    <Content Include="IMG\Main-Topic\hublot-background.png" />
+    <Content Include="IMG\Marc Jacobs-Collection\Images\marc-jacobs-image.png" />
+    <Content Include="IMG\Marc Jacobs-Collection\Images\marc-jacobs-logo.png" />
+    <Content Include="IMG\Marc Jacobs-Collection\Images\marc-jacobs-theme.png" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC BY MARC JACOBS AMY SILVER WATCH 36MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC BY MARC JACOBS FERGUS TWO-TONE WATCH 38MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC BY MARC JACOBS JIMMY GUNMETAL OLIVE-WATCH 43MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC BY MARC JACOBS X-UP BLUE AND BLACK WATCH 38MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS CICELY QUARTZ WATCH 31MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS CLASSIC LADIES WATCH 29MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS CLASSIC LADIES WATCH 37MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS CLASSIC STAINLESS-STEEL WATCH 36MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS CLASSIC WATCH 20MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS CLASSIC WATCH 28MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS CORIE BLACK IP WATCH 36MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS CORIE ROSE GOLD WATCH 36MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS CORIE TWO-TONE WATCH 36MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS DAISY GOLD-TONE AND WHITE WATCH 20MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS DOTTY LADIES WATCH 34MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS FARROW LADIES WATCH 26MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS HENRY SILVER TONE BLUE WATCH 25MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS PINK SILICONE WATCH 36MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS RAINBOW PAVE CRYSTAL WATCH 39MM.jpg" />
+    <Content Include="IMG\Marc Jacobs-Collection\MARC JACOBS THE JACOBS WOMEN%27S WATCH 31MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\Images\michael-kors-image.png" />
+    <Content Include="IMG\Michael Kors-Collection\Images\michael-kors-logo.png" />
+    <Content Include="IMG\Michael Kors-Collection\Images\michael-kors-theme.png" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS CHARLEY ROSE GOLD WATCH 38MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS CINTHIA THREE-HAND WATCH 33MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS GREER OVERSIZED WATCH 43MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS JARYN PAVÉ WATCH 38MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS JARYN WOMENS WATCH 36MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS JETSET GOLD WATCH 43MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS LAINEY PAVÉ WATCH 36MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS LAURYN MINI RED WATCH 33MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS MINDY ROSE GOLD-TONE WATCH 36MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS MINI PORTIA GOLD-TONE WATCH 32MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS PORTIA GOLD-TONE WATCH 37MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS PORTIA ROSE GOLD-TONE WATCH 37MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS PORTIA WATCH 36.5MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS RITZ WOMEN%27S WATCH 37MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS RUNWAY ACCESS CERAMIC SMARTWATCH 41MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS RUNWAY RAINBOW WATCH 38MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS RUNWAY SLIM WATCH 42MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS SAWYER WOMEN%27S BLUE WATCH 39MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS SOFIE THREE-HAND WATCH 36MM.jpg" />
+    <Content Include="IMG\Michael Kors-Collection\MICHAEL KORS SOFIE WOMENS WATCH 39MM.jpg" />
+    <Content Include="IMG\Michele-Collection\Images\michele-image.png" />
+    <Content Include="IMG\Michele-Collection\Images\michele-logo.png" />
+    <Content Include="IMG\Michele-Collection\Images\michele-theme.png" />
+    <Content Include="IMG\Michele-Collection\MICHELE ART OF DECO GOLD-PLATED LADIES WATCH 33X35MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE CABER DIAMOND WATCH 35MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE CAPE WATCH 38MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE CSX GARDEN PARTY DIAMOND BUTTERFLY 36MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE DECO DIAMOND WATCH 26.5MM X 37MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE DECO MADISON CERAMIC WATCH 29MM X 31MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE DECO MADISON DIAMOND WATCH 33 MM X 35 MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE DECO SPORT SILICONE WATCH 34MM X 36MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE DECO SPORT WATCH 34MM X 36MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE GINKGO DIAL GARNET ALLIGATOR WATCH 2931.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE JELLYBEAN WATCH 38MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE LADIES SIGNATURE CSX STAINLESS STEEL 36MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE SEREIN 12 WOMEN%27S WATCH 28MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE SEREIN 16 LADIES WATCH 34MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE SEREIN 16 WOMEN%27S WATCH 34 X 36MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE SEREIN MID DIAMOND WATCH 3634MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE SIGNATURE DECO LADIES WATCH 33MM X 35MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHELE SPORTY SAIL WATCH 38MM X 45MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHILE DECO LL MID PATTERN DIAMOND SNOWFLAKE 26.529MM.jpg" />
+    <Content Include="IMG\Michele-Collection\MICHILE SEREIN MID CASHMERE DIAMOND WATCH 3634MM.jpg" />
+    <Content Include="IMG\minusiconfaded.png" />
+    <Content Include="IMG\Movado-Collection\Images\movado-image.png" />
+    <Content Include="IMG\Movado-Collection\Images\movado-logo.png" />
+    <Content Include="IMG\Movado-Collection\Images\movado-theme.png" />
+    <Content Include="IMG\Movado-Collection\MOVADO 1881 AUTOMATIC BLACK WATCH 39.5MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO BOLD BLACK MEN%27S WATCH 43.5MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO BOLD GOLD TONE MESH WATCH 44MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO BOLD GREY MEN%27S WATCH 40MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO BOLD PINK SILICONE WATCH 38MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO EDGE CHRONOGRAPH WATCH 42MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO EDGE WOMEN%27S WATCH 34MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO HERITAGE SERIES CELESTOGRAF WATCH 36MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO HERITAGE SERIES WATCH 36MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO MASINO ROSE GOLD WOMEN%27S WATCH 26 MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO MEN%27S SWISS CHRONOGRAPH VIZIO WATCH 45MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO MIRI DIAMOND SWISS WATCH 24MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO MUSEUM 70TH ANNIVERSARY SPECIAL EDITION 35MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO MUSEUM 70TH ANNIVERSARY SPECIAL EDITION 40MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO MUSEUM CLASSIC BLUE WATCH 28MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO MUSEUM CLASSIC MEN%27S WATCH 40MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO MUSEUM CLASSIC WATCH 40MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO MUSEUM MEN%27S WATCH 38MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO MYLA DIAMOND WATCH 28.5MM.jpg" />
+    <Content Include="IMG\Movado-Collection\MOVADO ULTRA SLIM WATCH 35MM.jpg" />
+    <Content Include="IMG\news\10-thuong-hieu-dong-ho-nam-dep-de-cu-2020.png" />
+    <Content Include="IMG\news\2020-patek-philippe-5303r-001-minute-repeater-tourbillon-4-1536x1024.png" />
+    <Content Include="IMG\news\anh-bia-hublot-big-bang-millennial-pink.png" />
+    <Content Include="IMG\news\anh-bia-zenith-defy-el-primero-21-pink.png" />
+    <Content Include="IMG\news\banner-dong-ho-bulova-frank-lloyd-wright-december-gifts-limited.png" />
+    <Content Include="IMG\news\banner-dong-ho-nu-versace-qua-tang-20-10.png" />
+    <Content Include="IMG\news\banner-dong-ho-omega-seamaster-300m-james-bond-platinum-gold-numbered-edition.png" />
+    <Content Include="IMG\news\banner-khuyen-mai-20-10-2020.png" />
+    <Content Include="IMG\news\banner-mido-ocean-star-gmt.png" />
+    <Content Include="IMG\news\banner-rose-blackpink-with-omega.png" />
+    <Content Include="IMG\news\banner-tag-heuer-aquaracer-43-mm-tortoise-shell-effect-calibre-51.png" />
+    <Content Include="IMG\news\banner-vacheron-constantin-overseas-pink-gold-blue-dial.png" />
+    <Content Include="IMG\news\dong-ho-bam-gio-zenith-defy-21-chronograph-trang-den-banner.png" />
+    <Content Include="IMG\news\dong-ho-lich-van-nien-frederique-constant-highlife-perpetual-calendar-fc-775v4nh2b-2-.png" />
+    <Content Include="IMG\news\dong-ho-nu-patek-philippe-twenty-4-manchette-quartz1.jpg" />
+    <Content Include="IMG\news\dong-ho-omega-constellation-gents-41mm-ceramic-bezel-banner.png" />
+    <Content Include="IMG\news\dong-ho-quan-doi-longines-military-marine-nationale-banner.png" />
+    <Content Include="IMG\news\zalo-1.png" />
+    <Content Include="IMG\online-shopping-cart.png" />
+    <Content Include="IMG\plusiconfaded.png" />
+    <Content Include="IMG\qrcode.png" />
+    <Content Include="IMG\qrcode_ssid_wifikey.txt" />
+    <Content Include="IMG\Rado-Collection\Images\rado-image.png" />
+    <Content Include="IMG\Rado-Collection\Images\rado-logo.png" />
+    <Content Include="IMG\Rado-Collection\Images\rado-theme.png" />
+    <Content Include="IMG\Rado-Collection\RADO CENTRIX AUTOMATIC DAY-DATE 38MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO CENTRIX AUTOMATIC WATCH 38MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO CENTRIX OPEN HEART AUTOMATIC WATCH 33MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO CENTRIX QUARTZ M DIAMONDS WATCH 38MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO CENTRIX QUARTZ S CERAMIC WATCH 28MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO CENTRIX SILVER DIAL AUTOMATIC MEN%27S WATCH 42MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO COUPOLE CLASSIC AUTOMATIC DIAMONDS S 31.8MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO COUPOLE CLASSIC AUTOMATIC S 32MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO COUPOLE CLASSIC AUTOMATIC WATCH 31.8MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO COUPOLE CLASSIC CHRONOGRAPH WATCH 42MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO DIAMASTER CHRONOGRAPH XXL AUTOMATIC 45MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO DIAMASTER MEN%27S WATCH 40MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO HYPERCHROME CHRONOGRAPH WATCH 41MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO INTEGRAL CERAMIC WATCH 22MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO INTEGRAL MIDSIZE DIAMOND WATCH 24MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO THE ORIGINAL AUTOMATIC 3542MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO TRUE BLACK PLATINUM-TONE CERAMIC WATCH.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO TRUE QUARTZ L CERAMIC 40MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO TRUE STAR SIGN TAURUS LIMITED EDITION 30MM.jpg" />
+    <Content Include="IMG\Rado-Collection\RADO V10K MEN%27S QUARTZ WATCH 39MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\Images\raymond-weil-image.png" />
+    <Content Include="IMG\Raymond Weil-Collection\Images\raymond-weil-logo.png" />
+    <Content Include="IMG\Raymond Weil-Collection\Images\raymond-weil-theme.png" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND MAESTRO WATCH 40MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL FREELANCER AUTOMATIC 42MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL FREELANCER AUTOMATIC WATCH 42.5MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL FREELANCER AUTOMATIC WATCH 42MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL FREELANCER CHRONO AUTO WATCH 42MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL FREELANCER DIAMOND AUTO WATCH 38MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL FREELANCER DIAMOND WATCH 34MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL FREELANCER WATCH 34MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL JASMINE LADIES WATCH 29MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL JASMINE WATCH 35MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL MAESTRO AUTOMATIC MEN%27S WATCH 40MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL MAESTRO MOON PHASE WATCH 40MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL NOEMIA WATCH 32MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL PARSIFAL AUTOMATIC 18 KT WATCH 39MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL PARSIFAL AUTOMATIC DATE WATCH 39MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL PARSIFAL WATCH 41MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL TANGO 4891-SP5-00660 MENS WATCH 40MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL TANGO BLACK SPORTS WATCH 41MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL TANGO BLACK WATCH 41MM.jpg" />
+    <Content Include="IMG\Raymond Weil-Collection\RAYMOND WEIL TANGO SILVER LADIES WATCH 28MM.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\Images\roberto-cavalli-image.png" />
+    <Content Include="IMG\Roberto Cavalli-Collection\Images\roberto-cavalli-logo.png" />
+    <Content Include="IMG\Roberto Cavalli-Collection\Images\roberto-cavalli-theme.png" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI BY FRANCK BLUE WATCH 33.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI BY FRANCK MULLER BLACK WATCH 43.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI BY FRANCK MULLER SERPENTE WATCH 34MM.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI BY FRANCK MULLER WATCH 36MM.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI BY FRANCK MULLER WATCH 38MM.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI BY FRANCK MULLER WATCH 40.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI CLASSIC WATCH 34MM.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI GEOMETRY &amp; OCTAGON AUTOMATIC 44.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI GEOMETRY &amp; OCTAGON WATCH 44.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI LOGO BLUE MOTHER OF PEARL WATCH 35.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI QUILTED BLUE WATCH 36.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI QUILTED WHITE WATCH 36.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI RC-35 CHAMPAGNE WATCH 34.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI RC-37 BLUE MOTHER OF PEARL WATCH 34.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI ROTATING DIAL CHAMPAGNE WATCH 37.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI SILVER 30MM.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI SNAKE WATCH 34.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI SPORT-ELEGANT WATCH 42.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI WEBBING SILVER WATCH 37.5.jpg" />
+    <Content Include="IMG\Roberto Cavalli-Collection\ROBERTO CAVALLI WOMEN WEBBING WATCH 37.5.jpg" />
+    <Content Include="IMG\Rolex-Collection\Images\rolex-image.png" />
+    <Content Include="IMG\Rolex-Collection\Images\rolex-logo.png" />
+    <Content Include="IMG\Rolex-Collection\Images\rolex-theme.png" />
+    <Content Include="IMG\Rolex-Collection\ROLEX CELLINI 50519-0006 DUAL TIME 39.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX CELLINI 50529-0006 DUALTIME 39.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX CELLINI 50605RBR-0011 EVEROSE 39.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX DATEJUST 278273-0018 LADIES WATCH 31MM.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 116201 DATEJUST 36.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 116231 DATEJUST 36.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 118135-0030 DAY-DATE 36.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 118135-0066 DAY-DATE 36.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 118206-0036 DAY-DATE 36.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 118235F-0096 WATCH 36.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 118348-0054 DAY-DATE 36.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 126234 DATEJUST 36.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 178274-0004 DATEJUST 31.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 179174 LADY-DATEJUST 26.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 228396TBR-0002 WATCH 40.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 277200-0008 WATCH 31MM.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL 279163-0017 WATCH 28.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL116135-0064 DATEJUST 36.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL126233-0018 DATEJUST 36.jpg" />
+    <Content Include="IMG\Rolex-Collection\ROLEX OYSTER PERPETUAL126283RBR-0003 DATEJUST 36.jpg" />
+    <Content Include="IMG\Rolex-Oyster\UploadsImagesrolex33png_60_80.jpg" />
+    <Content Include="IMG\Rolex-Oyster\UploadsNewsoyster-perpetual-118348-day-date-361png_60_80.jpg" />
+    <Content Include="IMG\Rolex-Oyster\UploadsNewsoyster-perpetual-118348-day-date-36png_540_660.jpg" />
+    <Content Include="IMG\Rolex-Oyster\UploadsNewsoyster-perpetual-118348-day-date-36png_60_80.jpg" />
+    <Content Include="IMG\rss.png" />
+    <Content Include="IMG\search-icon-gray.png" />
+    <Content Include="IMG\Theme_danhmuc\army_watch_theme.png" />
+    <Content Include="IMG\Theme_danhmuc\couple_watch_theme.png" />
+    <Content Include="IMG\Theme_danhmuc\man_watch_theme.png" />
+    <Content Include="IMG\Theme_danhmuc\sale_watch_theme.png" />
+    <Content Include="IMG\Theme_danhmuc\sport_watch_theme.png" />
+    <Content Include="IMG\Theme_danhmuc\woman_watch_theme.png" />
+    <Content Include="IMG\tải xuống %283%29.png" />
+    <Content Include="IMG\tải xuống.png" />
+    <Content Include="IMG\UploadsNewsgucci-g-frame-unisex-wristwatch-watch-18x25mmjpg_540_660.jpg" />
+    <Content Include="IMG\UploadsNewsversace-jungle-print-medusa-frame-watch-36mmjpg_540_660.jpg" />
+    <Content Include="IMG\UploadsNewsversace-medusa.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\Images\vacheron-constantin-image.png" />
+    <Content Include="IMG\Vacheron Constantin-Collection\Images\vacheron-constantin-logo.png" />
+    <Content Include="IMG\Vacheron Constantin-Collection\Images\vacheron-constantin-theme.png" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNews-vacheron-constantin-patrimony-85180-000r-b515-watch-40jpg_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsatrimony-perpetual-43175-000r-9687-calendar-41mmpng_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsfiftysix-4000e-000r-b438complete-calendar-40png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsharmony-4000s-000r-b123-complete-calendar-png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsharmony-7805s-000r-b140-dual-time-small-model-png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsheures-creatives-37530-000g-b060-heure-discrete-png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsheures-creatives-37531-f04g-b060-heure-discrete-png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsheures-creatives-37640-000g-b030-heure-romantique-png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewshistoriques-5000h-000p-b058-cornes-de-vache-1955-png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewshistoriques-82035-000r-9359-american-1921-png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsmalte-30130-000r-9754-tourbillon-38-x-48-24png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsmalte-30135-000p-9842-tourbillon-openworked-38-48png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsmalte-30630-s22g-9899-tourbillon-high-jewellery-38-48png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsmetiers-d-art-1100a-000p-b026-mecaniques-gravees-39png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsmetiers-d-art-7000s-000g-b002-savoirs-enlumines--caperpng_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsmetiers-d-art-7600u-000g-b212-copernicus-celestial-43png_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewspatrimony-4000u-000g-b112-retrograde-day-date-42-5mmpng_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewspatrimony-81180-000r-9162-grand-taille-40mmpng_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewstraditionnelle-80172-000r-b406-calibre-2755-44mmpng_540_660.jpg" />
+    <Content Include="IMG\Vacheron Constantin-Collection\UploadsNewsvacheron-constantin-overseas-1205v-100a-b591-watch-33mmpng_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\Images\versace-image.png" />
+    <Content Include="IMG\Versace-Collection\Images\versace-logo.png" />
+    <Content Include="IMG\Versace-Collection\Images\versace-theme.png" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsersace-hellenyium-blue-watch-42mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsersace-palazzo-empire-unisex-watch-39mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsv-circle-medusa-watch-38mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-aiakos-swiss-automatic-watch-44mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-aion-chrono-quartz-watch-45mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-black-v-metal-icon-watch-46mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-champagne-metal-univers-watch-433png_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-chronograph-glaze-gray-vintage-watch-44mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-daphnis-gold-watch-35mmpng_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-destiny-veqy00318-watch-36mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-dv-25-diamond-gold-ip-watch-36mmpng_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-dv-25-limited-100-swiss-watch-30mmpng_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-mens-landmark-round-watch-41mmpng_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-mystique-chronograph-watch-44mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-perpetuelle-diamond-pave-watch-40mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-revive-silver-twwo-tone-ladies-watch-35mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-sport-tech-chronograph-watch-45mm-jpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-v-circle-logomania-edition-38mm2jpg_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-v-motif-silver-watch-35mmpng_540_660.jpg" />
+    <Content Include="IMG\Versace-Collection\UploadsNewsversace-women-s-p5q81sd999-s080-vanity-analog-display-swiss-watch-34jpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\Images\versus-image.png" />
+    <Content Include="IMG\Versus-Collection\Images\versus-logo.png" />
+    <Content Include="IMG\Versus-Collection\Images\versus-theme.png" />
+    <Content Include="IMG\Versus-Collection\UploadsNews-versus-by-versace-sunnyridge-ip-gold-watch-34mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsunisex-watch-versus-tokyo-jpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-agadir-blue-stainless-steel-watch-36mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-bracelet-womans-watch-42mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-brick-lane-watch-40mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-coral-gables-watch-36mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-covent-garden-quartz-watch-34mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-fashion-watch-36mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-fashion-watch-44mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-lea-ladies-watch-35mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-lexington-watch-44mm1jpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-lexington-watch-44mm2jpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-men-s-watch-44mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-mouffetard-watch-38mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-paris-lights-women-s-watch-34mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-by-versace-watch-34mm1jpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-easy-dual-men-s-quartz-watch-45mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-mens-cosmopolitan-blue-watchjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-versace-carnaby-street-watch-32mmjpg_540_660.jpg" />
+    <Content Include="IMG\Versus-Collection\UploadsNewsversus-versace-covent-garden-watch-36mm4jpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\Images\victorinox-image.png" />
+    <Content Include="IMG\Victorinox-Collection\Images\victorinox-logo.png" />
+    <Content Include="IMG\Victorinox-Collection\Images\victorinox-theme.png" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNews-victorinox-alliance-blue-chronograph-watch-44mm2jpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNews-victorinox-alliance-sport-chronograph-watch-44mmjpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNews-victorinox-i-n-o-x-blue-dial-45mmjpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNews241159jpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNews241443jpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNews241508jpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNews241608jpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-241691-maverick-gold-men-s-watch-43mmjpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-airboss-mechanical-chronograph-watch-42mm4jpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-alliance-black-men-s-watch-40mmjpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-alliance-men-s-watch-40mm1jpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-alliance-white-mother-of-pearl-dial-ladies-watch-35mmjpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-autumn-spirit-watch-43mmjpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-chrono-classic-watch-44mmjpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-fieldforce-chronograph-men-s-watch-42mmpng_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-garrison-brown-watch-40mm-jpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-i-n-o-x-carbon-watch-43mmpng_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-inox-v-black-watches-37mmjpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-swiss-army-alpnach-chronograph-watch-44mm8jpg_540_660.jpg" />
+    <Content Include="IMG\Victorinox-Collection\UploadsNewsvictorinox-swiss-army-watch-35nnjpg_540_660.jpg" />
+    <Content Include="JS\bootstrap.min.js" />
+    <Content Include="JS\bootstrapvalidator.min.js" />
+    <Content Include="JS\dataTables.bootstrap.min.js" />
+    <Content Include="JS\jcarousel.brands.js" />
+    <Content Include="JS\jcarousel.js" />
+    <Content Include="JS\jquery-1.10.2.js" />
+    <Content Include="JS\jquery-1.10.2.min.js" />
+    <Content Include="JS\jquery-ui.min.js" />
+    <Content Include="JS\jquery.carousel-3d.js" />
+    <Content Include="JS\jquery.dataTables.min.js" />
+    <Content Include="JS\jquery.emojiRatings.min.js" />
+    <Content Include="JS\jquery.jcarousel-swipe.min.js" />
+    <Content Include="JS\jquery.min.js" />
+    <Content Include="JS\jquery.resize.js" />
+    <Content Include="JS\jquery.waitforimages.js" />
+    <Content Include="JS\main.js" />
+    <Content Include="JS\metisMenu.js" />
+    <Content Include="JS\modernizr.js" />
+    <Content Include="JS\product.js" />
+    <Content Include="JS\sb-admin-2.js" />
+    <Content Include="JS\social.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\Views\QLHoaDon\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHoaDon\ThemHd.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHoaDon\SuaHd.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHoaDon\ChiTietHd.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHoaDon\XacNhanDonHang.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminHome\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminHome\DangNhap.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHang\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHang\ThemHang.cshtml" />
+    <Content Include="Areas\Admin\Views\QLHang\SuaHang.cshtml" />
+    <Content Include="Areas\Admin\Views\QLSanPham\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QLSanPham\ThemSp.cshtml" />
+    <Content Include="Areas\Admin\Views\QLSanPham\SuaSp.cshtml" />
+    <Content Include="Areas\Admin\Views\QLNguoiDung\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QLNguoiDung\ThemTk.cshtml" />
+    <Content Include="Areas\Admin\Views\QLNguoiDung\SuaTk.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\AdminMaster.cshtml" />
+    <Content Include="Areas\Admin\Views\QLTinTuc\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QLTinTuc\SuaTin.cshtml" />
+    <Content Include="Areas\Admin\Views\QLTinTuc\ThemTin.cshtml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\ChiTietSanPham.cshtml" />
+    <Content Include="Views\Home\LienHe.cshtml" />
+    <Content Include="Views\Shared\index_Layout.cshtml" />
+    <Content Include="Views\Home\DanhSachThuongHieu.cshtml" />
+    <Content Include="Views\Home\DanhSachDongHo.cshtml" />
+    <Content Include="Views\Home\DanhMucDongHo.cshtml" />
+    <Content Include="Views\Home\TinTuc.cshtml" />
+    <Content Include="Views\Home\ChiTietTinTuc.cshtml" />
+    <Content Include="Views\Shared\GioHang.cshtml" />
+    <Content Include="Views\GioHang\Index.cshtml" />
+    <Content Include="Views\GioHang\NhapThongTin.cshtml" />
+    <Content Include="Views\GioHang\ThanhToan.cshtml" />
+    <Content Include="Views\Shared\Admin_Lauyout.cshtml" />
+    <Content Include="Views\Home\TimKiem.cshtml" />
+    <Content Include="Views\CNTT_DinhViet\Index.cshtml" />
+    <Content Include="Views\CNTT_DinhViet\ThemSp.cshtml" />
+    <Content Include="Views\CNTT_TrongTien\Index.cshtml" />
+    <Content Include="Views\Shared\Phong.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49583</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44332/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

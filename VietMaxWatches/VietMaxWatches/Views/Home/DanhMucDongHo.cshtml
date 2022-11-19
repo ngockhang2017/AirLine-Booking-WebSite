@@ -1,0 +1,125 @@
+﻿
+@{
+     ViewBag.Title = "DanhMucDongHo";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+     var danh_muc = ViewBag.DanhMuc;
+     var list_sanpham = ViewBag.SanPham;
+}
+
+<!--Image + Theme-->
+<div id="ctl00_plMainContainer_div_bg_large" class="gray-background before-content brand-img bg-watch-hot" style="background-image:url(/@danh_muc.Theme)">
+     <div class="container">
+          <div class="row">
+               <div class="hero">
+
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 margin-auto" style="margin-left: 150px;">
+                         <div id="brand-large-image" class="brand-large-image">
+                              <img src="/@danh_muc.Image" alt="đồng hồ nam">
+                         </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+               </div>
+               <div id="anchor-brands-top">
+               </div>
+          </div>
+     </div>
+</div>
+
+<!-- link -->
+<div class="breadcrumb-outer-container">
+     <div class="container">
+          <ul class="breadcrumb" style="width: 1090px;">
+               <li class="home">
+                    <a href="/Home/Index">Trang chủ</a>
+               </li>
+               <li class="category3">
+                    <strong>@danh_muc.TenDanhMuc</strong>
+               </li>
+          </ul>
+     </div>
+</div>
+
+<!-- list watch -->
+<div class="main-container-wrapper">
+     <div class="container no-intro">
+          <div class="layout layout-1-col layout-1-col-row">
+               <div role="main">
+                    <!-- heading -->
+                    <div class="brands-heading">
+                         <span class="title">
+                              <i class="strike"></i>
+                              @danh_muc.TenDanhMuc Nổi Bật
+                              <i class="strike"></i>
+                         </span>
+                    </div>
+                    <!-- list image of watch -->
+                    <div class="amshopby-page-container" id="amshopby-page-container">
+                         <div class="category-products">
+                              <div class="scroller-container">
+                                   <div class="row product-list scroller" id="product-appended">
+                                        @foreach (var item in list_sanpham)
+                                        {
+
+                                             <div class="product-container scroller-item">
+                                                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                                       <div class="product">
+                                                            <div class="slight-zoom-hover">
+                                                                 <!-- image watch -->
+                                                                 <div class="product-info">
+                                                                      <div class="image-constrainer">
+                                                                           <a href="/Home/ChiTietSanPham/@item.MaSanPham" title="@item.TenSanPham" class="product-image">
+                                                                                <img src="/@item.Anh" alt="@item.TenSanPham">
+                                                                           </a>
+                                                                      </div>
+                                                                      <h2 class="product-name" title="@item.TenSanPham">
+                                                                           <a href="/Home/ChiTietSanPham/@item.MaSanPham">
+                                                                                <span class="msp">Mã SP: @item.MaSanPham</span>
+                                                                                <br>
+                                                                                @item.TenSanPham
+                                                                           </a>
+                                                                      </h2>
+                                                                 </div>
+                                                                 <!-- price -->
+                                                                 <span class="product-price">@double.Parse(@item.Gia.ToString()).ToString("##,###") VNĐ</span>
+                                                                 <!-- button -->
+                                                                 <div class="buttons">
+                                                                      <a href="/Home/ChiTietSanPham/@item.MaSanPham" class="btn adjust btn-default btn-float btn-120">Chi tiết</a>
+                                                                      <a rel="nofollow" class="btn adjust btn-orange-basic btn-float btn-120 btn-nudge-back item_add" href="javascript:;" onclick="ThemGioHang(@item.MaSanPham)">Đặt hàng</a>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        }
+                                        
+
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+<script type="text/javascript">
+
+     function ThemGioHang(masp) {
+
+          $.ajax({
+               url: '/GioHang/ThemVaoGioHang/?id=' + masp + '&soLuong=' + 1 + '',
+               type: 'POST',
+               dataType: 'json',
+               success: function (data) {
+                    var json = JSON.parse(data);
+                    alert(json);
+                    window.location.reload();
+               },
+               error: function (err) {
+                    alert("Đã xảy ra lỗi" + err.responseText);
+               }
+          });
+     };
+</script>
+

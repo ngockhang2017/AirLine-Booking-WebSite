@@ -1,0 +1,771 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+
+/* -------Menu Header------- */
+
+#wp-menu-header {
+    color: #fff;
+    left: 0;
+    padding: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+#menu-header {
+    /* background: var(--bg-header); */
+    background: white none repeat scroll 0 0;
+    border-bottom: 4px solid #589f46;
+    box-shadow: 0 -35px 73px black;
+}
+
+#main-nav {}
+
+#main-nav>ul>li>a {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #4E4E50;
+    margin-right: 10px;
+}
+
+#main-nav>ul>li:hover>a {
+    background: #00305b none repeat scroll 0 0;
+    color: white;
+    border-radius: 2rem;
+}
+
+.dropdown-hd {
+    position: absolute;
+    background: #e1e1e1;
+    display: none;
+}
+
+.hd:hover .dropdown-hd {
+    display: block;
+}
+
+
+/* ============================================CONTENT===================================== */
+
+#wp-find-flight {
+    background-image: url("../img/bg_col.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1920px auto;
+    margin-top: 62px;
+    min-height: 603px;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+#find-flight {
+    left: 50%;
+    margin-left: -500px;
+    position: absolute;
+    top: 136px;
+    width: 1006px;
+}
+
+#find-header {
+    background: #589f46bf none repeat scroll 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+    width: 282px;
+    padding: 11px 19px 8px;
+    margin-top: 203px;
+    font-size: 23px;
+    color: #ffffff;
+}
+
+#find-content {
+    background: #4ebdec82 none repeat scroll 0px 0px;
+    padding: 0px 0px 160px;
+    border-radius: 0px 10px 10px;
+    position: relative;
+}
+
+#find-content-header {
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    position: absolute;
+    font-size: 21px;
+    font-weight: bold;
+    left: 291px;
+    top: -32px;
+}
+
+#find-content-header>a>img {
+    position: absolute;
+    margin-top: -150px;
+    right: -151px;
+}
+
+#find-content-header>p {
+    color: white;
+}
+
+#find-content-header>img {
+    position: absolute;
+    right: 456px;
+    margin-top: -198px;
+}
+
+#find-content-header>b {
+    position: absolute;
+    margin-top: -43px;
+    font-size: 18px;
+    right: -164px;
+    color: tomato;
+    text-shadow: 5px 2px 5px rgb(255, 255, 255);
+}
+
+#icon-switch-flight {
+    cursor: pointer;
+}
+
+
+/* Flight Type */
+
+.flightType {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    padding-left: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.flightType input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 5px;
+    left: 16px;
+    width: 15px;
+    height: 15px;
+    background: #eee;
+    border-radius: 50%;
+}
+
+.flightType:hover .checkmark {
+    background: #ccc;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.flightType .checkmark:after {
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 3px white;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.flightType input:checked~.checkmark {
+    background: #2196F3;
+}
+
+.flightType input:checked~.checkmark:after {
+    display: block;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    z-index: 1;
+}
+
+
+/* End Flight Type */
+
+#loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+/* search */
+
+.content {
+    float: left;
+    width: 100%;
+    margin-left: 16px;
+}
+
+.diemdi,
+.diemden {
+    float: left;
+    width: 225px;
+}
+
+.diemdi input,
+.diemden input {
+    width: 100%;
+    border: 0px none;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    text-indent: 0px;
+    font-size: 13px;
+    padding: 0px;
+    height: 23px;
+    background: rgb(255, 255, 255) url(../img/location.png) no-repeat scroll 180px 4px;
+}
+
+.block-text {
+    background-color: #fff;
+    border-radius: 5px;
+    color: #333;
+    display: inline-block;
+    height: 55px;
+    padding: 3px 15px 0;
+    position: relative;
+}
+
+.block-text>label {
+    color: #333;
+    line-height: 1em;
+    margin: 0;
+}
+
+#icon-switch-flight {
+    float: left;
+    width: 26px;
+    padding-top: 16px;
+    height: 49px;
+    margin-left: 11px;
+}
+
+.ngaydi,
+#ngayve {
+    float: left;
+    width: 225px;
+    margin-left: 22px;
+}
+
+.ngaydi input,
+#ngayve input {
+    border: 0px none;
+    font-weight: normal;
+    color: rgb(51, 51, 51);
+    text-indent: 0px;
+    font-size: 17px;
+    padding: 0px;
+    height: 23px;
+    width: calc(100% - 27px);
+}
+
+img.ui-datepicker-trigger {
+    padding: 33px 19px 11px 190px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.aut,
+.chd,
+.inf {
+    margin-top: 20px;
+    color: #000;
+    line-height: 19px;
+    margin-left: 0;
+    margin-top: 14px;
+    position: relative;
+    width: 226px;
+    float: left;
+}
+
+.aut>.block-text>label,
+.chd>.block-text>label,
+.inf>.block-text>label {
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.aut>.block-text>input,
+.chd>.block-text>input,
+.inf>.block-text>input {
+    border: 0px none;
+    font-weight: normal;
+    color: rgb(232, 65, 0);
+    text-indent: 0px;
+    padding: 0px;
+    height: 23px;
+    font-size: 28px;
+    width: calc(100% - 160px);
+    float: right;
+    margin-right: 60px;
+    margin-top: 8px;
+}
+
+.sign.plus {
+    background: #ffcb0b none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #333;
+    font-family: arial;
+    font-size: 25px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 32px;
+    position: absolute;
+    right: 8px;
+    cursor: pointer;
+    text-indent: 8px;
+    top: 10px;
+    width: 30px;
+    transition: background 0.2s ease-in-out 0s;
+}
+
+.sign.minus {
+    background: #ffcb0b none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #333;
+    cursor: pointer;
+    font-family: verdana;
+    font-size: 25px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 29px;
+    position: absolute;
+    right: 43px;
+    text-indent: 9px;
+    top: 10px;
+    transition: background 0.2s ease-in-out 0s;
+    width: 30px;
+}
+
+#searchForFlight {
+    background: #589f46 url(../img/6.png) no-repeat scroll 181px 18px;
+    border: 0 none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    height: 55px;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 210px;
+    padding: 0;
+    text-align: left;
+    text-indent: 20px;
+}
+
+#searchForFlight::after {
+    margin-left: 40px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f054";
+}
+
+
+/* san bay */
+
+.sanbay {
+    width: 600px;
+    min-height: 400px;
+    background-color: #e1e1e1;
+    padding: 5px;
+    position: absolute;
+    top: -120px;
+    top: 544px;
+    left: 444px;
+    display: none;
+    z-index: 100;
+}
+
+#content-inland li:hover,
+#content-oversea li:hover {
+    cursor: pointer;
+    color: coral;
+}
+
+.tittle-airport {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: #e94d1c;
+}
+
+.tittle-airport>i {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.tittle-airport>i:hover {
+    color: darkcyan;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e94d1c;
+}
+
+#searchList {
+    position: absolute;
+    background: #ffffff;
+    top: 103px;
+    right: 24px;
+    width: 300px;
+    height: 200px;
+    overflow-y: scroll;
+    display: none;
+}
+
+#searchList>ul>li:hover {
+    padding: 2px;
+    border: 1px solid red;
+    background: #e1e1e1;
+    cursor: pointer;
+    font-weight: bold;
+    color: #e94d1c;
+}
+
+
+/* Date time */
+
+#my-calendar {
+    width: 25%;
+    position: absolute;
+    top: 550px;
+    left: 955px;
+    background: #e1e1e1;
+}
+
+.tavo-calendar__day_abs-today {
+    background-color: #e1e1e1 !important;
+}
+
+.tavo-calendar__day_select span {
+    background-color: lightblue !important;
+    border-radius: 2rem !important;
+}
+
+.thang {
+    width: 20%;
+    position: absolute;
+    top: 550px;
+    left: 955px;
+    background: #e1e1e1;
+    display: none;
+}
+
+.tenthang {
+    color: #ffffff !important;
+}
+
+.ngaythang,
+.homnay {
+    font-size: 17px;
+}
+
+.ngaythang:hover,
+.homnay:hover {
+    background: #ffe45c;
+    cursor: pointer;
+}
+
+#btn-prev:hover,
+#btn-next:hover {
+    background: red;
+    border-radius: 50%;
+    padding: 6px 10px;
+}
+
+.disable {
+    opacity: .35;
+}
+
+.op-dayve {
+    opacity: .65;
+}
+
+
+/* date time */
+
+#datepicker {
+    position: absolute;
+    top: 544px;
+    left: 706px;
+    display: none;
+}
+
+.ui-state-highlight {
+    border: 1px solid #fed22f;
+    background: #ffe45c !important;
+}
+
+
+/* lunarr */
+
+.ui-datepicker .lunar-date {
+    text-align: right;
+    font-size: 75%;
+    line-height: 100%;
+    color: #B91E1E;
+    background: transparent !important;
+}
+
+.ui-datepicker .lunar-date-leap {
+    text-align: right;
+    font-size: 75%;
+    line-height: 100%;
+    color: #B91E1E;
+}
+
+.ui-datepicker .lunar-date-tet {
+    text-align: right;
+    font-size: 75%;
+    line-height: 100%;
+    color: #fff;
+    background: #B91E1E;
+}
+
+.ui-datepicker td span {
+    font-size: 13px;
+    font-weight: normal;
+    display: block;
+    padding: 0;
+    text-align: right;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ui-datepicker-day {
+    text-align: left!important;
+}
+
+td>a {
+    width: 3rem !important;
+}
+
+.ui-state-default {
+    text-align: left!important;
+    border: 1px solid #ccc;
+    font-weight: 700;
+    color: #1c94c4;
+}
+
+.ui-datepicker-inline.ui-datepicker.ui-widget {
+    width: 70em !important;
+}
+
+.lunar-depart {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ff6347;
+    position: absolute;
+    top: 545px;
+    left: 975px;
+}
+
+.lunar-return {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ff6347;
+    position: absolute;
+    top: 545px;
+    left: 1225px;
+}
+
+.popover {
+    max-width: 600px;
+    width: auto;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    background: #589f46;
+}
+
+
+/* end search */
+
+#introduce_flight {
+    /* background: red;
+    height: 1000px; */
+}
+
+
+/*================================FOOTER==================================*/
+
+#wp-footer {
+    background-color: #fff;
+    font-size: 14px;
+    border-top: 1px solid #a09c9c;
+}
+
+#wp-footer ul li {
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 5px;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+#wp-footer ul {
+    padding-left: 0px;
+}
+
+#wp-footer .footer_topic {
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+#wp-footer ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+#wp-footer ul li a:hover {
+    color: #00adef;
+}
+
+.code button {
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+.fade {
+    opacity: 1;
+}
+
+
+/* -----------------------Chữ nhấp nháy-------------------------------- */
+
+@-webkit-keyframes my {
+    0% {
+        color: red;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: red;
+    }
+}
+
+@-moz-keyframes my {
+    0% {
+        color: red;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: red;
+    }
+}
+
+@-o-keyframes my {
+    0% {
+        color: red;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: red;
+    }
+}
+
+@keyframes my {
+    0% {
+        color: red;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.coupon-text {
+    /* background: #3d3d3d; */
+    font-size: 24px;
+    font-weight: bold;
+    -webkit-animation: my 500ms infinite;
+    -moz-animation: my 500ms infinite;
+    -o-animation: my 500ms infinite;
+    animation: my 500ms infinite;
+}
+
+
+/* -------------------Thông tin hiện ẩn------------------ */
+
+@keyframes pause-between-iterations {
+    /* Other animation is visible for 25% of the time */
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    /* Other animation is hidden for 75% of the time */
+    25.1% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showhide_info {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#new_guest {
+    animation: showhide_info 2s infinite, pause-between-iterations 6s infinite;
+    /* animation-delay: 5s;
+    animation-name: showhide_info;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; */
+}

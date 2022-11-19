@@ -1,0 +1,214 @@
+﻿
+@{
+     ViewBag.Title = "Home Page";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+     var list_SanPham = ViewBag.list_SanPham;
+     var list_ThuongHieu = ViewBag.list_ThuongHieu;
+     var tintuc = ViewBag.tintuc;
+}
+
+<link href="~/CSS/media.css" rel="stylesheet" />
+<link href="~/CSS/style2.css" rel="stylesheet" />
+<link href="~/CSS/style3.css" rel="stylesheet" />
+<link href="~/CSS/jquery.carousel-3d.default.css" rel="stylesheet" />
+
+<script src="~/JS/jcarousel.brands.js"></script>
+<script src="~/JS/jquery.resize.js"></script>
+<script src="~/JS/jquery.waitforimages.js"></script>
+<script src="~/JS/modernizr.js"></script>
+<script src="~/JS/jquery.carousel-3d.js"></script>
+
+<!-- =====background image===== -->
+<div class="slides-outer-container" style="height: 516px;">
+
+     <div class="slides">
+          <div class="slide active" id="slide0" style="display:block; opacity:1;" data-slide-id="0">
+               <a href="#">
+                    <img src="../IMG/Main-Topic/2000-midseason-sale2020-1-.png" alt="Vietmax" class="back img-responsive">
+               </a>
+          </div>
+     </div>
+
+     <div class="slide-navigation">
+
+     </div>
+</div>
+
+<!-- =====content===== -->
+<div class="main-container"></div>
+<div class="container brands">
+     <!-- title: Đồng Hồ Hiệu -->
+     <div class="brands-heading hidden-xs">
+          <a href="dong-ho-hieu-nam-nu.aspx">
+               <span class="title">
+                    <i class="strike-long"></i>
+                    Đồng Hồ Hiệu
+                    <i class="strike-long"></i>
+               </span>
+          </a>
+     </div>
+     <!-- image brands -->
+     <div class="jcarousel-wrapper">
+          <div class="jcarousel" data-jcarousel="true">
+               <ul style="left: 0px; top: 0px;">
+                    @foreach (var item in list_ThuongHieu)
+                    {
+                         <li class="brand" style="width: 214px;">
+                              <div class="center">
+                                   <a title="@item.TenThuongHieu" href="/Home/DanhSachDongHo/@item.MaThuongHieu">
+                                        <img alt="@item.TenThuongHieu" class="img-responsive" src="../@item.Logo" />
+                                   </a>
+                              </div>
+                         </li>
+                    }
+               </ul>
+
+          </div>
+          <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">&nbsp;</a>
+          <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">&nbsp;</a>
+     </div>
+     <!-- show all -->
+     <div class="center">
+          <a href="/Home/DanhSachThuongHieu" class="btn btn-white btn-180">Xem tất cả</a>
+     </div>
+
+</div>
+
+<!-- show watches -->
+<div class="white-background">
+     <div class="container">
+          <div class="row">
+               <div class="col-xs-12">
+                    <div class="picks">
+                         <!-- header: San Pham Moi -->
+                         <div class="brands-heading">
+                              <span class="title">
+                                   <i class="strike hidden-xs"></i>
+                                   Sản phẩm mới
+                                   <i class="strike hidden-xs"></i>
+                              </span>
+                         </div>
+                         <!-- show watches -->
+                         <div class="jcarousel-wrapper">
+                              <div class="jcarousel" data-jcarousel="true" data-jcarouselautoscroll="true">
+                                   <!-- list watches show -->
+
+                                   <ul class="product-list">
+                                        @foreach (var item in list_SanPham)
+                                        {
+                                             <li class="product" style="width: 280px;">
+                                                  <div class="slight-zoom-hover">
+
+                                                       <div class="product-info">
+                                                            <!-- image -->
+                                                            <div class="image-constrainer">
+                                                                 <a class="product-image" href="/Home/ChiTietSanPham/@item.MaSanPham">
+                                                                      <img src="/@item.Anh" alt="@item.MaThuongHieu" class="img-responsive">
+                                                                 </a>
+                                                            </div>
+                                                            <!-- information of watch -->
+                                                            <h2 class="product-name">
+                                                                 <a href="/Home/ChiTietSanPham/@item.MaSanPham" title="@item.MaThuongHieu" style="text-decoration:none;">
+                                                                      <span class="msp">MSP: @item.MaSanPham</span>
+                                                                      <br>@item.TenSanPham
+                                                                 </a>
+                                                            </h2>
+                                                       </div>
+
+                                                       <!-- price -->
+                                                       <span class="product-price">@double.Parse(@item.Gia.ToString()).ToString("##,###") VNĐ</span>
+                                                       <!-- button of watch -->
+                                                       <div class="buttons">
+                                                            <a href="/Home/ChiTietSanPham/@item.MaSanPham" class="btn adjust btn-default btn-float btn-120">Chi tiết</a>
+                                                            <a rel="nofollow" class="btn adjust btn-orange-basic btn-float btn-120 btn-nudge-back item_add" href="javascript:;" onclick="ThemGioHang(@item.MaSanPham)">Đặt hàng</a>
+                                                       </div>
+                                                  </div>
+                                             </li>
+                                        }
+
+                                   </ul>
+                              </div>
+                              <!-- con tro dieu huong -->
+                              <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">&nbsp;</a>
+                              <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">&nbsp;</a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+<!-- Tin Tuc -->
+<div class="white-background">
+     <div class="container">
+          <!-- content -->
+          <div class="pods row">
+               <!-- Tin Tuc -->
+               <div class="col-xs-12">
+                    <div class="brands-heading picks" style="padding-top:0px;">
+                         <span class="title">
+                              <i class="strike hidden-xs"></i>
+                              <a href="/Home/TinTuc">Tin tức</a>
+                              <i class="strike hidden-xs"></i>
+                         </span>
+                    </div>
+               </div>
+               <!-- information of watch -->
+               @foreach (var item in tintuc)
+               {
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                         <div class="pod pod-showrooms">
+                              <!-- image -->
+                              <div class="pod-table">
+                                   <div class="pod-row">
+                                        <div class="pod-title">
+                                             <img src="/@item.Anh" alt="Army watch">
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- information -->
+                              <div class="pod-info">
+                                   <h2 class="heading">@item.TieuDe</h2>
+                                   <div>
+                                        <span class="ndate">@item.NgayTao</span>
+                                        <span class="nauthor">@item.NguoiTao</span>
+                                   </div>
+                                   <div class="content">
+                                        @item.NoiDung
+                                   </div>
+                              </div>
+                              <!-- button: Chi Tiet  -->
+                              <div class="center">
+                                   <a class="btn btn-default btn-read-more btn-130" href="/Home/ChiTietTinTuc/@item.MaNguonTin">Chi tiết</a>
+                              </div>
+                         </div>
+                    </div>
+               }
+
+          </div>
+          <!-- lien he -->
+          <div class="center mar-t-40">
+               <a href="/Home/LienHe" class="btn btn-white btn-180">Liên hệ</a>
+          </div>
+     </div>
+</div>
+
+<script type="text/javascript">
+
+     function ThemGioHang(masp) {
+
+          $.ajax({
+               url: '/GioHang/ThemVaoGioHang/?id=' + masp + '&soLuong=' + 1 + '',
+               type: 'POST',
+               dataType: 'json',
+               success: function (data) {
+                    var json = JSON.parse(data);
+                    alert(json);
+                    window.location.reload();
+               },
+               error: function (err) {
+                    alert("Đã xảy ra lỗi" + err.responseText);
+               }
+          });
+     };
+</script>

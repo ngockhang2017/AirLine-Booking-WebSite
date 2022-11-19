@@ -1,0 +1,103 @@
+.gray-background {
+    background-color: #efecea;
+    overflow:hidden;
+}
+.brand-img {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.hero .brand-logo {
+    max-width: 210px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.hero .brand-logo img{
+    opacity: 0.8;
+    border-radius:4px;
+    padding:4px;
+    background-color:#fff;
+}
+.hero .short-description {
+    padding: 20px;
+    padding-bottom: 0px;
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.8em;
+    color:#fff;
+}
+.col-md-3 {
+    width: 25%;
+}
+.col-lg-3 {
+    width: 25%;
+}
+.col-md-9 {
+    width: 75%;
+}
+.col-lg-9 {
+    width: 75%;
+}
+.brand-large-image {
+    text-align: center;
+    background-image: url(/IMG/bg_brand.png);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 3.7%;
+}
+.brand-large-image img {
+    padding: 0;
+    margin: 0 auto;
+}
+.no-intro .layout {
+    padding-top: 30px;
+}
+.layout.layout-1-col div[role="main"] {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.amshopby-page-container ol li span, .amshopby-page-container ol li span:hover, .pager .pages ol > li > a, .pager .pages ol > li > span {
+	background: transparent !important;
+	color: black !important;
+	font-size: 14px !important;
+	font-weight: 300 !important;
+	border: none !important;
+}
+
+.amshopby-page-container ol li.active span, .amshopby-page-container ol li.active span:hover, .pager .pages ol > li.active > a, .pager .pages ol > li.active > span {
+	font-weight: 700 !important;
+}
+
+.breadcrumb-outer-container {
+    padding: 8px;
+    background-color: #e2deda;
+}
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+.breadcrumb > li {
+    display: inline-block;
+}
+.breadcrumb > li + li:before {
+    content: "/\00a0";
+    padding: 0 5px;
+    color: #cccccc;
+}
+.breadcrumb > .active {
+    color: #999999;
+}
+.breadcrumb strong {
+    font-weight: normal;
+    color: #999999;
+}

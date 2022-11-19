@@ -1,0 +1,45 @@
+﻿
+@{
+     ViewBag.Title = "Index";
+     Layout = "~/Areas/Admin/Views/Shared/AdminMaster.cshtml";
+}
+
+@using VietMaxWatches.Models
+@model List<VietMaxWatches.Models.ThuongHieuSanPham>
+<link href="~/Content/dataTables.bootstrap.css" rel="stylesheet" />
+<h1 class="page-header">
+     <a href="/Admin/QLHang/ThemHang" class="btn btn-outline btn-primary">Thêm</a>
+</h1>
+<div class="dataTable_wrapper">
+     <table class="table table-striped table-bordered table-hover" id="table">
+          <thead>
+               <tr>
+                    <th>#</th>
+                    <th>Tên</th>
+                    <th>Sửa</th>
+                    <th>Xóa</th>
+               </tr>
+          </thead>
+          <tbody>
+
+               @foreach (var item in Model)
+               {
+                    <tr class="even gradeA">
+                         <td>@item.MaThuongHieu</td>
+                         <td>@item.TenThuongHieu</td>
+
+                         <td><a href="/Admin/QLHang/SuaHang/@item.MaThuongHieu" class="btn btn-outline btn-primary">Sửa</a></td>
+                         <td><a href="/Admin/QLHang/XoaHang/@item.MaThuongHieu" class="btn btn-outline btn-primary">Xóa</a></td>
+                    </tr>
+
+               }
+          </tbody>
+     </table>
+</div>
+
+@*<script src="~/Scripts/jquery-1.10.2.js"></script>
+     <script src="~/Scripts/bootstrap.min.js"></script>
+
+     <script src="~/Scripts/sb-admin-2.js"></script>*@
+
+

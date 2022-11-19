@@ -1,0 +1,61 @@
+﻿@{
+     ViewBag.Title = "Index";
+     Layout = "~/Areas/Admin/Views/Shared/AdminMaster.cshtml";
+     Entities shop = new Entities();
+}
+@using VietMaxWatches.Models
+@model List<VietMaxWatches.Models.SanPham>
+<link href="~/Content/dataTables.bootstrap.css" rel="stylesheet" />
+<h1 class="page-header">
+     <a href="/Admin/QLSanPham/ThemSp" class="btn btn-outline btn-primary">Thêm</a>
+</h1>
+<div class="dataTable_wrapper">
+     <table class="table table-striped table-bordered table-hover" id="table">
+          <thead>
+               <tr>
+                    <th>#</th>
+                    <th>Tên </th>
+                    <th>Thương Hiệu</th>
+                    <th>Ảnh</th>
+                    <th>Số lượng</th>
+                    <th>Giá Ưu đãi</th>
+                    <th>Giá</th>
+                    <th>Sửa</th>
+                    <th>Xóa</th>
+               </tr>
+          </thead>
+          <tbody>
+
+               @for (int i = 0; i < Model.Count; i++)
+               {                    
+                    <tr class="even gradeA">
+                         <td>@Model[i].MaSanPham</td>
+                         <td>@Model[i].TenSanPham</td>
+                         <td>@Model[i].ThuongHieuSanPham.TenThuongHieu</td>
+                         <td><img src="/@Model[i].Anh" style="width: 50px; height: 50px;" /></td>
+                         <td>@Model[i].SoLuong</td>
+                         <td>@Model[i].GiaUuDai</td>
+                         <td>@Model[i].Gia</td>
+                         <td><a href="/Admin/QLSanPham/SuaSp/@Model[i].MaSanPham" class="btn btn-outline btn-primary">Sửa</a></td>
+                         <td><a href="/Admin/QLSanPham/XoaSp/@Model[i].MaSanPham" class="btn btn-outline btn-primary">Xóa</a></td>
+                    </tr>
+                    @*}
+                    else
+                    {
+                         <tr class="odd gradeA">
+                              <td>@Model[i].MaSanPham</td>
+                              <td>@Model[i].TenSanPham</td>
+                              <td>@Model[i].ThuongHieuSanPham.TenThuongHieu</td>
+                              <td><img src="/@Model[i].Anh" style="width: 50px; height: 50px;" /></td>
+                              <td>@Model[i].SoLuong</td>
+                              <td>@Model[i].GiaUuDai</td>
+                              <td>@Model[i].Gia</td>
+                              <td><a href="/QLSanPham/SuaSp/@Model[i].MaSanPham" class="btn btn-outline btn-primary">Sửa</a></td>
+                              <td><a href="/QLSanPham/XoaSp/@Model[i].MaSanPham" class="btn btn-outline btn-primary">Xóa</a></td>
+                         </tr>
+                    }*@
+               }
+          </tbody>
+     </table>
+</div>
+

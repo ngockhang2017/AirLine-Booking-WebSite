@@ -1,0 +1,854 @@
+﻿
+@{
+     ViewBag.Title = "ChiTietTinTuc";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+     var tintuc = ViewBag.tintuc;
+}
+
+     <link href="~/CSS/media.css" rel="stylesheet" />
+     <link href="~/CSS/style3.css" rel="stylesheet" />     
+     <link href="~/CSS/style2.css" rel="stylesheet" />
+
+
+<!-- link -->
+<div class="breadcrumb-outer-container">
+     <div class="container">
+          <ul class="breadcrumb">
+               <li class="home">
+                    <a href="/Home/Index">Trang chủ</a>
+               </li>
+               <li class="category3">
+                    <strong>Chi Tiết Tin Tức</strong>
+               </li>
+          </ul>
+     </div>
+</div>
+
+<!-- Content -->
+<div class="main-container-wrapper">
+     <div class="container no-intro">
+          <!-- Chu de -->
+          <div class="vc_row-flex ">
+               <!-- Image -->
+               <div class="vc_col-sm-6">
+                    <img src="/@tintuc.Anh" alt="@tintuc.TieuDe">
+               </div>
+               <!-- Description -->
+               <div class="vc_col-sm-6">
+                    <div class="imagetext__title">
+                         <!-- Tieu De -->
+                         <h1 class="imagetext__header">
+                              @tintuc.TieuDe
+                         </h1>
+                         <!-- NgayTao + NguoiTao -->
+                         <div>
+                              <span class="ndate">@tintuc.NgayTao,</span>
+                              <span class="nauthor">  @tintuc.NguoiTao</span>
+                         </div>
+                         <!-- Noi Dung -->
+                         <p>
+                              @tintuc.NoiDung
+                         </p>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Content -->
+          <div class="row">
+               <div class="text-block__content">
+                    <div class="post-view">
+                         <style type="text/css">
+                              a {
+                                   color: inherit;
+                              }
+
+                              h2 {
+                                   color: #9b773b;
+                              }
+
+                              .col-4 {
+                                   float: none;
+                                   width: 100%;
+                                   border: 1px solid#000000;
+                                   border-style: dotted;
+                                   padding: 5px;
+                                   margin: 0px;
+                                   background: #f3f3f3;
+                                   text-align: left;
+                                   padding-inline-start: 3%;
+                              }
+
+                              #toc {
+                                   background: #f3f3f3;
+                                   padding: 5px;
+                                   font-size: 15px;
+                                   text-align: left;
+                                   line-height: 100%;
+                                   margin-left: 0;
+                                   color: blue;
+                              }
+
+                                   #toc ul li {
+                                        list-style-type: circle;
+                                        padding: 5px;
+                                   }
+
+                                   #toc > ul > ul > li {
+                                        margin-left: 0;
+                                   }
+
+                                   #toc ul li a {
+                                        text-decoration: none;
+                                        margin-left: 0;
+                                   }
+                         </style>
+
+                         <!-- Muc Luc -->
+                         <div class="col-4">
+                              <h3>MỤC LỤC</h3>
+                              <button onclick="showML()">Ẩn</button>
+                              <div id="toc">
+                                   &nbsp;
+                                   <ul>
+                                        <ul>
+                                             <li>
+                                                  <a href="#NHUNGCUOCDOIDAUSAILAM">NHỮNG CUỘC ĐỐI ĐẦU SAI LẦM</a>
+                                             </li>
+                                             <li>
+                                                  <a href="#DEDOADOUYTIN">ĐE DỌA ĐỘ UY TÍN</a>
+                                             </li>
+                                             <li>
+                                                  <a href="#CUHITTOURBILLONnbsp">CÚ “HIT” TOURBILLON&nbsp;</a>
+                                             </li>
+                                             <li>
+                                                  <a href="#SUXAUHOKHICHIENTHANG">SỰ XẤU HỔ KHI CHIẾN THẮNG</a>
+                                             </li>
+                                             <li>
+                                                  <a href="#VANHOICUOICUNGVACAIKETnbsp">VÃN HỒI CUỐI CÙNG VÀ CÁI KẾT&nbsp;</a>
+                                             </li>
+                                        </ul>
+                                   </ul>
+                              </div>
+                         </div>
+
+                         <script>
+                            function showML() {
+                                var x = document.getElementById("toc");
+                                if (x.style.display === "none") {
+                                    x.style.display = "block";
+                                } else {
+                                    x.style.display = "none";
+                                }
+                            }
+                            $(document).on('click', 'a[href^="#"]', function(e) {
+                                var id = $(this).attr('href');
+                                var $id = $(id);
+                                if ($id.length === 0) {
+                                    return;
+                                }
+                                e.preventDefault();
+                                var pos = $id.offset().top;
+                                $('body, html').animate({scrollTop: pos},1000);
+                            });
+                            document.addEventListener('DOMContentLoaded', function() {
+                                TableOfContents();
+                            });
+                            function deletespace(str){
+                                str = str.replace(/\s+/g, ' ');
+                                return str.trim();
+                            }
+                            function deletenotbumber(str){
+                                return str.replace(/[^0-9a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ\s]/gi, '');
+                            }
+                            function deletedau(str) {
+                                str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+                                str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+                                str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+                                str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+                                str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+                                str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+                                str = str.replace(/đ/g, "d");
+                                str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
+                                str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
+                                str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
+                                str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
+                                str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
+                                str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
+                                str = str.replace(/Đ/g, "D");
+                                return str;
+                            }
+                            function full_xu_ly(str){
+                                str = deletespace(str);
+                                str = deletenotbumber(str);
+                                str = deletedau(str);
+                                return str;
+                            }
+                            function TableOfContents(container, output) {
+                                var toc = "";
+                                var level = 0;
+                                var container = document.querySelector(container) || document.querySelector('.post-view');
+                                var output = output || '#toc';
+
+                                container.innerHTML =
+                                container.innerHTML.replace(/<h([\d])>\s+<span style="font-size:\s+\d\dpt;">([^<]+)<\/span><\/h([\d])>/gi,function (str, openLevel, titleText, closeLevel) {
+                                        if (openLevel != closeLevel) {
+                                            return str;
+                                        }
+                                        if (openLevel > level) {
+                                            toc += (new Array(openLevel - level + 1)).join('<ul>');
+                                        } else if (openLevel < level) {
+                                            toc += (new Array(level - openLevel + 1)).join('</li></ul>');
+                                        } else {
+                                            toc += (new Array(level+ 1)).join('</li>');
+                                        }
+                                        level = parseInt(openLevel);
+                                        var anchor = full_xu_ly(titleText.replace(/ /g, "_"));
+                                        toc += '<li><a href="#' + anchor + '">' + titleText
+                                            + '</a>';
+
+                                        return '<h' + openLevel + '  id="' + anchor + '">'
+                                            + titleText + '</h' + closeLevel + '>';
+                                    }
+                                );
+                                if (level) {toc += (new Array(level + 1)).join('</ul>');}
+                                document.querySelector(output).innerHTML += toc;
+                            };
+                         </script>
+
+                         <!-- Noi dung Chinh -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">&nbsp;</p>
+                         <!-- Doan 1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-136ac2f3-7fff-2649-755c-a82bc7abc66d">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Sự sụp đổ của các cuộc thi chronometry vào năm 2019 được đánh dấu bằng lần tổ chức cuối cùng của Concours International de Chronométrie (cuộc thi dành cho độ chính xác của đồng hồ Swiss Made diễn ra 2 năm một lần, bắt đầu từ năm 2009). Cột mốc này là thứ vũ khí cuối cùng giết chết tư tưởng rằng đồng hồ là một công cụ thiết thực và nhất định phải hiển thị thời gian chính xác thì mới thực sự hữu dụng.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">&nbsp;</p>
+                         <!-- Doan 2 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-136ac2f3-7fff-2649-755c-a82bc7abc66d">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Bằng việc loại bỏ các đánh giá khoa học và những yếu tố đã từng quyết định nên giá trị của đồng hồ, sự tôn sùng
+                                   </span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Haute Horlogerie
+                                   </span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        đã trở nên thuần túy hơn bao giờ hết - củng cố định nghĩa nguyên bản của một chiếc đồng hồ có linh hồn, được sinh ra từ niềm đam mê, truyền thống và uy tín.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">&nbsp;</p>
+                         <!-- Doan 3 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-136ac2f3-7fff-2649-755c-a82bc7abc66d">
+                                   <span style="font-size: 12pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        <a href="https://luxshopping.vn/kien-thuc-dong-ho/do-chinh-xac-dong-ho-chuong-2--su-troi-day-va-suy-tan-84514.aspx" target="_blank">
+                                             <span style="color:#9b773b;">
+                                                  Các cuộc thử nghiệm về độ chính xác đồng hồ bắt nguồn từ Geneva vào năm 1879
+                                             </span>
+                                        </a>
+                                   </span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        , khi người đứng đầu đài thiên văn Geneva - Giáo sư Plantamour đưa ra một quy trình thử nghiệm đánh giá độ chính xác đồng hồ ở các vị trí và nhiệt độ khác nhau mà người dùng có thể gặp phải khi đeo hằng ngày. Rất nhanh sau đó, các đài thiên văn trở thành nơi có ảnh hưởng đến thời đại của đồng hồ dân dụng, quyết định tính hữu dụng và giá trị của những chiếc đồng hồ xa xỉ. Các ông trùm người Mỹ như James Ward Packard, Henry Graves Jr và Pierpont Morgan đã duy trì và đảm bảo cho các tác phẩm đạt đánh giá cao nhất.
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">&nbsp;</p>
+                         <!-- Image 1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        <img alt="Một chiếc đồng hồ bỏ túi chronograph split-seconds của Longines đã được thử nghiệm tại Đài thiên văn Neuchatel Observatory" src="/IMG/news/2020-patek-philippe-5303r-001-minute-repeater-tourbillon-4-1536x1024.png" style="width: 100%; height: 100%;">
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span style="font-size:8px;">
+                                   &nbsp;
+                                   &nbsp;
+                              </span>
+                         </p>
+                         <!-- Chu thich Image 1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span style="background-color: transparent; color: rgb(102, 102, 102); font-family: Arial; font-size: 11pt; font-style: italic; white-space: pre-wrap;">
+                                   — Một chiếc đồng hồ bỏ túi chronograph split-seconds của Longines đã được thử nghiệm tại Đài thiên văn Neuchatel Observatory vào năm 1968; chiếc đồng hồ này từng thuộc về Jean Pitallier, cựu chủ tịch của Liên đoàn Đạp xe Pháp (FFC)
+                              </span>
+                         </p>
+                         <!-- Doan 4 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-307e6ed5-7fff-e824-9cf3-73d97053b2f3">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Bất chấp sự ra đời của <strong>đồng hồ đeo tay</strong>, Đài thiên văn Neuchâtel Observatory vẫn duy trì các cuộc thi cho đến năm 1968, khi các thương hiệu Nhật Bản tham gia và càn quét các bảng xếp hạng của Thụy Sĩ. Năm 1972, đại diện của các CEO thương hiệu đồng hồ Thụy Sĩ đã kiến nghị với Bộ trưởng René Meylan loại bỏ sự tham gia của các nhà sản xuất Nhật Bản ra khỏi các viện đánh giá Thụy Sĩ.
+                                        &nbsp;
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan 5 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-307e6ed5-7fff-e824-9cf3-73d97053b2f3">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Khi kiến nghị này bị phủ nhận, các nhà sản xuất đồng hồ Thụy Sĩ đã tẩy chay các cuộc thử nghiệm. Một năm sau đó,
+                                   </span>
+                                   <span style="font-size: 12pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        <a href="https://luxshopping.vn/tin-tuc/5-dieu-ban-can-biet-ve-cosc-36059.aspx" target="_blank">
+                                             <span style="color:#9b773b;">
+                                                  Contrôle Officiel Suisse des Chronomètres (COSC)
+                                             </span>
+                                        </a>
+                                   </span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        được thành lập, hợp nhất tất cả các thử nghiệm đồng hồ Thụy Sĩ nhưng áp dụng các tiêu chuẩn ít nghiêm ngặt hơn. COSC vẫn là cơ quan kiểm tra hàng đầu trong ngành sản xuất đồng hồ hiện nay.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan 6 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-307e6ed5-7fff-e824-9cf3-73d97053b2f3">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Trong khi đó, Đài thiên văn Neuchâtel Observatory vẫn tiếp tục đánh giá đồng hồ đeo tay và công bố kết quả cho đến năm 1976, tựa như một sự níu kéo vô vọng. Sự thật thì đồng hồ quartz đã, đang và sẽ luôn vượt trội hơn đồng hồ cơ về độ chính xác và độ tin cậy. Vì vậy mà việc duy trì các cuộc thi là vô nghĩa. Thực ra thì bộ máy quartz cũng đã góp phần giải phóng
+                                   </span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        đồng hồ cơ Thụy Sĩ
+                                   </span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        khỏi những khuôn khổ của sự chính xác, cho phép nó được định nghĩa lại như một sản phẩm sang trọng, xa xỉ và thuần túy. Với thế giới độc quyền về đồng hồ xa xỉ, ngành sản xuất đồng hồ Thụy Sĩ vẫn luôn không ngừng phát triển và khẳng định đế chế không thể lay chuyển.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">&nbsp;</p>
+                         <!-- Image 2 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        <img alt="đồng hồ xa xỉ Thụy Sĩ" src="/IMG/news/anh-bia-hublot-big-bang-millennial-pink.png" style="width: 100%; height: 100%;">
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Phan I -->
+                         <h2 id="NHUNGCUOCDOIDAUSAILAM">NHỮNG CUỘC ĐỐI ĐẦU SAI LẦM</h2>
+                         <!-- Doan I..1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-2fb49d84-7fff-b241-12e8-b00ea9aa5508">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Rất lâu sau đó, vào năm 2009, bảng tàng horological nhỏ nhưng đáng kính của Le Locle bất ngờ lội ngược dòng lịch sử bằng cách thông báo họ sẽ kỷ niệm 150 năm với sự tái hiện các cuộc thi trong quá khứ trước thềm thế kỷ 21 -
+                                   </span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Concours International de Chronométrie
+                                   </span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        . Bảo tàng Musée d’Horlogerie du Locle đã mời các thương hiệu đồng hồ, nhà sản xuất bộ máy, trường đào tạo và các tư nhân tham gia một cuộc thi tính giờ dựa trên điểm, được thiết kế để kiểm tra sai số và độ chính xác cho đồng hồ của họ.
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan I..2 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-2fb49d84-7fff-b241-12e8-b00ea9aa5508">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Đó có thể là một ý tưởng điên rồ. Ngành công nghiệp đồng hồ Thụy Sĩ luôn có một sự liên kết nhất định giữa các thương hiệu tựa như một tập đoàn to lớn, họ đều phản đối sự cạnh tranh, trừ phi sự cạnh tranh đó có thể chi phối và chỉ huy giá bán lẻ cao nhất. Việc phân loại đồng hồ theo độ chính xác của chúng sẽ làm đảo lộn hệ thống phân cấp thương hiệu, vốn quen thuộc với những ai đam mê đồng hồ ở bất kỳ thời đại nào.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan I..3 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-2fb49d84-7fff-b241-12e8-b00ea9aa5508">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Nói một cách đơn giản, trong số các thương hiệu đồng hồ xa xỉ, những tên tuổi lẫy lừng như Vacheron Constantin, Audemars Piguet hay Jaeger-LeCoultre phải nằm sau Patek Philippe. Trong số những thương hiệu đồng hồ sang trang trọng và phổ biến hơn, OMEGA và Breitling xếp sau Rolex. Bên cạnh đó, các thương hiệu đồng hồ trang sức phải nhường ngôi cho Cartier.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">&nbsp;</p>
+                         <!-- Image I..1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        <img alt="bộ máy đồng hồ cơ patek philippe" src="/IMG/news/anh-bia-zenith-defy-el-primero-21-pink.png" style="width: 100%; height: 100%;">
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">&nbsp;</p>
+                         <!-- Doan I..4 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span style="background-color: transparent; font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                   Chronometrie 2009
+                              </span>
+                              <span style="background-color: transparent; font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                   gồm 3 bài kiểm tra đánh giá xếp hạng COSC kéo dài 16 ngày với với những chiếc đồng hồ đã qua nâng cấp, thực hiện theo tiêu chuẩn ISO 3159 trong các phòng thí nghiệm khác nhau. Giữa thử nghiệm thứ hai và thứ ba, đồng hồ phải chịu được va đập và từ trường. Các bài kiểm tra về cơ bản xác định
+                              </span>
+                              <strong>
+                                   <span style="background-color: transparent; font-size: 12pt; font-family: Arial; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        <a href="https://luxshopping.vn/kien-thuc-dong-ho/sai-so-dong-ho--nhung-dieu-co-ban-ma-ban-nen-biet-81317.aspx" target="_blank">
+                                             <span style="color:#9b773b;">
+                                                  sai số của đồng hồ
+                                             </span>
+                                        </a>
+                                   </span>
+                              </strong>
+                              <span style="background-color: transparent; font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                   : sai số tăng hay giảm bao nhiêu trong một ngày (accuracy) và sự ổn định của sai số đó (precision) ở các vị trí tĩnh và trong điều kiện nhiệt độ khác nhau. Bất kỳ chiếc đồng hồ nào không đạt đủ 7 tiêu chí trong mỗi thử nghiệm đều bị loại bỏ.
+                                   &nbsp;
+                                   &nbsp;
+                              </span>
+                         </p>
+                         <!-- Phan II -->
+                         <h2 id="DEDOADOUYTIN">ĐE DỌA ĐỘ UY TÍN</h2>
+                         <!-- Doan II..1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-1e5e45d4-7fff-8213-8a4e-517d3aa9ed87">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Bước vào cuộc thi mang lại rủi ro rất lớn - chỉ một người chiến thắng duy nhất, còn lại đều là người thua cuộc. Trong một ngành công nghiệp mà phần lớn thương hiệu đều quảng cáo chiếc đồng hồ mỏng nhất, phức tạp nhất, độc đáo nhất, hoàn thiện tốt nhất, lặn sâu nhất hoặc thậm chí là chính xác nhất thì một bài kiểm tra khách quan và độc lập như vậy dường như khá không cần thiết.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan II..2 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-1e5e45d4-7fff-8213-8a4e-517d3aa9ed87">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Quan trọng nhất, nếu không giành được chiến thắng sẽ phá hủy hình ảnh của thương hiệu, đặc biệt là khi bị bại dưới tay của một thương hiệu có đẳng cấp thấp hơn. Chiến thắng cũng sẽ chẳng có gì vinh quang. Nó sẽ gây nhầm lẫn cho cho các khách hàng mới - những người vẫn còn canh cánh về độ chính xác đồng hồ. Bạn biết đấy, đối với khách hàng mong đợi nhiều ở độ chính xác sẽ vĩnh viễn không thể hài lòng, bởi độ chính xác không bao giờ là tuyệt đối. Tất cả đồng hồ đều chạy nhanh hoặc chậm hơn thời gian thực.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan II..3 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-1e5e45d4-7fff-8213-8a4e-517d3aa9ed87">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Chronometrie 2009
+                                   </span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        có vẻ là một nhiệm vụ bất khả thi, nhưng các nhà tổ chức cho rằng họ biết cách xoa dịu những lo lắng của các thương hiệu bằng việc chỉ công bố người chiến thắng trong mỗi hạng mục. Kết quả sẽ được giữ bí mật. Nhật Bản và Mỹ sẽ không được tham gia. Tính công khai sẽ giảm xuống mức tối thiểu. Không truyền thông, không báo chí.
+                                        &nbsp;
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan II..4 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-1e5e45d4-7fff-8213-8a4e-517d3aa9ed87">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Ban tổ chức biết rằng nếu họ thu hút được một thương hiệu thực sự có uy tín, họ có thể dựa vào bản năng bầy đàn của ngành công nghiệp <strong>đồng hồ Swiss Made</strong> để những thương hiệu khác tham gia. Nhưng các thương hiệu hạng A như Patek Philippe, Vacheron Constantin, Breguet, Rolex, OMEGA cũng như nhiều thương hiệu khác cảm thấy khả năng thất bại khá lớn mà lựa chọn tránh xa.
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Phan III -->
+                         <h2 id="CUHITTOURBILLONnbsp">CÚ “HIT” TOURBILLON&nbsp;</h2>
+                         <!-- Doan III..1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-1e5e45d4-7fff-8213-8a4e-517d3aa9ed87">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Ánh sáng le lói trong Chronometrie 2009 bắt đầu là khi Jaeger-LeCoultre đồng ý tham gia. Điều này đã dẫn đến Audemars Piguet, Chopard và 13 thí sinh khác, đáng chú ý còn có Zenith, FP Journe và Greubel Forsey. Chronometrie 2009 một cách miễn cưỡng đã được tiến hành. Và phải mất bốn mùa tổ chức nữa trước khi bị khai tử.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan III..2 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-1e5e45d4-7fff-8213-8a4e-517d3aa9ed87">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Hai cuộc thi đầu tiên đã tạo ra một bất ngờ:
+                                   </span>
+                                   <strong>
+                                        <span style="font-size: 12pt; font-family: Arial; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                             <a href="https://luxshopping.vn/kien-thuc-dong-ho/tong-quan-ve-tinh-nang-tourbillon-cua-dong-ho-co-cao-cap-66854.aspx" target="_blank">
+                                                  <span style="color:#9b773b;">
+                                                       đồng hồ tourbillon
+                                                  </span>
+                                             </a>
+                                        </span>
+                                   </strong>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        đã chiến thắng.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">&nbsp;</p>
+                         <!-- Doan III..3 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-1e5e45d4-7fff-8213-8a4e-517d3aa9ed87">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Vào năm 2009, Master Tourbillon của Jaeger-LeCoultre đã ngoạn mục về nhất với 909 điểm trên thang 1000. Trớ trêu thay, bằng một cách vi diệu nào đó mà người ta đã sớm nhận ra chiếc đồng hồ về nhì vẫn là Jaeger-LeCoultre với Gyrotourbillon đa trục cực kỳ phức tạp và chỉ thua 1 điểm với 908 điểm. Để chấm dứt những lời dị nghị, ông Karl-Friedrich Scheufele đã ân cần xác nhận tin rò rỉ rằng chiếc đồng hồ tourbillon L.U.C 16/1906 của Chopard đã đứng thứ ba với 906 điểm. (Rò rỉ tin tức vẫn tiếp tục cho đến khi vị phóng viên may mắn kia có thể xếp hạng tất cả các thí sinh.)
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">&nbsp;</p>
+                         <!-- Image III..1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        <img alt="Gyrotourbillon, một ví dụ đã ghi được 908 điểm tại Chronometrie 2009" src="/IMG/news/banner-dong-ho-omega-seamaster-300m-james-bond-platinum-gold-numbered-edition.png" style="width: 100%; height: 100%;">
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span style="font-size:8px;">
+                                   &nbsp;
+                                   &nbsp;
+                              </span>
+                         </p>
+                         <!-- Chu Thich Image III..1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span style="background-color: transparent; color: rgb(67, 67, 67); font-family: Arial; font-size: 11pt; font-style: italic; white-space: pre-wrap;">
+                                   — Gyrotourbillon, một ví dụ đã ghi được 908 điểm tại Chronometrie 2009
+                              </span>
+                         </p>
+                         <!-- Doan III..4 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-f9696048-7fff-3bdf-6d94-c25ddf57611a">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Tiết lộ rằng tourbillon thực sự nâng cao hiệu suất của một chiếc đồng hồ đã gây ra một cú sốc lớn, dẫn đến nhiều sự tranh cãi trong lĩnh vực chế tạo đồng hồ truyền thống. Nhiều người cho rằng tourbillon vẫn chỉ nên là một tính năng đại diện cho tinh hoa và nghệ thuật, việc trở nên “có ích” cho độ chính xác đối với một bộ phận có giá hàng chục nghìn franc sẽ phá hủy danh tiếng của nó. Quartz đã làm cho độ chính xác trở nên rẻ tiền, và tourbillon không nên bị vấy bẩn bởi sự rẻ tiền.
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Phan IV -->
+                         <h2 id="SUXAUHOKHICHIENTHANG">SỰ XẤU HỔ KHI CHIẾN THẮNG</h2>
+                         <!-- Doan IV..1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-f9696048-7fff-3bdf-6d94-c25ddf57611a">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Ban lãnh đạo cấp cao của Jaeger-LeCoultre tỏ thái độ không muốn nhận giải thưởng. Năm ngày sau, công ty chôn giấu tin tức trong một thông cáo báo chí dài 800 từ mà không ai buồn đọc. Không một tiêu đề nào công bố rằng Jaeger-LeCoultre đã chế tạo ra chiếc đồng hồ đeo tay cơ khí chính xác và ổn định nhất thế giới.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan IV..2 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-f9696048-7fff-3bdf-6d94-c25ddf57611a">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Những người quen thuộc với thương hiệu Greubel Forsey sẽ biết rằng họ sản xuất một số thiết bị đeo tay đắt tiền nhất. Nhưng những gì mà người ta có thể không biết là thương hiệu đã từng chế tạo ra chiếc đồng hồ đeo tay chính xác và ổn định nhất của thời hiện đại. Greubel Forsey đã “quá khiêm tốn” khi tuyên bố rằng chiếc đồng hồ double tourbillon của họ cân bằng nghiêng 30° trên lò xo Nivarox đã hạ bệ Jaeger-LeCoultre để lập kỷ lục bất bại với 915 điểm trong năm 2011.
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">&nbsp;</p>
+                         <!-- Image IV..1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        <img alt="Cơ chế Double Tourbillon 30° của Greubel Forsey" src="/IMG/news/banner-mido-ocean-star-gmt.png" style="width: 100%; height: 100%;">
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span style="font-size:8px;">
+                                   &nbsp;
+                                   &nbsp;
+                              </span>
+                         </p>
+                         <!-- Chu thich Image IV..1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span style="background-color: transparent; color: rgb(67, 67, 67); font-family: Arial; font-size: 11pt; font-style: italic; white-space: pre-wrap;">
+                                   — Cơ chế Double Tourbillon 30° của Greubel Forsey
+                                   &nbsp;
+                              </span>
+                         </p>
+                         <!-- Doan IV..3 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-9c270dee-7fff-f313-80da-c969729fa93e">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Chronometrie 2011 thu hút 18 thí sinh, chỉ có năm người tham gia sống sót - tỷ lệ thất bại cao hơn nhiều so với cuộc thi đầu tiên - 72% và 37,5%.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan IV..4 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-9c270dee-7fff-f313-80da-c969729fa93e">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Ban tổ chức đã cố gắng cứu vãn tình hình bằng cách cho phép các thương hiệu cạnh tranh ẩn danh vào năm 2013, và tiếp tục thử nghiệm nếu họ không đạt một trong các rào cản. Kết quả của thí sinh chưa được phân loại sẽ giữ bí mật. Để khuyến khích hơn nữa, mỗi thương hiệu có thể nộp 3 chiếc đồng hồ giống hệt nhau để tăng cơ hội lên bục thưởng.
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Phan V -->
+                         <h2 id="VANHOICUOICUNGVACAIKETnbsp">VÃN HỒI CUỐI CÙNG VÀ CÁI KẾT&nbsp;</h2>
+                         <!-- Doan V..1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-9c270dee-7fff-f313-80da-c969729fa93e">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Những thương hiệu đắt tiền bắt đầu bỏ đi khi họ nhận ra nỗi sợ hãi tồi tệ nhất. Đồng hồ Tissot khiêm tốn bắt đầu quét bảng trong sự kiện năm 2013, chiếm hai vị trí đầu tiên với 878 và 850 điểm, đánh bại Leroy tourbillon ở vị trí thứ ba. Tissot đã thực hiện cuộc thi một cách nghiêm túc, phát triển đồng hồ cạnh tranh dựa trên sự hiệu chỉnh bộ máy ETA 2824 với lò xo silicon.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan V..2 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-9c270dee-7fff-f313-80da-c969729fa93e">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Sự kiện tiếp theo trong năm 2015 đánh dấu sự thành công của Tissot. Chỉ có 10 thương hiệu tham gia, 3 thương hiệu ẩn danh và 18 chiếc đồng hồ học đường. Đồng hồ học đường với bộ chuyển động 2,5Hz kiểu cũ, tất cả đều thất bại.
+                                        &nbsp;
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan V..3 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-9c270dee-7fff-f313-80da-c969729fa93e">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Tissot đứng thứ nhất, thứ hai và thứ ba trong danh mục đồng hồ thông thường và đứng nhất trong số những chiếc đồng hồ chronograph. Những chiếc đồng hồ chiến thắng của Tissot đều trang bị các bộ máy có nguồn gốc từ ETA - cal. A86.501 và bộ thoát đòn bẩy 4Hz, ghi được 908 điểm ngoạn mục - hiệu suất ngang bằng với Jaeger-LeCoultre Gyrotourbillon, nhưng chênh lệch vài trăm nghìn đô la về vị thế.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan V..4 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-9c270dee-7fff-f313-80da-c969729fa93e">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Điều hấp dẫn nhất là đồng hồ nộp ẩn danh có hiệu suất hàng đầu ghi được 931 điểm, vẫn là mức cao nhất mọi thời đại của Chronometrie. Một số tin tiết lộ là cal Breguet cal.574DR với trục cân bằng từ tính, thành công của nó đã chứng minh rằng khoa học vật liệu và kỹ thuật quan trọng hơn sự huyền bí của Haute Horlogerie.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan V..5 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-9c270dee-7fff-f313-80da-c969729fa93e">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Sau tất cả, nó đã quá sức chịu đựng. Sự kiện năm 2015 đã khép lại cuộc thi Chronometrie cuối cùng. Cuộc thi năm 2017 đã bị hoãn lại vì mong muốn được ủng hộ.
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Image V..1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">&nbsp;</p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span>
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        <img alt="Buổi trao giải Concours International de Chronométrie 2015" src="/IMG/news/banner-tag-heuer-aquaracer-43-mm-tortoise-shell-effect-calibre-51.png" style="width: 100%; height: 100%;">
+                                   </span>
+                              </span>
+                         </p>
+
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span style="font-size:8px;">
+                                   &nbsp;
+                                   &nbsp;
+                              </span>
+                         </p>
+                         <!-- Chu thich Image V..1 -->
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span style="background-color: transparent; color: rgb(67, 67, 67); font-family: Arial; font-size: 11pt; font-style: italic; white-space: pre-wrap;">
+                                   — Buổi trao giải Concours International de Chronométrie 2015
+                              </span>
+                         </p>
+                         <!-- Doan V..6 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-56711eb8-7fff-9ccf-1801-14cffb3aa59c">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Vào năm 2019, ban tổ chức đã cố gắng vãn hồi và khôi phục bằng cách viết lại các quy tắc để loại bỏ mọi thiệt hại có thể xảy ra đối với thương hiệu uy tín. Điểm và thứ hạng đã bị bãi bỏ. Đồng hồ sẽ được trao danh hiệu “excellent” (800 đến 900 điểm) hoặc “exceptional” (lớn hơn 900 điểm). Những chiếc đồng hồ sống sót sau bài kiểm tra COSC đầu tiên đã được cấp chứng chỉ. Các đối thủ phải được ẩn danh, ngoại trừ những người đoạt giải. Chỉ những chiếc đồng hồ Swiss Made mới được phép - ngoại trừ một thương hiệu của Pháp - L.Leroy, đã đưa Chronometrie ra “quốc tế”.
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan V..7 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-56711eb8-7fff-9ccf-1801-14cffb3aa59c">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Năm chiếc đồng hồ tham gia cuộc thi. Chỉ một người sống sót sau vòng loại và tiếp tục thi đấu - ẩn danh.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+                         <!-- Doan V..8 -->
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-56711eb8-7fff-9ccf-1801-14cffb3aa59c">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Thông cáo báo chí về kết quả cuộc thi được ghi nhận một cách khô khan “thu hoạch năm 2019 của những chiếc đồng hồ tham gia là đặc biệt khiêm tốn”. Không có ích gì khi tổ chức một lễ trao giải. Thay vào đó, các nhà tổ chức đã tổ chức một “lễ kỷ niệm về chế tạo đồng hồ chính xác của Thụy Sĩ”, bao gồm một cuộc thảo luận bàn trong và một tạp chí trực tuyến đã tô bóng về sự cố.
+                                        &nbsp;
+                                   </span>
+                              </span>
+                         </p>
+
+                         <br>
+                         <p dir="ltr" style="line-height:1.38;text-align: right;margin-top:0pt;margin-bottom:0pt;">
+                              <span id="docs-internal-guid-56711eb8-7fff-9ccf-1801-14cffb3aa59c">
+                                   <span style="font-size: 12pt; font-family: Arial; color: rgb(67, 67, 67); background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">
+                                        Luxury Shopping
+                                   </span>
+                              </span>
+                         </p>
+
+                         <div>&nbsp;</div>
+
+                         <div class="source-news">
+
+                         </div>
+                         <div class="text-right">
+                              <ul class="social-icons">
+                                   <li class="social-icon">
+                                        <a target="_blank" class="share_facebook" href="#">
+                                             <img src="/images/facebook1.png" class="active-icon" alt="facebook">
+                                             <img style="opacity: 0.5" src="/images/facebook1.png" class="inactive-icon" alt="facebook">
+                                        </a>
+                                   </li>
+                                   <li class="social-icon">
+                                        <a target="_blank" href="#" class="share_twitter">
+                                             <img src="/images/twitter1.png" alt="twitter" class="active-icon">
+                                             <img style="opacity: 0.5" src="/images/twitter1.png" alt="twitter" class="inactive-icon">
+                                        </a>
+                                   </li>
+                                   <li class="social-icon">
+                                        <a target="_blank" href="#" class="share_gplus">
+                                             <img src="/images/gplus.png" alt="google plus" class="active-icon">
+                                             <img style="opacity: 0.5" src="/images/gplus.png" alt="google plus" class="inactive-icon">
+                                        </a>
+                                   </li>
+                                   <li class="social-icon">
+                                        <a target="_blank" href="#" class="share_pinterest">
+                                             <img src="/images/pinterest.png" alt="pinterest" class="active-icon">
+                                             <img style="opacity: 0.5" src="/images/pinterest.png" alt="pinterest" class="inactive-icon">
+                                        </a>
+                                   </li>
+                                   <li class="social-icon">
+                                        <a href="#" target="_blank" class="share_email">
+                                             <img src="/images/email1.png" alt="email" class="active-icon">
+                                             <img style="opacity: 0.5" src="/images/email1.png" alt="email" class="inactive-icon">
+                                        </a>
+                                   </li>
+                              </ul>
+                         </div>
+
+                    </div>
+               </div>
+          </div>
+
+          <!-- Slide tin tuc -->
+          <div class="picks" style="padding-top:0;">
+               <div class="jcarousel-wrapper">
+                    <div class="jcarousel" data-jcarousel="true" data-jcarouselautoscroll="true">
+                         <ul style="left: -356.3px; top: 0px;">
+                              <!-- Slide 1 -->
+                              <li class="news__wrap" style="width: 356.333px;">
+                                   <h2 class="news__title line--bottom">
+                                        <a href="/kien-thuc-dong-ho/lich-su-thuong-hieu-longines--188-nam-huyen-thoai-thuy-si-81466.aspx">
+                                             LỊCH SỬ THƯƠNG HIỆU LONGINES - 188 NĂM HUYỀN THOẠI THỤY SĨ
+                                        </a>
+                                   </h2>
+                                   <a class="news__image_sm" href="/kien-thuc-dong-ho/lich-su-thuong-hieu-longines--188-nam-huyen-thoai-thuy-si-81466.aspx">
+                                        <img src="/IMG/news/banner-vacheron-constantin-overseas-pink-gold-blue-dial.png" alt="LỊCH SỬ THƯƠNG HIỆU LONGINES - 188 NĂM HUYỀN THOẠI THỤY SĨ">
+                                   </a>
+                                   <div class="news__text">
+                                        <p>Lịch sử thương hiệu đồng hồ Longines bắt đầu từ năm 1832 - một trong những nhà sản xuất đồng hồ Thụy Sĩ đã hoạt động liên tục trong suốt 188 năm tại Saint-Imier.</p>
+                                   </div>
+                              </li>
+                              <!-- Slide 2 -->
+                              <li class="news__wrap" style="width: 356.333px;">
+                                   <h2 class="news__title line--bottom">
+                                        <a href="/kien-thuc-dong-ho/do-chong-nuoc-dong-ho-water-resistance--cac-kien-thuc-co-ban-81342.aspx">
+                                             ĐỘ CHỐNG NƯỚC ĐỒNG HỒ (WATER RESISTANCE) &amp; CÁC KIẾN THỨC CƠ BẢN
+                                        </a>
+                                   </h2>
+                                   <a class="news__image_sm" href="/kien-thuc-dong-ho/do-chong-nuoc-dong-ho-water-resistance--cac-kien-thuc-co-ban-81342.aspx">
+                                        <img src="/IMG/news/dong-ho-bam-gio-zenith-defy-21-chronograph-trang-den-banner.png" alt="ĐỘ CHỐNG NƯỚC ĐỒNG HỒ (WATER RESISTANCE) &amp; CÁC KIẾN THỨC CƠ BẢN">
+                                   </a>
+                                   <div class="news__text">
+                                        <p>Độ chống nước của đồng hồ được quy định bởi những chỉ số ATM, BAR hay feet. Chúng cho biết khả năng chống nước của đồng hồ khi tiếp xúc với nước ở độ sâu được xác lập bởi nhà sản xuất.</p>
+                                   </div>
+                              </li>
+                              <!-- Slide 3 -->
+                              <li class="news__wrap" style="width: 356.333px;">
+                                   <h2 class="news__title line--bottom">
+                                        <a href="/kien-thuc-dong-ho/do-chinh-xac-dong-ho-chuong-2--su-troi-day-va-suy-tan-84514.aspx">
+                                             ĐỘ CHÍNH XÁC ĐỒNG HỒ (CHƯƠNG 2): SỰ TRỖI DẬY VÀ SUY TÀN
+                                        </a>
+                                   </h2>
+                                   <a class="news__image_sm" href="/kien-thuc-dong-ho/do-chinh-xac-dong-ho-chuong-2--su-troi-day-va-suy-tan-84514.aspx">
+                                        <img src="/IMG/news/dong-ho-lich-van-nien-frederique-constant-highlife-perpetual-calendar-fc-775v4nh2b-2-.png" alt="ĐỘ CHÍNH XÁC ĐỒNG HỒ (CHƯƠNG 2): SỰ TRỖI DẬY VÀ SUY TÀN">
+                                   </a>
+                                   <div class="news__text">
+                                        <p>Đứng trước thềm thời đại đồng hồ quartz, những cuộc thử nghiệm và các cuộc thi về độ chính xác đồng hồ ở Mỹ và Anh quốc đã phải đối mặt với điều gì?</p>
+                                   </div>
+                              </li>
+                              <!-- Slide 4 -->
+                              <li class="news__wrap" style="width: 356.333px;">
+                                   <h2 class="news__title line--bottom">
+                                        <a href="/kien-thuc-dong-ho/do-chinh-xac-dong-ho-chuong-1--cuoc-chien-thoi-gian-84512.aspx">
+                                             ĐỘ CHÍNH XÁC ĐỒNG HỒ (CHƯƠNG 1): CUỘC CHIẾN THỜI GIAN
+                                        </a>
+                                   </h2>
+                                   <a class="news__image_sm" href="/kien-thuc-dong-ho/do-chinh-xac-dong-ho-chuong-1--cuoc-chien-thoi-gian-84512.aspx">
+                                        <img src="/IMG/news/dong-ho-omega-constellation-gents-41mm-ceramic-bezel-banner.png" alt="ĐỘ CHÍNH XÁC ĐỒNG HỒ (CHƯƠNG 1): CUỘC CHIẾN THỜI GIAN">
+                                   </a>
+                                   <div class="news__text">
+                                        <p>Độ chính xác của đồng hồ từ lâu đã trở thành thước đo của sự uy tín trong lĩnh vực chế tạo đồng hồ cao cấp. Cùng Luxury Shopping khám phá chương đầu tiên về độ chính xác đồng hồ.</p>
+                                   </div>
+                              </li>
+                              <!-- Slide 5 -->
+                              <li class="news__wrap" style="width: 356.333px;">
+                                   <h2 class="news__title line--bottom">
+                                        <a href="/kien-thuc-dong-ho/dong-ho-the-gioi-world-time--dong-ho-gmt--dong-ho-da-vung-83957.aspx">
+                                             ĐỒNG HỒ THẾ GIỚI (WORLD-TIME), ĐỒNG HỒ GMT &amp; ĐỒNG HỒ ĐA VÙNG
+                                        </a>
+                                   </h2>
+                                   <a class="news__image_sm" href="/kien-thuc-dong-ho/dong-ho-the-gioi-world-time--dong-ho-gmt--dong-ho-da-vung-83957.aspx">
+                                        <img src="/IMG/news/anh-bia-zenith-defy-el-primero-21-pink.png" alt="ĐỒNG HỒ THẾ GIỚI (WORLD-TIME), ĐỒNG HỒ GMT &amp; ĐỒNG HỒ ĐA VÙNG">
+                                   </a>
+                                   <div class="news__text">
+                                        <p>Cùng khám phá các thuật ngữ về đồng hồ giờ thế giới World Time, đồng hồ GMT / UTC / Dual Time.</p>
+                                   </div>
+                              </li>
+                         </ul>
+
+                         <script>
+                            function ResizeIframe() {
+                                try {
+                                    var w = $('.post-list-item')[0].width();
+                                    var h = w / 360 * 220;
+                                    $('.post-list-item .zoom-hover-inner iframe').each(function () {
+                                        $(this).attr("width", w);
+                                        $(this).attr("height", h);
+                                    });
+                                }
+                                catch (ex) { }
+                            }
+                            $(window).resize(function () {
+                                ResizeIframe();
+                            });
+                         </script>
+                    </div>
+
+                    <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">&nbsp;</a>
+                    <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">&nbsp;</a>
+               </div>
+          </div>
+     </div>
+</div>
+

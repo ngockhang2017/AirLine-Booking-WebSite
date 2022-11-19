@@ -1,0 +1,163 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS lib -->
+        <link rel="stylesheet" href="../Asset/css/reset.css">
+        <link rel="stylesheet" href="../Asset/css/global.css">
+        <link rel="stylesheet" href="../Asset/css/style.css">
+        <link rel="stylesheet" href="../Asset/css/pay.css">
+        <!-- Font-Awesome lib -->
+        <link rel="stylesheet" href="../lib/Fontawesome/css/all.css">
+        <!-- Owl Carousel -->
+        <link rel="stylesheet" href="../lib/owlcarousel/assets/owl.carousel.css">
+        <link rel="stylesheet" href="../lib/owlcarousel/assets/owl.theme.default.css">
+        <!-- <link rel="stylesheet" href="lib/jQuery/jquery 3.5.0.js"> -->
+        <link rel="stylesheet" href="../lib/owlcarousel/owl.carousel.js">
+        <!-- Font Google -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS + JS-->
+        <link rel="stylesheet" href="../lib/bootstrap-4.5.0-dist/css/bootstrap.css">
+        <script src="../lib/bootstrap-4.5.0-dist/js/jquery 3.5.0.js"></script>
+        <script src="../lib/bootstrap-4.5.0-dist/js/popper.min.js"></script>
+        <script src="../lib/bootstrap-4.5.0-dist/js/bootstrap.js"></script>
+        <!-- jQuery -->
+        <script src="../Asset/js/style.js"></script>
+        <!-- <script src="../Asset/js/payment.js"></script> -->
+        <script src="../Asset/js/pay.js"></script>
+        <title>Mua vé máy bay</title>
+    </head>
+
+    <style>
+        .modal-backdrop {
+            background-color: unset;
+        }
+    </style>
+
+    <body>
+        <div id="loader" class="center"></div>
+        <div id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href=""><img src="../Asset/img/logo_vnpay.png" alt="" style="height: 56px;padding-left: 82px;margin-bottom: 20px;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wp-content" class="mb-5">
+            <div class="container">
+                <div class="row content">
+                    <div class="col-md-12">
+                        <p class="warning text-center">
+                            Quý khách vui lòng không tắt trình duyệt cho đến khi nhận được kết quả giao dịch trên website. Xin cảm ơn!
+                        </p>
+                    </div>
+
+                    <div class="col-md-6 text-center">
+                        <p style="font-size: 24px;font-weight: 600;">Ứng dụng mobile quét mã</p>
+                        <img src="../Asset/img/QRCODE.png" alt="">
+                        <p style="font-size: 18px;font-weight: 500">Thanh toán trực tuyến</p>
+                        <p style="font-size: 16px;color: #139029;font-weight: 600;">19,918,000 đ</p>
+                        <a href="">Hướng dẫn thanh toán?</a>
+                        <p>Hoặc</p>
+                        <a href="/Home/Index" class="btn btn-dark" style="padding-left: 20px;padding-right: 20px">Xác Nhận</a>
+                    </div>
+
+                    <div class="col-md-6">
+                        <p>Sử dụng Mobile Banking hỗ trợ VNPAYQR</p>
+                        <div class="row  list_atm">
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/abbank_logo.png" alt="">
+                            </div>
+                            <div class="atm  col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/acb_logo.png" alt="">
+                            </div>
+                            <div class="atm  col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/agribank_logo.png" alt="">
+                            </div>
+                            <div class="atm  col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/bacabank_logo.png" alt="">
+                            </div>
+                            <div class="atm  col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/bidv_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/dongabank_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/eximbank_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/hdbank_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/ivb_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/mbbank_logo.png" alt="">
+                            </div>
+                            <div class="atm  col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/msbank_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/namabank_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/ncb_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/ocb_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/ojb_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/PVComBank_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/sacombank_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/saigonbank.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/scb_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/techcombank_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/shb_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/tpbank_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/vccb_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/vib_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/vietcombank_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/vietinbank_logo.png" alt="">
+                            </div>
+                            <div class="atm col-md-4">
+                                <img class="img-fluid" src="../Asset/img/ATM_images/vpbank_logo.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

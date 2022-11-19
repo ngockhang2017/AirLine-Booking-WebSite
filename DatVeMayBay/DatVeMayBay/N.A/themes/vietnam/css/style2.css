@@ -1,0 +1,838 @@
+ 
+.brandBold {
+  color: #333;
+  font-family: GraublauWebb;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 10px;
+  padding-left: 9px;
+}
+
+.brandBold2 {
+  color: #333;
+  font-family: GraublauWebb;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 10px;
+} 
+.clearfix.eq-container.init-0.init-2.init-1 {
+  margin-left: 7px;
+}
+
+.eq-item {
+  float: left;
+  margin-left: 3px;
+  width: 33%;
+}
+.j30-feature-block { 
+  position: relative;
+}
+
+.what-we-offer {
+  border-top: 1px solid #dbdbdb;
+}
+.what-we-offer h2 {
+  color: #333;
+  font-family: GraublauWebb;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.what-we-offer ul {
+  display: block;
+  list-style: outside none none;
+  padding: 0;
+  width: 100%;
+}.what-we-offer li {
+  display: inline-block;
+  text-align: center;
+  width: 105px;
+}.what-we-offer li {
+  display: inline-block;
+  text-align: center;
+  width: 105px;
+}
+.what-we-offer a {
+  color: #555;
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 0 2px;
+}
+.what-we-offer a .icon {
+  background: #f9c406 none repeat scroll 0 0;
+  display: block;
+  height: 70px;
+  margin: 20px auto;
+  width: 90px;
+}
+
+
+
+.j30-feature-block ul {
+ /* background: rgba(0, 0, 0, 0) url("/_global/main/images/elements/bg_hp-feature-block.png") repeat-y scroll 0 0;*/
+  list-style: outside none none;
+}
+.j30-feature-block li {
+  float: left;
+  margin-left: 10px;
+  width: 359px;
+}
+.ie7 .j30-feature-block li:first-child, .ie8 .j30-feature-block li:first-child, .j30-feature-block li:first-child {
+  margin-left: 0;
+}
+.j30-feature-block.hotels-agoda li {
+  position: relative;
+}
+
+
+.j30-feature-block li a {
+  color: #333;
+  display: block;
+  overflow: hidden;
+  padding: 190px 9px 10px;
+  position: relative;
+}
+
+button.png-bg.SiteSearchBtn{
+  background: rgba(0, 0, 0, 0) url("../img/j30-sprite-nav-icons.png") no-repeat scroll -6px -485px;
+  border: 0 solid transparent;
+  border-radius: 4px;
+  color: #fe5815;
+  cursor: pointer;
+  font-family: GraublauWeb;
+  font-size: 19px;
+  font-weight: bold;
+  height: 20px;
+  margin: 2px 5px;
+  padding: 0 4px;
+}
+
+div.results ul li a.lead-in span.price {
+ 
+  float: left;
+ 
+  color: #fbca04;
+  font-size: 24px;
+}
+span.cost span.price {
+  color: #f7c003;
+  float: right;
+  font-size: 24px;
+}
+
+.disclaimer {
+  overflow: auto;
+  padding-left: 8px;
+  padding-top: 4px;
+}
+
+.results li {
+  border-bottom: 1px solid #e5e5e5;
+  height: 44px;
+  padding-bottom: 0;
+  padding-top: 5px;
+}
+.results li { 
+  height: 40px; 
+}
+
+.j30-feature-block.hotels-agoda li a {
+  overflow: visible;
+  padding-bottom: 45px;
+  position: initial;
+}
+.j30-feature-block li:hover {
+  background: #fafafa none repeat scroll 0 0;
+  box-shadow: 0 0 4px 1px rgba(111, 111, 111, 0.3);
+}
+.hotel-discount {
+  background: #f9c406 none repeat scroll 0 0;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 5px 15px 5px 10px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 1;
+}
+.hotel-discount::after {
+  border-color: #f9c406 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 31px 0 0 14px;
+  content: "";
+  height: 0;
+  left: -13px;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.j30-feature-block a img {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.j30-feature-block .deal {
+  display: block;
+  font-size: 12px;
+}
+.j30-feature-block .dest {
+  display: block;
+  font-family: GraublauWebb;
+  font-size: 19px;
+  font-weight: bold;
+}
+.j30-feature-block.hotels-agoda .dest {
+  margin-bottom: 5px;
+}
+
+ 
+
+.j30-feature-block.hotels-agoda .cost {
+  bottom: 10px;
+  font-size: 12px;
+  margin-top: 15px;
+  min-height: 0;
+  position: absolute;
+  width: 280px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.j30-flight-specials {
+  float: left;
+  margin-left: -10px;
+  margin-right: 0;
+  width: 620px;
+}
+
+
+.specials-wrapper .j30-alerts-and-ads {
+  float: right;
+  width: 373px;
+}
+
+
+ .j30-alerts-and-ads .promo a {
+  background: #fe5815 none repeat scroll 0 0;
+  color: #fff;
+  display: block;
+  margin-bottom: 20px;
+  min-height: 90px; 
+  position: relative;
+}
+
+.specials-wrapper {
+  margin-left: -15px;
+  margin-top: 20px;
+  padding: 10px 0 0;
+}
+
+
+.j30-flight-specials .origin-switcher {
+  border-bottom: 1px solid #f6f6f6;
+  position: relative;
+  z-index: 41;
+}
+ .j30-flight-specials .origin-switcher p {
+  margin-bottom: 10px;
+}
+ .j30-flight-specials .current-origin {
+  float: left;
+  font-size: 14px;
+}
+.j30-flight-specials .view-all {
+  float: right;
+}
+
+
+.j30-flight-specials .key {
+  background: #f6f6f6 none repeat scroll 0 0;
+  border-bottom: 1px solid #f6f6f6;
+  padding: 10px 0;
+}
+
+.j30-flight-specials .key span, .j30-flight-specials .results a span {
+ 
+}
+
+.j30-flight-specials .key span, .j30-flight-specials .results a span {
+  
+}
+
+.j30-flight-specials .period {
+  color: #7a7a7a;
+  font-size: 12px;
+  padding-left: 30px;
+  width: 180px;
+}.j30-flight-specials .key span {
+  color: #333;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+
+.j30-flight-specials .results ul {
+  clear: both;
+  list-style: outside none none;
+}.j30-flight-specials .results li a {
+ 
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+}
+
+
+
+
+
+.j30-flight-specials .dest {
+  color: #525759;
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 10px;
+  width: 228px;
+}
+
+.j30-flight-specials .key span, .j30-flight-specials .results a span {
+ 
+}.j30-flight-specials .results a span.currency {
+ 
+}
+
+
+
+
+.tabABAY {
+  overflow: hidden;
+}
+
+
+.tabDatvemaybay {
+  color: #ffffff !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  padding-top: 9px !important;
+  text-shadow: 1px 1px #011123 !important;
+  text-transform: uppercase !important;
+}
+.tabDatvemaybay {
+  background: rgba(0, 0, 0, 0) url("../img/bgActive.png") no-repeat scroll left top / 100% auto;
+  float: left;
+  height: 40px;
+  line-height: 36px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 20px;
+  padding-right: 10px;
+  width: 178px;
+  z-index: 9999;
+}
+.airplane {
+  float: left;
+  margin-left: -16px;
+  margin-right: 8px;
+  margin-top: 0;
+}
+
+.TabKhachsan {
+  background: rgba(0, 0, 0, 0) url("../../../../www.abay.vn/images/AbayV2/Plane.png") no-repeat scroll left top;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  height: 40px;
+  line-height: 35px;
+  padding-left: 48px;
+  padding-top: 8px;
+}
+
+.TabKhachsan {
+  background: rgba(0, 0, 0, 0) url("../img/BGKSActive.png") no-repeat scroll left top / 100% auto;
+  border-radius: 5px 5px 0 0;
+  float: left;
+  height: 38px;
+  line-height: 35px;
+  margin-left: -21px;
+  margin-right: -2px;
+  margin-top: 3px;
+  padding-left: 27px;
+  width: 151px;
+  z-index: 0;
+}
+
+.hotel {
+  float: left;
+  margin-right: 8px;
+  margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.j30-flight-specials {
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  width: 620px;
+}
+.j30-flight-specials.loading {
+    background: rgba(0, 0, 0, 0) url("../../../_global/main/images/elements/loader-j30.html") no-repeat scroll 50% 50%;
+    min-height: 100px;
+}
+.j30-flight-specials h2 {
+    color: #000;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0 0 10px;
+}
+ 
+.j30-flight-specials h2 {
+  color: #ff191a;
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0 0 10px;
+}
+
+.j30-flight-specials .origin-switcher {
+    border-bottom: 1px solid #f6f6f6;
+    position: relative;
+    z-index: 41;
+}
+#content .j30-flight-specials .origin-switcher p {
+    margin-bottom: 10px;
+}
+#content .j30-flight-specials .current-origin {
+  color: #f4bd01;
+  float: left;
+  font-size: 14px;
+}
+
+.view-all > a {
+  color: #f4bd01;
+}
+
+
+.j30-flight-specials .current-origin a {
+    color: #0091f2;
+    display: none;
+    text-decoration: none;
+}
+.j30-flight-specials .current-origin a::after {
+    background: rgba(0, 0, 0, 0) url("../../../_global/main/images/elements/sprite-j30.html") no-repeat scroll -50px 0;
+    content: "";
+    display: inline-block;
+    height: 7px;
+    margin-left: 5px;
+    width: 10px;
+}
+.j30-flight-specials .view-all {
+    float: right;
+}
+.j30-flight-specials .select-origin {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #949494;
+    box-shadow: 0 0 3px 1px rgba(111, 111, 111, 0.3);
+    display: none;
+    left: 0;
+    margin-top: 30px;
+    padding: 15px;
+    position: absolute;
+    z-index: 40;
+}
+.j30-flight-specials .open .select-origin {
+    display: block;
+}
+.j30-flight-specials .select-origin .col {
+    float: left;
+    margin-right: 100px;
+}
+.j30-flight-specials .select-origin .col2 {
+    margin-right: 30px;
+}
+.j30-flight-specials .select-origin a {
+    color: #333;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.j30-flight-specials.error .key, .j30-flight-specials.error .disclaimer, .j30-flight-specials.initial .key, .j30-flight-specials.initial .results, .j30-flight-specials.initial .disclaimer, .j30-flight-specials.loading .key, .j30-flight-specials.loading .results, .j30-flight-specials.loading .disclaimer {
+    display: none;
+}
+.j30-flight-specials .results ul {
+    clear: both;
+    list-style: outside none none;
+}
+.j30-flight-specials .key {
+    background: #f6f6f6 none repeat scroll 0 0;
+    border-bottom: 1px solid #f6f6f6;
+    padding: 10px 0;
+}
+.j30-flight-specials .key span {
+    color: #333;
+    font-size: 12px;
+    font-weight: normal;
+}
+.j30-flight-specials .key span, .j30-flight-specials .results a span {
+    
+}
+.ie7 .j30-flight-specials .key span, .ie7 .j30-flight-specials .results a span {
+    display: inline-block;
+}
+.j30-flight-specials .results a span.currency {
+    display: inline-block;
+    vertical-align: baseline;
+}
+.j30-flight-specials .results li a {
+    
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+}
+
+.j30-flight-specials .results li a { 
+  padding: 3px 0; 
+}
+
+
+.j30-flight-specials .dest {
+  color: #525759;
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 10px;
+  width: 275px;
+}
+.j30-flight-specials .price {
+  color: #fe5815;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  width: 120px;
+}
+
+.footer-wrapper {
+  border-top: 1px solid #f9c406;
+  font-family: graublauweb;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.j30-flight-specials .period {
+  color: #7a7a7a;
+  font-size: 12px;
+  padding-left: 1px;
+  width: 180px;
+}
+.j30-flight-specials .book {
+  color: #fbca04;
+  float: right;
+  font-size: 12px;
+  text-align: right;
+  width: 80px;
+}
+.j30-flight-specials .book .icon {
+    background: rgba(0, 0, 0, 0) url("../../../_global/main/images/elements/sprite-j30.html") no-repeat scroll -18px -14px;
+    display: inline-block;
+    height: 10px;
+    margin-left: 2px;
+    margin-top: -1px;
+    width: 7px;
+}
+.j30-flight-specials .results li a:hover, .j30-flight-specials .results li a:focus, .j30-flight-specials .results li a:active {
+    background: #f5fbfe none repeat scroll 0 0;
+    cursor: pointer;
+}
+.j30-flight-specials .results li a:hover .book, .j30-flight-specials .results li a:focus .book, .j30-flight-specials .results li a:active .book {
+    text-decoration: underline;
+}
+#content .j30-flight-specials.error .results {
+    margin-top: 40px;
+}
+#content .j30-flight-specials.error .results p {
+    color: #525759;
+    font-size: 14px;
+}
+.j30-flight-specials.error .results a {
+    color: #0091f2;
+    font-size: 14px;
+    margin: 0;
+}
+.j30-flight-specials.error .results a::after {
+    background: rgba(0, 0, 0, 0) url("../../../_global/main/images/elements/sprite-j30.html") no-repeat scroll -11px -14px;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    margin-left: 5px;
+    width: 7px;
+}
+.j30-flight-specials.bargain-bin h2 {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 102px;
+    margin-bottom: 7px;
+    text-indent: -9999px;
+    width: 600px;
+}
+.j30-flight-specials.bargain-bin .origin-switcher, .j30-flight-specials.bargain-bin .results ul {
+    border-bottom: 1px solid #e1e1e1;
+}
+.j30-flight-specials.bargain-bin.loading .results {
+    min-height: 286px;
+    visibility: hidden;
+}
+.j30-flight-specials.bargain-bin .origin-switcher {
+    padding: 0 8px;
+}
+.j30-flight-specials.bargain-bin.error .key span {
+    color: #e3e3e4;
+}
+#content .j30-flight-specials.bargain-bin.error .results {
+    background: #fafafa none repeat scroll 0 0;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+.j30-flight-specials.bargain-bin.error .results a {
+    color: #fe5815;
+}
+.j30-flight-specials.bargain-bin.error .results a::after {
+    display: none;
+}
+#content .j30-flight-specials.bargain-bin .origin-switcher p {
+    margin-bottom: 7px;
+}
+.j30-flight-specials.bargain-bin .period {
+    color: #303642;
+    padding-left: 18px;
+    width: 178px;
+}
+.j30-flight-specials.bargain-bin .key {
+    background: #ffffff none repeat scroll 0 0;
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 5px;
+    padding-top: 6px;
+}
+.j30-flight-specials.bargain-bin .key span {
+    color: #303642;
+    font-size: 13px;
+}
+.j30-flight-specials.bargain-bin .price {
+    color: #bf1951;
+}
+.j30-flight-specials.bargain-bin .results ul {
+    visibility: visible;
+}
+.j30-flight-specials.bargain-bin .results li:nth-child(2n+1) {
+    background: #fafafa none repeat scroll 0 0;
+}
+.j30-flight-specials.bargain-bin .results li a {
+    border-bottom: medium none;
+    padding-top: 10px;
+}
+.j30-flight-specials.bargain-bin .results li a:hover, .j30-flight-specials.bargain-bin .results li a:focus {
+    background: #e1effc none repeat scroll 0 0;
+}
+.j30-flight-specials .results li a:active {
+    background: #f5fbfe none repeat scroll 0 0;
+    cursor: pointer;
+}
+.j30-flight-specials.bargain-bin .results li a:hover .book, .j30-flight-specials.bargain-bin .results li a:focus .book, .j30-flight-specials.bargain-bin .results li a:active .book {
+    text-decoration: none;
+}
+.j30-flight-specials.bargain-bin .dest {
+    padding-left: 8px;
+}
+.j30-flight-specials .via-dest {
+    display: block;
+    font-size: 13px;
+}
+.j30-flight-specials.bargain-bin .book {
+    width: 110px;
+}
+.ie7 .j30-flight-specials.bargain-bin .book {
+    width: 95px;
+}
+.j30-flight-specials.bargain-bin .sale-type {
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 4px 9px 3px 10px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 75px;
+}
+
+
+
+
+
+
+
+
+
+#nav dd.nav-item a.nav-item-name {
+  color: #333;
+  display: inline-block;
+  float: left;
+  padding: 17px 12px;
+  text-decoration: none;
+}
+
+.j30-header #nav .booking dd.nav-item a.nav-item-name {
+  background: #fe5815 none repeat scroll 0 0;
+  float: left;
+  text-align: center;
+  width: 125px;
+  color: white;
+}
+
+
+.j30-header #nav .booking dd.nav-item a.nav-item-name {
+  background: #f9c406 none repeat scroll 0 0;
+  color: #ffffff;
+  float: left;
+  text-align: center;
+  width: 125px;
+}
+
+.j30-header #nav .booking dd.nav-item a.nav-item-name {
+  background: #ff191a none repeat scroll 0 0;
+  color: #ffffff;
+  float: left;
+  text-align: center;
+  width: 125px;
+}
+
+.j30-header #nav .booking dd.nav-item a.nav-item-name2 {
+  float: left;
+  padding: 17px;
+  text-align: center;
+  width: 150px;
+}
+
+.search-flightd {
+  
+}
+
+.search-flight {
+ 
+}
+
+.bxsliderdiv {
+  background: #ffffff none repeat scroll 0 0;
+  float: left;
+  height: 373px;
+  width: 618px;
+}
+
+.bx-viewport {
+  height: 364px; 
+}
+
+.bx-wrapper img {
+  display: block;
+  height: 373px;
+  max-width: 100%;
+  width: 100%;
+}
+ 
+#nav dd.nav-item {
+  float: left;
+  font-family: GraublauWebb;
+  font-size: 15px;
+  width: 150px;
+}
+.clear40 {
+  background: white none repeat scroll 0 0;
+  height: 20px;
+}
+
+
+
+.search-form {
+  color: #333333;
+}
+
+
+.col1 {
+ 
+}
+/*
+.pad3 button::after {
+  background: rgba(0, 0, 0, 0) url("../img/sprite-j30.png") no-repeat scroll 0 -11px;
+  content: "";
+  display: block;
+  height: 17px;
+  margin-top: -9px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 11px;
+}
+*/
+.col2 {
+ 
+}
+
+.copyright > p {
+  line-height: 22px;
+}
+
+
+.col2 .field {
+  margin-bottom: 16px;
+}
+.col2 label {
+    display: block;
+    float: left;
+    line-height: 18px;
+    margin-right: 3px;
+    padding: 2px;
+    text-align: right;
+    width: 64px;
+}
+ .col2 select {
+  margin: 0;
+  width: 40px;
+}
+.col2 select, .col2.text {
+  background: rgba(0, 0, 0, 0) url("../img/bg_nav-menu-input.gif") repeat scroll left top;
+  border: 2px solid white;
+  color: #333;
+  font-weight: normal;
+  min-width: 51px;
+  padding: 1px;
+}
+
+.col2 select option, .col2 select optgroup {
+  background: #ffffff none repeat scroll 0 0;
+}
+
+

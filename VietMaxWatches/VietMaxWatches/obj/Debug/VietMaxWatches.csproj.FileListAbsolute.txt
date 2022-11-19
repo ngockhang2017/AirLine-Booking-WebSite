@@ -1,0 +1,288 @@
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\VietMaxWatches.dll.config
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\VietMaxWatches.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\VietMaxWatches.pdb
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\csc.exe
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\csc.exe.config
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\csc.rsp
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\csi.exe
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\csi.exe.config
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\csi.rsp
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.AppContext.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Collections.Immutable.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Console.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.IO.Compression.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.IO.FileSystem.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.IO.Pipes.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Reflection.Metadata.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.AccessControl.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.Claims.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.Principal.Windows.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.ValueTuple.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Xml.XPath.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\vbc.exe
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\vbc.exe.config
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\vbc.rsp
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\VBCSCompiler.exe
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\roslyn\VBCSCompiler.exe.config
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Antlr3.Runtime.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.Web.Infrastructure.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Newtonsoft.Json.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Net.Http.Formatting.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.Helpers.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.Http.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.Http.WebHost.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.Mvc.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.Optimization.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.Razor.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.WebPages.Deployment.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.WebPages.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.WebPages.Razor.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\WebGrease.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.Helpers.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.Mvc.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.Optimization.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.Razor.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.WebPages.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.WebPages.Deployment.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.WebPages.Razor.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Newtonsoft.Json.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Antlr3.Runtime.pdb
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Net.Http.Formatting.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.Http.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.Web.Http.WebHost.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\obj\Debug\VietMaxWatches.csproj.CopyComplete
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\obj\Debug\VietMaxWatches.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\obj\Debug\VietMaxWatches.pdb
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\EntityFramework.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\EntityFramework.SqlServer.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\EntityFramework.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\EntityFramework.SqlServer.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\obj\Debug\VietMaxWatches.csproj.CoreCompileInputs.cache
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\obj\Debug\VietMaxWatches.csprojAssemblyReference.cache
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.Logging.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.Tokens.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.TeamFoundation.Common.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.VisualStudio.Services.Common.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.VisualStudio.Services.WebApi.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\PagedList.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\PagedList.Mvc.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.Logging.pdb
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.Logging.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.Tokens.pdb
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.Tokens.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.TeamFoundation.Common.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.VisualStudio.Services.Common.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\Microsoft.VisualStudio.Services.WebApi.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.IdentityModel.Tokens.Jwt.pdb
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\cs\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\de\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\es\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\fr\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\it\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\ja\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\ko\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\pl\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\pt-BR\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\ru\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\tr\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\zh-Hans\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\zh-Hant\Microsoft.TeamFoundation.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\cs\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\de\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\es\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\fr\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\it\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\ja\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\ko\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\pl\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\pt-BR\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\ru\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\tr\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\zh-Hans\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\zh-Hant\Microsoft.VisualStudio.Services.Common.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\cs\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\de\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\es\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\fr\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\it\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\ja\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\ko\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\pl\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\pt-BR\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\ru\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\tr\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\zh-Hans\Microsoft.VisualStudio.Services.WebApi.resources.dll
+E:\ki 1 nam 4\WEB\VietMaxWatches\VietMaxWatches\bin\zh-Hant\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\VietMaxWatches.dll.config
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\VietMaxWatches.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\VietMaxWatches.pdb
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\csc.exe
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\csc.exe.config
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\csc.rsp
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\csi.exe
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\csi.exe.config
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\csi.rsp
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.Managed.Core.targets
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.AppContext.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Collections.Immutable.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Console.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.IO.Compression.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.IO.FileSystem.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.IO.Pipes.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Reflection.Metadata.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.AccessControl.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.Claims.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Security.Principal.Windows.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.ValueTuple.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Xml.XmlDocument.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Xml.XPath.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\vbc.exe
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\vbc.exe.config
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\vbc.rsp
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\VBCSCompiler.exe
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\roslyn\VBCSCompiler.exe.config
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Antlr3.Runtime.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\EntityFramework.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\EntityFramework.SqlServer.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.Logging.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.Tokens.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.TeamFoundation.Common.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.VisualStudio.Services.Common.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.VisualStudio.Services.WebApi.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.Web.Infrastructure.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Newtonsoft.Json.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Net.Http.Formatting.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.Helpers.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.Http.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.Http.WebHost.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.Mvc.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.Optimization.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.Razor.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.WebPages.Deployment.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.WebPages.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.WebPages.Razor.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\WebGrease.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\EntityFramework.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\EntityFramework.SqlServer.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.Logging.pdb
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.Logging.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.Tokens.pdb
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.IdentityModel.Tokens.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.TeamFoundation.Common.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.VisualStudio.Services.Common.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.VisualStudio.Services.WebApi.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.Helpers.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.Mvc.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.Optimization.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.Razor.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.WebPages.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.WebPages.Deployment.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.WebPages.Razor.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Newtonsoft.Json.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Antlr3.Runtime.pdb
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Net.Http.Formatting.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.Http.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\System.Web.Http.WebHost.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\cs\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\de\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\es\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\fr\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\it\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\ja\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\ko\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\pl\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\pt-BR\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\ru\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\tr\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\zh-Hans\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\zh-Hant\Microsoft.TeamFoundation.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\cs\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\de\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\es\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\fr\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\it\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\ja\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\ko\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\pl\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\pt-BR\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\ru\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\tr\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\zh-Hans\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\zh-Hant\Microsoft.VisualStudio.Services.Common.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\cs\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\de\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\es\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\fr\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\it\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\ja\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\ko\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\pl\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\pt-BR\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\ru\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\tr\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\zh-Hans\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\bin\zh-Hant\Microsoft.VisualStudio.Services.WebApi.resources.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\obj\Debug\VietMaxWatches.csprojAssemblyReference.cache
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\obj\Debug\VietMaxWatches.csproj.CoreCompileInputs.cache
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\obj\Debug\VietMaxWatches.csproj.CopyComplete
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\obj\Debug\VietMaxWatches.dll
+C:\VIET\Ki 2 Nam 4\lap trinh tich hop\Dat Ve May Bay\VietMaxWatches\VietMaxWatches\obj\Debug\VietMaxWatches.pdb

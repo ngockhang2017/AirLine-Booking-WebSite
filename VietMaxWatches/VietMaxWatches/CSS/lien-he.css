@@ -1,0 +1,136 @@
+.breadcrumb-outer-container {
+    padding: 8px;
+    background-color: #e2deda;
+}
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+.breadcrumb > li {
+    display: inline-block;
+}
+.breadcrumb > li + li:before {
+    content: "/\00a0";
+    padding: 0 5px;
+    color: #cccccc;
+}
+.breadcrumb > .active {
+    color: #999999;
+}
+.breadcrumb strong {
+    font-weight: normal;
+    color: #999999;
+}
+.gray-background2 {
+    background-color: #f7f7f5;
+    overflow: hidden
+}
+.layout.layout-1-col div[role="main"] {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+} 
+.contact-us span.heading {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: block;
+}
+.contact-us span {
+    font-size: 16px;
+    font-weight: 300;
+}
+.contact-us .form {
+    max-width: 330px;
+}
+.contact-us hr {
+    border-color: #d7cfcd;
+    background-color: #d7cfcd;
+    color: #d7cfcd;
+    margin-right: 20px;
+}
+.col-md-4{
+    width: 30.342%;
+    padding-top: 20px;
+}
+input[type="text"],select {
+    height: 35px;
+    width: 100%;
+    font-weight: 300;
+    color: #53534a;
+    margin-bottom: 15px;
+    border-radius: 0px; 
+    padding: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid #d7cfcd !important;
+    border-radius: 5px;
+    font-size: 14px;
+}
+textarea {
+    width: 100%;
+    font-weight: 300;
+    color: #53534a;
+    margin-bottom: 15px;
+    border-radius: 0px;
+    font-size: 14px;
+    padding: 12px;
+    border: 1px solid #d7cfcd !important;
+    resize: none;
+    font-family: Arial;
+    border-radius: 5px;
+}
+.btn.btn-wide{
+    height:42px;
+    line-height:38px;
+    font-size:14px;
+}
+.subscribe {
+    background: #b8b2ac;
+    margin: 30px 0 20px;
+    padding: 10px 0;
+}
+.subscribe h3{
+    margin-top:0;
+} 
+.subscribe a.facebook, .subscribe a.rss {
+    background: url('IMG/facebook.png') center bottom no-repeat;width: 33px;
+    height: 33px;
+    display: inline-block;
+    margin-right: 2px; 
+    -moz-transition: all 0.2s ease-out 0s;
+    -webkit-transition: all 0.2s ease-out;
+    margin-top:22px;
+}
+.subscribe strong{
+    display:inline-block;
+    margin-top:25px;
+    margin-right:20px;
+    float:left;
+    line-height:33px;
+}
+.subscribe a.facebook:hover,.subscribe a.rss:hover{
+    background-position: center top;
+}
+.subscribe a.rss{
+    background: url('IMG/rss.png') center bottom no-repeat;
+}
+.find-us{
+    width:90%;
+    border-right:solid 1px #a29c97;
+    height:90px;
+    padding-left:5%;
+}
+.col-md-8 {
+    width: 66.66666667%;
+}
+.col-lg-8 {
+    width: 66.66666667%;
+}
+
+

@@ -1,0 +1,67 @@
+﻿
+@{
+     ViewBag.Title = "TinTuc";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+     var list_tintuc = ViewBag.list_tintuc;
+}
+
+<!-- link -->
+<div class="breadcrumb-outer-container">
+     <div class="container">
+          <ul class="breadcrumb" style="width: 1090px;">
+               <li class="home">
+                    <a href="#">Trang chủ</a>
+               </li>
+               <li class="category3">
+                    <strong>Tin Tức</strong>
+               </li>
+          </ul>
+     </div>
+</div>
+
+<!-- content -->
+<div class="pods row">
+     <!-- Tin Tuc -->
+     <div class="col-xs-12">
+          <div class="brands-heading picks" style="padding-top:0px;">
+               <span class="title">
+                    <i class="strike hidden-xs"></i>
+                    <a href="/Home/TinTuc">Tin tức</a>
+                    <i class="strike hidden-xs"></i>
+               </span>
+          </div>
+     </div>
+     <!-- information of watch -->
+     @foreach (var item in list_tintuc)
+     {
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <div class="pod pod-showrooms">
+                    <!-- image -->
+                    <div class="pod-table">
+                         <div class="pod-row">
+                              <div class="pod-title">
+                                   <img src="/@item.Anh" alt="@item.TieuDe">
+                              </div>
+                         </div>
+                    </div>
+                    <!-- information -->
+                    <div class="pod-info">
+                         <h2 class="heading">@item.TieuDe</h2>
+                         <div>
+                              <span class="ndate">@item.NgayTao</span>
+                              <span class="nauthor">@item.NguoiTao</span>
+                         </div>
+                         <div class="content">
+                              @item.NoiDung
+                         </div>
+                    </div>
+                    <!-- button: Chi Tiet  -->
+                    <div class="center">
+                         <a class="btn btn-default btn-read-more btn-130" href="/Home/ChiTietTinTuc/@item.MaNguonTin">Chi tiết</a>
+                    </div>
+               </div>
+          </div>
+     }
+
+</div>
+

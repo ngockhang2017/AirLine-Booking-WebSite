@@ -1,0 +1,310 @@
+
+
+/* ============================================CONTENT===================================== */
+#wp-content{
+    background-color: #f5f5f5;
+    padding-top: 83px;
+}
+.multi_breadcrumb ul{
+    display: flex;
+}
+.multi_breadcrumb ul li{
+    list-style: none;
+}
+.code  input{
+    width: 60%;
+    display: inline-block;
+}
+.multi_breadcrumb ul{
+    padding-left: 0px;
+}
+.multi_breadcrumb ul li{
+    padding-right: 20px;
+}
+.multi_breadcrumb ul li a{
+    color: rgba(33, 33, 33, 0.6);
+    text-decoration: none;
+}
+.multi_breadcrumb ul li a.active{
+    color: #0066da;
+}
+.code,.payment_display,.information{
+        border: 1px solid #cbd3db;
+    padding: 16px 20px 25px;
+    background: #fff;
+    border-radius: 8px;
+}
+.payment_display,.information{
+    background-color: #fff;
+}
+.code button{
+    background-color: #00adef;
+}
+.code button:hover{
+    background-color: rgb(0, 155, 215);
+}
+.sub_payment{
+    border-bottom: 1px solid #333;
+    position: relative;
+}
+.sub_payment>input{
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    height: 30px;
+    width: 20px;
+}
+.form-group{
+    padding-top: 10px;
+    margin-bottom: 0px!important;
+}
+.top_sidebar{
+    display: flex;
+}
+.top_sidebar h5{
+    flex: 1 1 0%;
+}
+.information{
+    padding: 10px 15px;
+}
+#sidebar p,span{
+    font-size: 14px;
+    color: #212121;
+}
+.time{
+    display: flex;
+    background-color: #f0f7ff;
+    padding: 5px;
+}
+.time a{
+    width: 20%;
+    /*padding-top: 3px;*/
+}
+.time p{
+    margin-bottom: 6px;
+}
+.time a{
+    width: 55px;
+    margin-left: 10px;
+}
+
+.detail_ticket{
+    border: 1px solid #d4e8ff;
+    padding: 14px;
+}
+.baggage{
+    border-top: 1px solid #d4e8ff;
+}
+.all_money{
+    background-color: #f0f7ff;
+    padding:14px;
+}
+
+/*style modal*/
+.sub_detail {
+    display: flex;
+}
+.sub_detail p{
+     flex: 1 1 0%;
+}
+@media (min-width: 992px)
+
+{
+.modal-lg, .modal-xl {
+    max-width: 915px!important;
+}
+}
+.modal-header{
+    border-bottom: unset!important;
+    font-size: 20px;
+}
+.modal-footer{
+    border-top: unset!important;
+}
+.detail_planet{
+    display: flex;
+    padding-bottom: 20px;
+    padding-top: 16px;
+    border-bottom: 1px solid #dee2e6;
+    margin-right: 15px;
+}
+.schedule{
+    display: flex;
+    flex:  1.5 1 0%;
+}
+.go,.back{
+    display: flex;
+}
+.band{
+    margin-left: 20px;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 14px;
+}
+.band img{
+    width: 35px;
+}
+.time_sce{
+    margin-right: 10px;
+}
+.where{
+    max-width: 180px;
+}
+#dialog1 .modal-content{
+    
+    
+}
+#dialog1 .modal-body{
+    height: 400px!important;
+    overflow: auto;
+}
+#dialog1 .modal-header{
+    padding: 0px!important;
+}
+.information i.back{
+    transform: rotate(180deg);
+}
+.schedule .planet{
+    margin-right: 16px;
+}
+.planet{
+    color: #635e5e;
+}
+.time_planet span{
+    font-size: 12px;
+    color: rgba(33, 33, 33, 0.6);
+}
+.time_planet h6{
+    margin-bottom: 0px;
+}
+.sub_time p{
+        color: #00adef;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+
+}
+.more{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #555;
+        letter-spacing: 0.01071em;
+}
+.more i{
+    font-size: 18px;
+}
+.more .return_money{
+    color: #c7711a;
+}
+.modal-header .close{
+    margin: -1rem 1rem -1rem auto!important;
+}
+.detail_money{
+    display: flex;
+    flex: 1 1 0%;
+      border-bottom: 1px solid #dee2e6;
+      font-size: 14px;
+}
+.detail_go,.detail_back{
+    width: 50%;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+.tab-content{
+    padding: 20px;
+}
+.detail_go{
+    border-right: 1px solid #dee2e6;
+}
+.nav-tabs{
+    font-size: 20px;
+}
+
+/*end modal*/
+
+/*style atm*/
+.list_item{
+    display: flex;
+}
+.atm{
+    padding: 20px 0px;
+    margin: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px, rgba(0, 0, 0, 0.12) 0px 3px 4px, rgba(0, 0, 0, 0.14) 0px 2px 4px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+@media (min-width: 768px)
+{
+   .col-md-3 {
+    -ms-flex: 0 0 25%!important;
+    flex: 0 0 23%!important;
+    max-width: 23%!important;
+} 
+}
+.atm:hover{
+    background-color: #f5f5f5;
+
+}
+.all_atm{
+    display: none;
+}
+.box{
+    border: 1px solid rgb(0, 173, 239);
+    box-shadow: rgb(0, 173, 239) 0px 1px 5px, rgb(0, 173, 239) 0px 3px 4px, rgb(0, 173, 239) 0px 2px 4px;
+}
+/*end style atm*/
+
+/*style modal payment*/
+#payment .modal-header{
+    text-align: center!important;
+    font-size: 18px;color: #fff;
+    padding-left: 45%;
+}
+
+#payment .modal-footer {
+    display: block;
+}
+#payment .modal-body p{
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+.infom{
+    display: none;
+}
+
+/**/
+.promo label{
+   
+    width: 80%;
+}
+.promo{
+    position: relative;
+    border: 1px solid #dee2e6 ;
+    padding: 10px;
+}
+.promo input{
+    position: absolute;
+    top: 29px;
+    right: 5px;
+    height: 24px;
+    width: 24px;
+}
+#promotion .modal-footer{
+    display: block;
+}
+.promo{
+    cursor: pointer;
+
+}
+.promo:hover{
+    background-color: #f0f7ff;
+}
+.promo label{
+    cursor: pointer;
+}
+
+#fullname_error,#phone_error,#address_error{
+    color: red;
+    font-size: 14px;
+}

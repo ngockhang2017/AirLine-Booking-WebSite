@@ -1,0 +1,1638 @@
+﻿@*@model List<DatVeMayBay.Models.KhachHang>*@
+@{
+    ViewBag.Title = "KiemTraThongTin";
+    Layout = "~/Views/Shared/Layout2.cshtml";
+}
+
+<div style="flex: 1 1 0% ;background-color: ghostwhite;margin-top: 85px;">
+    <!--Link-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="multi_breadcrumb mt-3">
+                    <ul>
+                        <li><a href="../pages/timkiem.html">Tìm kiếm</a></li>
+                        <li><i class="fas fa-caret-right"></i></li>
+                        <li><a href="../pages/Thong-Tin-Khach-Hang.html">Thông tin khách hàng</a></li>
+                        <li><i class="fas fa-caret-right"></i></li>
+                        <li><a href="" class="active">Kiểm tra thông tin</a></li>
+                        <li><i class="fas fa-caret-right"></i></li>
+                        <li><a href="../pages/payment.html">Thanh toán</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Link-->
+    <!-- content -->
+    <div id="root">
+        <div class="sc-bdVaJa eddVTL">
+            <div style="flex: 1 1 0%">
+                <div>
+                    <div class="MuiContainer-root MuiContainer-maxWidthLg" style="flex: 1 1 0%; display: flex; margin-bottom: 85px;">
+                        <!--Thông tin khách hàng-->
+                        <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%">
+                            <!--Thông tin hành khách-->
+                            <h6 class="MuiTypography-root text=bold MuiTypography-h6" style="margin-bottom: 16px">
+                                Thông tin hành khách
+                            </h6>
+                            <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded" style="padding: 16px">
+                                <!--Người lớn 1-->
+                                <h6 class="MuiTypography-root text=bold MuiTypography-h6" style="height: 40px; flex-basis: 160px; display: flex; align-items: center;">
+                                    1.&nbsp;Người lớn 1
+                                </h6>
+                                <div class="sc-ifAKCX dakLHt card" style="width: 100%">
+                                    <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2" style="padding: 16px; display: flex;">
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Họ và tên</h6>
+                     
+                                 
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">@ViewBag.kh[0].TenKH</p>
+                                        </div>
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4" style="padding-left: 135px;">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Danh xưng:</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">@ViewBag.kh[0].DanhXung</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="MuiGrid-root card-background MuiGrid-container" style="padding: 16px; display: flex;">
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Hành lý chiều đi</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">Không có</p>
+                                        </div>
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4" style="padding-left: 150px;">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Hành lý chiều về</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">Gói (Bag) 20 kg - 99,000&nbsp;đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Người lớn 2-->
+                                <h6 class="MuiTypography-root text=bold MuiTypography-h6" style="height: 40px;flex-basis: 160px;display: flex;align-items: center;">
+                                    2.&nbsp;Người lớn 2
+                                </h6>
+                                <div class="sc-ifAKCX dakLHt card" style="width: 100%">
+                                    <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2" style="padding: 16px; display: flex;">
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Họ và tên</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">@ViewBag.kh[1].TenKH</p>
+                                        </div>
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4" style="padding-left: 132px;">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Danh xưng:</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">@ViewBag.kh[1].DanhXung</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="MuiGrid-root card-background MuiGrid-container" style="padding: 16px; display: flex;">
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Hành lý chiều đi</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">Không có</p>
+                                        </div>
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4" style="padding-left: 150px;">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Hành lý chiều về</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">Gói (Bag) 15 kg - 88,000&nbsp;đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="height: 16px"></div>
+
+                                <!--Trẻ em-->
+                                <h6 class="MuiTypography-root text=bold MuiTypography-h6" style="height: 40px;flex-basis: 160px;display: flex;align-items: center;">
+                                    3.&nbsp;Trẻ em
+                                </h6>
+                                <div class="sc-ifAKCX dakLHt card" style="width: 100%">
+                                    <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2" style="padding: 16px; display: flex;">
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Họ và tên</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">@ViewBag.kh[2].TenKH</p>
+                                        </div>
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4" style="padding-left: 136px;">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Danh xưng:</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">@ViewBag.kh[2].DanhXung</p>
+                                        </div>
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4" style="padding-left: 200px;">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Ngày sinh</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">@ViewBag.kh[2].NgaySinh</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="MuiGrid-root card-background MuiGrid-container" style="padding: 16px; display: flex;">
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Hành lý chiều đi</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">Không có</p>
+                                        </div>
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4" style="padding-left: 150px;">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Hành lý chiều về</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">Gói (Bag) 15 kg - 88,000&nbsp;đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Thông tin liên hệ-->
+                            <h6 class="MuiTypography-root text=bold MuiTypography-h6" style="margin: 24px 0px 16px">
+                                Thông tin liên hệ
+                            </h6>
+                            <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded" style="padding: 16px">
+                                <div style="display: flex">
+                                    <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2" style="flex: 2 1 0%">
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Họ và tên:</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">@ViewBag.kh[0].TenKH</p>
+                                        </div>
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2">Danh xưng:</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="padding-top: 6px;">@ViewBag.kh[0].DanhXung</p>
+                                        </div>
+                                        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6">
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2" style="padding-top: 12px;">Số điện thoại</h6>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="margin-top: 8px">@ViewBag.kh[0].SDT</p>
+                                        </div>
+                                        @*<div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6">
+                                            <p class="MuiTypography-root MuiTypography-body2" style="padding-top: 12px;">Email:</p>
+                                            <p class="MuiTypography-root MuiTypography-body2" style="color: rgb(0, 102, 218); margin-top: 8px">dinhviet99hdhd@gmail.com</p>
+                                        </div>*@
+                                    </div>
+
+                                    <div style="flex: 1 1 0%">
+                                        <h6 class="MuiTypography-root MuiTypography-subtitle2">Địa chỉ</h6>
+                                        <p class="MuiTypography-root MuiTypography-body2" style="padding-top: 6px;">@ViewBag.kh[0].DiaChi</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Button Quay Lại - Tiếp tục-->
+                            <div class="sc-bxivhb gepbvZ" style="justify-content: center; margin-top: 24px">
+                                <button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSizeLarge MuiButton-sizeLarge" tabindex="0" type="button" id="flightReview.back" style="margin-right: 16px; min-width: 160px">
+                                    <span class="MuiButton-label"><a href="../Home/ThongTinKhachHang" style="color: black;text-decoration: unset;">Quay lại</a></span><span class="MuiTouchRipple-root"></span>
+                                </button>
+                                <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-containedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation" tabindex="0" type="button" id="flightReview.next" style="min-width: 160px">
+                                    <span class="MuiButton-label" style="color: white;">
+                                        <a href="../Home/ThanhToan" style="color: white;text-decoration: unset;">Tiếp tục</a>
+                                    </span>
+                                    <span class="MuiTouchRipple-root"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <!--END Thông tin khách hàng-->
+                        <!--Thông tin chuyến bay-->
+                        <div style="width: 360px; margin-left: 24px;margin-top: 15px;">
+                            <!--Header-->
+                            <div class="top_sidebar">
+                                <h5>Thông tin chuyến bay</h5>
+                                <a href="" data-toggle="modal" style="text-decoration: none;" data-target="#dialog1">Xem chi tiết</a>
+                            </div>
+
+                            <!--Content-->
+                            <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded" style="margin-bottom: 20px; align-self: flex-start">
+                                <!--Chuyến bay-->
+                                <div style="padding: 16px 16px 0px">
+                                    <!--Chiều đi-->
+                                    <div style="display: flex; flex-direction: column">
+                                        <div style="display: flex; align-items: center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="width: 16px; height: 16px">
+                                                <path d="M18.7741 10.6097C18.6214 10.6097 18.1121 10.6135 17.9695 10.6221L15.0726 10.6958C15.042 10.6958 15.0105 10.6833 14.9962 10.6575L10.653 4.32235C10.5236 4.12148 10.2914 4 10.05 4H8.99266C8.74209 4 8.65653 4.24392 8.74617 4.46966L10.983 10.6785C11.0054 10.7359 10.9657 10.7962 10.9025 10.7962L5.43882 10.8746C5.3227 10.8785 5.21473 10.8268 5.14343 10.7398L3.4923 8.78269C3.35785 8.61338 3.14802 8.51773 2.93004 8.51773H2.17934C2.05508 8.51773 1.96952 8.63538 2.01026 8.74825L2.89847 11.7355C2.96569 11.901 2.96569 12.0875 2.89847 12.252L2.01026 15.2393C1.96952 15.3531 2.05508 15.4698 2.17934 15.4698H2.92495C3.14395 15.4698 3.35276 15.3704 3.48721 15.2049L5.17093 13.2182C5.24223 13.1311 5.35428 13.0785 5.4653 13.0833L10.8984 13.2009C10.9606 13.2048 11.0003 13.2612 10.9789 13.3176L8.74107 19.5313C8.65144 19.757 8.737 20 8.98655 20H10.0449C10.2893 20 10.5175 19.8785 10.6479 19.6786L14.9952 13.3482C15.0135 13.3224 15.04 13.31 15.0716 13.31L17.9684 13.3836C18.1161 13.3922 18.6203 13.3961 18.7731 13.3961C20.7502 13.3961 22 12.7743 22 12.0053C22 11.2352 20.7543 10.6087 18.7721 10.6087L18.7741 10.6097Z" fill="#888888"></path>
+                                            </svg>
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2" style="margin-left: 10px">Chiều đi&nbsp;-&nbsp;17/11/2020</h6>
+                                        </div>
+
+                                        <div style="padding-top: 8px">
+                                            <div class="sc-bxivhb gepbvZ card-background" style="padding: 8px; margin-bottom: 8px">
+                                                <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%">
+                                                    <div class="sc-bxivhb gepbvZ">
+                                                        <p class="MuiTypography-root MuiTypography-body2" style="min-width: 50px; margin-right: 16px">17:50</p>
+                                                        <p class="MuiTypography-root MuiTypography-body2">Hà Nội (HAN)</p>
+                                                    </div>
+                                                    <div class="sc-bxivhb gepbvZ" style="margin-top: 8px">
+                                                        <p class="MuiTypography-root MuiTypography-body2" style="min-width: 50px; margin-right: 16px">19:40</p>
+                                                        <p class="MuiTypography-root MuiTypography-body2">TP Hồ Chí Minh (SGN)</p>
+                                                    </div>
+                                                </div>
+                                                <div class="sc-bxivhb gepbvZ">
+                                                    <img src="../Asset/img/VNA_logo_notext.png" alt="" style="max-width: 48px" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Chiều về-->
+                                    <div style="display: flex; flex-direction: column; padding-top: 12px;">
+                                        <div style="display: flex; align-items: center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="width: 16px; height: 16px; transform: rotate(180deg);">
+                                                <path d="M18.7741 10.6097C18.6214 10.6097 18.1121 10.6135 17.9695 10.6221L15.0726 10.6958C15.042 10.6958 15.0105 10.6833 14.9962 10.6575L10.653 4.32235C10.5236 4.12148 10.2914 4 10.05 4H8.99266C8.74209 4 8.65653 4.24392 8.74617 4.46966L10.983 10.6785C11.0054 10.7359 10.9657 10.7962 10.9025 10.7962L5.43882 10.8746C5.3227 10.8785 5.21473 10.8268 5.14343 10.7398L3.4923 8.78269C3.35785 8.61338 3.14802 8.51773 2.93004 8.51773H2.17934C2.05508 8.51773 1.96952 8.63538 2.01026 8.74825L2.89847 11.7355C2.96569 11.901 2.96569 12.0875 2.89847 12.252L2.01026 15.2393C1.96952 15.3531 2.05508 15.4698 2.17934 15.4698H2.92495C3.14395 15.4698 3.35276 15.3704 3.48721 15.2049L5.17093 13.2182C5.24223 13.1311 5.35428 13.0785 5.4653 13.0833L10.8984 13.2009C10.9606 13.2048 11.0003 13.2612 10.9789 13.3176L8.74107 19.5313C8.65144 19.757 8.737 20 8.98655 20H10.0449C10.2893 20 10.5175 19.8785 10.6479 19.6786L14.9952 13.3482C15.0135 13.3224 15.04 13.31 15.0716 13.31L17.9684 13.3836C18.1161 13.3922 18.6203 13.3961 18.7731 13.3961C20.7502 13.3961 22 12.7743 22 12.0053C22 11.2352 20.7543 10.6087 18.7721 10.6087L18.7741 10.6097Z" fill="#888888"></path>
+                                            </svg>
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle2" style="margin-left: 10px">Chiều về&nbsp;-&nbsp;22/11/2020</h6>
+                                        </div>
+
+                                        <div style="padding-top: 8px">
+                                            <div class="sc-bxivhb gepbvZ card-background" style="padding: 8px; margin-bottom: 8px">
+                                                <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%">
+                                                    <div class="sc-bxivhb gepbvZ">
+                                                        <p class="MuiTypography-root MuiTypography-body2" style="min-width: 50px; margin-right: 16px">06:55</p>
+                                                        <p class="MuiTypography-root MuiTypography-body2">TP Hồ Chí Minh (SGN)</p>
+                                                    </div>
+                                                    <div class="sc-bxivhb gepbvZ" style="margin-top: 8px">
+                                                        <p class="MuiTypography-root MuiTypography-body2" style="min-width: 50px; margin-right: 16px">08:50</p>
+                                                        <p class="MuiTypography-root MuiTypography-body2">Hà Nội (HAN)</p>
+                                                    </div>
+                                                </div>
+                                                <div class="sc-bxivhb gepbvZ">
+                                                    <img src="../Asset/img/VNA_logo_notext.png" alt="" style="max-width: 48px" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Danh sách hành khách-->
+                                    <div style="flex: 1 1 0%; margin-top: 10px">
+                                        <h6 class="MuiTypography-root MuiTypography-subtitle1">Danh sách hành khách</h6>
+                                        <div class="card" style="flex: 1 1 0%;margin-top: 10px;padding: 8px 16px;">
+                                            <div class="sc-kEYyzF gnHRdD">
+                                                <p class="MuiTypography-root MuiTypography-body2">@ViewBag.kh[0].TenKH</p>
+                                                <p class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary">Người lớn</p>
+                                            </div>
+                                            <div class="sc-kEYyzF gnHRdD">
+                                                <p class="MuiTypography-root MuiTypography-body2">@ViewBag.kh[1].TenKH</p>
+                                                <p class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary">Người lớn</p>
+                                            </div>
+                                            <div class="sc-kEYyzF gnHRdD">
+                                                <p class="MuiTypography-root MuiTypography-body2">@ViewBag.kh[2].TenKH</p>
+                                                <p class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary">Trẻ em</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Chi tiết giá-->
+                                <div style="flex: 1 1 0%; padding: 12px 16px 16px">
+                                    <h6 class="MuiTypography-root MuiTypography-subtitle1">Chi tiết giá</h6>
+                                    <div class="card" style="flex: 1 1 0%; margin-top: 8px">
+                                        <div style="padding: 8px 16px">
+                                            <div class="sc-kkGfuU jtKufW">
+                                                Giá vé người lớn
+                                                <div class="price">
+                                                    <span class="sc-iAyFgw chOgCn">2&nbsp;x&nbsp;</span>4,609,000&nbsp;đ
+                                                </div>
+                                            </div>
+                                            <div class="sc-kkGfuU jtKufW">
+                                                Giá vé trẻ em
+                                                <div class="price">
+                                                    <span class="sc-iAyFgw chOgCn">1&nbsp;x&nbsp;</span>4,609,000&nbsp;đ
+                                                </div>
+                                            </div>
+                                            <div class="sc-kkGfuU jtKufW">
+                                                Thuế và phí
+                                                <div class="price">4,202,000&nbsp;đ</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-divider"></div>
+                                        <div style="padding: 8px 16px">
+                                            <div class="sc-kkGfuU jtKufW">
+                                                Mua thêm hành lý
+                                                <div class="price">275,000&nbsp;đ</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-background" style="padding: 16px">
+                                            <div style="display: flex;justify-content: space-between;align-items: center;">
+                                                <h6 class="MuiTypography-root MuiTypography-subtitle1">Tổng tiền thanh toán</h6>
+                                                <h6 class="MuiTypography-root final-price MuiTypography-subtitle1">18,304,000&nbsp;đ</h6>
+                                            </div>
+                                            <div style="display: flex;align-items: center;justify-content: flex-end;color: rgb(33, 33, 33);">
+                                                <div class="sc-kkGfuU jtKufW">
+                                                    <span class="MuiTypography-root MuiTypography-caption">Giá đã bao gồm thuế, phí &amp; hóa đơn VAT</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END Thông tin chuyến bay-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END content -->
+</div>
+<script>
+    !(function (e) {
+        function t(t) {
+            for (
+                var n, o, f = t[0], u = t[1], i = t[2], d = 0, s = [];
+                d < f.length;
+                d++
+            )
+                (o = f[d]),
+                    Object.prototype.hasOwnProperty.call(a, o) &&
+                    a[o] &&
+                    s.push(a[o][0]),
+                    (a[o] = 0);
+            for (n in u)
+                Object.prototype.hasOwnProperty.call(u, n) && (e[n] = u[n]);
+            for (l && l(t); s.length;) s.shift()();
+            return c.push.apply(c, i || []), r();
+        }
+        function r() {
+            for (var e, t = 0; t < c.length; t++) {
+                for (var r = c[t], n = !0, o = 1; o < r.length; o++) {
+                    var u = r[o];
+                    0 !== a[u] && (n = !1);
+                }
+                n && (c.splice(t--, 1), (e = f((f.s = r[0]))));
+            }
+            return e;
+        }
+        var n = {},
+            o = { 7: 0 },
+            a = { 7: 0 },
+            c = [];
+        function f(t) {
+            if (n[t]) return n[t].exports;
+            var r = (n[t] = { i: t, l: !1, exports: {} });
+            return e[t].call(r.exports, r, r.exports, f), (r.l = !0), r.exports;
+        }
+        (f.e = function (e) {
+            var t = [];
+            o[e]
+                ? t.push(o[e])
+                : 0 !== o[e] &&
+                { 8: 1, 10: 1, 11: 1, 12: 1, 13: 1 }[e] &&
+                t.push(
+                    (o[e] = new Promise(function (t, r) {
+                        for (
+                            var n =
+                                "static/css/" +
+                                ({}[e] || e) +
+                                "." +
+                                {
+                                    0: "31d6cfe0",
+                                    1: "31d6cfe0",
+                                    2: "31d6cfe0",
+                                    3: "31d6cfe0",
+                                    4: "31d6cfe0",
+                                    5: "31d6cfe0",
+                                    8: "1346aa23",
+                                    10: "87811394",
+                                    11: "dfac6ea4",
+                                    12: "0191bf0c",
+                                    13: "dfac6ea4",
+                                    14: "31d6cfe0",
+                                    15: "31d6cfe0",
+                                    16: "31d6cfe0",
+                                    17: "31d6cfe0",
+                                    18: "31d6cfe0",
+                                    19: "31d6cfe0",
+                                    20: "31d6cfe0",
+                                    21: "31d6cfe0",
+                                    22: "31d6cfe0",
+                                }[e] +
+                                ".chunk.css",
+                            a = f.p + n,
+                            c = document.getElementsByTagName("link"),
+                            u = 0;
+                            u < c.length;
+                            u++
+                        ) {
+                            var i =
+                                (l = c[u]).getAttribute("data-href") ||
+                                l.getAttribute("href");
+                            if ("stylesheet" === l.rel && (i === n || i === a))
+                                return t();
+                        }
+                        var d = document.getElementsByTagName("style");
+                        for (u = 0; u < d.length; u++) {
+                            var l;
+                            if (
+                                (i = (l = d[u]).getAttribute("data-href")) === n ||
+                                i === a
+                            )
+                                return t();
+                        }
+                        var s = document.createElement("link");
+                        (s.rel = "stylesheet"),
+                            (s.type = "text/css"),
+                            (s.onload = t),
+                            (s.onerror = function (t) {
+                                var n = (t && t.target && t.target.src) || a,
+                                    c = new Error(
+                                        "Loading CSS chunk " + e + " failed.\n(" + n + ")"
+                                    );
+                                (c.code = "CSS_CHUNK_LOAD_FAILED"),
+                                    (c.request = n),
+                                    delete o[e],
+                                    s.parentNode.removeChild(s),
+                                    r(c);
+                            }),
+                            (s.href = a),
+                            document.getElementsByTagName("head")[0].appendChild(s);
+                    }).then(function () {
+                        o[e] = 0;
+                    }))
+                );
+            var r = a[e];
+            if (0 !== r)
+                if (r) t.push(r[2]);
+                else {
+                    var n = new Promise(function (t, n) {
+                        r = a[e] = [t, n];
+                    });
+                    t.push((r[2] = n));
+                    var c,
+                        u = document.createElement("script");
+                    (u.charset = "utf-8"),
+                        (u.timeout = 120),
+                        f.nc && u.setAttribute("nonce", f.nc),
+                        (u.src = (function (e) {
+                            return (
+                                f.p +
+                                "static/js/" +
+                                ({}[e] || e) +
+                                "." +
+                                {
+                                    0: "3c20835a",
+                                    1: "9375243a",
+                                    2: "12470d64",
+                                    3: "e962e2b4",
+                                    4: "cd6f0eb1",
+                                    5: "cc69f4e4",
+                                    8: "59feb34e",
+                                    10: "e5b71573",
+                                    11: "b6888835",
+                                    12: "fcc7a6bb",
+                                    13: "73a2c15a",
+                                    14: "6ea47f88",
+                                    15: "3d9e6439",
+                                    16: "4202aa0f",
+                                    17: "5ca7f1d1",
+                                    18: "54b73da7",
+                                    19: "a316eb24",
+                                    20: "87808635",
+                                    21: "f20213e4",
+                                    22: "9c97b5ad",
+                                }[e] +
+                                ".chunk.js"
+                            );
+                        })(e));
+                    var i = new Error();
+                    c = function (t) {
+                        (u.onerror = u.onload = null), clearTimeout(d);
+                        var r = a[e];
+                        if (0 !== r) {
+                            if (r) {
+                                var n = t && ("load" === t.type ? "missing" : t.type),
+                                    o = t && t.target && t.target.src;
+                                (i.message =
+                                    "Loading chunk " + e + " failed.\n(" + n + ": " + o + ")"),
+                                    (i.name = "ChunkLoadError"),
+                                    (i.type = n),
+                                    (i.request = o),
+                                    r[1](i);
+                            }
+                            a[e] = void 0;
+                        }
+                    };
+                    var d = setTimeout(function () {
+                        c({ type: "timeout", target: u });
+                    }, 12e4);
+                    (u.onerror = u.onload = c), document.head.appendChild(u);
+                }
+            return Promise.all(t);
+        }),
+            (f.m = e),
+            (f.c = n),
+            (f.d = function (e, t, r) {
+                f.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r });
+            }),
+            (f.r = function (e) {
+                "undefined" != typeof Symbol &&
+                    Symbol.toStringTag &&
+                    Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+                    Object.defineProperty(e, "__esModule", { value: !0 });
+            }),
+            (f.t = function (e, t) {
+                if ((1 & t && (e = f(e)), 8 & t)) return e;
+                if (4 & t && "object" == typeof e && e && e.__esModule) return e;
+                var r = Object.create(null);
+                if (
+                    (f.r(r),
+                        Object.defineProperty(r, "default", { enumerable: !0, value: e }),
+                        2 & t && "string" != typeof e)
+                )
+                    for (var n in e)
+                        f.d(
+                            r,
+                            n,
+                            function (t) {
+                                return e[t];
+                            }.bind(null, n)
+                        );
+                return r;
+            }),
+            (f.n = function (e) {
+                var t =
+                    e && e.__esModule
+                        ? function () {
+                            return e.default;
+                        }
+                        : function () {
+                            return e;
+                        };
+                return f.d(t, "a", t), t;
+            }),
+            (f.o = function (e, t) {
+                return Object.prototype.hasOwnProperty.call(e, t);
+            }),
+            (f.p = "/"),
+            (f.oe = function (e) {
+                throw (console.error(e), e);
+            });
+        var u = (this["webpackJsonptripi-one-project"] =
+            this["webpackJsonptripi-one-project"] || []),
+            i = u.push.bind(u);
+        (u.push = t), (u = u.slice());
+        for (var d = 0; d < u.length; d++) t(u[d]);
+        var l = i;
+        r();
+    })([]);
+</script>
+<script src="/static/js/9.90cabca0.chunk.js">
+
+</script>
+<script src="/static/js/main.b4d4fe45.chunk.js">
+
+</script>
+<script type="text/javascript" id="">
+    (function (a, c, e, f, d, b) {
+        a.hj =
+            a.hj ||
+            function () {
+                (a.hj.q = a.hj.q || []).push(arguments);
+            };
+        a._hjSettings = { hjid: 228912, hjsv: 6 };
+        d = c.getElementsByTagName("head")[0];
+        b = c.createElement("script");
+        b.async = 1;
+        b.src = e + a._hjSettings.hjid + f + a._hjSettings.hjsv;
+        d.appendChild(b);
+    })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv\x3d");
+</script>
+<script type="text/javascript"
+        id=""
+        src="//mytour.api.useinsider.com/ins.js?id=10001599"></script>
+<script type="text/javascript"
+        id=""
+        src="//static.accesstrade.vn/js/trackingtag/tracking.min.js "></script>
+<script type="text/javascript" id="">
+    var cookieList = getCookie();
+    if (null !== cookieList.clickCityAdsID) {
+        var hrefParam = document.location.search + document.location.hash,
+            utm_source = hrefParam.match(/utm_source=\w*/i),
+            fbad = hrefParam.match(/fbclid=\w*/i),
+            gglead = hrefParam.match(/gclid=\w*/i);
+        if (null !== utm_source && "cityads" === utm_source[0].split("\x3d")[1]) {
+            var click_id = hrefParam.match(/click_id=\w*/i);
+            console.log("create cityads cookie");
+            createClickIDCookie(click_id, 30);
+        } else if (
+            (null !== utm_source && "cityads" !== utm_source[0].split("\x3d")[1]) ||
+            null !== gglead ||
+            null !== fbad
+        )
+            console.log("delete cityads cookie"), deleteCookie("clickCityAdsID");
+    }
+    function createClickIDCookie(b, c) {
+        var a = new Date(),
+            d = "; expires\x3d" + a.toGMTString();
+        null != c &&
+            (a.setTime(a.getTime() + 864e5 * c),
+                (d = "; expires\x3d" + a.toGMTString()));
+        null != b &&
+            (document.cookie = "clickCityAdsID\x3d" + b + d + "; path\x3d/");
+    }
+    function deleteCookie(b) {
+        document.cookie =
+            b + "\x3d; Path\x3d/; Expires\x3dThu, 01 Jan 1970 00:00:01 GMT;";
+    }
+    function getCookie() {
+        var b = {},
+            c = document.cookie.split(";");
+        c.forEach(function (a) {
+            var c = a.substr(0, a.indexOf("\x3d")).trim();
+            a = a.substr(a.indexOf("\x3d") + 1);
+            b[c] = a;
+        });
+        return b;
+    }
+</script>
+<script type="text/javascript" id="">
+    !(function (b, e, f, g, a, c, d) {
+        b.fbq ||
+            ((a = b.fbq = function () {
+                a.callMethod
+                    ? a.callMethod.apply(a, arguments)
+                    : a.queue.push(arguments);
+            }),
+                b._fbq || (b._fbq = a),
+                (a.push = a),
+                (a.loaded = !0),
+                (a.version = "2.0"),
+                (a.queue = []),
+                (c = e.createElement(f)),
+                (c.async = !0),
+                (c.src = g),
+                (d = e.getElementsByTagName(f)[0]),
+                d.parentNode.insertBefore(c, d));
+    })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "1830856737154545");
+    fbq("set", "agent", "tmgoogletagmanager", "1830856737154545");
+    fbq("track", "PageView");
+</script>
+<noscript>
+    <img height="1"
+         width="1"
+         style="display: none"
+         src="https://www.facebook.com/tr?id=1830856737154545&amp;ev=PageView&amp;noscript=1" />
+</noscript>
+<script type="text/javascript" id="">
+    function _instanceof(b, a) {
+        return null != a && "undefined" !== typeof Symbol && a[Symbol.hasInstance]
+            ? !!a[Symbol.hasInstance](b)
+            : b instanceof a;
+    }
+    function _classCallCheck(b, a) {
+        if (!_instanceof(b, a))
+            throw new TypeError("Cannot call a class as a function");
+    }
+    function _defineProperties(b, a) {
+        for (var e = 0; e < a.length; e++) {
+            var c = a[e];
+            c.enumerable = c.enumerable || !1;
+            c.configurable = !0;
+            "value" in c && (c.writable = !0);
+            Object.defineProperty(b, c.key, c);
+        }
+    }
+    function _createClass(b, a, e) {
+        a && _defineProperties(b.prototype, a);
+        e && _defineProperties(b, e);
+        return b;
+    }
+    var Ecomobi = (function () {
+        function b(a) {
+            _classCallCheck(this, b);
+            this.options = {
+                token: a.token || "",
+                offerId: a.offerId || "",
+                appPageScript:
+                    a.appPageScript ||
+                    "//dev-go.ecotrackings.com/eco_tracking_all_order.js",
+                bookingScript:
+                    a.bookingScript || "//dev-go.ecotrackings.com/eco_px.js",
+            };
+            this.run();
+        }
+        _createClass(b, [
+            {
+                key: "run",
+                value: function () {
+                    var a = this;
+                    this.insertScript(
+                        this.options.appPageScript,
+                        "ecomobi-all-page",
+                        function () {
+                            a.isCheckOut() &&
+                                a
+                                    .createDataSend()
+                                    .insertScript(
+                                        a.options.bookingScript,
+                                        "ecomobi-booking-page"
+                                    );
+                        }
+                    );
+                },
+            },
+            {
+                key: "isCheckOut",
+                value: function () {
+                    return (
+                        -1 <
+                        document
+                            .querySelector("body")
+                            .className.indexOf("page-booking-hotel-success") ||
+                        -1 <
+                        document
+                            .querySelector("body")
+                            .className.indexOf("page-booking-hotel-success-online")
+                    );
+                },
+            },
+            {
+                key: "createDataSend",
+                value: function () {
+                    var a = bookingInfoSuccess,
+                        b = a.bookingCode,
+                        c = a.bookingIP,
+                        d = a.hotel,
+                        f = a.cityName,
+                        g = a.booView,
+                        h = a.linkback;
+                    a = a.totalMoney;
+                    window.eco_token = this.options.token;
+                    window.eco_data = {
+                        offer_id: this.options.offerId,
+                        transaction_id: b,
+                        transaction_time: new Date(),
+                        session_ip: c || "",
+                        traffic_id: eco_cps.get_traffic_id(),
+                        products: [
+                            {
+                                id: b,
+                                sku: b,
+                                name: d.hot_name_temp,
+                                category_id: d.hot_city,
+                                category_name: f,
+                                price: a,
+                                quantity: 1,
+                                commission: "7%",
+                                status_code: g || 0,
+                                link: h,
+                            },
+                        ],
+                    };
+                    return this;
+                },
+            },
+            {
+                key: "insertScript",
+                value: function (a, b, c) {
+                    var d = document.querySelector("#" + b);
+                    if (d) return !1;
+                    d = document.createElement("script");
+                    d.setAttribute("src", a);
+                    d.setAttribute("id", b);
+                    document.body.appendChild(d);
+                    d.onload = function () {
+                        c && c();
+                    };
+                },
+            },
+        ]);
+        return b;
+    })();
+    new Ecomobi({
+        token: "3301a5de23c019d349c80ae8f5776c5b",
+        offerId: "mytour.vn",
+        appPageScript: "//go.ecotrackings.com/eco_tracking_all_order.js",
+        bookingScript: "//go.ecotrackings.com/eco_px.js",
+    });
+</script>
+<script src="//go.ecotrackings.com/eco_tracking_all_order.js" id="ecomobi-all-page">
+
+
+</script>
+<script type="text/javascript" id="">
+    window.__lc = window.__lc || {};
+    window.__lc.license = 12178533;
+    (function (e, f, c) {
+        function d(a) {
+            return b._h ? b._h.apply(null, a) : b._q.push(a);
+        }
+        var b = {
+            _q: [],
+            _h: null,
+            _v: "2.0",
+            on: function () {
+                d(["on", c.call(arguments)]);
+            },
+            once: function () {
+                d(["once", c.call(arguments)]);
+            },
+            off: function () {
+                d(["off", c.call(arguments)]);
+            },
+            get: function () {
+                if (!b._h)
+                    throw Error("[LiveChatWidget] You can't use getters before load.");
+                return d(["get", c.call(arguments)]);
+            },
+            call: function () {
+                d(["call", c.call(arguments)]);
+            },
+            init: function () {
+                var a = f.createElement("script");
+                a.async = !0;
+                a.type = "text/javascript";
+                a.src = "https://cdn.livechatinc.com/tracking.js";
+                f.head.appendChild(a);
+            },
+        };
+        !e.__lc.asyncInit && b.init();
+        e.LiveChatWidget = e.LiveChatWidget || b;
+    })(window, document, [].slice);
+</script>
+<noscript>
+    <a href="https://www.livechatinc.com/chat-with/12178533/" rel="nofollow">Chat with us</a>, powered by
+    <a href="https://www.livechatinc.com/?welcome"
+       rel="noopener nofollow"
+       target="_blank">LiveChat</a>
+</noscript>
+<script type="text/javascript" id="">
+    !(function (b, e, f, g, a, c, d) {
+        b.fbq ||
+            ((a = b.fbq = function () {
+                a.callMethod
+                    ? a.callMethod.apply(a, arguments)
+                    : a.queue.push(arguments);
+            }),
+                b._fbq || (b._fbq = a),
+                (a.push = a),
+                (a.loaded = !0),
+                (a.version = "2.0"),
+                (a.queue = []),
+                (c = e.createElement(f)),
+                (c.async = !0),
+                (c.src = g),
+                (d = e.getElementsByTagName(f)[0]),
+                d.parentNode.insertBefore(c, d));
+    })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "650297611840553");
+    fbq("set", "agent", "tmgoogletagmanager", "650297611840553");
+    fbq("track", "PageView");
+</script>
+<noscript>
+    <img height="1"
+         width="1"
+         style="display: none"
+         src="https://www.facebook.com/tr?id=650297611840553&amp;ev=PageView&amp;noscript=1" />
+</noscript>
+<iframe name="_hjRemoteVarsFrame"
+        title="_hjRemoteVarsFrame"
+        id="_hjRemoteVarsFrame"
+        src="https://vars.hotjar.com/box-469cf41adb11dc78be68c1ae7f9457a4.html"
+        style="
+        display: none !important;
+        width: 1px !important;
+        height: 1px !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        "></iframe>
+<script type="text/javascript" id="">
+    AT.init({ campaign_id: 31, is_reoccur: 1, is_lastclick: 1 });
+    AT.track();
+</script>
+<iframe id="insider-worker"
+        src="https://mytour.api.useinsider.com/worker-new.html"
+        style="display: none"></iframe>
+<div id="chat-widget-container"
+     style="
+        opacity: 1;
+        visibility: visible;
+        z-index: 2147483639;
+        position: fixed;
+        bottom: 0px;
+        width: 84px;
+        height: 84px;
+        max-width: 100%;
+        max-height: calc(100% - 0px);
+        min-height: 0px;
+        min-width: 0px;
+        background-color: transparent;
+        border: 0px;
+        overflow: hidden;
+        right: 0px;
+        transition: none 0s ease 0s !important;
+        ">
+    <iframe allow="autoplay; microphone *; camera *;"
+            src="https://secure.livechatinc.com/licence/12178533/v2/open_chat.cgi?license=12178533&amp;group=0&amp;embedded=1&amp;widget_version=3&amp;unique_groups=0&amp;localization_improvement=1"
+            allowtransparency="true"
+            id="chat-widget"
+            name="chat-widget"
+            title="LiveChat chat widget"
+            scrolling="no"
+            style="
+            width: 100%;
+            height: 100%;
+            min-height: 0px;
+            min-width: 0px;
+            margin: 0px;
+            padding: 0px;
+            background-image: none;
+            background-position: 0% 0%;
+            background-size: initial;
+            background-attachment: scroll;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: rgba(0, 0, 0, 0);
+            border-width: 0px;
+            float: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            transition: none 0s ease 0s !important;
+        "></iframe>
+</div>
+<iframe src="https://bid.g.doubleclick.net/xbbe/pixel?d=KAE"
+        style="display: none">
+</iframe>
+<style id="ins-free-style"
+       innerhtml=".ins-preview-wrapper.ins-preview-wrapper-196.ins-pos-bottom-right {
+        right: 11px !important;
+    }
+
+    /* OPT-9878 START */
+    #wrap-text-1549295557830 {
+        display: none;
+    }
+
+    #wrap-text-1549295747622 {
+        display: none;
+    }
+
+    .ins-element-visible-2820,
+    .ins-element-visible-2821 {
+        display: block !important;
+    }
+    /* OPT-9878 END */
+
+    /* OPT-14033 START */
+    .ins-email-blacklisted-3321, .ins-email-exists-3321 {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        color: red;
+    }
+
+    .ins-checkbox-unchecked-3321 {
+        box-shadow: 0 0 0 1px rgba(255, 0, 0, 1);
+    }
+    /* OPT-14033 END */
+
+    .sp-inline-wrap-3321.sp-advanced-css-3321{
+        z-index: 99 !important;
+    }">
+    .ins-preview-wrapper.ins-preview-wrapper-196.ins-pos-bottom-right {
+        right: 11px !important;
+    }
+
+    /* OPT-9878 START */
+    #wrap-text-1549295557830 {
+        display: none;
+    }
+
+    #wrap-text-1549295747622 {
+        display: none;
+    }
+
+    .ins-element-visible-2820,
+    .ins-element-visible-2821 {
+        display: block !important;
+    }
+    /* OPT-9878 END */
+
+    /* OPT-14033 START */
+    .ins-email-blacklisted-3321,
+    .ins-email-exists-3321 {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        color: red;
+    }
+
+    .ins-checkbox-unchecked-3321 {
+        box-shadow: 0 0 0 1px rgba(255, 0, 0, 1);
+    }
+    /* OPT-14033 END */
+
+    .sp-inline-wrap-3321.sp-advanced-css-3321 {
+        z-index: 99 !important;
+    }
+</style>
+<script type="text/javascript"
+        async=""
+        classname="ins-camp-frameless-js ins-camp-frameless-js-6430"
+        class="ins-camp-frameless-js ins-camp-frameless-js-6430">
+        try {
+        (function (camp) {
+            function initSideMenuCoupon() {
+            var self = {};
+            var mainWrapper = sQuery(".ins-preview-wrapper-" + camp.id);
+            var elements = {
+                couponContainer: mainWrapper.find(".ins-coupon-container"),
+                clipboardButton: mainWrapper.find(
+                ".ins-element-copy-to-clipboard-button"
+                ),
+                sideMenuContainer: mainWrapper.find(
+                ".ins-coupon-container .ins-side-menu-container"
+                ),
+                sideMenuArrow: mainWrapper.find(".ins-side-menu-arrow"),
+                content: mainWrapper.find(".ins-content-area"),
+                contentText: mainWrapper.find(".ins-coupon-title"),
+                copyButton: mainWrapper.find(".ins-coupon-button"),
+                actionButton: mainWrapper.find(".ins-action-button"),
+            };
+            var storages = {
+                isClosed: "ins-side-menu-closed-" + camp.id,
+                coupon: "sp-info-c-" + camp.id,
+                campaign: "sp-camp-" + camp.id,
+            };
+            var toggles = {
+                coupon: "block",
+                button: "block",
+                expandClassName: "ins-opened",
+                closeButton: "visible",
+            };
+            var classes = {
+                open: "ins-opened",
+                close: "ins-closed",
+                right: "ins-coupon-position-right",
+                left: "ins-coupon-position-left",
+                top: "ins-coupon-position-top",
+                bottom: "ins-coupon-position-bottom",
+            };
+            var isOnActionBuilder = camp.id === 0;
+            self.construct = function () {
+                self.reset();
+                self.setPosition();
+                self.triggerCoupon();
+                self.setEvents();
+                self.triggerClipBoard();
+                self.adjustVisibilityOfButtons();
+            };
+            self.reset = function () {
+                var positionClasses =
+                classes.right +
+                " " +
+                classes.left +
+                " " +
+                classes.bottom +
+                " " +
+                classes.top;
+                placementPosition = mainWrapper.css("margin");
+                mainWrapper.attr("style", "");
+                elements.couponContainer.removeClass(positionClasses);
+                self.resetButtonVisibility([
+                elements.copyButton,
+                elements.actionButton,
+                ]);
+            };
+            self.resetButtonVisibility = function (buttons) {
+                buttons.forEach(function (button) {
+                button.removeClass("ins-show ins-hide");
+                });
+                elements.contentText.removeClass(
+                "ins-small-height ins-medium-height ins-large-height"
+                );
+            };
+            self.setPosition = function () {
+                if (camp.locationConfig.gridConfig) {
+                self.adjustPlacementClass(camp.locationConfig.gridConfig);
+                }
+                self.adjustVisibilityOfContent();
+                self.setAnimation();
+                if (isArabic()) {
+                elements.content.attr("dir", "rtl");
+                }
+            };
+            self.adjustVisibilityOfContent = function () {
+                var currentVisibilityClass = classes.open;
+                var isClosed = spApi.storageData(storages.isClosed);
+                if (!isClosed || isOnActionBuilder) {
+                currentVisibilityClass = toggles.expandClassName;
+                } else if (isClosed === "1") {
+                currentVisibilityClass = classes.close;
+                }
+                [elements.content, elements.sideMenuArrow].forEach(function (
+                content
+                ) {
+                content.removeClass(classes.open + " " + classes.close);
+                content.addClass(currentVisibilityClass);
+                });
+            };
+            self.adjustPlacementClass = function (gridConfig) {
+                var position =
+                gridConfig.yDirection === "middle"
+                    ? gridConfig.xDirection
+                    : gridConfig.yDirection;
+                elements.couponContainer.addClass(classes[position]);
+            };
+            self.setAnimation = function () {
+                setTimeout(function () {
+                elements.content.addClass("ins-coupon-animation");
+                }, 1000);
+            };
+            self.triggerCoupon = function () {
+                if (!self.isCouponExists()) {
+                self.getCoupon();
+                } else {
+                self.useCoupon();
+                }
+            };
+            self.isCouponExists = function () {
+                return spApi.storageData(storages.coupon) !== null;
+            };
+            @*self.useCoupon = function () {
+                var couponCode = self.isCouponExists()
+                ? spApi.storageData(storages.coupon)
+                : "";
+                if (couponCode) {
+                var couponContent = sQuery(".ins-copy-to-clipboard", mainWrapper);
+                elements.clipboardButton.attr("data-clipboard-text", couponCode);
+                couponContent.html(
+                    couponContent.html().replace("@COUPONCODE", couponCode)
+                );
+                }
+            };*@
+            self.getCoupon = function () {
+                if (!spApi["insGetSideMenuCoupon" + camp.id]) {
+                spApi["insGetSideMenuCoupon" + camp.id] = true;
+                sQuery(document).trigger("getCoupon" + camp.id, self.useCoupon);
+                }
+            };
+            self.adjustVisibilityOfButtons = function () {
+                if (toggles.coupon === "block") {
+                if (toggles.button === "block") {
+                    self.toggleContentClasses(
+                    "ins-show",
+                    "ins-hide",
+                    "ins-small-height"
+                    );
+                } else {
+                    self.toggleContentClasses(
+                    "ins-hide",
+                    "ins-hide",
+                    "ins-small-height"
+                    );
+                }
+                } else if (toggles.coupon === "none") {
+                if (toggles.button === "block") {
+                    self.toggleContentClasses(
+                    "ins-hide",
+                    "ins-show",
+                    "ins-medium-height"
+                    );
+                } else if (toggles.closeButton === "hidden") {
+                    self.toggleContentClasses(
+                    "ins-hide",
+                    "ins-hide",
+                    "ins-full-height"
+                    );
+                } else {
+                    self.toggleContentClasses(
+                    "ins-hide",
+                    "ins-hide",
+                    "ins-large-height"
+                    );
+                }
+                }
+            };
+            self.toggleContentClasses = function (copy, action, content) {
+                elements.copyButton.addClass(copy);
+                elements.actionButton.addClass(action);
+                elements.contentText.addClass(content);
+            };
+            self.setEvents = function () {
+                var clickEvent = "click.insSideMenuCoupon";
+                elements.couponContainer.on(clickEvent, function (event) {
+                if (sQuery(event.target).closest(".ins-content-area").exists()) {
+                    return;
+                }
+                var params = {
+                    storageValue: "1",
+                    sideBarDisplayClass: classes.open,
+                    contentDisplayClass: classes.close,
+                };
+                if (sQuery(".ins-content-area", this).hasClass(classes.close)) {
+                    params = {
+                    storageValue: "0",
+                    sideBarDisplayClass: classes.close,
+                    contentDisplayClass: classes.open,
+                    };
+                }
+                self.toggleCouponContainer(params);
+                });
+                elements.clipboardButton.on(clickEvent, function () {
+                if (isOnActionBuilder) {
+                    return;
+                }
+                setAfterClickText(this);
+                setAfterClickColor(this);
+                setTimeout(function () {
+                    elements.sideMenuContainer.click();
+                }, 1500);
+                });
+                elements.content.on(clickEvent, function () {
+                if (
+                    isOnActionBuilder ||
+                    toggles.coupon !== "none" ||
+                    toggles.button !== "none" ||
+                    sQuery(this).closest(".ins-coupon-close-text.ins-show").exists()
+                ) {
+                    return;
+                }
+                sQuery(".ins-content-link", mainWrapper)[0].click();
+                });
+            };
+            self.toggleCouponContainer = function (data) {
+                var campaignExpireDuration = JSON.parse(
+                localStorage.getItem(storages.campaign) || "{}"
+                )._expires;
+                elements.content
+                .removeClass(data.sideBarDisplayClass)
+                .addClass(data.contentDisplayClass);
+                elements.sideMenuArrow
+                .removeClass(data.sideBarDisplayClass)
+                .addClass(data.contentDisplayClass);
+                spApi.storageData(
+                storages.isClosed,
+                data.storageValue,
+                campaignExpireDuration
+                );
+            };
+            self.triggerClipBoard = function () {
+                if (typeof InsClipboard === "undefined") {
+                spApi.loadScript(
+                    spApi.staticUrl + "js/clipboard.min.js",
+                    self.setCopyButton
+                );
+                } else {
+                self.setCopyButton();
+                }
+            };
+            self.setCopyButton = function () {
+                if (!elements.clipboardButton.hasClass("ins-show-assistant")) {
+                sQuery(document).trigger(
+                    "setCopyButton" + camp.id,
+                    ".ins-element-copy-to-clipboard-button"
+                );
+                }
+            };
+            self.construct();
+            }
+            function isArabic() {
+            var rightToLeftLangList = [
+                "ar_AE",
+                "ar_AR",
+                "ar_EG",
+                "ar_ME",
+                "ar_SA",
+                "fa_FA",
+                "fa_IR",
+                "ur_UR",
+            ];
+            return rightToLeftLangList.indexOf(spApi.getLang()) > -1;
+            }
+            function setAfterClickText(element) {
+            var afterClickText =
+                sQuery("[data-after-click-text]").attr("data-after-click-text") ||
+                "";
+            sQuery(".ins-element-editable", element)
+                .find("div, span")
+                .text(afterClickText);
+            }
+            function setAfterClickColor(element) {
+            var targetElement = sQuery(element).closest(
+                "[data-after-click-color]"
+            );
+            if (!targetElement.exists()) {
+                targetElement = sQuery(element).find("[data-after-click-color]");
+            }
+            targetElement.css(
+                "background-color",
+                targetElement.attr("data-after-click-color")
+            );
+            }
+            initSideMenuCoupon();
+            sQuery(document).on("framelessInited" + camp.id, initSideMenuCoupon);
+        })({
+            id: 6430,
+            predictiveFeedSettings: "",
+            locationConfig: {
+            type: 0,
+            mode: "adaptive",
+            position: "fixed",
+            left: "1326",
+            top: "202.5",
+            windowHeight: "575",
+            windowWidth: "1366",
+            windowHref: "https://vemaybay.mytour.vn/",
+            selectedElement: "",
+            frameless: true,
+            gridIsActive: true,
+            gridConfig: {
+                gridIsActive: "true",
+                mode: "adaptive",
+                xDirection: "right",
+                yDirection: "middle",
+            },
+            },
+            currencyFormatRules: {
+            VND: {
+                name: "Vietnamese Dong",
+                symbol: "₫",
+                alignment: "1",
+                thousandSeparator: ".",
+                decimalSeparator: ",",
+                decimalCount: -1,
+                value: "VND",
+            },
+            },
+            storyConfig: [],
+            smsConfig: { virtualLongNumber: "" },
+        });
+        } catch (err) {
+        Insider.errorBag.add(err);
+        }
+</script>
+<script type="text/javascript"
+        async=""
+        classname="ins-camp-frameless-js ins-camp-frameless-js-notification-center"
+        class="ins-camp-frameless-js ins-camp-frameless-js-notification-center">
+    try {
+        (function (camp) {
+            var initNotificationCenter = function () {
+                var mainContainer = sQuery(".ins-notification-center-wrapper");
+                var contentContainer = mainContainer.find(
+                    ".ins-notification-center-content"
+                );
+                var cartButton = mainContainer.find(".ins-element-cart-button");
+
+                sQuery("body")
+                    .off("click.notificationCenter")
+                    .on(
+                        "click.notificationCenter",
+                        ".ins-notification-center-button-img-wrapper",
+                        function () {
+                            contentContainer.toggleClass("ins-notification-center-closed");
+                            cartButton.toggleClass("ins-floating-cart-active");
+                        }
+                    );
+
+                if (camp.id !== 0) {
+                    if (!contentContainer.hasClass("ins-notification-center-closed")) {
+                        contentContainer.addClass("ins-notification-center-closed");
+                    }
+
+                    if (cartButton.hasClass("ins-floating-cart-active")) {
+                        cartButton.removeClass("ins-floating-cart-active");
+                    }
+
+                    if (mainContainer.hasClass("ins-notification-center-content-rtl")) {
+                        mainContainer.removeClass("ins-notification-center-content-rtl");
+                    }
+                }
+
+                var rightToLeftLangList = [
+                    "ar_AE",
+                    "ar_AR",
+                    "ar_EG",
+                    "ar_ME",
+                    "ar_SA",
+                    "fa_FA",
+                    "ur_UR",
+                ];
+
+                if (rightToLeftLangList.indexOf(spApi.getLang()) > -1) {
+                    mainContainer.addClass("ins-notification-center-content-rtl");
+                    sQuery(".ins-notification-center-wrapper").attr("dir", "ltr");
+                }
+            };
+
+            initNotificationCenter();
+
+            sQuery(document).on(
+                "framelessInited-notification-center",
+                initNotificationCenter
+            );
+        })({
+            id: "notification-center",
+            locationConfig: {
+                type: 0,
+                mode: "adaptive",
+                position: "fixed",
+                left: "0",
+                top: "668",
+                windowHeight: "748",
+                windowWidth: "1440",
+                windowHref: "https://mytour.vn/",
+                selectedElement: "",
+                frameless: "true",
+                gridIsActive: true,
+                gridConfig: {
+                    gridIsActive: "true",
+                    mode: "adaptive",
+                    xDirection: "left",
+                    yDirection: "bottom",
+                },
+            },
+            currencyFormatRules: { undefined: { decimalCount: -1 } },
+            smsConfig: { virtualLongNumber: "" },
+        });
+    } catch (err) {
+        Insider.errorBag.add(err);
+    }
+</script>
+
+<!-- phan modal cua xem chi tiet -->
+<div class="modal fade" id="dialog1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <!--modal-header-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!--END modal-header-->
+            <!--modal-body-->
+            <div class="modal-body">
+                <nav>
+                    <div class="nav nav-tabs nav-fill">
+                        <a href="#tab-step-1" class="nav-item nav-link active" data-toggle="tab">Chi tiết chuyến bay</a>
+                        <a href="#tab-step-2" class="nav-item nav-link" data-toggle="tab">Chi tiết giá</a>
+                    </div>
+                </nav>
+                <div class="tab-content">
+                    <!--Chi tiết chuyến bay-->
+                    <div class="tab-pane show fade active" id="tab-step-1">
+                        <div class="hay">
+                            <!--Máy bay 1-->
+                            <div class="detail_planet">
+                                <div class="band">
+                                    <img src="../Asset/img/VNA_logo_notext.png" alt="">
+                                    <p style="margin-bottom: 0px">VN261</p>
+                                    <p>Airbus A321-100/200</p>
+                                </div>
+                                <div class="schedule">
+                                    <div class="planet">
+                                        <i class="fas fa-plane-departure"></i>
+                                        <div style="border-left: 1px solid rgb(136, 136, 136); height: 70%;"></div>
+                                        <i class="fas fa-plane-arrival"></i>
+
+                                    </div>
+                                    <div class="time_planet">
+                                        <div class="go">
+                                            <div class="time_sce">
+                                                <h6>23:05</h6>
+                                                <span>17/11/2020</span>
+                                            </div>
+                                            <div class="where">
+                                                <h6>Hà Nội (HAN)</h6>
+                                                <span>Nội Bài</span>
+                                            </div>
+                                        </div>
+                                        <div class="sub_time">
+                                            <p><i class="far fa-clock"></i>2h 5m</p>
+                                        </div>
+                                        <div class="back">
+                                            <div class="time_sce">
+                                                <h6>01:10</h6>
+                                                <span>18/11/2020</span>
+                                            </div>
+                                            <div class="where">
+                                                <h6>Thành phố Hồ Chí Minh (SGN)</h6>
+                                                <span>Tân Sơn Nhất</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="more">
+                                    <p><i class="fas fa-suitcase-rolling"></i> Hành lý xách tay 2 kiện (9kg/kiện). Hành lý ký gửi 32kg</p>
+                                    <p><i class="fas fa-history"></i> Miễn phí đổi vé chỉ mất phí chênh lệch giá vé (nếu có)</p>
+                                    <p class="return_money"><i class="fas fa-undo-alt"></i> Phí hoàn vé 300.000VND</p>
+                                </div>
+                            </div>
+                            <!--Máy bay 2-->
+                            <div class="detail_planet" style="border-bottom: unset;">
+                                <div class="band">
+                                    <img src="../Asset/img/VNA_logo_notext.png" alt="">
+                                    <p style="margin-bottom: 0px">VN261</p>
+                                    <p>Airbus A321-100/200</p>
+                                </div>
+                                <div class="schedule">
+                                    <div class="planet">
+                                        <i class="fas fa-plane-departure"></i>
+                                        <div style="border-left: 1px solid rgb(136, 136, 136); height: 70%;"></div>
+                                        <i class="fas fa-plane-arrival"></i>
+
+                                    </div>
+                                    <div class="time_planet">
+                                        <div class="go">
+                                            <div class="time_sce">
+                                                <h6>23:05</h6>
+                                                <span>17/11/2020</span>
+                                            </div>
+                                            <div class="where">
+                                                <h6>Hà Nội (HAN)</h6>
+                                                <span>Nội Bài</span>
+                                            </div>
+                                        </div>
+                                        <div class="sub_time">
+                                            <p><i class="far fa-clock"></i>2h 5m</p>
+                                        </div>
+                                        <div class="back">
+                                            <div class="time_sce">
+                                                <h6>01:10</h6>
+                                                <span>18/11/2020</span>
+                                            </div>
+                                            <div class="where">
+                                                <h6>Thành phố Hồ Chí Minh (SGN)</h6>
+                                                <span>Tân Sơn Nhất</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="more">
+                                    <p><i class="fas fa-suitcase-rolling"></i> Hành lý xách tay 2 kiện (9kg/kiện). Hành lý ký gửi 32kg</p>
+                                    <p><i class="fas fa-history"></i> Miễn phí đổi vé chỉ mất phí chênh lệch giá vé (nếu có)</p>
+                                    <p class="return_money"><i class="fas fa-undo-alt"></i> Phí hoàn vé 300.000VND</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END Chi tiết chuyến bay-->
+                    <!--Chi tiết giá-->
+                    <div class="tab-pane show fade" id="tab-step-2">
+                        <div class="detail_money">
+                            <!--Chiều đi-->
+                            <div class="detail_go">
+                                <h6>Giá chiều đi</h6>
+                                <div class="sub_detail">
+                                    <p>Giá vé người lớn </p><span>2 x 4,509,000 đ</span>
+                                </div>
+                                <div class="sub_detail">
+                                    <p>Giá vé trẻ em </p><span>1 x 4,509,000 đ</span>
+                                </div>
+                                <div class="sub_detail">
+                                    <p>Thuế và phí </p><span>2,358,000 đ</span>
+                                </div>
+                                <div class="sub_detail">
+                                    <p>Mua thêm hành lý </p><span>187,000 đ</span>
+                                </div>
+                                <div class="sub_detail">
+                                    <p>Tổng giá chiều đi </p><span>15,885,000 đ</span>
+                                </div>
+                            </div>
+                            <!--Chiều về-->
+                            <div class="detail_back">
+                                <h6>Giá chiều về</h6>
+                                <div class="sub_detail">
+                                    <p>Giá vé người lớn </p><span>2 x 4,509,000 đ</span>
+                                </div>
+                                <div class="sub_detail">
+                                    <p>Giá vé trẻ em </p><span>1 x 4,509,000 đ</span>
+                                </div>
+                                <div class="sub_detail">
+                                    <p>Thuế và phí </p><span>2,358,000 đ</span>
+                                </div>
+                                <div class="sub_detail">
+                                    <p>Mua thêm hành lý </p><span>187,000 đ</span>
+                                </div>
+                                <div class="sub_detail">
+                                    <p>Tổng giá chiều về </p><span>15,885,000 đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Tổng tiền-->
+                        <div class="all_money">
+                            <div class="sub_detail">
+                                <p style="font-size: 14px">Bảo hiểm du lịch </p><span>3 x 36,000 đ</span>
+                            </div>
+                            <div class="sub_detail">
+                                <p style="font-size: 16px;font-weight: 600">Tổng tiền thanh toán</p><span style="font-size: 16px;color: #139029;font-weight: 600;">15,993,000 đ</span>
+                            </div>
+                            <p class="text-right" style="font-size: 12px;">Giá đã bao gồm thuế, phí & hóa đơn VAT</p>
+                        </div>
+                    </div>
+                    <!--END Chi tiết giá-->
+                </div>
+            </div>
+            <!--END modal-body-->
+
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+<!-- het modal cua xem chi tiet -->
+<style>
+    #layout-1505891501864,
+    #wrap-cart-button-1492688272087,
+    .lc-1xypejv-enter-done {
+        display: none;
+    }
+</style>
+
+

@@ -1,0 +1,561 @@
+﻿
+@{
+    ViewBag.Title = "TimKiemChuyenBay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @model List<DatVeMayBay.Models.ChuyenBay>
+    var SanCC = (List<DatVeMayBay.Models.SanBay>)ViewBag.SanBcc;
+    var SanHC = (List<DatVeMayBay.Models.SanBay>)ViewBag.SanBhc;
+
+}
+
+<div id="wrapper">
+    <!--Search-->
+    <div id="wp-content">
+        <!--Tìm kiếm-->
+        <div id="wp-find-flight">
+            <div id="find-flight">
+
+                <div id="find-header">
+                    TÌM CHUYẾN BAY
+                    <img src="../Asset/img/index_plane.png" class="float-right mt-1" width="20" height="21">
+                </div>
+
+                <div id="find-content">
+                    <div id="find-content-header">
+                        <p>Banana Airlines - Hơn cả một chuyến bay</p>
+                        <a title="Check-in trực tuyến" href="/Home/KhuyenMai" target="_blank">
+                            <img class=" " src="../Asset/img/ticketicon.png" width="115">
+                        </a>
+                        <img class=" " src="../Asset/img/bamboo-airways-fb.traihathanh.png">
+                        <b class="coupon-text"> Khuyến mãi !!!</b>
+                    </div>
+
+                    <!--Form Tìm kiếm-->
+                    <form method="POST" action="/Home/TimKiemChuyenBay">
+                        <!---->
+                        <div class="find-content-form">
+                            <div class="search-form">
+                                <div class="ticket-category">
+                                    <label class="flightType">
+                                        Một chiều
+                                        <input type="radio" name="MaLoaiVe" id="1" checked value="1">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="flightType">
+                                        Khứ hồi
+                                        <input type="radio" name="MaLoaiVe" id="2" value="2">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="diemdi">
+                                    <div class="block-text">
+                                        <label>Điểm đi</label>
+                                        <input type="text" id="departCity" placeholder="Điểm đi" name="SanBay_CatCanh" value="">
+                                        <input type="hidden" name="SanBay_CatCanh" id="departCity_hidden" >
+                                    </div>
+                                </div>
+                                <i class="fas fa-exchange" id="icon-switch-flight"></i>
+                                <div class="diemden">
+                                    <div class="block-text">
+                                        <label>Điểm đến</label>
+                                        <input type="text" id="returnCity" placeholder="Điểm đến">
+                                        <input type="hidden" name="SanBay_HaCanh" id="returnCity_hidden">
+                                    </div>
+                                </div>
+                                <div class="ngaydi">
+                                    <div class="block-text">
+                                        <label>Ngày đi</label>
+                                        <input type="hidden" name="NgayCatCanh" class="txt-date txt-date-departure hasDatepicker" value="" datetype="departure" id="dp1604649647739" style=""><img class="ui-datepicker-trigger" src="../Asset/img/calendar.png"
+                                                                                                                                                                                                   alt="Ngày đi" title="Ngày đi">
+                                        <input type="text" name="NgayCatCanh" id="flights-checkin" class="date depDate  hasDatepicker" value="07-11-2022">
+                                        <input type="hidden" name="au" value="X$H%bQ;8q9YGs&amp;Pq">
+                                    </div>
+                                </div>
+                                <div class="op-dayve dayres" id="ngayve" style="position: relative; display: block;">
+                                    <div class="block-text">
+                                        <label>Ngày về</label>
+                                        <input type="hidden" name="NgayHaCanh" class="txt-date txt-date-return hasDatepicker" value="" datetype="return" id="dp1604649647740"><img class="ui-datepicker-trigger" src="../Asset/img/calendar.png" alt="Ngày về"
+                                                                                                                                                                                   title="Ngày về">
+                                        <input type="text" name="NgayHaCanh" id="flights-checkout" class="date retDate hasDatepicker" value="09-11-2022">
+                                        <input type="hidden" name="key" value="X$H%bQ;8q9YGs&amp;Pq">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content mt-3">
+                                <div class="aut">
+                                    <div class="block-text ">
+                                        <img src="../Asset/img/nguoilon.png" title="Người lớn" alt="Người lớn">
+                                        <label id="ad" for="ddlAdults">
+                                            Người lớn
+                                            <span style="position: absolute; font-weight: normal; font-size: 11px; left: 16px; top: 18px;">&gt;=12 tuổi</span>
+                                        </label>
+                                        <input required="" class="block-item" id="adult_qty" name="adult" value="1" title="Người lớn" type="text">
+                                        <span class="sign plus" id="plus_adult">+</span>
+                                        <span class="sign minus" id="minus_adult">-</span>
+                                    </div>
+                                </div>
+                                <div class="chd" style="margin-left:35px;">
+                                    <div class="block-text ">
+                                        <img src="../Asset/img/treem.png" title="Trẻ em" alt="Trẻ em">
+                                        <label id="ad" for="child">
+                                            Trẻ em
+                                            <span style="position: absolute; font-weight: normal; font-size: 11px; left: 1px; top: 18px;width: 72px;">dưới 12 tuổi</span>
+                                        </label>
+                                        <input required="" class="block-item" id="child_qty" name="child" value="0" title="Trẻ em" type="text">
+                                        <span class="sign plus" id="plus_child">+</span>
+                                        <span class="sign minus" id="minus_child">-</span>
+                                    </div>
+                                </div>
+                                <div class="inf" style="margin-left:22px;">
+                                    <div class="block-text ">
+                                        <img src="../Asset/img/embe.png" title="Em bé" alt="Em bé">
+                                        <label id="ad" for="infant">
+                                            Em bé
+                                            <span style="position: absolute; font-weight: normal; font-size: 11px; left: 1px; top: 18px;width: 72px;">dưới 24 tháng</span>
+                                        </label>
+                                        <input required="" class="block-item" id="infant_qty" name="infant" value="0" title="Em bé" type="text">
+                                        <span class="sign plus" id="plus_infant">+</span>
+                                        <span class="sign minus" id="minus_infant">-</span>
+                                    </div>
+                                </div>
+                                <!--<div class="inf" style="margin-left:22px;width: 225px;">
+                                    <button class="btn btn-success w-100" id="searchForFlight">Tìm chuyến bay</button>
+                                </div>-->
+                                <input class=" btn btn-outline-primary" type="submit" style="margin-left:22px;width: 225px;" value="Tìm chuyến bay">
+                            </div>
+                        </div>
+                    </form>
+                    <!--End Form Tìm Kiếm-->
+                </div>
+            </div>
+        </div>
+        <!--End Tìm Kiếm-->
+        <!--Tab Tìm Điểm Bay-->
+        <div class="sanbay">
+            <div class="tittle-airport d-flex justify-content-between">
+                <p class="mb-0">Lựa chọn thành phố hoặc sân bay đi</p>
+                <i class="fas fa-times" id="close-form-flight"></i>
+            </div>
+
+            <div class="content-airport mt-2">
+                <ul class="nav nav-pills" id="tab-airport" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active " id="tab-inland" data-toggle="tab" href="#content-inland" role="tab" aria-controls="content-inland" aria-selected="true">
+                            Nội địa
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab-oversea" data-toggle="tab" href="#content-oversea" role="tab" aria-controls="content-oversea" aria-selected="false">
+                            Quốc tế
+                        </a>
+                    </li>
+                    <li class="nav-item" style="margin-left: 100px;margin-top: 5px;">
+                        <input type="text" placeholder="Nhập tên thành phố hoặc sân bay" style="width:300px;" id="searchFlight">
+                    </li>
+                </ul>
+                <!--List-->
+                <div class="tab-content" id="tab-airport-content">
+                    <!--List Sân bay Nội địa-->
+                    <div class="tab-pane fade show active " id="content-inland" role="tabpanel" aria-labelledby="tab-inland">
+                        <div class="d-flex justify-content-between">
+
+                            <ul class="list-unstyled mr-3 ">
+                                <h2 class="text-danger" style="font-size: 1.5rem;">Miền Bắc</h2>
+                                <li class="aircode"><a code="HAN" typeflight="0" airportcode="8772,Hà Nội (HAN)"><b>Hà Nội </b><span>(HAN)</span></a></li>
+                                <li class="aircode"><a code="HPH" typeflight="0" airportcode="8758,Hải Phòng (HPH)"><b>Hải Phòng </b><span>(HPH)</span></a></li>
+                                <li class="aircode"><a code="DIN" typeflight="0" airportcode="8762,Điện Biên Phủ (DIN)"><b>Điện Biên </b><span>(DIN)</span></a></li>
+                                <li class="aircode"><a code="VDO" typeflight="0" airportcode="8762,Vân Đồn (VDO)"><b>Vân Đồn </b><span>(VDO)</span></a></li>
+                            </ul>
+                            <ul class="list-unstyled mr-3 ">
+                                <h2 class="text-danger" style="font-size: 1.5rem;">Miền Trung</h2>
+                                <li class="aircode"><a code="THD" typeflight="0" airportcode="8906,Thanh Hóa (THD)"><b>Thanh Hóa </b><span>(THD)</span></a></li>
+                                <li class="aircode"><a code="VII" typeflight="0" airportcode="8786,Vinh  (VII)"><b>Vinh  </b><span>(VII)</span></a></li>
+                                <li class="aircode"><a code="DAD" typeflight="0" airportcode="8761,Đà Nẵng (DAD)"><b>Đà Nẵng </b><span>(DAD)</span></a></li>
+                                <li class="aircode"><a code="HUI" typeflight="0" airportcode="8775,Huế (HUI)"><b>Huế </b><span>(HUI)</span></a></li>
+                                <li class="aircode"><a code="VDH" typeflight="0" airportcode="8902,Đồng Hới (VDH)"><b>Đồng Hới </b><span>(VDH)</span></a></li>
+                                <li class="aircode"><a code="TBB" typeflight="0" airportcode="8763,Tuy Hòa (TBB)"><b>Tuy Hòa </b><span>(TBB)</span></a></li>
+                                <li class="aircode"><a code="VCL" typeflight="0" airportcode="8903,Chu Lai (VCL)"><b>Chu Lai </b><span>(VCL)</span></a></li>
+                                <li class="aircode"><a code="PXU" typeflight="0" airportcode="8779,Pleiku (PXU)"><b>Pleiku </b><span>(PXU)</span></a></li>
+                            </ul>
+                            <ul class="list-unstyled ">
+                                <h2 class="text-danger" style="font-size: 1.5rem;">Miền Nam</h2>
+                                <li class="aircode"><a code="SGN" typeflight="0" airportcode="8785,Hồ Chí Minh (SGN)"><b>Hồ Chí Minh </b><span>(SGN)</span></a></li>
+                                <li class="aircode"><a code="CXR" typeflight="0" airportcode="8769,Nha Trang (CXR)"><b>Nha Trang </b><span>(CXR)</span></a></li>
+                                <li class="aircode"><a code="DLI" typeflight="0" airportcode="8766,Đà Lạt (DLI)"><b>Đà Lạt </b><span>(DLI)</span></a></li>
+                                <li class="aircode"><a code="PQC" typeflight="0" airportcode="8764,Phú Quốc (PQC)"><b>Phú Quốc </b><span>(PQC)</span></a></li>
+                                <li class="aircode"><a code="VCA" typeflight="0" airportcode="8756,Cần Thơ (VCA)"><b>Cần Thơ </b><span>(VCA)</span></a></li>
+                                <li class="aircode"><a code="VCS" typeflight="0" airportcode="8760,Côn Đảo (VCS)"><b>Côn Đảo </b><span>(VCS)</span></a></li>
+                                <li class="aircode"><a code="VKG" typeflight="0" airportcode="8782,Rạch Giá (VKG)"><b>Rạch Giá </b><span>(VKG)</span></a></li>
+                                <li class="aircode"><a code="CAH" typeflight="0" airportcode="8755,Cà Mau (CAH)"><b>Cà Mau </b><span>(CAH)</span></a></li>
+                                <li class="aircode"><a code="BMV" typeflight="0" airportcode="8777,Buôn Ma Thuột (BMV)"><b>Buôn Ma Thuột </b><span>(BMV)</span></a></li>
+                                <li class="aircode"><a code="UIH" typeflight="0" airportcode="8781,Quy Nhơn (UIH)"><b>Quy Nhơn </b><span>(UIH)</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--END List Sân bay Nội địa-->
+                    <!--List Sân bay Quốc Tế-->
+                    <div class="tab-pane fade " id="content-oversea" role="tabpanel" aria-labelledby="tab-oversea">
+                        <div class="d-flex justify-content-between">
+                            <ul class="list-unstyled">
+                                <h2 class="title">Đông Nam Á</h2>
+                                <li class="aircode" code="HAN" typeflight="0">
+                                    <a><img src="https://vietjetvn.com/image/flag/VN.png" width="22px" height="15px" align="absmiddle" alt="Hà Nội">&nbsp;<b>Hà Nội </b><span>&nbsp;(HAN)</span></a>
+                                </li>
+                                <li class="aircode" code="SGN" typeflight="0">
+                                    <a><img src="https://vietjetvn.com/image/flag/VN.png" width="22px" height="15px" align="absmiddle" alt="Hồ Chí Minh">&nbsp;<b>Hồ Chí Minh </b><span>&nbsp;(SGN)</span></a>
+                                </li>
+                                <li class="aircode" code="SIN" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/SG.png" width="22px" height="15px" align="absmiddle" alt="Singapore">&nbsp;<b>Singapore </b><span>&nbsp;(SIN)</span></a>
+                                </li>
+                                <li class="aircode" code="BKK" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/TH.png" width="22px" height="15px" align="absmiddle" alt="Bangkok">&nbsp;<b>Bangkok </b><span>&nbsp;(BKK)</span></a>
+                                </li>
+                                <li class="aircode" code="PNH" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/KH.png" width="22px" height="15px" align="absmiddle" alt="Phnom Penh">&nbsp;<b>Phnom Penh </b><span>&nbsp;(PNH)</span></a>
+                                </li>
+                                <li class="aircode" code="REP" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/KH.png" width="22px" height="15px" align="absmiddle" alt="Siem Reap">&nbsp;<b>Siem Reap </b><span>&nbsp;(REP)</span></a>
+                                </li>
+                                <li class="aircode" code="CGK" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/ID.png" width="22px" height="15px" align="absmiddle" alt="Jakarta">&nbsp;<b>Jakarta </b><span>&nbsp;(CGK)</span></a>
+                                </li>
+                                <li class="aircode" code="MNL" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/PH.png" width="22px" height="15px" align="absmiddle" alt="Manila">&nbsp;<b>Manila </b><span>&nbsp;(MNL)</span></a>
+                                </li>
+                                <li class="aircode" code="KUL" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/MY.png" width="22px" height="15px" align="absmiddle" alt="Kuala Lumpur">&nbsp;<b>Kuala Lumpur </b><span>&nbsp;(KUL)</span></a>
+                                </li>
+                                <li class="aircode" code="PNH" typeflight="1">
+                                    <a airportcode="4690,Yangon (RGN)"><img src="https://vietjetvn.com/image/flag/MM.png" width="22px" height="15px" align="absmiddle" alt="Yangon">&nbsp;<b>Yangon </b><span>&nbsp;(RGN)</span></a>
+                                </li>
+                                <li class="aircode" code="VTE" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/LA.png" width="22px" height="15px" align="absmiddle" alt="Vientiane">&nbsp;<b>Vientiane </b><span>&nbsp;(VTE)</span></a>
+                                </li>
+                                <li class="aircode" code="PKZ" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/LA.png" width="22px" height="15px" align="absmiddle" alt="Pakse">&nbsp;<b>Pakse </b><span>&nbsp;(PKZ)</span></a>
+                                </li>
+                                <h2 class="title mb-0">Châu Úc</h2>
+                                <li class="aircode" code="DRW" typeflight="2">
+                                    <a><img src="https://vietjetvn.com/image/flag/AU.png" width="22px" height="15px" align="absmiddle" alt="Darwin">&nbsp;<b>Darwin </b><span>&nbsp;(DRW)</span></a>
+                                </li>
+                                <li class="aircode" code="SYD" typeflight="2">
+                                    <a><img src="https://vietjetvn.com/image/flag/AU.png" width="22px" height="15px" align="absmiddle" alt="Sydney">&nbsp;<b>Sydney </b><span>&nbsp;(SYD)</span></a>
+                                </li>
+                                <li class="aircode" code="MEL" typeflight="2">
+                                    <a><img src="https://vietjetvn.com/image/flag/AU.png" width="22px" height="15px" align="absmiddle" alt="Melbourne">&nbsp;<b>Melbourne </b><span>&nbsp;(MEL)</span></a>
+                                </li>
+                                <li class="aircode" code="AKL" typeflight="2">
+                                    <a><img src="https://vietjetvn.com/image/flag/AU.png" width="22px" height="15px" align="absmiddle" alt="Auckland"><b>Auckland </b><span>&nbsp;(AKL)</span></a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <h2 class="title">Trung Quốc</h2>
+                                <li class="aircode" code="HKG" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/HK.png" width="22px" height="15px" align="absmiddle" alt="Hong Kong">&nbsp;<b>Hong Kong </b><span>&nbsp;(HKG)</span></a>
+                                </li>
+                                <li class="aircode" code="MFM" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/MO.png" width="22px" height="15px" align="absmiddle" alt="Macau">&nbsp;<b>Macau </b><span>&nbsp;(MFM)</span></a>
+                                </li>
+                                <h2 class="title mb-0">Bắc Á</h2>
+                                <li class="aircode" code="CAN" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Quảng Châu">&nbsp;<b>Quảng Châu </b><span>&nbsp;(CAN)</span></a>
+                                </li>
+                                <li class="aircode" code="PEK" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Bắc Kinh">&nbsp;<b>Bắc Kinh </b><span>&nbsp;(PEK)</span></a>
+                                </li>
+                                <li class="aircode" code="CSX" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Changsha">&nbsp;<b>Changsha </b><span>&nbsp;(CSX)</span></a>
+                                </li>
+                                <li class="aircode" code="SHA" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Thượng Hải">&nbsp;<b>Thượng Hải </b><span>&nbsp;(SHA)</span></a>
+                                </li>
+                                <li class="aircode" code="NNG" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Nam Ninh">&nbsp;<b>Nam Ninh </b><span>&nbsp;(NNG)</span></a>
+                                </li>
+                                <li class="aircode" code="PVG" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/CN.png" width="22px" height="15px" align="absmiddle" alt="Thượng Hải">&nbsp;<b>Thượng Hải </b><span>&nbsp;(PVG)</span></a>
+                                </li>
+                                <li class="aircode" code="HYD" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/IN.png" width="22px" height="15px" align="absmiddle" alt="Hyderabad">&nbsp;<b>Hyderabad </b><span>&nbsp;(HYD)</span></a>
+                                </li>
+                                <li class="aircode" code="TRV" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/IN.png" width="22px" height="15px" align="absmiddle" alt="Trivandrum">&nbsp;<b>Trivandrum </b><span>&nbsp;(TRV)</span></a>
+                                </li>
+                                <li class="aircode" code="NGO" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/JP.png" width="22px" height="15px" align="absmiddle" alt="Nagoya">&nbsp;<b>Nagoya </b><span>&nbsp;(NGO)</span></a>
+                                </li>
+                                <li class="aircode" code="KIX" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/JP.png" width="22px" height="15px" align="absmiddle" alt="Osaka">&nbsp;<b>Osaka </b><span>&nbsp;(KIX)</span></a>
+                                </li>
+                                <li class="aircode" code="NRT" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/JP.png" width="22px" height="15px" align="absmiddle" alt="Tokyo">&nbsp;<b>Tokyo </b><span>&nbsp;(NRT)</span></a>
+                                </li>
+                                <li class="aircode" code="PUS" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/KR.png" width="22px" height="15px" align="absmiddle" alt="Busan">&nbsp;<b>Busan </b><span>&nbsp;(PUS)</span></a>
+                                </li>
+                                <li class="aircode" code="GMP" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/KR.png" width="22px" height="15px" align="absmiddle" alt="Seoul">&nbsp;<b>Seoul </b><span>&nbsp;(GMP)</span></a>
+                                </li>
+                                <li class="aircode" code="ICN" typeflight="1">
+                                    <a><img src="https://vietjetvn.com/image/flag/KR.png" width="22px" height="15px" align="absmiddle" alt="Seoul">&nbsp;<b>Seoul </b><span>&nbsp;(ICN)</span></a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <h2 class="title">Châu Âu</h2>
+                                <li class="aircode" code="PRG" typeflight="2">
+                                    <a><img src="https://vietjetvn.com/image/flag/CZ.png" width="22px" height="15px" align="absmiddle" alt="Prague">&nbsp;<b>Prague </b><span>&nbsp;(PRG)</span></a>
+                                </li>
+                                <li class="aircode" code="CDG" typeflight="2">
+                                    <a><img src="https://vietjetvn.com/image/flag/FR.png" width="22px" height="15px" align="absmiddle" alt="Paris">&nbsp;<b>Paris </b><span>&nbsp;(CDG)</span></a>
+                                </li>
+                                <li class="aircode" code="FRA" typeflight="2">
+                                    <a><img src="https://vietjetvn.com/image/flag/DE.png" width="22px" height="15px" align="absmiddle" alt="Frankfurt">&nbsp;<b>Frankfurt </b><span>&nbsp;(FRA)</span></a>
+                                </li>
+                                <li class="aircode" code="MOW" typeflight="2">
+                                    <a><img src="https://vietjetvn.com/image/flag/RU.png" width="22px" height="15px" align="absmiddle" alt="Moscow">&nbsp;<b>Moscow </b><span>&nbsp;(MOW)</span></a>
+                                </li>
+                                <li class="aircode" code="LHR" typeflight="2">
+                                    <a><img src="https://vietjetvn.com/image/flag/CA.png" width="22px" height="15px" align="absmiddle" alt="London">&nbsp;<b>London </b><span>&nbsp;(LHR)</span></a>
+                                </li>
+                                <h2 class="title mb-0">Châu Mỹ</h2>
+                                <li class="aircode" code="YTO" typeflight="3">
+                                    <a><img src="https://vietjetvn.com/image/flag/CA.png" width="22px" height="15px" align="absmiddle" alt="Toronto">&nbsp;<b>Toronto </b><span>&nbsp;(YTO)</span></a>
+                                </li>
+                                <li class="aircode" code="CHI" typeflight="3">
+                                    <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="Chicago">&nbsp;<b>Chicago </b><span>&nbsp;(CHI)</span></a>
+                                </li>
+                                <li class="aircode" code="BOS" typeflight="3">
+                                    <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="Boston">&nbsp;<b>Boston </b><span>&nbsp;(BOS)</span></a>
+                                </li>
+                                <li class="aircode" code="MSP" typeflight="3">
+                                    <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="Minneapolis">&nbsp;<b>Minneapolis </b><span>&nbsp;(MSP)</span></a>
+                                </li>
+                                <li class="aircode" code="SFO" typeflight="3">
+                                    <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="San Francisco">&nbsp;<b>San Francisco </b><span>&nbsp;(SFO)</span></a>
+                                </li>
+                                <li class="aircode" code="SEA" typeflight="3">
+                                    <a><img src="https://vietjetvn.com/image/flag/US.png" width="22px" height="15px" align="absmiddle" alt="Seattle, WA">&nbsp;<b>Seattle, WA </b><span>&nbsp;(SEA)</span></a>
+                                </li>
+                                <li class="aircode" code="LAX" typeflight="3">
+                                    <a><img src="https://vietjetvn.com/image/flag/CL.png" width="22px" height="15px" align="absmiddle" alt="Los Angeles">&nbsp;<b>Los Angeles </b><span>&nbsp;(LAX)</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--END List Sân bay Quốc Tế-->
+                </div>
+                <!--END List-->
+            </div>
+
+            <div id="searchList"></div>
+        </div>
+        <!--END Tab Tìm Điểm Bay-->
+    </div>
+    <!--END Search-->
+
+    <script src="../Asset/js/search-flights.js"></script>
+
+    <!-- CONTENT SEARCH -->
+    <div id="search-flights-info" style="background-color: rgb(250, 250, 250);padding-bottom: 20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <!--Bộ lọc-->
+                        <div class="col-md-3" id="sidebar-left">
+                            <!--Header-->
+                            <div class="filter-refresh">
+                                <span class="text-bold"><i class="fas fa-filter"></i>Bộ lọc</span>
+                                <span class="text-bold text-primary"><i class="fas fa-redo-alt"></i>Làm mới</span>
+                            </div>
+                            <!--Giá-->
+                            <div class="price-fliter">
+                                <div class="price-header d-flex justify-content-between mb-3">
+                                    <b>Giá</b>
+                                    <span id="price-amount">0 đ - 5,000,000 đ</span>
+                                </div>
+                                <div id="slider-range-price" class="mb-3"></div>
+                            </div>
+                            <!--Số điểm dừng-->
+                            <div class="btn mb-3 d-flex justify-content-between item-filter" data-toggle="collapse" data-target="#stop-point-qty" style="font-weight: bold;padding-left: 0;cursor: pointer;">
+                                <span>Số điểm dừng</span><i class="fas fa-chevron-down rotate ml-2" style="margin-top:5px"></i>
+                            </div>
+                            <div id="stop-point-qty" class="collapse ">
+                                <input type="checkbox" id="stop-point">
+                                <label for="#stop-point" class="ml-3">Bay thẳng</label>
+                            </div>
+                            <!--Giờ cất cánh-->
+                            <div class="take-off-flight">
+                                <p class="font-weight-bold">Cất cánh</p>
+                                <div id="time-range-flight" class="d-flex justify-content-around">
+                                    <button class="time-range-flight">00:00 - 06:00</button>
+                                    <button class="time-range-flight">06:00 - 12:00</button>
+                                </div>
+                                <div id="time-range-flight" class="d-flex justify-content-around mt-2">
+                                    <button class="time-range-flight">12:00 - 18:00</button>
+                                    <button class="time-range-flight">18:00 - 24:00</button>
+                                </div>
+                            </div>
+                            <!--Giờ hạ cánh-->
+                            <div class="landing-flight mt-3">
+                                <p class="font-weight-bold">Hạ cánh</p>
+                                <div id="time-range-flight" class="d-flex justify-content-around">
+                                    <button class="time-range-flight">00:00 - 06:00</button>
+                                    <button class="time-range-flight">06:00 - 12:00</button>
+                                </div>
+                                <div id="time-range-flight" class="d-flex justify-content-around mt-2">
+                                    <button class="time-range-flight">12:00 - 18:00</button>
+                                    <button class="time-range-flight">18:00 - 24:00</button>
+                                </div>
+                            </div>
+                            <!--Thời lượng bay-->
+                            <div class="btn mb-3 d-flex justify-content-between item-filter mt-3" data-toggle="collapse" data-target="#time-to-flight" style="font-weight: bold;padding-left: 0;cursor: pointer;">
+                                <span>Thời lượng</span><i class="fas fa-chevron-down rotate ml-2" style="margin-top:5px"></i>
+                            </div>
+                            <div id="time-to-flight" class="collapse ">
+                                <div class="time-header d-flex justify-content-between mb-3">
+                                    <b>Chặng bay</b>
+                                    <span id="time-amount">0h - 5h</span>
+                                </div>
+                                <div id="slider-range-time" class="mb-3"></div>
+                            </div>
+                            <!--Hãng bay-->
+                            <div class="btn mb-3 d-flex justify-content-between item-filter" data-toggle="collapse" data-target="#type-of-flight" style="font-weight: bold;padding-left: 0;cursor: pointer;">
+                                <span>Hãng bay</span><i class="fas fa-chevron-down rotate ml-2" style="margin-top:5px"></i>
+                            </div>
+                            <div id="type-of-flight" class="collapse">
+                                <input type="checkbox" id="type-vn-airline">
+                                <label for="#type-vn-airline" class="ml-3">Vietnam Airlines</label>
+                                <br>
+                                <input type="checkbox" id="type-vn-bamboo">
+                                <label for="#type-vn-bamboo" class="ml-3">Bamboo Airways</label>
+                                <br>
+                                <input type="checkbox" id="type-vn-pacific">
+                                <label for="#type-vn-pacific" class="ml-3">Pacific Airlines</label>
+                                <br>
+                                <input type="checkbox" id="type-vn-vietjet">
+                                <label for="#type-vn-vietjet" class="ml-3">Vietjet Air</label>
+                            </div>
+                        </div>
+                        <!--END Bộ lọc-->
+                        <!--List kết quả-->
+                        <div class="col-md-9" id="content-search">
+
+                            <div class="filter-flights d-flex justify-content-between mt-4">
+                                <div class="sort-flights ">
+                                    <span>Sắp xếp</span>
+                                    <select class="p-1">
+                                        <option value="0">Đề xuất</option>
+                                        <option value="1">Giá tăng dần</option>
+                                        <option value="2">Giá giảm dần</option>
+                                        <option value="3">Thời gian cất cánh</option>
+                                        <option value="4">Thời gian bay</option>
+                                    </select>
+                                </div>
+                                <div class="show-tax d-flex">
+                                    <p>Hiển thị giá gồm thuế và phí</p>
+                                    <div class="custom-control custom-switch ml-3">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitches">
+                                        <label class="custom-control-label" for="customSwitches"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="hidden" name="" id="flight_qty" value="9">
+                            @foreach (var cb in Model)
+                            {
+                                <div class="info-per-flight container mt-4 ">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-3 airline mt-3">
+                                                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/Vietjet_Air_logo_transparent.png" alt="" class="img-fluid">
+                                                    <p>@cb.MayBay.TenMayBay</p>
+                                                </div>
+                                                <div class="col-md-6 d-flex" style="justify-content: space-between;margin-top: 16px;">
+                                                    <div class="time-per-depart">
+                                                        <p>@cb.GioCatCanh</p>
+                                                        <b>@cb.ChangBay.SanBay_CatCanh</b>
+                                                    </div>
+                                                    <i class="fas fa-arrow-right mt-4"></i>
+                                                    <div class="time-per-return">
+                                                        <p>@cb.GioCatCanh</p>
+                                                        <b>@cb.ChangBay.SanBay_HaCanh</b>
+                                                    </div>
+                                                    <div class="time-flights">
+                                                        <p><i class="far fa-clock"></i>@cb.ThoiGianBay</p>
+                                                        <b><i class="far fa-clock"></i>Phổ thông</b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 mt-2 text-center">
+                                                    <b class="price-per-flights" style="font-size: 2rem;">@cb.GiaNguoiLon VND</b>
+                                                    <a href="../Home/ThongTinKhachHang" class="btn btn-danger w-100 mt-3 select-ticket" data-toggle="popover" data-placement="right" tittle="Thông tin đánh giá" data-html="true" data-trigger="hover" data-popover-content="#info-select-ticket" data-id="0" data-original-title="" title="">Chọn vé này</a>
+                                                </div>
+                                                <button class="btn mb-3 btn-info-flights" data-toggle="collapse" data-target="#information-of-flight-0" style="color: #807e7e;">Thông tin chuyến bay<i class="fas fa-chevron-down rotate ml-2"></i></button>
+                                                <div id="information-of-flight-0" class="collapse information-of-flight">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="row mt-3">
+                                                                    <div class="col-md-3">
+                                                                        <span><b>@cb.MayBay.TenMayBay</b> @cb.MayBay.LoaiMayBay</span>
+                                                                        <p>@cb.MayBay.HangMayBay</p>
+                                                                    </div>
+                                                                    <div class="col-md-5 pl-1">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1">
+                                                                                <i class="fas fa-plane-departure"></i>
+                                                                                <div style="border-left: 1px solid rgb(136, 136, 136); height: 62%;margin-left:8px;">
+                                                                                </div>
+                                                                                <i class="fas fa-plane-arrival"></i>
+                                                                            </div>
+                                                                            <div class="col-md-2">
+                                                                                <b>@cb.GioCatCanh</b>
+                                                                                <span class="fs-12">@cb.NgayCatCanh</span>
+                                                                                <b class="my-4 d-inline-block text-danger" style="font-size: 14px;"><i class="far fa-clock"></i>@cb.ThoiGianBay</b>
+                                                                                <b>@cb.GioCatCanh</b>
+                                                                                <span class="fs-12">@cb.NgayCatCanh</span>
+                                                                            </div>
+                                                                            @foreach (var sancc in SanCC)
+                                                                            {
+                                                                                foreach (var sanhc in SanHC)
+                                                                                {
+                                                                                    <div class="col-md-8 ml-4">
+                                                                                        <p class="mb-0"><b>@sancc.ViTri (@cb.ChangBay.SanBay_CatCanh)</b></p>
+                                                                                        <span class="fs-12">@sancc.TenSanBay</span>
+                                                                                        <p class="mb-0" style="margin-top:90px;"><b>@sanhc.ViTri (@cb.ChangBay.SanBay_HaCanh)</b></p>
+                                                                                        <span class="fs-12">@sanhc.TenSanBay</span>
+                                                                                    </div>
+                                                                                }
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <p><i class="fas fa-suitcase-rolling mr-2"></i>Hành lý xách tay 7kg. Liên hệ với CSKH để biết thêm thông tin về hành lý ký gửi.</p>
+                                                                        <p><i class="fas fa-sync-alt mr-2"></i>Phí đổi vé 374.000VND và chênh lệch tiền vé (nếu có), thời hạn 3h so với giờ khởi hành.</p>
+                                                                        <p class="text-warning"><i class="fas fa-ban mr-2"></i>Không hoàn vé</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                    <!--END List kết quả-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CONTENT SEARCH-->
+</div>
+

@@ -1,0 +1,2088 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Thông tin khách hàng</title>
+
+    <style data-jss="" data-meta="MuiPaper">
+        .MuiPaper-root {
+            color: #212121;
+            transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            border-radius: 6px;
+            background-color: #fff;
+        }
+
+        .MuiPaper-rounded {
+            border-radius: 4px;
+        }
+
+        .MuiPaper-outlined {
+            border: 1px solid #cbd3db;
+        }
+
+        .MuiPaper-elevation0 {
+            box-shadow: none;
+        }
+
+        .MuiPaper-elevation1 {
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05), -2px -2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .MuiPaper-elevation2 {
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.05), -3px -3px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .MuiPaper-elevation3 {
+            box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.05), -5px -5px 9px rgba(0, 0, 0, 0.05);
+        }
+
+        .MuiPaper-elevation4 {
+            box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.05), -5px -5px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .MuiPaper-elevation5 {
+            box-shadow: 5px 5px 24px rgba(0, 0, 0, 0.05), -5px -5px 24px rgba(0, 0, 0, 0.05);
+        }
+
+        .MuiPaper-elevation6 {
+            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation7 {
+            box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation8 {
+            box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation9 {
+            box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation10 {
+            box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation11 {
+            box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2), 0px 11px 15px 1px rgba(0, 0, 0, 0.14), 0px 4px 20px 3px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation12 {
+            box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation13 {
+            box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation14 {
+            box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation15 {
+            box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.2), 0px 15px 22px 2px rgba(0, 0, 0, 0.14), 0px 6px 28px 5px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation16 {
+            box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation17 {
+            box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.2), 0px 17px 26px 2px rgba(0, 0, 0, 0.14), 0px 6px 32px 5px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation18 {
+            box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.2), 0px 18px 28px 2px rgba(0, 0, 0, 0.14), 0px 7px 34px 6px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation19 {
+            box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.2), 0px 19px 29px 2px rgba(0, 0, 0, 0.14), 0px 7px 36px 6px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation20 {
+            box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 20px 31px 3px rgba(0, 0, 0, 0.14), 0px 8px 38px 7px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation21 {
+            box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 21px 33px 3px rgba(0, 0, 0, 0.14), 0px 8px 40px 7px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation22 {
+            box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.2), 0px 22px 35px 3px rgba(0, 0, 0, 0.14), 0px 8px 42px 7px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation23 {
+            box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.2), 0px 23px 36px 3px rgba(0, 0, 0, 0.14), 0px 9px 44px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiPaper-elevation24 {
+            box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+    <style data-jss="" data-meta="MuiContainer">
+        .MuiContainer-root {
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiInputAdornment">
+        .MuiInputAdornment-root {
+            height: 0.01em;
+            display: flex;
+            max-height: 2em;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        .MuiInputAdornment-filled.MuiInputAdornment-positionStart:not(.MuiInputAdornment-hiddenLabel) {
+            margin-top: 16px;
+        }
+
+        .MuiInputAdornment-positionStart {
+            margin-right: 8px;
+        }
+
+        .MuiInputAdornment-positionEnd {
+            margin-left: 8px;
+        }
+
+        .MuiInputAdornment-disablePointerEvents {
+            pointer-events: none;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiInputBase">
+
+        .MuiInputBase-root {
+            color: #212121;
+            cursor: text;
+            display: inline-flex;
+            position: relative;
+            font-size: 16px;
+            box-sizing: border-box;
+            align-items: center;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: normal;
+            line-height: 1.1876em;
+            letter-spacing: 0.00938em;
+        }
+
+            .MuiInputBase-root.Mui-disabled {
+                color: rgba(0, 0, 0, 0.38);
+                cursor: default;
+            }
+
+        .MuiInputBase-multiline {
+            padding: 6px 0 7px;
+        }
+
+            .MuiInputBase-multiline.MuiInputBase-marginDense {
+                padding-top: 3px;
+            }
+
+        .MuiInputBase-fullWidth {
+            width: 100%;
+        }
+
+        .MuiInputBase-input {
+            font: inherit;
+            color: currentColor;
+            width: 100%;
+            border: 0;
+            height: 1.1876em;
+            margin: 0;
+            display: block;
+            padding: 6px 0 7px;
+            min-width: 0;
+            background: none;
+            box-sizing: content-box;
+            animation-name: mui-auto-fill-cancel;
+            letter-spacing: inherit;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+            .MuiInputBase-input::-webkit-input-placeholder {
+                color: currentColor;
+                opacity: 0.42;
+                transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            }
+
+            .MuiInputBase-input::-moz-placeholder {
+                color: currentColor;
+                opacity: 0.42;
+                transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            }
+
+            .MuiInputBase-input:-ms-input-placeholder {
+                color: currentColor;
+                opacity: 0.42;
+                transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            }
+
+            .MuiInputBase-input::-ms-input-placeholder {
+                color: currentColor;
+                opacity: 0.42;
+                transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            }
+
+            .MuiInputBase-input:focus {
+                outline: 0;
+            }
+
+            .MuiInputBase-input:invalid {
+                box-shadow: none;
+            }
+
+            .MuiInputBase-input::-webkit-search-decoration {
+                -webkit-appearance: none;
+            }
+
+            .MuiInputBase-input.Mui-disabled {
+                opacity: 1;
+            }
+
+            .MuiInputBase-input:-webkit-autofill {
+                animation-name: mui-auto-fill;
+                animation-duration: 5000s;
+            }
+
+        label[data-shrink="false"] + .MuiInputBase-formControl
+        .MuiInputBase-input::-webkit-input-placeholder {
+            opacity: 0 !important;
+        }
+
+        label[data-shrink="false"] + .MuiInputBase-formControl
+        .MuiInputBase-input::-moz-placeholder {
+            opacity: 0 !important;
+        }
+
+        label[data-shrink="false"] + .MuiInputBase-formControl
+        .MuiInputBase-input:-ms-input-placeholder {
+            opacity: 0 !important;
+        }
+
+        label[data-shrink="false"] + .MuiInputBase-formControl
+        .MuiInputBase-input::-ms-input-placeholder {
+            opacity: 0 !important;
+        }
+
+        label[data-shrink="false"] + .MuiInputBase-formControl
+        .MuiInputBase-input:focus::-webkit-input-placeholder {
+            opacity: 0.42;
+        }
+
+        label[data-shrink="false"] + .MuiInputBase-formControl
+        .MuiInputBase-input:focus::-moz-placeholder {
+            opacity: 0.42;
+        }
+
+        label[data-shrink="false"] + .MuiInputBase-formControl
+        .MuiInputBase-input:focus:-ms-input-placeholder {
+            opacity: 0.42;
+        }
+
+        label[data-shrink="false"] + .MuiInputBase-formControl
+        .MuiInputBase-input:focus::-ms-input-placeholder {
+            opacity: 0.42;
+        }
+
+        .MuiInputBase-inputMarginDense {
+            padding-top: 3px;
+        }
+
+        .MuiInputBase-inputMultiline {
+            height: auto;
+            resize: none;
+            padding: 0;
+        }
+
+        .MuiInputBase-inputTypeSearch {
+            -moz-appearance: textfield;
+            -webkit-appearance: textfield;
+        }
+    </style>
+
+    <style data-jss="" data-meta="makeStyles">
+        .jss1047 {
+            border: 1px solid #ced4da;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+            min-height: 40px;
+            transition: border-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        .jss1048 {
+            padding: 8px;
+            position: relative;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        .jss667 {
+            border-color: #00adef;
+        }
+
+        .jss668 {
+            border-color: #f44336;
+        }
+
+        .jss669 {
+            color: black;
+            background-color: #f5f5f5;
+        }
+    </style>
+    <style data-jss data-meta="MuiFormLabel">
+        .MuiFormLabel-root {
+            color: rgba(33, 33, 33, 0.6);
+            padding: 0;
+            font-size: 16px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: normal;
+            line-height: 1;
+            letter-spacing: 0.00938em;
+        }
+
+            .MuiFormLabel-root.Mui-focused {
+                color: #00adef;
+            }
+
+            .MuiFormLabel-root.Mui-disabled {
+                color: rgba(0, 0, 0, 0.38);
+            }
+
+            .MuiFormLabel-root.Mui-error {
+                color: #f44336;
+            }
+
+        .MuiFormLabel-colorSecondary.Mui-focused {
+            color: #de0262;
+        }
+
+        .MuiFormLabel-asterisk.Mui-error {
+            color: #f44336;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiFormHelperText">
+        .MuiFormHelperText-root {
+            color: rgba(33, 33, 33, 0.6);
+            margin: 0;
+            font-size: 14px;
+            margin-top: 0;
+            text-align: left;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: normal;
+            line-height: 20px;
+            letter-spacing: 0.03333em;
+        }
+
+            .MuiFormHelperText-root.Mui-disabled {
+                color: rgba(0, 0, 0, 0.38);
+            }
+
+            .MuiFormHelperText-root.Mui-error {
+                color: #f44336;
+            }
+
+        .MuiFormHelperText-marginDense {
+            margin-top: 4px;
+        }
+
+        .MuiFormHelperText-contained {
+            margin-left: 14px;
+            margin-right: 14px;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiRadio">
+        .MuiRadio-root {
+            color: rgba(33, 33, 33, 0.6);
+        }
+
+        .MuiRadio-colorPrimary.Mui-checked {
+            color: #0066da;
+        }
+
+        .MuiRadio-colorPrimary.Mui-disabled {
+            color: rgba(0, 0, 0, 0.26);
+        }
+
+        .MuiRadio-colorPrimary.Mui-checked:hover {
+            background-color: rgba(0, 173, 239, 0.04);
+        }
+
+        .MuiRadio-colorSecondary.Mui-checked {
+            color: #0066da;
+        }
+
+        .MuiRadio-colorSecondary.Mui-disabled {
+            color: rgba(0, 0, 0, 0.26);
+        }
+
+        .MuiRadio-colorSecondary.Mui-checked:hover {
+            background-color: rgba(222, 2, 98, 0.04);
+        }
+    </style>
+    <style data-jss="" data-meta="MuiInputLabel">
+        .MuiInputLabel-root {
+            color: #000;
+            display: block;
+            position: relative;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-left: 12px;
+            margin-bottom: 4px;
+            transform-origin: top left;
+        }
+
+        .MuiInputLabel-formControl {
+            top: 0;
+            left: 0;
+            position: relative;
+            font-size: 14px;
+            transform: unset;
+            font-weight: 500;
+            line-height: 20px;
+            margin-bottom: 4px;
+        }
+
+        .MuiInputLabel-marginDense {
+            transform: translate(0, 21px) scale(1);
+        }
+
+        .MuiInputLabel-shrink {
+            transform: unset;
+            transform-origin: top left;
+        }
+
+        .MuiInputLabel-animated {
+            transition: color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+        }
+
+        .MuiInputLabel-filled {
+            z-index: 1;
+            transform: translate(12px, 20px) scale(1);
+            pointer-events: none;
+        }
+
+            .MuiInputLabel-filled.MuiInputLabel-marginDense {
+                transform: translate(12px, 17px) scale(1);
+            }
+
+            .MuiInputLabel-filled.MuiInputLabel-shrink {
+                transform: translate(12px, 10px) scale(0.75);
+            }
+
+                .MuiInputLabel-filled.MuiInputLabel-shrink.MuiInputLabel-marginDense {
+                    transform: translate(12px, 7px) scale(0.75);
+                }
+
+        .MuiInputLabel-outlined {
+            z-index: 1;
+            transform: translate(14px, 20px) scale(1);
+            pointer-events: none;
+        }
+
+            .MuiInputLabel-outlined.MuiInputLabel-marginDense {
+                transform: translate(14px, 12px) scale(1);
+            }
+
+            .MuiInputLabel-outlined.MuiInputLabel-shrink {
+                transform: translate(14px, -6px) scale(0.75);
+            }
+    </style>
+    <style data-jss="" data-meta="MuiCollapse">
+        .MuiCollapse-container {
+            height: 0;
+            overflow: hidden;
+            transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        }
+
+        .MuiCollapse-entered {
+            height: auto;
+            overflow: visible;
+        }
+
+        .MuiCollapse-hidden {
+            visibility: hidden;
+        }
+
+        .MuiCollapse-wrapper {
+            display: flex;
+        }
+
+        .MuiCollapse-wrapperInner {
+            width: 100%;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiSvgIcon">
+        .MuiSvgIcon-root {
+            fill: currentColor;
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            font-size: 1.7142857142857142rem;
+            transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            flex-shrink: 0;
+            user-select: none;
+        }
+
+        .MuiSvgIcon-colorPrimary {
+            color: #00adef;
+        }
+
+        .MuiSvgIcon-colorSecondary {
+            color: #de0262;
+        }
+
+        .MuiSvgIcon-colorAction {
+            color: rgba(0, 0, 0, 0.54);
+        }
+
+        .MuiSvgIcon-colorError {
+            color: #f44336;
+        }
+
+        .MuiSvgIcon-colorDisabled {
+            color: rgba(0, 0, 0, 0.26);
+        }
+
+        .MuiSvgIcon-fontSizeInherit {
+            font-size: inherit;
+        }
+
+        .MuiSvgIcon-fontSizeSmall {
+            font-size: 1.4285714285714286rem;
+        }
+
+        .MuiSvgIcon-fontSizeLarge {
+            font-size: 2.5rem;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiTypography">
+        .MuiTypography-root {
+            margin: 0;
+        }
+
+        .MuiTypography-body2 {
+            font-size: 14px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: normal;
+            line-height: 20px;
+            letter-spacing: 0.01071em;
+        }
+
+        .MuiTypography-body1 {
+            font-size: 16px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: normal;
+            line-height: 24px;
+            letter-spacing: 0.00938em;
+        }
+
+        .MuiTypography-caption {
+            font-size: 12px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0.03333em;
+            color: #0066da;
+        }
+
+        .MuiTypography-button {
+            font-size: 16px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: normal;
+            line-height: auto;
+            letter-spacing: 0.02857em;
+            text-transform: none;
+        }
+
+        .MuiTypography-h1 {
+            font-size: 96px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: lighter;
+            line-height: 128px;
+            letter-spacing: -0.01562em;
+        }
+
+        .MuiTypography-h2 {
+            font-size: 60px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: lighter;
+            line-height: 80px;
+            letter-spacing: -0.00833em;
+        }
+
+        .MuiTypography-h3 {
+            font-size: 48px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: lighter;
+            line-height: 68px;
+            letter-spacing: 0em;
+        }
+
+        .MuiTypography-h4 {
+            font-size: 34px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0.00735em;
+        }
+
+        .MuiTypography-h5 {
+            font-size: 24px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 500;
+            line-height: 34px;
+            letter-spacing: 0em;
+        }
+
+        .MuiTypography-h6 {
+            font-size: 20px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0.0075em;
+        }
+
+        .MuiTypography-subtitle1 {
+            font-size: 16px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0.00938em;
+        }
+
+        .MuiTypography-subtitle2 {
+            font-size: 14px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0.00714em;
+        }
+
+        .MuiTypography-overline {
+            font-size: 0.8571428571428571rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+            line-height: 2.66;
+            letter-spacing: 0.08333em;
+            text-transform: uppercase;
+        }
+
+        .MuiTypography-srOnly {
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        .MuiTypography-alignLeft {
+            text-align: left;
+        }
+
+        .MuiTypography-alignCenter {
+            text-align: center;
+        }
+
+        .MuiTypography-alignRight {
+            text-align: right;
+        }
+
+        .MuiTypography-alignJustify {
+            text-align: justify;
+        }
+
+        .MuiTypography-noWrap {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .MuiTypography-gutterBottom {
+            margin-bottom: 0.35em;
+        }
+
+        .MuiTypography-paragraph {
+            margin-bottom: 16px;
+        }
+
+        .MuiTypography-colorInherit {
+            color: inherit;
+        }
+
+        .MuiTypography-colorPrimary {
+            color: #00adef;
+        }
+
+        .MuiTypography-colorSecondary {
+            color: #de0262;
+        }
+
+        .MuiTypography-colorTextPrimary {
+            color: #212121;
+        }
+
+        .MuiTypography-colorTextSecondary {
+            color: rgba(33, 33, 33, 0.6);
+        }
+
+        .MuiTypography-colorError {
+            color: #f44336;
+        }
+
+        .MuiTypography-displayInline {
+            display: inline;
+        }
+
+        .MuiTypography-displayBlock {
+            display: block;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiTouchRipple">
+        .MuiTouchRipple-root {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            overflow: hidden;
+            position: absolute;
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
+        .MuiTouchRipple-ripple {
+            opacity: 0;
+            position: absolute;
+        }
+
+        .MuiTouchRipple-rippleVisible {
+            opacity: 0.3;
+            animation: MuiTouchRipple-keyframes-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(1);
+        }
+
+        .MuiTouchRipple-ripplePulsate {
+            animation-duration: 200ms;
+        }
+
+        .MuiTouchRipple-child {
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: 1;
+            border-radius: 50%;
+            background-color: currentColor;
+        }
+
+        .MuiTouchRipple-childLeaving {
+            opacity: 0;
+            animation: MuiTouchRipple-keyframes-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .MuiTouchRipple-childPulsate {
+            top: 0;
+            left: 0;
+            position: absolute;
+            animation: MuiTouchRipple-keyframes-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiButtonBase">
+        .MuiButtonBase-root {
+            color: inherit;
+            border: 0;
+            cursor: pointer;
+            margin: 0;
+            display: inline-flex;
+            outline: 0;
+            padding: 0;
+            position: relative;
+            align-items: center;
+            user-select: none;
+            border-radius: 0;
+            vertical-align: middle;
+            -moz-appearance: none;
+            justify-content: center;
+            text-decoration: none;
+            background-color: transparent;
+            -webkit-appearance: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+            .MuiButtonBase-root::-moz-focus-inner {
+                border-style: none;
+            }
+
+            .MuiButtonBase-root.Mui-disabled {
+                cursor: default;
+                pointer-events: none;
+            }
+    </style>
+    <style data-jss="" data-meta="MuiIconButton">
+        .MuiIconButton-root {
+            flex: 0 0 auto;
+            color: rgba(0, 0, 0, 0.54);
+            padding: 12px;
+            overflow: visible;
+            font-size: 1.7142857142857142rem;
+            text-align: center;
+            transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            border-radius: 50%;
+        }
+
+            .MuiIconButton-root:hover {
+                background-color: rgba(0, 0, 0, 0.04);
+            }
+
+            .MuiIconButton-root.Mui-disabled {
+                color: rgba(0, 0, 0, 0.26);
+                background-color: transparent;
+            }
+
+        .MuiIconButton-edgeStart {
+            margin-left: -12px;
+        }
+
+        .MuiIconButton-sizeSmall.MuiIconButton-edgeStart {
+            margin-left: -3px;
+        }
+
+        .MuiIconButton-edgeEnd {
+            margin-right: -12px;
+        }
+
+        .MuiIconButton-sizeSmall.MuiIconButton-edgeEnd {
+            margin-right: -3px;
+        }
+
+        .MuiIconButton-colorInherit {
+            color: inherit;
+        }
+
+        .MuiIconButton-colorPrimary {
+            color: #00adef;
+        }
+
+            .MuiIconButton-colorPrimary:hover {
+                background-color: rgba(0, 173, 239, 0.04);
+            }
+
+        .MuiIconButton-colorSecondary {
+            color: #de0262;
+        }
+
+            .MuiIconButton-colorSecondary:hover {
+                background-color: rgba(222, 2, 98, 0.04);
+            }
+
+        .MuiIconButton-sizeSmall {
+            padding: 3px;
+            font-size: 1.2857142857142858rem;
+        }
+
+        .MuiIconButton-label {
+            width: 100%;
+            display: flex;
+            align-items: inherit;
+            justify-content: inherit;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiButton">
+        .MuiButton-root {
+            color: #212121;
+            padding: 0 8px;
+            font-size: 16px;
+            min-width: unset;
+            box-sizing: border-box;
+            min-height: 40px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: normal;
+            line-height: auto;
+            border-radius: 4px;
+            letter-spacing: 0.02857em;
+            text-transform: none;
+        }
+
+            .MuiButton-root:hover {
+                text-decoration: none;
+                background-color: rgba(33, 33, 33, 0.04);
+            }
+
+            .MuiButton-root.Mui-disabled {
+                color: rgba(0, 0, 0, 0.26);
+            }
+
+            .MuiButton-root:hover.Mui-disabled {
+                background-color: transparent;
+            }
+
+        .MuiButton-label {
+            width: 100%;
+            display: inherit;
+            align-items: inherit;
+            justify-content: inherit;
+        }
+
+        .MuiButton-text {
+            padding: 6px 8px;
+        }
+
+        .MuiButton-textPrimary {
+            color: #00adef;
+        }
+
+            .MuiButton-textPrimary:hover {
+                background-color: rgba(0, 173, 239, 0.04);
+            }
+
+        .MuiButton-textSecondary {
+            color: #de0262;
+        }
+
+            .MuiButton-textSecondary:hover {
+                background-color: rgba(222, 2, 98, 0.04);
+            }
+
+        .MuiButton-outlined {
+            color: #212121;
+            border: 1px solid rgba(0, 0, 0, 0.23);
+            padding: 5px 15px;
+            font-size: 16px;
+            background: #fff;
+            font-weight: normal;
+            line-height: auto;
+            text-transform: none;
+        }
+
+            .MuiButton-outlined.Mui-disabled {
+                border: 1px solid rgba(0, 0, 0, 0.12);
+            }
+
+        .MuiButton-outlinedPrimary {
+            color: #00adef;
+            border: 1px solid rgba(0, 173, 239, 0.5);
+        }
+
+            .MuiButton-outlinedPrimary:hover {
+                border: 1px solid #00adef;
+                background-color: rgba(0, 173, 239, 0.04);
+            }
+
+
+        .MuiButton-outlinedSecondary {
+            color: #de0262;
+            border: 1px solid rgba(222, 2, 98, 0.5);
+        }
+
+            .MuiButton-outlinedSecondary:hover {
+                border: 1px solid #de0262;
+                background-color: rgba(222, 2, 98, 0.04);
+            }
+
+            .MuiButton-outlinedSecondary.Mui-disabled {
+                border: 1px solid rgba(0, 0, 0, 0.26);
+            }
+
+        .MuiButton-contained {
+            color: rgba(0, 0, 0, 0.87);
+            box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+            background-color: #e0e0e0;
+        }
+
+            .MuiButton-contained:hover {
+                box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+                background-color: #d5d5d5;
+            }
+
+            .MuiButton-contained.Mui-focusVisible {
+                box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+            }
+
+            .MuiButton-contained:active {
+                box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+            }
+
+            .MuiButton-contained.Mui-disabled {
+                color: rgba(0, 0, 0, 0.26);
+                box-shadow: none;
+                background-color: rgba(0, 0, 0, 0.12);
+            }
+
+            .MuiButton-contained:hover.Mui-disabled {
+                background-color: rgba(0, 0, 0, 0.12);
+            }
+
+        .MuiButton-containedPrimary {
+            color: #ffffff;
+            background-color: #00adef;
+        }
+
+            .MuiButton-containedPrimary:hover {
+                background-color: rgb(0, 155, 215);
+            }
+
+        .MuiButton-containedSecondary {
+            color: #ffffff;
+            background-color: #de0262;
+        }
+
+            .MuiButton-containedSecondary:hover {
+                background-color: rgb(199, 1, 88);
+            }
+
+        .MuiButton-disableElevation {
+            box-shadow: none;
+        }
+
+            .MuiButton-disableElevation:hover {
+                box-shadow: none;
+            }
+
+            .MuiButton-disableElevation.Mui-focusVisible {
+                box-shadow: none;
+            }
+
+            .MuiButton-disableElevation:active {
+                box-shadow: none;
+            }
+
+            .MuiButton-disableElevation.Mui-disabled {
+                box-shadow: none;
+            }
+
+        .MuiButton-colorInherit {
+            color: inherit;
+            border-color: currentColor;
+        }
+
+        .MuiButton-textSizeSmall {
+            padding: 4px 5px;
+            font-size: 0.9285714285714286rem;
+        }
+
+        .MuiButton-textSizeLarge {
+            padding: 8px 11px;
+            font-size: 1.0714285714285714rem;
+        }
+
+        .MuiButton-outlinedSizeSmall {
+            padding: 3px 9px;
+            font-size: 0.9285714285714286rem;
+        }
+
+        .MuiButton-outlinedSizeLarge {
+            padding: 7px 21px;
+            font-size: 1.0714285714285714rem;
+        }
+
+        .MuiButton-containedSizeSmall {
+            padding: 4px 10px;
+            font-size: 0.9285714285714286rem;
+        }
+
+        .MuiButton-containedSizeLarge {
+            padding: 8px 22px;
+            font-size: 1.0714285714285714rem;
+        }
+
+        .MuiButton-sizeSmall {
+            padding: 0 8px;
+            font-size: 16px;
+            min-height: 32px;
+            font-weight: normal;
+            line-height: auto;
+            text-transform: none;
+        }
+
+        .MuiButton-sizeLarge {
+            padding: 0 8px;
+            font-size: 16px;
+            min-height: 48px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        .MuiButton-fullWidth {
+            width: 100%;
+        }
+
+        .MuiButton-startIcon {
+            display: inherit;
+            margin-left: -4px;
+            margin-right: 8px;
+        }
+
+            .MuiButton-startIcon.MuiButton-iconSizeSmall {
+                margin-left: -2px;
+            }
+
+        .MuiButton-endIcon {
+            display: inherit;
+            margin-left: 8px;
+            margin-right: -4px;
+        }
+
+            .MuiButton-endIcon.MuiButton-iconSizeSmall {
+                margin-right: -2px;
+            }
+
+        .MuiButton-iconSizeSmall > *:first-child {
+            font-size: 18px;
+        }
+
+        .MuiButton-iconSizeMedium > *:first-child {
+            font-size: 20px;
+        }
+
+        .MuiButton-iconSizeLarge > *:first-child {
+            font-size: 22px;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiFormControl">
+        .MuiFormControl-root {
+            border: 0;
+            margin: 0;
+            display: inline-flex;
+            padding: 0;
+            position: relative;
+            min-width: 0;
+            margin-right: 16px;
+            flex-direction: column;
+            vertical-align: top;
+        }
+
+        .MuiFormControl-marginNormal {
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        .MuiFormControl-marginDense {
+            margin-top: 8px;
+            margin-bottom: 4px;
+        }
+
+        .MuiFormControl-fullWidth {
+            width: 100%;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiDivider">
+        .MuiDivider-root {
+            border: none;
+            height: 1px;
+            margin: 0;
+            flex-shrink: 0;
+            background-color: rgba(0, 0, 0, 0.12);
+        }
+
+        .MuiDivider-absolute {
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+        }
+
+        .MuiDivider-inset {
+            margin-left: 72px;
+        }
+
+        .MuiDivider-light {
+            background-color: rgba(0, 0, 0, 0.08);
+        }
+
+        .MuiDivider-middle {
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+
+        .MuiDivider-vertical {
+            width: 1px;
+            height: 100%;
+        }
+
+        .MuiDivider-flexItem {
+            height: auto;
+            align-self: stretch;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiFormControlLabel">
+        .MuiFormControlLabel-root {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            margin-left: -11px;
+            margin-right: 16px;
+            vertical-align: middle;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+            .MuiFormControlLabel-root.Mui-disabled {
+                cursor: default;
+            }
+
+        .MuiFormControlLabel-labelPlacementStart {
+            margin-left: 16px;
+            margin-right: -11px;
+            flex-direction: row-reverse;
+        }
+
+        .MuiFormControlLabel-labelPlacementTop {
+            margin-left: 16px;
+            flex-direction: column-reverse;
+        }
+
+        .MuiFormControlLabel-labelPlacementBottom {
+            margin-left: 16px;
+            flex-direction: column;
+        }
+
+        .MuiFormControlLabel-label.Mui-disabled {
+            color: rgba(0, 0, 0, 0.38);
+        }
+    </style>
+    <style data-jss="" data-meta="MuiCheckbox">
+        .MuiCheckbox-root {
+            color: rgba(33, 33, 33, 0.6);
+        }
+
+        .MuiCheckbox-colorPrimary.Mui-checked {
+            color: #0066da;
+        }
+
+        .MuiCheckbox-colorPrimary.Mui-disabled {
+            color: rgba(0, 0, 0, 0.26);
+        }
+
+        .MuiCheckbox-colorPrimary.Mui-checked:hover {
+            background-color: rgba(0, 173, 239, 0.04);
+        }
+
+        .MuiCheckbox-colorSecondary.Mui-checked {
+            color: #0066da;
+        }
+
+        .MuiCheckbox-colorSecondary.Mui-disabled {
+            color: rgba(0, 0, 0, 0.26);
+        }
+
+        .MuiCheckbox-colorSecondary.Mui-checked:hover {
+            background-color: rgba(222, 2, 98, 0.04);
+        }
+    </style>
+    <style data-jss="" data-meta="MuiSlider">
+        .MuiSlider-root {
+            color: #00adef;
+            width: 100%;
+            cursor: pointer;
+            height: 2px;
+            display: inline-block;
+            padding: 13px 0;
+            position: relative;
+            box-sizing: content-box;
+            touch-action: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+            .MuiSlider-root.Mui-disabled {
+                color: #bdbdbd;
+                cursor: default;
+                pointer-events: none;
+            }
+
+            .MuiSlider-root.MuiSlider-vertical {
+                width: 2px;
+                height: 100%;
+                padding: 0 13px;
+            }
+
+        .MuiSlider-colorSecondary {
+            color: #de0262;
+        }
+
+        .MuiSlider-marked {
+            margin-bottom: 20px;
+        }
+
+            .MuiSlider-marked.MuiSlider-vertical {
+                margin-right: 20px;
+                margin-bottom: auto;
+            }
+
+        .MuiSlider-rail {
+            width: 100%;
+            height: 4px;
+            display: block;
+            opacity: 0.38;
+            position: absolute;
+            border-radius: 1px;
+            background-color: currentColor;
+        }
+
+        .MuiSlider-vertical .MuiSlider-rail {
+            width: 2px;
+            height: 100%;
+        }
+
+        .MuiSlider-track {
+            height: 4px;
+            display: block;
+            position: absolute;
+            border-radius: 1px;
+            background-color: currentColor;
+        }
+
+        .MuiSlider-vertical .MuiSlider-track {
+            width: 2px;
+        }
+
+        .MuiSlider-trackFalse .MuiSlider-track {
+            display: none;
+        }
+
+        .MuiSlider-trackInverted .MuiSlider-track {
+            background-color: rgb(158, 223, 248);
+        }
+
+        .MuiSlider-trackInverted .MuiSlider-rail {
+            opacity: 1;
+        }
+
+        .MuiSlider-thumb {
+            width: 12px;
+            height: 12px;
+            display: flex;
+            outline: 0;
+            position: absolute;
+            box-sizing: border-box;
+            margin-top: -5px;
+            transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            align-items: center;
+            margin-left: -6px;
+            border-radius: 50%;
+            justify-content: center;
+            background-color: currentColor;
+        }
+
+            .MuiSlider-thumb::after {
+                top: -15px;
+                left: -15px;
+                right: -15px;
+                bottom: -15px;
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+            }
+
+            .MuiSlider-thumb.Mui-focusVisible,
+            .MuiSlider-thumb:hover {
+                box-shadow: 0px 0px 0px 8px rgba(0, 173, 239, 0.16);
+            }
+
+            .MuiSlider-thumb.MuiSlider-active {
+                box-shadow: 0px 0px 0px 14px rgba(0, 173, 239, 0.16);
+            }
+
+            .MuiSlider-thumb.Mui-disabled {
+                width: 8px;
+                height: 8px;
+                margin-top: -3px;
+                margin-left: -4px;
+            }
+
+        .MuiSlider-vertical .MuiSlider-thumb {
+            margin-left: -5px;
+            margin-bottom: -6px;
+        }
+
+            .MuiSlider-vertical .MuiSlider-thumb.Mui-disabled {
+                margin-left: -3px;
+                margin-bottom: -4px;
+            }
+
+        .MuiSlider-thumb.Mui-disabled:hover {
+            box-shadow: none;
+        }
+
+        .MuiSlider-thumbColorPrimary {
+            border: 1px solid #00adef;
+            background: white;
+            margin-top: -4px;
+        }
+
+        .MuiSlider-thumbColorSecondary.Mui-focusVisible,
+        .MuiSlider-thumbColorSecondary:hover {
+            box-shadow: 0px 0px 0px 8px rgba(222, 2, 98, 0.16);
+        }
+
+        .MuiSlider-thumbColorSecondary.MuiSlider-active {
+            box-shadow: 0px 0px 0px 14px rgba(222, 2, 98, 0.16);
+        }
+
+        .MuiSlider-valueLabel {
+            left: calc(-50% - 4px);
+        }
+
+        .MuiSlider-mark {
+            width: 2px;
+            height: 2px;
+            position: absolute;
+            border-radius: 1px;
+            background-color: currentColor;
+        }
+
+        .MuiSlider-markActive {
+            opacity: 0.8;
+            background-color: #fff;
+        }
+
+        .MuiSlider-markLabel {
+            top: 26px;
+            color: rgba(33, 33, 33, 0.6);
+            position: absolute;
+            font-size: 14px;
+            transform: translateX(-50%);
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: normal;
+            line-height: 20px;
+            white-space: nowrap;
+            letter-spacing: 0.01071em;
+        }
+
+        .MuiSlider-vertical .MuiSlider-markLabel {
+            top: auto;
+            left: 26px;
+            transform: translateY(50%);
+        }
+
+        .MuiSlider-markLabelActive {
+            color: #212121;
+        }
+    </style>
+    <style data-jss="" data-meta="PrivateSwitchBase">
+        .jss510 {
+            padding: 9px;
+        }
+
+        .jss513 {
+            top: 0;
+            left: 0;
+            width: 100%;
+            cursor: inherit;
+            height: 100%;
+            margin: 0;
+            opacity: 0;
+            padding: 0;
+            z-index: 1;
+            position: absolute;
+        }
+    </style>
+    <style type="text/css">
+        iframe#_hjRemoteVarsFrame {
+            display: none !important;
+            width: 1px !important;
+            height: 1px !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: normal;
+            box-sizing: border-box !important;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        code {
+            font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+        }
+    </style>
+
+    <link rel='stylesheet' type='text/css' href='../Asset/css/9.7c90ce11.chunk.css'>
+    <link rel='stylesheet' type='text/css' href='../Asset/css/css.css'>
+    <link rel='stylesheet' type='text/css' href='../Asset/css/main.f51c2e01.chunk.css'>
+    <link rel='stylesheet' type='text/css' href='../Asset/css/payment.css'>
+    <link rel='stylesheet' type='text/css' href='../Asset/css/style.css'>
+    <link rel='stylesheet' type='text/css' href='../Asset/css/global.css'>
+    <link rel='stylesheet' type='text/css' href='../Asset/css/reset.css'>
+
+    <!-- <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> -->
+
+    <script type="text/javascript" async src="../Asset/js/1830856737154545.js"></script>
+    <script type="text/javascript" async src="../Asset/js/analytics.js"></script>
+    <script type="text/javascript" async src="../Asset/js/conversion_async.js"></script>
+    <script type="text/javascript" async src="../Asset/js/fbevents.js"></script>
+    <script type="text/javascript" async src="../Asset/js/gtm.js"></script>
+    <script type="text/javascript" async src="../Asset/js/js.js"></script>
+    <script type="text/javascript" async src="../Asset/js/tracking.js"></script>
+    <script charset="utf-8" src="../Asset/js/0.3c20835a.chunk.js"></script>
+    <script charset="utf-8" src="../Asset/js/1.9375243a.chunk.js"></script>
+    <script charset="utf-8" src="../Asset/js/2.12470d64.chunk.js"></script>
+    <script charset="utf-8" src="../Asset/js/3.e962e2b4.chunk.js"></script>
+    <script charset="utf-8" src="../Asset/js/14.6ea47f88.chunk.js"></script>
+    <script async="true" src="JS/ins.js"></script>
+    <script async src="../Asset/js/analytics.js"></script>
+    <script async src="../Asset/js/fbevents.js"></script>
+    <script async src="../Asset/js/hotjar-228912.js"></script>
+    <script async src="../Asset/js/style.js"></script>
+    <script async src="../Asset/js/payment.js"></script>
+
+
+
+    <script async src="../Asset/js/modules.e6d659b18986716fc817.js' charset="utf-8"></script>
+
+    <script>
+        !function (e, t, a, n, g) {
+            e[n] = e[n] || [], e[n].push({ "gtm.start": (new Date).getTime(), event: "gtm.js" });
+            var m = t.getElementsByTagName(a)[0], r = t.createElement(a);
+            r.async = !0, r.src = "https://www.googletagmanager.com/gtm.js?id=GTM-N2GBP9W", m.parentNode.insertBefore(r, m)
+        }(window, document, "script", "dataLayer")
+    </script>
+    <script>
+        $('#dialog1').modal('show')
+    </script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+
+    <!-- CSS lib -->
+    <link rel="stylesheet" href="../Asset/css/reset.css">
+    <link rel="stylesheet" href="../Asset/css/global.css">
+    <link rel="stylesheet" href="../Asset/css/style.css">
+    <link rel="stylesheet" href="../Asset/css/payment.css">
+    <!-- Font-Awesome lib -->
+    <link rel="stylesheet" href="../lib/Fontawesome/css/all.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="../lib/owlcarousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="../lib/owlcarousel/assets/owl.theme.default.css">
+    <!-- <link rel="stylesheet" href="lib/jQuery/jquery 3.5.0.js"> -->
+    <link rel="stylesheet" href="../lib/owlcarousel/owl.carousel.js">
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS + JS-->
+    <link rel="stylesheet" href="../lib/bootstrap-4.5.0-dist/css/bootstrap.css">
+    <script src="../lib/bootstrap-4.5.0-dist/js/jquery 3.5.0.js"></script>
+    <script src="../lib/bootstrap-4.5.0-dist/js/popper.min.js"></script>
+    <script src="../lib/bootstrap-4.5.0-dist/js/bootstrap.js"></script>
+    <!-- jQuery -->
+    <script src="../Asset/js/style.js"></script>
+    <script src="../Asset/js/payment.js"></script>
+
+</head>
+
+<body>
+
+
+    <div id="loader" class="center"></div>
+    <div id="wrapper">
+        <!-- HEADER -->
+        <div id="header">
+            <div id="login-header">
+                <div class="" id="wp-menu-header">
+                    <div class="" id="menu-header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <nav class="navbar navbar-light navbar-expand-xl">
+                                        <a href="index.html" class="navbar-brand">
+                                            <img src="../Asset/img/adada.png" alt="" style="height: 65px;">
+                                        </a>
+                                        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="main-nav">
+                                            <ul class="navbar-nav mr-auto" style="width: 740px;">
+                                                <li class="nav-item">
+                                                    <a href="/Home/Index" class="nav-link">Trang chủ</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/Home/TimKiemChuyenBay" class="nav-link">Vé máy bay</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/Home/ThanhToan" class="nav-link">Thanh toán vé</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/Home/HoanDoiVe" class="nav-link">Hoán đổi vé</a>
+                                                </li>
+                                                <li class="nav-item hd">
+                                                    <a href="/Home/HuongDan?queue=Hướng dẫn đặt vé" class="nav-link">Hướng dẫn</a>
+                                                    <div class="dropdown-hd ">
+                                                        <ul class="list-unstyled ml-2">
+                                                            <li>
+                                                                <a href="/Home/HuongDan?queue=Hướng dẫn mua vé máy bay" class=" nav-link font-weight-bold">Hướng dẫn mua vé máy bay</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/Home/HuongDan?queue=Hướng dẫn thanh toán vé máy bay" class="nav-link font-weight-bold">Hướng dẫn thanh toán vé máy bay</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/Home/HuongDan?queue=Các trường hợp hành khách bị cấm bay" class="nav-link font-weight-bold">Các trường hợp hành khách bị cấm bay</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/Home/HuongDan?queue=Các quy định đặt vé" class="nav-link font-weight-bold">Các quy định đặt vé</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/Home/HuongDan?queue=Các thông tin cần biết" class="nav-link font-weight-bold">Các thông tin cần biết</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/Home/LienHe" class="nav-link">Liên hệ</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END HEADER -->
+        <!--BODY-->
+        <div>
+            @RenderBody()
+        </div>
+        <!--END BODY-->
+        <!-- FOOTER -->
+        <div id="wp-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="">
+                            <img src="../Asset/img/adada.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer_topic">
+                            Công ty TNHH Banana Airlines Việt Nam
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li>Hà Nội: 024 7109 9999</li>
+                                <li>Hồ Chí Minh: 028 7109 9998</li>
+                                <li>Email: admin@322AirLines.vn</li>
+                                <li>Văn phòng Hà Nội: Tầng 11, Tòa Peakview, 36 Hoàng Cầu, Đống Đa</li>
+
+                                <li>Văn phòng HCM: Tầng 6, Tòa Nhà Central Park, 117 Nguyễn Du, Q.1</li>
+
+                                <br>
+                                <li>Số ĐKKD: 0105983269 cấp ngày 30/08/2012</li>
+                                <li>Nơi cấp: Sở kế hoạch và Đầu tư thành phố Hà Nội</li>
+                                <li>Lĩnh vực kinh doanh: Đại lý du lịch</li>
+                                <li>Địa chỉ tên miền: 322AirLines.vn</li>
+                                <br>
+                                <li>Tài khoản ngân hàng số: 19027493250015</li>
+                                <li>Techcombank Chi nhánh Hội Sở</li>
+                                <li>Chủ tài khoản: Công ty TNHH Banana Airlines Việt Nam</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer_topic text-uppercase">
+                            Quy định dành cho Website TMĐT Bán hàng – Dịch vụ đặt phòng
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li><a href="">Chính sách và quy định chung</a></li>
+                                <li><a href="">Quy định về thanh toán</a></li>
+                                <li><a href="">Quy định về xác nhận thông tin đặt phòng</a></li>
+                                <li><a href="">Chính sách về hủy đặt phòng và hoàn trả tiền</a></li>
+                                <li><a href="">Chính sách bảo mật thông tin</a></li>
+                                <li>
+                                    <a href=""><img src="../Asset/img/logo-dathongbao-bocongthuong-w165.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer_topic text-uppercase">
+                            Quy định cho sàn GDTMĐT – Dịch vụ đặt phòng và dịch vụ đặt tour du lịch
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li><a href="">Quy chế hoạt động</a></li>
+                                <li><a href="">Chính sách bảo mật</a></li>
+                                <li><a href="">Quy trình giải quyết tranh chấp khiếu nại</a></li>
+
+                                <li>
+                                    <a href=""><img src="../Asset/img/logo-congthuong-w165.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer_topic text-uppercase">
+                            Khách sạn tại Việt Nam
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li><a href="">A</a> - <a href="">B</a> - <a href="">C</a> - <a href="">D</a> - <a href="">E</a> - <a href="">F</a> - <a href="">G</a> - <a href="">H</a> - <a href="">I</a> - <a href="">J</a> - <a href="">K</a> - <a href="">L</a>                                - <a href="">M</a> - <a href="">N</a> - <a href="">O</a> - <a href="">P</a> - <a href="">Q</a> - <a href="">R</a> - <a href="">S</a> - <a href="">T</a> - <a href="">U</a> - <a href="">V</a> - <a href="">W</a> - <a href="">X</a>                                - <a href="">Y</a> - <a href="">Z</a> - Khách sạn theo khu vực</li>
+
+                            </ul>
+                        </div>
+                        <div class="footer_topic">
+                            Khách hàng và đối tác
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+
+                                <li><a href="">Tích lũy Vpoint</a></li>
+                                <li><a href="">Đăng nhập</a></li>
+                                <li><a href="">Đăng ký</a></li>
+                                <li><a href="">Đăng nhập HMS</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="footer_topic text-uppercase">
+                            Tải Mobile app 322AirLines.vn
+                        </div>
+                        <div class="footer_content">
+                            <a href=""><img style="width: 130px" src="../Asset/img/btn-app-apple.png" alt=""></a>
+                            <a href=""><img style="width: 130px" src="../Asset/img/btn-app-android.png" alt=""></a>
+                        </div>
+                        <div class="footer_topic text-uppercase mt-4">
+                            Kết nối với 322AirLines.vn
+                        </div>
+                        <div class="footer_content">
+                            <a href=""><i style="font-size: 25px;margin-right: 30px;color: #4c66a4;" class="fab fa-facebook-square"></i></a>
+                            <a href=""><i style="font-size: 25px;margin-right: 30px;color: #D50F25;" class="fab fa-google-plus-square"></i></a>
+                            <a href=""><i style="font-size: 25px;margin-right: 30px;color: #bf3566;" class="fab fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+    </div>
+    <!-- phan modal cua xem chi tiet -->
+    <div class="modal fade" id="dialog1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title">Tiêu đề Hộp thoại</h5> -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <nav>
+                        <div class="nav nav-tabs nav-fill">
+                            <a href="#tab-step-1" class="nav-item nav-link active" data-toggle="tab">Chi tiết chuyến bay</a>
+                            <a href="#tab-step-2" class="nav-item nav-link" data-toggle="tab">Chi tiết giá</a>
+
+                        </div>
+
+
+                    </nav>
+                    <div class="tab-content">
+                        <div class="tab-pane show fade active" id="tab-step-1">
+                            <div class="hay">
+
+
+                                <div class="detail_planet">
+                                    <div class="band">
+                                        <img src="../Asset/img/VNA_logo_notext.png" alt="">
+                                        <p style="margin-bottom: 0px">VN261</p>
+                                        <p>Airbus A321-100/200</p>
+                                    </div>
+                                    <div class="schedule">
+                                        <div class="planet">
+                                            <i class="fas fa-plane-departure"></i>
+                                            <div style="border-left: 1px solid rgb(136, 136, 136); height: 70%;"></div>
+                                            <i class="fas fa-plane-arrival"></i>
+
+                                        </div>
+                                        <div class="time_planet">
+                                            <div class="go">
+                                                <div class="time_sce">
+                                                    <h6>23:05</h6>
+                                                    <span>17/11/2020</span>
+                                                </div>
+                                                <div class="where">
+                                                    <h6>Hà Nội (HAN)</h6>
+                                                    <span>Nội Bài</span>
+                                                </div>
+                                            </div>
+                                            <div class="sub_time">
+                                                <p><i class="far fa-clock"></i>2h 5m</p>
+                                            </div>
+                                            <div class="back">
+                                                <div class="time_sce">
+                                                    <h6>01:10</h6>
+                                                    <span>18/11/2020</span>
+                                                </div>
+                                                <div class="where">
+                                                    <h6>Thành phố Hồ Chí Minh (SGN)</h6>
+                                                    <span>Tân Sơn Nhất</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="more">
+                                        <p><i class="fas fa-suitcase-rolling"></i> Hành lý xách tay 2 kiện (9kg/kiện). Hành lý ký gửi 32kg</p>
+                                        <p><i class="fas fa-history"></i> Miễn phí đổi vé chỉ mất phí chênh lệch giá vé (nếu có)</p>
+                                        <p class="return_money"><i class="fas fa-undo-alt"></i> Phí hoàn vé 300.000VND</p>
+                                    </div>
+                                </div>
+                                <div class="detail_planet" style="border-bottom: unset;">
+                                    <div class="band">
+                                        <img src="../Asset/img/VNA_logo_notext.png" alt="">
+                                        <p style="margin-bottom: 0px">VN261</p>
+                                        <p>Airbus A321-100/200</p>
+                                    </div>
+                                    <div class="schedule">
+                                        <div class="planet">
+                                            <i class="fas fa-plane-departure"></i>
+                                            <div style="border-left: 1px solid rgb(136, 136, 136); height: 70%;"></div>
+                                            <i class="fas fa-plane-arrival"></i>
+
+                                        </div>
+                                        <div class="time_planet">
+                                            <div class="go">
+                                                <div class="time_sce">
+                                                    <h6>23:05</h6>
+                                                    <span>17/11/2020</span>
+                                                </div>
+                                                <div class="where">
+                                                    <h6>Hà Nội (HAN)</h6>
+                                                    <span>Nội Bài</span>
+                                                </div>
+                                            </div>
+                                            <div class="sub_time">
+                                                <p><i class="far fa-clock"></i>2h 5m</p>
+                                            </div>
+                                            <div class="back">
+                                                <div class="time_sce">
+                                                    <h6>01:10</h6>
+                                                    <span>18/11/2020</span>
+                                                </div>
+                                                <div class="where">
+                                                    <h6>Thành phố Hồ Chí Minh (SGN)</h6>
+                                                    <span>Tân Sơn Nhất</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="more">
+                                        <p><i class="fas fa-suitcase-rolling"></i> Hành lý xách tay 2 kiện (9kg/kiện). Hành lý ký gửi 32kg</p>
+                                        <p><i class="fas fa-history"></i> Miễn phí đổi vé chỉ mất phí chênh lệch giá vé (nếu có)</p>
+                                        <p class="return_money"><i class="fas fa-undo-alt"></i> Phí hoàn vé 300.000VND</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane show fade" id="tab-step-2">
+                            <div class="detail_money">
+                                <div class="detail_go">
+                                    <h6>Giá chiều đi</h6>
+                                    <div class="sub_detail">
+                                        <p>Giá vé người lớn </p><span>2 x 4,509,000 đ</span>
+                                    </div>
+                                    <div class="sub_detail">
+                                        <p>Giá vé trẻ em </p><span>1 x 4,509,000 đ</span>
+                                    </div>
+                                    <div class="sub_detail">
+                                        <p>Thuế và phí </p><span>2,358,000 đ</span>
+                                    </div>
+                                    <div class="sub_detail">
+                                        <p>Mua thêm hành lý </p><span>187,000 đ</span>
+                                    </div>
+                                    <div class="sub_detail">
+                                        <p>Tổng giá chiều đi </p><span>15,885,000 đ</span>
+                                    </div>
+                                </div>
+                                <!-- end detail_go    -->
+                                <div class="detail_back">
+                                    <h6>Giá chiều về</h6>
+                                    <div class="sub_detail">
+                                        <p>Giá vé người lớn </p><span>2 x 4,509,000 đ</span>
+                                    </div>
+                                    <div class="sub_detail">
+                                        <p>Giá vé trẻ em </p><span>1 x 4,509,000 đ</span>
+                                    </div>
+                                    <div class="sub_detail">
+                                        <p>Thuế và phí </p><span>2,358,000 đ</span>
+                                    </div>
+                                    <div class="sub_detail">
+                                        <p>Mua thêm hành lý </p><span>187,000 đ</span>
+                                    </div>
+                                    <div class="sub_detail">
+                                        <p>Tổng giá chiều về </p><span>15,885,000 đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end detail_money -->
+                            <div class="all_money">
+
+                                <div class="sub_detail">
+                                    <p style="font-size: 14px">Bảo hiểm du lịch </p><span>3 x 36,000 đ</span>
+                                </div>
+                                <div class="sub_detail">
+                                    <p style="font-size: 16px;font-weight: 600">Tổng tiền thanh toán</p><span style="font-size: 16px;color: #139029;font-weight: 600;">15,993,000 đ</span>
+                                </div>
+                                <p class="text-right" style="font-size: 12px;">Giá đã bao gồm thuế, phí & hóa đơn VAT</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <!--   <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                      <button type="button" class="btn btn-primary">Lưu lại</button> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- het modal cua xem chi tiet -->
+    <style>
+
+        .select-box {
+            display: flex;
+            width: 250px;
+            flex-direction: column;
+        }
+
+            .select-box .options-container {
+                background: #2db5df;
+                color: #f5f6fa;
+                max-height: 0;
+                width: 100%;
+                opacity: 0;
+                transition: all 0.4s;
+                border-radius: 8px;
+                overflow: hidden;
+                order: 1;
+            }
+
+        .selected {
+            background: rgb(238, 233, 233);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            color: black;
+            position: relative;
+            order: 0;
+        }
+
+            .selected::after {
+                content: "";
+                background: url("img/arrow-down.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                height: 100%;
+                width: 32px;
+                right: 10px;
+                top: 5px;
+                transition: all 0.4s;
+            }
+
+        .select-box .options-container.active {
+            max-height: 240px;
+            opacity: 1;
+            overflow-y: scroll;
+        }
+
+            .select-box .options-container.active + .selected::after {
+                transform: rotateX(180deg);
+                top: -6px;
+            }
+
+        .select-box .options-container::-webkit-scrollbar {
+            width: 8px;
+            background: #0d141f;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .select-box .options-container::-webkit-scrollbar-thumb {
+            background: #525861;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .select-box .option,
+        .selected {
+            padding: 12px 24px;
+            cursor: pointer;
+        }
+
+            .select-box .option:hover {
+                background: #414b57;
+            }
+
+        .select-box label {
+            cursor: pointer;
+        }
+
+        .select-box .option .radio {
+            display: none;
+        }
+    </style>
+
+    <script>
+        const selected = document.querySelector(".selected");
+        const optionsContainer = document.querySelector(".options-container");
+        const optionsList = document.querySelectorAll(".option");
+        selected.addEventListener("click", () => {
+            optionsContainer.classList.toggle("active");
+        });
+
+        optionsList.forEach(o => {
+            o.addEventListener("click", () => {
+                selected.innerHTML = o.querySelector("label").innerHTML;
+                optionsContainer.classList.remove("active");
+            });
+        });
+    </script>
+</body>
+<style>
+    #layout-1505891501864, #wrap-cart-button-1492688272087 {
+        display: none;
+    }
+</style>
+
+</html>
+

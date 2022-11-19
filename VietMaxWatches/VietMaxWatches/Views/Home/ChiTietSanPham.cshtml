@@ -1,0 +1,256 @@
+﻿
+@{
+     ViewBag.Title = "ChiTietSanPham";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+     var SanPham = ViewBag.SanPham;
+     var ThuongHieu = ViewBag.ThuongHieu;
+     var list_SanPham = ViewBag.list_sanpham;
+}
+
+<!--  chi tiết đồng hồ  -->
+<div class="main-container-wrapper">
+     <div class="container no-intro">
+          <div class="layout layout-1-col layout-1-col-row">
+               <div role="main">
+                    <div class="product-view">
+                         <div class="product-essential">
+                              <div class="row">
+                                   <!-- watch image + viewbox-->
+                                   <div class="row-inner center-vertical-container">
+                                        <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
+                                             <!-- watch iamge -->
+                                             <div class="row-inner center-vertical-container">
+                                                  <!-- small image -->
+                                                  <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 thumblist" style="height: 124px;">
+                                                       <img src="/@SanPham.Anh_Them1" class="view_img selectd">
+                                                       <img src="/@SanPham.Anh_Them2" class="view_img">
+                                                       <img src="/@SanPham.Anh_Them3" class="view_img">
+                                                  </div>
+                                                  <!-- large image -->
+                                                  <div class="col-xs-12 col-sm-6 col-md-9 col-lg-9">
+                                                       <div data-center="#maindiv" data-center-min="768" class="media center-vertical-disabled">
+                                                            <div class="product-image product-image-zoom" id="big-img">
+                                                                 <img class="img-main img-responsive" src="/@SanPham.Anh" alt="ROLEX OYSTER PERPETUAL 118348-0054 DAY-DATE 36" style="height: 522px;width: 307px;">
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <!-- Danh Gia -->
+                                             <div class="reviewBox">
+
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <!-- watch info -->
+                                   <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4" id="collapseParent">
+                                        <div class="main-info" id="maindiv">
+                                             <!-- logo brand -->
+                                             <div class="brand-logo hidden-xs">
+                                                  <img src="/@ThuongHieu.Logo" alt="Rolex" class="img-responsive">
+                                             </div>
+                                             <!-- watch info -->
+                                             <div class="info-group">
+                                                  <div class="product-name">
+                                                       <h1>@SanPham.TenSanPham</h1>
+                                                       <span class="msp">MSP: @SanPham.MaSanPham</span>
+                                                  </div>
+                                                  <div class="product-price">@double.Parse(SanPham.Gia.ToString()).ToString("##,###") VNĐ</div>
+                                             </div>
+                                             <!-- thong tin chi tiet -->
+                                             <div class="collapse-bar-outer">
+                                                  <div id="ai9" class="product-details collapse-bar">
+                                                       <a href="javascript:void(0)" class="collapse-icon-faded" data-after-open-anchor="#ai9" data-after-closed-anchor="#product_addtocart_form" data-toggle="collapse" data-parent="#collapseParent" data-target="#collapseProductA">Thông tin chi tiết</a>
+                                                  </div>
+                                                  <!-- <div id="collapseProductA" class="panel-collapse collapse" style="height: 0px;">
+                                                      <div>
+                                                          <div>
+                                                              PRECIOUS MATERIALS
+                                                          </div>
+                                                          <div>
+                                                              Năm 1956, Rolex Day-Date lần đầu tiên ra mắt. Chỉ có loại bằng vàng 18 ct hoặc bạch kim, đây là chiếc đồng hồ đeo tay đầu tiên hiển thị ngày và thứ trong tuần được viết đầy đủ trong một cửa sổ trên mặt số. Với vòng đeo tay President, Day-Date tiếp tục là chiếc đồng hồ xuất sắc của những người trong giới thượng lưu.</div>
+                                                          <div>
+                                                              &nbsp;
+                                                          </div>
+                                                          <div>
+                                                              Bằng cách vận hành xưởng đúc độc quyền của riêng mình, Rolex có khả năng vô song trong việc đúc các hợp kim vàng 18 ct với chất lượng cao nhất. Theo tỷ lệ bạc, đồng, bạch kim hoặc palladium được thêm vào, các loại vàng 18 ct khác nhau sẽ thu được: vàng, hồng hoặc trắng. Chúng chỉ được làm bằng những kim loại tinh khiết nhất và được kiểm tra tỉ mỉ trong một phòng thí nghiệm trong nhà với thiết bị hiện đại, trước khi vàng được tạo hình với sự quan tâm kỹ lưỡng về chất lượng. Cam kết của Rolex đối với sự xuất sắc bắt đầu từ nguồn gốc chất liệu của nó. </div>
+                                                          <div>
+                                                              &nbsp;
+                                                          </div>
+                                                          <div>
+                                                              DIAMOND PAVED DIAL
+                                                          </div>
+                                                          <div>
+                                                              Những người thợ chế tác đá quý, giống như các nhà điêu khắc, chạm khắc tinh xảo kim loại quý để tạo hình bằng tay cho những chiếc đồng hồ, trong đó mỗi viên đá quý sẽ được gắn một cách hoàn hảo. Với nghệ thuật thủ công và tay nghề của một thợ kim hoàn, viên đá được đặt và căn chỉnh tỉ mỉ với những viên khác, sau đó được cố định chắc chắn trong thiết kế bằng vàng hoặc bạch kim. Bên cạnh chất lượng nội tại của những viên đá, một số tiêu chí khác góp phần tạo nên vẻ đẹp của chế tác đá quý Rolex: sự căn chỉnh chính xác chiều cao của các viên đá quý, hướng và vị trí của chúng, độ đều đặn, sức mạnh và tỷ lệ của việc lắp đặt cũng như sự phức tạp hoàn thiện đồ kim loại.Một bản giao hưởng lấp lánh để nâng tầm chiếc đồng hồ và mê hoặc người đeo.</div>
+                                                          <div>
+                                                              &nbsp;
+                                                          </div>
+                                                          <div>
+                                                              THE PRESIDENT BRACELET
+                                                          </div>
+                                                          <div>
+                                                              Việc thiết kế, phát triển và sản xuất vòng đeo tay và đồng hồ Rolex, cũng như các cuộc kiểm tra nghiêm ngặt mà chúng phải đối mặt, liên quan đến công nghệ cao tiên tiến. Và, giống như tất cả các thành phần của đồng hồ, các bộ phận kiểm soát thẩm mỹ bằng mắt người đảm bảo vẻ đẹp hoàn hảo. Vòng đeo tay President, với các mắt xích ba mảnh hình bán nguyệt, được tạo ra vào năm 1956 để ra mắt đồng hồ Oyster Perpetual Day-Date. Nó đại diện cho sự tinh tế và tiện nghi đỉnh cao và luôn được làm bằng các kim loại quý được lựa chọn cẩn thận.
+                                                          </div>
+                                                          <div>
+                                                              &nbsp;
+                                                          </div>
+                                                          <div>
+                                                              3155 MOVEMENT
+                                                          </div>
+                                                          <div>
+                                                              Day-Date 36 được trang bị bộ máy cơ 3155, một bộ máy cơ tự lên dây hoàn toàn do Rolex phát triển và sản xuất. Nó có cơ chế đĩa của ngày và thứ. Giống như tất cả các bộ máy Rolex Perpetual, 3155 là một máy đo thời gian được chứng nhận của Thụy Sĩ, một ký hiệu dành riêng cho những chiếc đồng hồ có độ chính xác cao đã vượt qua thành công các bài test của Viện Kiểm tra Chronometer Chính thức của Thụy Sĩ (COSC). Kiến trúc của nó, điểm chung với tất cả các chuyển động của đồng hồ Oyster, khiến nó trở nên đáng tin cậy một cách kỳ lạ.
+                                                          </div>
+                                                          <div>
+                                                              &nbsp;
+                                                          </div>
+                                                          <div>
+                                                              MONDAY, LUNDI
+                                                          </div>
+                                                          <div>
+                                                              Lần đầu tiên được giới thiệu vào năm 1956, Day-Date là sản phẩm đầu tiên trên thế giới. Chiếc đồng hồ đầu tiên cho biết ngày trong tuần được viết đầy đủ. Được nhiều nhà lãnh đạo thế giới đeo, Day-Date có sẵn với màn hình hiển thị ngày riêng bằng nhiều ngôn ngữ lựa chọn.                                                    </div>
+                                                      </div>
+                                                  </div> -->
+                                             </div>
+                                             <div class="collapse-bar-outer">
+                                                  <div id="ai8" class="style-matters collapse-bar">
+                                                       <a href="javascript:void(0)" class="collapse-icon-faded" data-after-open-anchor="#ai8" data-after-closed-anchor="#product_addtocart_form" data-toggle="collapse" data-parent="#collapseParent" data-target="#collapseProductB">Thông tin thêm</a>
+                                                  </div>
+                                                  <!-- <div id="collapseProductB" class="panel-collapse collapse" style="height:0px;">
+                                                      <div class="std">
+                                                          <div class="std">
+                                                              › Sản phẩm nhập khẩu chính hãng.<br>
+                                                              › Vận chuyển miễn phí toàn quốc.<br>
+                                                              › Thanh toán sau khi nhận hàng.<br>
+                                                              › Bảo hành 5 Năm tại Công ty.<br>
+                                                              › Bảo hành chính hãng toàn cầu.<br>
+                                                              › Gọi <strong>1800 0091</strong> hoặc <strong>028 3833 9999</strong> để đặt hàng.
+                                                          </div>
+                                                      </div>
+                                                  </div> -->
+                                             </div>
+                                             <!-- liên hệ -->
+                                             <div class="center">
+                                                  <ul class="social-icons">
+                                                       <li class="social-icon">
+                                                            <a target="_blank" class="share_facebook" href="#">
+                                                                 <img src="/IMG/center/facebook1.png" class="active-icon" alt="facebook">
+                                                                 <img style="opacity: 0.5;" src="/IMG/center/facebook1.png" class="inactive-icon" alt="facebook">
+                                                            </a>
+                                                       </li>
+                                                       <li class="social-icon">
+                                                            <a target="_blank" class="share_email" href="#">
+                                                                 <img src="/IMG/center/email1.png" class="active-icon" alt="email">
+                                                                 <img style="opacity: 0.5;" src="/IMG/center/email1.png" class="inactive-icon" alt="email">
+                                                            </a>
+                                                       </li>
+                                                       <li class="social-icon">
+                                                            <a target="_blank" class="share_gplus" href="#">
+                                                                 <img src="/IMG/center/gplus.png" class="active-icon" alt="gplus">
+                                                                 <img style="opacity: 0.5;" src="/IMG/center/gplus.png" class="inactive-icon" alt="gplus">
+                                                            </a>
+                                                       </li>
+                                                       <li class="social-icon">
+                                                            <a target="_blank" class="share_twitter" href="#">
+                                                                 <img src="/IMG/center/twitter1.png" class="active-icon" alt="twitter">
+                                                                 <img style="opacity: 0.5;" src="/IMG/center/twitter1.png" class="inactive-icon" alt="twitter">
+                                                            </a>
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                             <!-- button -->
+                                             <div class="buttons">
+                                                  <div class="shape1">
+                                                       <a id="btnAddToCart" href="/GioHang/Index" rel="nofollow">Đặt hàng</a>
+                                                  </div>
+                                                  <div class="shape2">
+                                                       <a href="/tu-van.aspx?id=21208" rel="nofollow">Tư vấn thêm</a>
+                                                  </div>
+                                                  <a href="/thanh-toan.aspx?id=21208&amp;type=1" rel="nofollow" class="btn pull-left btn-140-160 btn-orange-basic btn-hov-cham">Thanh toán online</a>
+                                                  <a href="/tra-gop.aspx?id=21208&amp;type=2" rel="nofollow" class="btn pull-right btn-140-160  btn-orange-basic btn-hov-cham">Trả góp 0%</a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+<!-- Sản phẩm tương tự -->
+<div class="white-background">
+     <div class="container">
+          <div class="row">
+               <div class="col-xs-12">
+                    <div class="picks">
+                         <div class="brands-heading">
+                              <span class="title">
+                                   <i class="strike hidden-xs"></i>
+                                   Sản phẩm tương tự
+                                   <i class="strike hidden-xs"></i>
+                              </span>
+                         </div>
+                         <div class="jcarousel-wrapper">
+                              <!-- list image -->
+                              <div class="jcarousel" data-jcarousel="true" data-jcarouselautoscroll="true">
+                                   <ul class="product-list">
+                                        @foreach (var item in list_SanPham)
+                                        {
+                                             <li class="product" style="width:  290px;">
+                                                  <div class="slight-zoom-hover">
+                                                       <!-- info watch -->
+                                                       <div class="product-info">
+                                                            <!-- image -->
+                                                            <div class="image-constrainer">
+                                                                 <a class="product-image" href="/Home/ChiTietSanPham/@item.MaSanPham">
+                                                                      <img src="/@item.Anh" alt="@item.TenSanPham" class="img-responsive">
+                                                                 </a>
+                                                            </div>
+                                                            <!-- name -->
+                                                            <h2 class="product-name">
+                                                                 <a href="/Home/ChiTietSanPham/@item.MaSanPham" title="@item.TenSanPham">
+                                                                      <span class="msp">MSP: @item.MaSanPham</span>
+                                                                      <br>@item.TenSanPham
+                                                                 </a>
+                                                            </h2>
+                                                       </div>
+                                                       <!-- price -->
+                                                       <span class="product-price">@double.Parse(@item.Gia.ToString()).ToString("##,###") VNĐ</span>
+                                                       <!-- button -->
+                                                       <div class="buttons">
+                                                            <a href="/Home/ChiTietSanPham/@item.MaSanPham" class="btn adjust btn-default btn-float btn-120">Chi tiết</a>
+                                                            <a rel="nofollow" class="btn adjust btn-orange-basic btn-float btn-120 btn-nudge-back item_add" href="javascript:;" onclick="ThemGioHang(@item.MaSanPham)">Đặt hàng</a>
+                                                       </div>
+                                                  </div>
+                                             </li>
+                                        }
+                                   </ul>
+                              </div>
+                              <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">&nbsp;</a>
+                              <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">&nbsp;</a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+<script type="text/javascript">
+
+     function ThemGioHang(masp) {
+
+          $.ajax({
+               url: '/GioHang/ThemVaoGioHang/?id=' + masp + '&soLuong=' + 1 + '',
+               type: 'POST',
+               dataType: 'json',
+               success: function (data) {
+                    var json = JSON.parse(data);
+                    alert(json);
+                    window.location.reload();
+               },
+               error: function (err) {
+                    alert("Đã xảy ra lỗi" + err.responseText);
+               }
+          });
+     };
+</script>

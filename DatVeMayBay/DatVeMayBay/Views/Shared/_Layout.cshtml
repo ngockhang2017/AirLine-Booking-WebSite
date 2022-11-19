@@ -1,0 +1,716 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS lib -->
+    <link rel="stylesheet" href="../Asset/css/reset.css">
+    <link rel="stylesheet" href="../Asset/css/global.css">
+    <link rel="stylesheet" href="../Asset/css/style.css">
+    <link rel="stylesheet" href="../Asset/css/tavo-calendar.css">
+
+    <!-- <link rel='stylesheet' type='text/css' href='../Asset/css/bootstrap.min.css'> -->
+    <link rel='stylesheet' type='text/css' href='../Asset/css/style_.css'>
+    <!-- Font-Awesome lib -->
+    <link rel="stylesheet" href="../lib/Fontawesome/css/all.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="../lib/owlcarousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="../lib/owlcarousel/assets/owl.theme.default.css">
+    <!-- <link rel="stylesheet" href="lib/jQuery/jquery 3.5.0.js"> -->
+    <link rel="stylesheet" href="../lib/owlcarousel/owl.carousel.js">
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS + JS-->
+    <link rel="stylesheet" href="../lib/bootstrap-4.5.0-dist/css/bootstrap.css">
+    <script src="../lib/bootstrap-4.5.0-dist/js/jquery 3.5.0.js"></script>
+    <script src="../lib/bootstrap-4.5.0-dist/js/popper.min.js"></script>
+    <script src="../lib/bootstrap-4.5.0-dist/js/bootstrap.js"></script>
+    <!-- jQuery -->
+    <script src="../Asset/js/momment.js"></script>
+    <script src="../Asset/js/tavo-calendar.js"></script>
+    <script src="../Asset/js/style.js"></script>
+
+    <link rel="stylesheet" href="../lib/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <script src="../lib/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="../lib/jquery-ui-1.12.1.custom/jquery_lunar.js"></script>
+    <script src="../Asset/js/amlich-hnd.js"></script>
+    <title>Banana Airlines</title>
+
+</head>
+
+<body>
+
+
+    <div id="loader" class="center"></div>
+    <div id="wrapper">
+        <!-- HEADER -->
+        <div id="header">
+            <div id="login-header">
+                <div class="" id="wp-menu-header">
+                    <div class="" id="menu-header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <nav class="navbar navbar-light navbar-expand-xl">
+                                        <a href="index.html" class="navbar-brand">
+                                            <img src="../Asset/img/adada.png" alt="" style="height: 65px;">
+                                        </a>
+                                        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="main-nav">
+                                            <ul class="navbar-nav mr-auto" style="width: 740px;">
+                                                <li class="nav-item">
+                                                    <a href="~/Home/Index" class="nav-link">Trang chủ</a>
+                                                </li>
+
+                                                <li class="nav-item">
+                                                    <a href="/Home/ThanhToan" class="nav-link">Thanh toán vé</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/Home/HoanDoiVe" class="nav-link">Hoán đổi vé</a>
+                                                </li>
+                                                <li class="nav-item hd">
+                                                    <a href="/Home/HuongDan?queue=Hướng dẫn đặt vé" class="nav-link">Hướng dẫn</a>
+                                                    <div class="dropdown-hd ">
+                                                        <ul class="list-unstyled ml-2">
+                                                            <li>
+                                                                <a href="/Home/HuongDan?queue=Hướng dẫn mua vé máy bay" class=" nav-link font-weight-bold">Hướng dẫn mua vé máy bay</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/Home/HuongDan?queue=Hướng dẫn thanh toán vé máy bay" class="nav-link font-weight-bold">Hướng dẫn thanh toán vé máy bay</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/Home/HuongDan?queue=Các trường hợp hành khách bị cấm bay" class="nav-link font-weight-bold">Các trường hợp hành khách bị cấm bay</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/Home/HuongDan?queue=Các quy định đặt vé" class="nav-link font-weight-bold">Các quy định đặt vé</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/Home/HuongDan?queue=Các thông tin cần biết" class="nav-link font-weight-bold">Các thông tin cần biết</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/Home/LienHe" class="nav-link">Liên hệ</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END HEADER -->
+        <!--BODY-->
+        <div>
+            @RenderBody()
+        </div>
+        <!--END BODY-->
+        <!--FOOTER-->
+        <!-- SUBCRIBE -->
+        <div class="bgw">
+            <div id="footer" class="clearfix j30-footer">
+                <div class="clearfix " id="footers">
+                    <div class=" ">
+                        <div class="clear"></div>
+                        <!-- 4 icon -->
+                        <div class="row hidden-xs">
+                            <div class="col-md-10 col-md-offset-1 " style="margin:0px auto;">
+                                <div class="row" style="text-align: center;font-size: 14px;">
+                                    <!-- Dễ dàng tìm chuyến bay -->
+                                    <div class="col-xs-3">
+                                        <p class="box-icon">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 32 32">
+                                                <title>home-solgan-search</title>
+                                                <path fill="#5a5954" d="M20.976 0c-6.079 0-11.024 4.945-11.024 11.024 0 2.501 0.838 4.81 2.247 6.661l-2.233 2.233c-0.014 0.014-0.027 0.029-0.039 0.044-0.183-0.038-0.37-0.058-0.561-0.058-0.729 0-1.415 0.284-1.931 0.8l-6.635 6.635c-0.516 0.516-0.799 1.201-0.799 1.93s0.284 1.415 0.799 1.93c0.516 0.516 1.201 0.8 1.931 0.8s1.415-0.284 1.93-0.8l6.635-6.635c0.516-0.516 0.799-1.201 0.799-1.93 0-0.191-0.020-0.379-0.058-0.562 0.016-0.012 0.030-0.025 0.044-0.039l2.233-2.233c1.852 1.409 4.161 2.246 6.662 2.246 6.078 0 11.024-4.945 11.024-11.024s-4.945-11.024-11.023-11.024v0zM3.927 30.467c-0.32 0.32-0.745 0.496-1.197 0.496s-0.877-0.176-1.198-0.496c-0.32-0.32-0.496-0.745-0.496-1.197s0.176-0.877 0.496-1.197l5.992-5.992 2.394 2.394-5.992 5.992zM10.649 23.738l-2.387-2.386c0.316-0.272 0.709-0.41 1.103-0.41 0.434 0 0.867 0.165 1.197 0.495 0.32 0.32 0.496 0.745 0.496 1.197 0 0.41-0.145 0.797-0.409 1.104v0zM11.592 21.057c-0.089-0.124-0.187-0.242-0.297-0.352s-0.228-0.209-0.352-0.297l1.924-1.924c0.207 0.225 0.424 0.442 0.649 0.649l-1.924 1.923zM20.976 21.011c-5.507 0-9.987-4.48-9.987-9.987s4.48-9.987 9.987-9.987 9.987 4.48 9.987 9.987c0 5.507-4.481 9.987-9.987 9.987v0z"></path>
+                                                <path fill="#4469b0" d="M20.976 2.212c-4.859 0-8.812 3.953-8.812 8.812s3.953 8.812 8.812 8.812 8.812-3.953 8.812-8.812c-0-4.859-3.953-8.812-8.812-8.812v0zM20.976 18.799c-4.287 0-7.775-3.488-7.775-7.775s3.488-7.775 7.775-7.775 7.775 3.488 7.775 7.776c0 4.287-3.488 7.775-7.775 7.775v0z"></path>
+                                                <path fill="#5a5954" d="M22.176 4.532c-0.393-0.072-0.796-0.109-1.2-0.109-0.286 0-0.518 0.232-0.518 0.518s0.232 0.518 0.518 0.518c0.34 0 0.681 0.031 1.012 0.092 0.032 0.006 0.063 0.009 0.095 0.009 0.245 0 0.463-0.175 0.509-0.425 0.052-0.282-0.134-0.552-0.416-0.603v0z"></path>
+                                                <path fill="#4469b0" d="M18.42 11.276c0.547 0.682 1.094 1.364 1.64 2.045 0.231 0.289 0.636 0.131 0.814-0.105 1.538-2.029 3.075-4.058 4.613-6.087 0.403-0.532-0.497-1.049-0.895-0.523-1.538 2.029-3.075 4.058-4.613 6.087 0.271-0.035 0.543-0.070 0.814-0.105-0.547-0.682-1.094-1.364-1.64-2.045-0.417-0.52-1.147 0.218-0.733 0.733v0z"></path>
+                                            </svg>
+                                        </p>
+                                        <p class=""><b>Dễ dàng tìm chuyến bay</b></p>
+                                        <p>Mọi lúc mọi nơi</p>
+                                    </div>
+
+                                    <!-- Thanh toán nhanh chóng -->
+                                    <div class="col-xs-3">
+                                        <p class="box-icon">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 32 32">
+                                                <title>home-solgan-payment</title>
+                                                <path fill="#5a5954" d="M28.8 4.267c0-0.588-0.479-1.067-1.067-1.067s-1.067 0.478-1.067 1.067c0 0.588 0.479 1.067 1.067 1.067s1.067-0.478 1.067-1.067v0z"></path>
+                                                <path fill="#5a5954" d="M27.2 9.6c-0.294 0-0.534 0.239-0.534 0.534v19.2c0 0.883-0.717 1.6-1.6 1.6h-18.134c-0.882 0-1.6-0.717-1.6-1.6v-18.666h19.733c0.295 0 0.534-0.239 0.534-0.534s-0.238-0.534-0.534-0.534h-20.266c-0.294 0-0.534 0.239-0.534 0.534v19.2c0 1.47 1.197 2.667 2.667 2.667h18.134c1.471 0 2.667-1.197 2.667-2.667v-19.2c0-0.294-0.239-0.534-0.534-0.534v0z"></path>
+                                                <path fill="#5a5954" d="M24 4.8c0.295 0 0.534-0.238 0.534-0.534s-0.238-0.533-0.534-0.533h-5.333c-0.294 0-0.534 0.239-0.534 0.533s0.239 0.534 0.534 0.534h5.333z"></path>
+                                                <path fill="#4469b0" d="M28.8 12.266c0 0.295 0.239 0.534 0.533 0.534 0.295 0 0.534-0.238 0.534-0.534v-4.267c0-0.294-0.238-0.533-0.534-0.533h-26.666c-0.294 0-0.533 0.239-0.533 0.533v4.267c0 0.295 0.239 0.534 0.533 0.534 0.295 0 0.534-0.238 0.534-0.534v-3.733h25.6v3.733z"></path>
+                                                <path fill="#4469b0" d="M10.5 11.754c-0.284-0.080-0.579 0.084-0.658 0.368-0.16 0.566-0.242 1.153-0.242 1.745 0 3.529 2.871 6.4 6.4 6.4s6.4-2.871 6.4-6.4c0-0.592-0.081-1.179-0.241-1.745-0.080-0.283-0.377-0.446-0.658-0.368-0.283 0.080-0.448 0.375-0.368 0.658 0.133 0.472 0.201 0.961 0.201 1.455 0 2.942-2.393 5.333-5.333 5.333s-5.333-2.392-5.333-5.333c0-0.494 0.068-0.983 0.201-1.455 0.080-0.284-0.084-0.579-0.368-0.659v0z"></path>
+                                                <path fill="#5a5954" d="M29.333 0h-26.666c-1.47 0-2.667 1.197-2.667 2.667v11.733c0 1.47 1.197 2.667 2.667 2.667 0.295 0 0.534-0.238 0.534-0.533s-0.238-0.534-0.534-0.534c-0.882 0-1.6-0.717-1.6-1.6v-11.733c0-0.882 0.718-1.6 1.6-1.6h26.667c0.883 0 1.6 0.718 1.6 1.6v11.733c0 0.883-0.717 1.6-1.6 1.6-0.294 0-0.534 0.239-0.534 0.533 0 0.295 0.239 0.534 0.534 0.534 1.47 0 2.667-1.196 2.667-2.667v-11.733c0-1.47-1.197-2.667-2.667-2.667v0z"></path>
+                                                <path fill="#5a5954" d="M6.933 11.733c-0.294 0-0.533 0.239-0.533 0.533v13.867c0 0.295 0.239 0.533 0.533 0.533 1.47 0 2.667 1.197 2.667 2.667 0 0.295 0.239 0.534 0.534 0.534h11.733c0.295 0 0.533-0.238 0.533-0.534 0-1.47 1.197-2.667 2.667-2.667 0.295 0 0.534-0.238 0.534-0.533v-13.867c0-0.294-0.238-0.533-0.534-0.533s-0.533 0.239-0.533 0.533v13.372c-1.633 0.235-2.927 1.529-3.162 3.162h-10.743c-0.234-1.633-1.529-2.927-3.162-3.162v-13.372c0-0.294-0.238-0.533-0.534-0.533v0z"></path>
+                                                <path fill="#4469b0" d="M14.4 12.8c0.295 0 0.533-0.238 0.533-0.534s-0.238-0.533-0.533-0.533c-0.991 0-1.819 0.682-2.058 1.6h-0.076c-0.294 0-0.533 0.239-0.533 0.533 0 0.295 0.239 0.534 0.533 0.534h0.076c0.239 0.918 1.067 1.6 2.058 1.6 1.177 0 2.133-0.957 2.133-2.134 0-0.588 0.479-1.067 1.067-1.067s1.067 0.479 1.067 1.067c0 0.588-0.479 1.067-1.067 1.067-0.294 0-0.534 0.239-0.534 0.533 0 0.295 0.239 0.534 0.534 0.534 0.991 0 1.82-0.682 2.058-1.6h0.075c0.295 0 0.534-0.238 0.534-0.534 0-0.294-0.238-0.533-0.534-0.533h-0.075c-0.238-0.917-1.067-1.6-2.058-1.6-1.177 0-2.134 0.957-2.134 2.133 0 0.588-0.478 1.067-1.067 1.067s-1.067-0.479-1.067-1.067c0-0.588 0.479-1.067 1.067-1.067v0z"></path>
+                                            </svg>
+
+                                        </p>
+                                        <p><b>Thanh toán nhanh chóng</b></p>
+                                        <p>Tiện lợi và tin cậy</p>
+                                    </div>
+
+                                    <!-- Hỗ trợ đặt vé -->
+                                    <div class="col-xs-3">
+                                        <p class="box-icon">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="41" height="48" viewBox="0 0 26 32">
+                                                <title>home-solgan-support</title>
+                                                <path fill="#5a5954" d="M24.518 20.628l-0.006-0.005c-0.919-0.855-1.734-1.449-2.48-1.802 1.651-1.662 2.61-3.943 2.61-6.309 0-4.927-4.009-8.936-8.936-8.936-1.926 0-3.808 0.635-5.342 1.775-0.199-0.855-0.689-1.832-1.497-3.006-1.085-1.578-2.217-2.345-3.463-2.345-1.475 0-2.671 1.081-3.726 2.035-0.185 0.167-0.359 0.325-0.53 0.471-0.64 0.539-1.029 1.446-1.126 2.624-0.143 1.746 0.353 4.055 1.397 6.5 1.177 2.756 3.019 5.636 5.326 8.326 5.263 6.213 10.896 8.994 14.143 8.994 0.943 0 1.693-0.228 2.229-0.676l0.008-0.007c0.18-0.155 0.371-0.313 0.575-0.479 1.197-0.982 2.554-2.095 2.615-3.726 0.042-1.119-0.547-2.242-1.798-3.435zM10.255 6.939c1.456-1.451 3.455-2.281 5.513-2.281 4.304 0 7.806 3.502 7.806 7.806 0 2.34-1.074 4.587-2.885 6.059-0.021-0-0.042-0.001-0.062-0.001-1.251 0-2.138 0.752-3.065 1.564-0.002 0.002-0.004 0.003-0.006 0.005-0.020 0.018-0.040 0.035-0.060 0.053-0.102 0.089-0.206 0.18-0.314 0.273-0.055 0.048-0.132 0.097-0.286 0.097-0.567 0-2.030-0.599-5.461-4.605-1.448-1.703-2.442-3.061-3.040-4.152-0.593-1.081-0.768-1.885-0.471-2.153 0.086-0.071 0.172-0.141 0.257-0.211 0.894-0.731 1.741-1.425 2.074-2.454zM23.104 27.072c-0.213 0.175-0.415 0.34-0.611 0.509-0.296 0.245-0.785 0.375-1.415 0.375-2.918 0-8.374-2.734-13.462-8.74-2.278-2.655-4.090-5.485-5.242-8.184-0.985-2.308-1.457-4.445-1.327-6.019 0.068-0.83 0.309-1.458 0.68-1.768l0.007-0.005c0.188-0.161 0.373-0.33 0.571-0.508 0.308-0.279 0.63-0.57 0.961-0.833 0.362 0.398 0.934 1.063 1.541 1.91 0.132 0.184 0.338 0.282 0.549 0.282 0.136 0 0.273-0.041 0.392-0.126 0.302-0.217 0.372-0.638 0.155-0.941-0.563-0.786-1.093-1.419-1.477-1.853 0.264-0.111 0.529-0.176 0.792-0.176 0.787 0 1.608 0.612 2.437 1.819 1.102 1.602 1.546 2.774 1.357 3.582-0.167 0.716-0.836 1.262-1.681 1.955-0.089 0.073-0.179 0.146-0.27 0.221l-0.013 0.011c-0.866 0.753-0.81 2.039 0.168 3.823 0.642 1.172 1.688 2.603 3.196 4.379 2.966 3.465 5.027 5.078 6.486 5.078 0.445 0 0.849-0.148 1.169-0.426 0.006-0.005 0.012-0.010 0.018-0.015 0.345 0.214 0.863 0.544 1.4 0.92 0.445 0.312 0.829 0.604 1.14 0.866 0.126 0.107 0.281 0.159 0.434 0.159 0.192 0 0.382-0.081 0.516-0.24 0.24-0.285 0.204-0.71-0.081-0.95-0.343-0.289-0.758-0.605-1.236-0.94-0.396-0.278-0.78-0.53-1.098-0.733 0.492-0.381 0.952-0.634 1.468-0.634 0.815 0 1.875 0.617 3.241 1.886 0.971 0.925 1.45 1.763 1.422 2.49-0.040 1.064-1.131 1.959-2.186 2.825z"></path>
+                                                <path fill="#4469b0" d="M7.039 6.44c0.112 0 0.225-0.028 0.33-0.086 0.325-0.182 0.44-0.593 0.257-0.918-0.106-0.189-0.211-0.356-0.33-0.525-0.215-0.304-0.635-0.377-0.939-0.162s-0.377 0.635-0.162 0.939c0.092 0.131 0.174 0.26 0.257 0.408 0.123 0.219 0.352 0.343 0.588 0.343z"></path>
+                                                <path fill="#4469b0" d="M23.116 23.574c-0.26-0.265-0.685-0.269-0.951-0.010s-0.272 0.685-0.014 0.952c0.003 0.003 0.079 0.082 0.371 0.409 0.133 0.148 0.317 0.224 0.502 0.224 0.16 0 0.321-0.057 0.45-0.172 0.277-0.248 0.3-0.675 0.052-0.952-0.313-0.349-0.397-0.436-0.411-0.45z"></path>
+                                                <path fill="#4469b0" d="M17.314 13.429h2.237v1.1c0 0.252 0.307 0.382 0.606 0.382 0.308 0 0.606-0.131 0.606-0.382v-1.1h0.438c0.195 0 0.382-0.28 0.382-0.559 0-0.289-0.131-0.568-0.382-0.568h-0.438v-0.979c0-0.27-0.298-0.382-0.606-0.382-0.298 0-0.606 0.112-0.606 0.382v0.979h-1.090l1.789-3.579c0.028-0.056 0.047-0.112 0.047-0.159 0-0.279-0.391-0.466-0.606-0.466-0.195 0-0.4 0.084-0.512 0.317l-2.209 4.342c-0.047 0.084-0.065 0.168-0.065 0.242 0 0.27 0.177 0.429 0.41 0.429z"></path>
+                                                <path fill="#4469b0" d="M12.511 14.911h3.318c0.205 0 0.382-0.261 0.382-0.54s-0.177-0.522-0.382-0.522h-2.591v-0.223c0-0.969 2.954-1.622 2.954-3.634 0-1.184-1.006-1.892-2.088-1.892-1.034 0-2.003 0.652-2.003 1.715 0 0.503 0.233 0.652 0.55 0.652 0.401 0 0.633-0.223 0.633-0.447 0-0.578 0.373-0.82 0.83-0.82 0.615 0 0.867 0.447 0.867 0.83 0 1.314-3.001 2.106-3.001 3.597v0.904c0 0.232 0.317 0.381 0.531 0.381z"></path>
+                                                <path fill="#4469b0" d="M19.899 30.652h-13.481c-0.372 0-0.674 0.302-0.674 0.674s0.302 0.674 0.674 0.674h13.481c0.372 0 0.674-0.302 0.674-0.674s-0.302-0.674-0.674-0.674z"></path>
+                                            </svg>
+                                        </p>
+                                        <p><b>Hỗ trợ đặt vé máy bay 24/7</b></p>
+                                        <p>Chăm sóc tận tình chu đáo</p>
+                                    </div>
+
+                                    <!-- Săn vé giá rẻ -->
+                                    <div class="col-xs-3">
+                                        <p class="box-icon">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="65" height="48" viewBox="0 0 43 32">
+                                                <title>home-solgan-sale</title>
+                                                <path fill="none" stroke="#4469b0" stroke-width="1.2633" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" d="M28.174 2.703c4.154 0 7.954 4.073 7.954 9.15s-4.177 9.155-8.773 9.155"></path>
+                                                <path fill="#4469b0" d="M21.437 22.131c-1.912 0-3.468 1.556-3.468 3.468s1.556 3.468 3.468 3.468c1.912 0 3.468-1.556 3.468-3.468s-1.556-3.468-3.468-3.468v0zM21.437 27.708c-1.163 0-2.109-0.946-2.109-2.109s0.947-2.109 2.109-2.109 2.109 0.946 2.109 2.109c0 1.163-0.946 2.109-2.109 2.109v0z"></path>
+                                                <path fill="#5a5954" d="M25.181 20.876c-1.059-0.841-2.389-1.304-3.744-1.304s-2.686 0.463-3.745 1.304c-0.294 0.234-0.343 0.661-0.109 0.955s0.661 0.343 0.955 0.11c0.831-0.66 1.834-1.009 2.899-1.009s2.067 0.349 2.898 1.009c0.125 0.099 0.274 0.147 0.423 0.147 0.2 0 0.398-0.088 0.533-0.257 0.233-0.293 0.184-0.721-0.11-0.955v0z"></path>
+                                                <path fill="#5a5954" d="M32.711 29.682c1.081 0 1.961-0.879 1.961-1.961s-0.88-1.961-1.961-1.961-1.961 0.879-1.961 1.961c0 1.081 0.88 1.961 1.961 1.961v0zM32.711 27.12c0.331 0 0.601 0.27 0.601 0.601s-0.27 0.601-0.601 0.601-0.601-0.27-0.601-0.601c0-0.332 0.27-0.601 0.601-0.601v0z"></path>
+                                                <path fill="#4469b0" d="M42.548 22.096c-0.321-0.195-0.739-0.033-0.934 0.288l-0.889 1.522h-11.75c-0.168-2.023-1.019-3.642-2.303-4.856h1.201c0.376 0 0.68-0.231 0.68-0.607s-0.304-0.607-0.68-0.607h-3.153c-0.8-0.405-1.25-0.826-2.464-0.908v-3.316c0-0.376-0.434-0.68-0.809-0.68s-0.809 0.304-0.809 0.68v3.316c-0.809 0.083-1.684 0.504-2.484 0.908h-3.152c-0.375 0-0.68 0.231-0.68 0.607s0.305 0.607 0.68 0.607h1.201c-1.284 1.214-2.135 2.833-2.303 4.856h-11.749l-0.889-1.522c-0.195-0.321-0.613-0.453-0.934-0.258s-0.423 0.598-0.227 0.919l1.088 1.769c0.123 0.203 0.344 0.307 0.581 0.307h5.518c-0.576 0.809-0.925 1.562-0.925 2.517 0 2.131 1.734 3.871 3.865 3.871s3.864-1.743 3.864-3.873c0-0.955-0.349-1.705-0.925-2.514h0.736c0.345 4.047 3.593 6.889 7.537 6.889s7.192-2.842 7.537-6.889h0.736c-0.576 0.809-0.925 1.562-0.925 2.517 0 2.131 1.734 3.871 3.865 3.871s3.864-1.743 3.864-3.873c0-0.955-0.349-1.705-0.925-2.514h5.518c0.237 0 0.457-0.112 0.581-0.314l1.088-1.783c0.195-0.321 0.093-0.733-0.227-0.928zM10.14 30.695c-1.64 0-2.974-1.334-2.974-2.974s1.334-2.974 2.974-2.974c1.64 0 2.973 1.334 2.973 2.974s-1.333 2.974-2.973 2.974zM21.437 30.952c-3.577 0-6.486-2.91-6.486-6.487s2.91-6.486 6.486-6.486c3.577 0 6.486 2.91 6.486 6.486s-2.909 6.487-6.486 6.487zM35.684 27.721c0 1.639-1.334 2.974-2.974 2.974s-2.974-1.334-2.974-2.974c0-1.64 1.334-2.974 2.974-2.974s2.974 1.334 2.974 2.974z"></path>
+                                                <path fill="#5a5954" d="M10.14 29.682c1.081 0 1.961-0.879 1.961-1.961s-0.88-1.961-1.961-1.961-1.961 0.879-1.961 1.961c0 1.081 0.88 1.961 1.961 1.961v0zM10.14 27.12c0.331 0 0.601 0.27 0.601 0.601s-0.27 0.601-0.601 0.601-0.601-0.27-0.601-0.601c0-0.332 0.27-0.601 0.601-0.601v0z"></path>
+                                                <path fill="#4469b0" d="M34.319-0.031h-26.055v9.475h26.055c0 0 2.369-1.634 2.369-4.737s-2.369-4.737-2.369-4.737v0zM33.135 5.89c-0.654 0-1.184-0.53-1.184-1.184s0.53-1.184 1.184-1.184c0.654 0 1.184 0.53 1.184 1.184s-0.53 1.184-1.184 1.184v0z"></path>
+                                                <path fill="#4469b0" d="M33.135 6.483c0.98 0 1.776-0.797 1.776-1.777s-0.797-1.776-1.776-1.776c-0.98 0-1.776 0.797-1.776 1.776s0.797 1.777 1.776 1.777v0zM33.135 4.114c0.326 0 0.592 0.266 0.592 0.592s-0.266 0.592-0.592 0.592c-0.326 0-0.592-0.266-0.592-0.592s0.265-0.592 0.592-0.592v0z"></path>
+                                                <path fill="#fff" d="M12.705 8.259h0.592c1.143 0 2.073-0.93 2.073-2.073s-0.93-2.073-2.073-2.073h-0.592c-0.49 0-0.888-0.399-0.888-0.888s0.399-0.888 0.888-0.888h0.592c0.49 0 0.888 0.399 0.888 0.888v0.296h1.184v-0.296c0-1.143-0.93-2.073-2.073-2.073h-0.592c-1.143 0-2.073 0.93-2.073 2.073s0.93 2.073 2.073 2.073h0.592c0.49 0 0.888 0.399 0.888 0.888s-0.399 0.888-0.888 0.888h-0.592c-0.49 0-0.888-0.399-0.888-0.888v-0.296h-1.184v0.296c0 1.143 0.93 2.073 2.073 2.073v0z"></path>
+                                                <path fill="#fff" d="M17.146 5.89h2.369v2.369h1.184v-4.737c0-1.307-1.062-2.369-2.369-2.369s-2.369 1.062-2.369 2.369v4.737h1.184v-2.369zM18.331 2.337c0.653 0 1.184 0.531 1.184 1.184v1.184h-2.369v-1.184c-0-0.654 0.531-1.184 1.184-1.184v0z"></path>
+                                                <path fill="#fff" d="M25.437 7.075h-2.369v-5.922h-1.184v7.106h3.553v-1.184z"></path>
+                                                <path fill="#fff" d="M30.174 7.075h-2.369v-1.777h2.369v-1.184h-2.369v-1.776h2.369v-1.184h-3.553v7.106h3.553v-1.184z"></path>
+                                            </svg>
+                                        </p>
+                                        <p class="bold mt15"><b>Săn vé máy bay giá rẻ</b></p>
+                                        <p>Khuyến mại quanh năm</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <style>
+                            .col-xs-3 {
+                                float: left;
+                                padding: 34px 0 30px;
+                                width: 25%;
+                            }
+                        </style>
+                        <div class="clear"></div>
+
+                        <!-- Hotline -->
+                        <div class="sales-bar__wrapper sales-bar__wrapper--hotfares clearfix">
+                            <h2 class="sales-bar__title" style="float: left;"> Banana Airlines - Hơn Cả Một Chuyến Bay ! </h2>
+                            <div class=" " style="float: right;">Hotline: 08.4949.1166</div>
+                        </div>
+
+                        <!-- các chuyến bay -->
+                        <div class="specials-wrapper clearfix" style="margin-top: 20px;">
+                            <div style="min-height: 0px; font-family: GraublauWebb;" class="j30-flight-specialsx" id="specials_0_refreshspecials_0_pnlSpecials">
+                                <div class="resultsve">
+                                    <ul>
+                                        <!-- Từ Phú Quốc -->
+                                        <li class="sale__wrapper clearfix sale__wrapper--via">
+                                            <a href="../pages/timkiem.html" class="lead-in">
+                                                <div class="sale__details" style="min-height: 66px;">
+                                                    <h3 class="sale__dest">Từ Phú Quốc</h3>
+                                                    <img alt="Arrow" src="../Asset/img/arrow-right-cam.png" style="float: left; line-height: 11px; margin: 4px 6px 2px 0px;" height="12">
+                                                    <p class="sale__period"> TP Hồ Chí Minh</p>
+                                                    <p class="sale__orig"> 28/11/2020 </p>
+                                                </div>
+                                                <div class="sale__price-wrap">
+                                                    <span class="sale__price-disclaimer">
+                                                        <span class="deal__price-disclaimer--main">Giá từ </span>
+                                                    </span>
+                                                    <p class="sale__price">
+                                                        <span class="price" style=" color: red;">
+                                                            <strong class="currency">49.000 VNĐ</strong>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                                <small class="sale__availability"></small>
+                                                <span class="book" style="line-height: 24px;  color: #FF380B;">
+                                                    Mua ngay<span class="icon"></span>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <!-- Từ Nha Trang -->
+                                        <li class="sale__wrapper clearfix sale__wrapper--via">
+                                            <a href="../pages/timkiem.html" class="lead-in">
+                                                <div class="sale__details" style="min-height: 66px;">
+                                                    <h3 class="sale__dest">Từ Nha Trang</h3>
+                                                    <img alt="Arrow" src="../Asset/img/arrow-right-cam.png" style="float: left; line-height: 11px; margin: 4px 6px 2px 0px;" height="12">
+                                                    <p class="sale__period"> Hải Phòng</p>
+                                                    <p class="sale__orig"> 15/11/2020 </p>
+                                                </div>
+                                                <div class="sale__price-wrap">
+                                                    <span class="sale__price-disclaimer">
+                                                        <span class="deal__price-disclaimer--main">Giá từ </span>
+                                                    </span>
+                                                    <p class="sale__price">
+                                                        <span class="price" style=" color: red;">
+                                                            <strong class="currency">599.000 VNĐ</strong>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                                <small class="sale__availability"></small>
+                                                <span class="book" style="line-height: 24px;  color: #FF380B;">
+                                                    Mua ngay<span class="icon"></span>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <!-- Từ Hải Phòng -->
+                                        <li class="sale__wrapper clearfix sale__wrapper--via">
+                                            <a href="../pages/timkiem.html" class="lead-in">
+                                                <div class="sale__details" style="min-height: 66px;">
+                                                    <h3 class="sale__dest">Từ Hải Phòng</h3>
+                                                    <img alt="Arrow" src="../Asset/img/arrow-right-cam.png" style="float: left; line-height: 11px; margin: 4px 6px 2px 0px;" height="12">
+                                                    <p class="sale__period"> TP Hồ Chí Minh</p>
+                                                    <p class="sale__orig"> 18/12/2020 </p>
+                                                </div>
+                                                <div class="sale__price-wrap">
+                                                    <span class="sale__price-disclaimer">
+                                                        <span class="deal__price-disclaimer--main">Giá từ </span>
+                                                    </span>
+                                                    <p class="sale__price">
+                                                        <span class="price" style=" color: red;">
+                                                            <strong class="currency">199.000 VNĐ</strong>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                                <small class="sale__availability"></small>
+                                                <span class="book" style="line-height: 24px;  color: #FF380B;">
+                                                    Mua ngay<span class="icon"></span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <!-- Từ Hà Nội -->
+                                        <li class="sale__wrapper clearfix sale__wrapper--via">
+                                            <a href="../pages/timkiem.html" class="lead-in">
+                                                <div class="sale__details" style="min-height: 66px;">
+                                                    <h3 class="sale__dest">Từ Hà Nội </h3>
+                                                    <img alt="Arrow" src="../Asset/img/arrow-right-cam.png" style="float: left; line-height: 11px; margin: 4px 6px 2px 0px;" height="12">
+                                                    <p class="sale__period"> TP Hồ Chí Minh</p>
+                                                    <p class="sale__orig"> 28/01/2021 </p>
+                                                </div>
+                                                <div class="sale__price-wrap">
+                                                    <span class="sale__price-disclaimer">
+                                                        <span class="deal__price-disclaimer--main">Giá từ </span>
+                                                    </span>
+                                                    <p class="sale__price">
+                                                        <span class="price" style=" color: red;">
+                                                            <strong class="currency">99.000 VNĐ</strong>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                                <small class="sale__availability"></small>
+                                                <span class="book" style="line-height: 24px;  color: #FF380B;">
+                                                    Mua ngay<span class="icon"></span>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <!-- Từ TP Hồ Chí Minh -->
+                                        <li class="sale__wrapper clearfix sale__wrapper--via">
+                                            <a href="../pages/timkiem.html" class="lead-in">
+                                                <div class="sale__details" style="min-height: 66px;">
+                                                    <h3 class="sale__dest">Từ TP Hồ Chí Minh</h3>
+                                                    <img alt="Arrow" src="../Asset/img/arrow-right-cam.png" style="float: left; line-height: 11px; margin: 4px 6px 2px 0px;" height="12">
+                                                    <p class="sale__period"> Phú Quốc</p>
+                                                    <p class="sale__orig"> 25/12/2020 </p>
+                                                </div>
+                                                <div class="sale__price-wrap">
+                                                    <span class="sale__price-disclaimer">
+                                                        <span class="deal__price-disclaimer--main">Giá từ </span>
+                                                    </span>
+                                                    <p class="sale__price">
+                                                        <span class="price" style=" color: red;">
+                                                            <strong class="currency">399.000 VNĐ</strong>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                                <small class="sale__availability"></small>
+                                                <span class="book" style="line-height: 24px;  color: #FF380B;">
+                                                    Mua ngay<span class="icon"></span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+
+                        <!-- Đăng kí Newsletter -->
+                        <div id="newsletter" style="margin-bottom: 20px; margin-top: 15px;">
+                            <!-- icon -->
+                            <div class="icon"><img alt="Newsletter" src="../Asset/img/newsletter.png"></div>
+
+                            <!-- intro -->
+                            <div class="intro">
+                                <div class="intro-title">Đăng ký Newsletter</div>
+                                <div class="intro-content">
+                                    Nhận ưu đãi về giá vé lên đến 70%<br> và rất nhiều khuyến mãi hấp dẫn khác<br> hoàn toàn miễn phí
+                                </div>
+                            </div>
+
+                            <!-- input -->
+                            <div class="input">
+                                <div class="rel">
+                                    <form name="frmSubcribe" id="frmSubcribe" class="form-inlinex subscribe-formx" method="POST" action="" style="margin-top: 31px;" novalidate="novalidate">
+                                        <input type="text" class="text focus-clear txtJetmailEmail" placeholder="Email của bạn" id="ctl06_ctl00_JetmailSignup2_txtJetmailEmail" name="email" style="float: left; color: rgb(78, 78, 80); border-radius: 0px; border: 3px solid rgb(209, 209, 209); width: 403px; font-size: 17px; padding: 7px 12px;">
+                                        <button class="btnEmailSubmit" type="submit">Đăng ký →</button>
+                                        <div class="error" style="margin-top: 10px; color: #C00101"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END SUBCRIBE -->
+        <div id="customer-comment" class="container mb-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div style="background-color: lightgoldenrodyellow;">
+                                <h5>Khách hàng nói về chúng tôi</h5>
+                                <div class="comment d-flex">
+                                    <img src="../Asset/img/MessagesIcon.png" alt="" class="img-fluid" style="height: 50px;">
+                                    <div class="ml-2" style="font-size: 13px;font-style: italic;">
+                                        <span>Dear Abay Mình mất chứng minh nhân dân,cung mất cả giấy tờ xe các loại,nay mình xin được giấy xác nhận của địa phương vậy có mua được ...</span><br>
+                                        <p>Tạ Mạnh Dũng - 090742517X</p>
+                                    </div>
+                                </div>
+                                <div class="comment d-flex">
+                                    <img src="../Asset/img/MessagesIcon.png" alt="" class="img-fluid" style="height: 50px;">
+                                    <div class="ml-2" style="font-size: 13px;font-style: italic;">
+                                        <span>Đây là lần đầu tiên mình đặt vé máy bay trực tuyến qua Abay.vn. Đây là 1 hình thức đặt vé và thanh toán cực kỳ thuận tiện và nhanh chón ...</span><br>
+                                        <p>Phạm Văn Đức - 097798289X</p>
+                                    </div>
+                                </div>
+                                <div class="comment d-flex">
+                                    <img src="../Asset/img/MessagesIcon.png" alt="" class="img-fluid" style="height: 50px;">
+                                    <div class="ml-2" style="font-size: 13px;font-style: italic;">
+                                        <span>Mình thường phải đi công tác Hà Nội - Sai Gòn nhiều, trước kia mua vé của một số đại lý giá cao hơn nhiều so với Abay, mua vé ở Abay ...</span><br>
+                                        <p>Pham Van Dung - 090907496X</p>
+                                    </div>
+                                </div>
+                                <div class="comment d-flex" style="padding-bottom: 10px;">
+                                    <img src="../Asset/img/MessagesIcon.png" alt="" class="img-fluid" style="height: 50px;">
+                                    <div class="ml-2" style="font-size: 13px;font-style: italic;">
+                                        <span>Mình thường phải đi công tác Hà Nội - Sai Gòn nhiều, trước kia mua vé của một số đại lý giá cao hơn nhiều so với Abay, mua vé ở Abay ...</span><br>
+                                        <p>Pham Van Dung - 090907496X</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div style="background-color: #e1e1e1;">
+                                <h4>Câu hỏi thường gặp</h4>
+                                <a href="" class="ml-2">Giá vé máy bay của trẻ em được tính như thế nào?</a><br>
+                                <a href="" class="ml-2">Tôi bị mất chứng minh thư thì có được bay không ?</a><br>
+                                <a href="" class="ml-2">Tôi có mang theo thịt tươi sống và hải sản theo hành lý lên máy bay?</a><br>
+                                <a href="" class="ml-2">Khi đi máy bay tôi được mang theo bao nhiêu kg hành lý xách tay?</a><br>
+                                <a href="" class="ml-2">Em bé bao nhiêu tuổi thì được đi máy bay? Và cần những giấy tờ gì?</a><br>
+                                <a href="" class="ml-2">Làm thế nào để tôi tìm được vé máy bay giá rẻ nhất?</a><br>
+                                <a href="" class="ml-2">Khi đi máy bay tôi có được mang theo rượu và nước mắm không?</a><br>
+                                <a href="" class="ml-2"> Tôi cần có mặt ở sân bay trước bao nhiêu lâu để làm thủ tục bay?</a><br>
+                                <a href="" class="ml-2"> Tôi cần có mặt ở sân bay trước bao nhiêu lâu để làm thủ tục bay?</a><br>
+                                <a href="" class="ml-2"> Tôi cần có mặt ở sân bay trước bao nhiêu lâu để làm thủ tục bay?</a><br>
+                                <a href="" class="ml-2"> Tôi cần có mặt ở sân bay trước bao nhiêu lâu để làm thủ tục bay?</a><br>
+                                <a href="" class="ml-2"> Tôi cần có mặt ở sân bay trước bao nhiêu lâu để làm thủ tục bay?</a><br>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <div id="wp-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="">
+                            <img src="../Asset/img/adada.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer_topic">
+                            Công ty TNHH Banana Airlines Việt Nam
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li>Hà Nội: 024 7109 9999</li>
+                                <li>Hồ Chí Minh: 028 7109 9998</li>
+                                <li>Email: admin@322AirLines.vn</li>
+                                <li>Văn phòng Hà Nội: Tầng 11, Tòa Peakview, 36 Hoàng Cầu, Đống Đa</li>
+
+                                <li>Văn phòng HCM: Tầng 6, Tòa Nhà Central Park, 117 Nguyễn Du, Q.1</li>
+
+                                <br>
+                                <li>Số ĐKKD: 0105983269 cấp ngày 30/08/2012</li>
+                                <li>Nơi cấp: Sở kế hoạch và Đầu tư thành phố Hà Nội</li>
+                                <li>Lĩnh vực kinh doanh: Đại lý du lịch</li>
+                                <li>Địa chỉ tên miền: 322AirLines.vn</li>
+                                <br>
+                                <li>Tài khoản ngân hàng số: 19027493250015</li>
+                                <li>Techcombank Chi nhánh Hội Sở</li>
+                                <li>Chủ tài khoản: Công ty TNHH Banana Airlines Việt Nam</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer_topic text-uppercase">
+                            Quy định dành cho Website TMĐT Bán hàng – Dịch vụ đặt phòng
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li><a href="">Chính sách và quy định chung</a></li>
+                                <li><a href="">Quy định về thanh toán</a></li>
+                                <li><a href="">Quy định về xác nhận thông tin đặt phòng</a></li>
+                                <li><a href="">Chính sách về hủy đặt phòng và hoàn trả tiền</a></li>
+                                <li><a href="">Chính sách bảo mật thông tin</a></li>
+                                <li>
+                                    <a href=""><img src="../Asset/img/logo-dathongbao-bocongthuong-w165.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer_topic text-uppercase">
+                            Quy định cho sàn GDTMĐT – Dịch vụ đặt phòng và dịch vụ đặt tour du lịch
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li><a href="">Quy chế hoạt động</a></li>
+                                <li><a href="">Chính sách bảo mật</a></li>
+                                <li><a href="">Quy trình giải quyết tranh chấp khiếu nại</a></li>
+
+                                <li>
+                                    <a href=""><img src="../Asset/img/logo-congthuong-w165.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer_topic text-uppercase">
+                            Khách sạn tại Việt Nam
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li><a href="">A</a> - <a href="">B</a> - <a href="">C</a> - <a href="">D</a> - <a href="">E</a> - <a href="">F</a> - <a href="">G</a> - <a href="">H</a> - <a href="">I</a> - <a href="">J</a> - <a href="">K</a> - <a href="">L</a>                                - <a href="">M</a> - <a href="">N</a> - <a href="">O</a> - <a href="">P</a> - <a href="">Q</a> - <a href="">R</a> - <a href="">S</a> - <a href="">T</a> - <a href="">U</a> - <a href="">V</a> - <a href="">W</a> - <a href="">X</a>                                - <a href="">Y</a> - <a href="">Z</a> - Khách sạn theo khu vực</li>
+
+                            </ul>
+                        </div>
+                        <div class="footer_topic">
+                            Khách hàng và đối tác
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+
+                                <li><a href="">Tích lũy Vpoint</a></li>
+                                <li><a href="">Đăng nhập</a></li>
+                                <li><a href="">Đăng ký</a></li>
+                                <li><a href="">Đăng nhập HMS</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="footer_topic text-uppercase">
+                            Tải Mobile app 322AirLines.vn
+                        </div>
+                        <div class="footer_content">
+                            <a href=""><img style="width: 130px" src="../Asset/img/btn-app-apple.png" alt=""></a>
+                            <a href=""><img style="width: 130px" src="../Asset/img/btn-app-android.png" alt=""></a>
+                        </div>
+                        <div class="footer_topic text-uppercase mt-4">
+                            Kết nối với 322AirLines.vn
+                        </div>
+                        <div class="footer_content">
+                            <a href=""><i style="font-size: 25px;margin-right: 30px;color: #4c66a4;" class="fab fa-facebook-square"></i></a>
+                            <a href=""><i style="font-size: 25px;margin-right: 30px;color: #D50F25;" class="fab fa-google-plus-square"></i></a>
+                            <a href=""><i style="font-size: 25px;margin-right: 30px;color: #bf3566;" class="fab fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+    </div>
+
+    <p class="lunar-depart" data-toggle="popover" data-placement="right" tittle="Thông tin thêm" data-html="true" data-trigger="hover" data-popover-content="#info-date-depart">Âm lịch: Ngày 28/9/2020</p>
+    <p class="lunar-return" data-toggle="popover" data-placement="right" tittle="Thông tin thêm" data-html="true" data-trigger="hover" data-popover-content="#info-date-return">Âm lịch: Ngày 29/9/2020</p>
+    <input type="hidden" id="ngaydi_flag" value="1">
+    <input type="hidden" id="fl_type" value="1">
+    <input type="hidden" id="currentMonth" value="11">
+    <input type="hidden" id="currentDay" value="15">
+    <input type="hidden" id="currentYear" value="2020">
+    <input type="hidden" id="flag_open_calendar" value="false">
+    <div id="info-date-depart" style="display: none;">
+
+    </div>
+    <div id="info-date-return" style="display: none;">
+
+    </div>
+    <div id="datepicker"></div>
+    <a id="back-to-top" href="#" class="btn btn-danger btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+    <script>
+        $('.lunar-depart').popover({
+            html: true,
+            container: "body",
+            content: function () {
+                var elementId = $(this).attr("data-popover-content");
+                return $(elementId).html();
+            }
+        });
+        $('.lunar-return').popover({
+            html: true,
+            container: "body",
+            content: function () {
+                var elementId = $(this).attr("data-popover-content");
+                return $(elementId).html();
+            }
+        });
+        $(function () {
+            $.datepicker.regional["vi-VN"] = {
+                closeText: "Đóng",
+                prevText: "Trước",
+                nextText: "Sau",
+                currentText: "Hôm nay",
+                monthNames: ["Tháng 1 /", "Tháng 2 /", "Tháng 3 /", "Tháng 4 /", "Tháng 5 /", "Tháng 6 /", "Tháng 7 /", "Tháng 8 /", "Tháng 9 /", "Tháng 10 /", "Tháng 11 /", "Tháng 12 /"],
+                monthNamesShort: ["Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám", "Chín", "Mười", "Mười một", "Mười hai"],
+                dayNames: ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"],
+                dayNamesShort: ["CN", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy"],
+                dayNamesMin: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"],
+                weekHeader: "Tuần",
+                dateFormat: "dd-mm-yy",
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ""
+            };
+            $.datepicker.setDefaults($.datepicker.regional["vi-VN"]);
+            var dateToday = new Date();
+            $("#datepicker").datepicker({
+                dateFormat: "dd-mm-yy",
+                numberOfMonths: 3,
+                stepMonths: 2,
+                minDate: dateToday,
+                maxDate: 180
+            });
+
+            //defaults
+            $("#flights-checkin").val(dateToday.getDate() + "-" + (dateToday.getMonth() + 1) + "-" + dateToday.getFullYear());
+            var lunID = $("#flights-checkin").val().split("-").join("");
+            var lunID_ = $("#flights-checkin").val().split("-");
+            if (Number(lunID_[0]) - 10 < 0) {
+                lunID_[0] = "0" + lunID_[0];
+            }
+            if (Number(lunID_[1]) - 10 < 0) {
+                lunID = lunID_[0] + "0" + lunID_[1] + lunID_[2];
+            }
+
+            $(".lunar-depart").html("Âm lịch: " + TUAN[(jdn(dateToday.getDate(), (dateToday.getMonth() + 1), dateToday.getFullYear()) + 1) % 7] + " " + $("span#" + lunID).data("lunarday") + "/" + $("span#" + lunID).data("lunarmonth") + " " + getYearCanChi($("span#" + lunID).data("lunaryear")));
+            var res = alertDayInfo($("span#" + lunID).data("lunarday"), $("span#" + lunID).data("lunarmonth"), $("span#" + lunID).data("lunaryear"), 0, jdn(dateToday.getDate(), (dateToday.getMonth() + 1), dateToday.getFullYear()), dateToday.getDate(), (dateToday.getMonth() + 1), dateToday.getFullYear()).split("/*space*/");
+            var tooltip_text = "";
+            tooltip_text += "<b>" + res[0] + " " + res[1] + "</b>";
+            tooltip_text += "<p>" + res[2] + "</p>";
+            tooltip_text += "<p>" + res[3] + "</p>";
+            tooltip_text += "<p>" + res[4] + "</p>";
+            tooltip_text += "<p>" + res[5] + "</p>";
+            $("#info-date-depart").html(tooltip_text);
+            var date_after_2days = new Date(dateToday.setDate(dateToday.getDate() + 2));
+            $("#flights-checkout").val(date_after_2days.getDate() + "-" + (date_after_2days.getMonth() + 1) + "-" + date_after_2days.getFullYear());
+            var lun_ret_ID = $("#flights-checkout").val().split("-").join("");
+            var lun_ret_ID_ = $("#flights-checkout").val().split("-");
+            if (Number(lun_ret_ID_[0]) - 10 < 0) {
+                lun_ret_ID_[0] = "0" + lun_ret_ID_[0];
+            }
+            if (Number(lun_ret_ID_[1]) - 10 < 0) {
+                lun_ret_ID = lun_ret_ID_[0] + "0" + lun_ret_ID_[1] + lun_ret_ID_[2];
+            }
+            $(".lunar-return").html("Âm lịch: " + TUAN[(jdn(date_after_2days.getDate(), (date_after_2days.getMonth() + 1), date_after_2days.getFullYear()) + 1) % 7] + " " + $("span#" + lun_ret_ID).data("lunarday") + "/" + $("span#" + lun_ret_ID).data("lunarmonth") + " " + getYearCanChi($("span#" + lun_ret_ID).data("lunaryear")));
+            res = alertDayInfo($("span#" + lun_ret_ID).data("lunarday"), $("span#" + lun_ret_ID).data("lunarmonth"), $("span#" + lun_ret_ID).data("lunaryear"), 0, jdn(date_after_2days.getDate(), (date_after_2days.getMonth() + 1), date_after_2days.getFullYear()), date_after_2days.getDate(), (date_after_2days.getMonth() + 1), date_after_2days.getFullYear()).split("/*space*/");
+            var tooltip_text = "";
+            tooltip_text += "<b>" + res[0] + " " + res[1] + "</b>";
+            tooltip_text += "<p>" + res[2] + "</p>";
+            tooltip_text += "<p>" + res[3] + "</p>";
+            tooltip_text += "<p>" + res[4] + "</p>";
+            tooltip_text += "<p>" + res[5] + "</p>";
+            $("#info-date-return").html(tooltip_text);
+            $("#datepicker").on("change", function () {
+                var selected = $(this).val();
+                var lunar = selected.split("-");
+                var solarday = lunar[0];
+                var solarmonth = lunar[1];
+                var solaryear = lunar[2];
+                var lunarID = lunar.join("");
+                var lunarday = $("span#" + lunarID).data("lunarday");
+                var lunarmonth = $("span#" + lunarID).data("lunarmonth");
+                var lunaryear = $("span#" + lunarID).data("lunaryear");
+                var res = alertDayInfo(lunarday, lunarmonth, lunaryear, 0, jdn(Number(solarday), Number(solarmonth), Number(solaryear)), solarday, solarmonth, solaryear).split("/*space*/");
+                var tooltip_text = "";
+                tooltip_text += "<b>" + res[0] + " " + res[1] + "</b>";
+                tooltip_text += "<p>" + res[2] + "</p>";
+                tooltip_text += "<p>" + res[3] + "</p>";
+                tooltip_text += "<p>" + res[4] + "</p>";
+                tooltip_text += "<p>" + res[5] + "</p>";
+                if ($("#ngaydi_flag").val() == 1) { //ngay di
+                    $("#flights-checkin").val(selected);
+                    $("#flights-checkout").val(selected);
+                    $(".lunar-depart").html("Âm lịch: " + TUAN[(jdn(Number(solarday), Number(solarmonth), Number(solaryear) + 1)) % 7] + " " + lunarday + "/" + lunarmonth + " " + getYearCanChi(lunaryear));
+                    //tooltip
+                    $("#info-date-depart").html(tooltip_text);
+                    $(".lunar-return").html("Âm lịch: " + TUAN[(jdn(Number(solarday), Number(solarmonth), Number(solaryear) + 1)) % 7] + " " + lunarday + "/" + lunarmonth + " " + getYearCanChi(lunaryear));
+                    $("#info-date-return").html(tooltip_text);
+                } else if ($("#ngaydi_flag").val() == 2) {
+                    $("#flights-checkout").val(selected);
+                    $(".lunar-return").html("Âm lịch: " + TUAN[(jdn(Number(solarday), Number(solarmonth), Number(solaryear) + 1)) % 7] + " " + lunarday + "/" + lunarmonth + " " + getYearCanChi(lunaryear));
+                    $("#info-date-return").html(tooltip_text);
+                }
+                $(this).hide();
+            });
+            $(".flightType>input#1").click(function () {
+                $("#ngayve").addClass("op-dayve");
+                $("input#fl_type").val(1);
+            });
+            $(".flightType>input#2").click(function () {
+                $("#ngayve").removeClass("op-dayve");
+                $("input#fl_type").val(2);
+                //$("#ngayve").disabled = true;
+            });
+
+        });
+    </script>
+
+    <!-- <div id="my-calendar"></div> -->
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+﻿
+@{
+     ViewBag.Title = "LienHe";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- link -->
+<div class="breadcrumb-outer-container">
+     <div class="container">
+          <ul class="breadcrumb" style="width: 1090px;">
+               <li class="home">
+                    <a href="#">Trang chủ</a>
+               </li>
+               <li class="category3">
+                    <strong>Liên hệ</strong>
+               </li>
+          </ul>
+     </div>
+</div>
+<!-- content -->
+<div class="gray-background2" id="ctl00_plMainContainer_listitem">
+     <div class="container">
+          <div class="layout layout-1-col">
+               <div role="main">
+                    <form name="aspnetForm" method="post" action="lien-he.html" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+                         <!-- content -->
+                         <div class="responsive-cart cart">
+                              <!-- info 1 -->
+                              <div class="row contact-us">
+                                   <!-- 1 -->
+                                   <div class="col-xs-12 col-md-4">
+                                        <span class="heading">
+                                             <b>hotline: 1900 8198</b>
+                                        </span>
+                                        <hr>
+                                        <span class="heading">
+                                             <strong>VietNam</strong>
+                                             <br>
+                                             <strong>GENUINE IMPORT EXPORT USA CO.,LTD</strong>
+                                        </span>
+                                        <span class="info">
+                                             236 Hoàng Quốc Việt, Phường Cổ Nhuế 1, Bắc Từ Liêm<br>
+                                             Hà Nội<br>
+                                             Tel: 1800 8198 | 035-666-8888
+                                             <br>
+                                             Email: dinhviet@vietmax.vn<br>
+                                             Tax code: 0357342744
+                                             &nbsp;<br>
+                                             &nbsp;<br>
+                                        </span>
+                                        <hr>
+                                   </div>
+                                   <!-- 2 -->
+                                   <div class="col-xs-12 col-md-4">
+                                        <span class="heading"><b>&nbsp;</b></span>
+                                        <hr>
+                                        <span class="heading">
+                                             <strong>USA</strong><br>
+                                             <strong>VietMax watch store</strong>
+                                        </span> <span class="info">
+                                             611 Wilshire Blvd, Los Angeles<br>
+                                             CA 90017<br>
+                                             Tel: +1 213-623-1821
+                                             <br>
+                                             &nbsp;<br>
+                                             &nbsp;<br>
+                                             &nbsp;<br>
+                                             &nbsp;<br>
+                                        </span>
+                                        <hr>
+                                   </div>
+                                   <!-- 3 -->
+                                   <div class="col-xs-12 col-md-4">
+                                        <span class="heading"><b>&nbsp;</b></span>
+                                        <hr>
+                                        <span class="heading">
+                                             <strong>UK</strong><br>
+                                             <strong>Vietmax Watch Swiss</strong>
+                                        </span> <span class="info">
+                                             439-441 Oxford Street, London<br>UK<br>
+                                             Tel: 0207-409-3555
+                                             <br>
+                                             &nbsp;<br>
+                                             &nbsp;<br>
+                                             &nbsp;<br>
+                                             &nbsp;<br>
+                                        </span>
+                                        <hr>
+                                   </div>
+                              </div>
+                              <!-- submit form -->
+                              <div class="row contact-us" id="submit-form">
+                                   <!-- info of customer -->
+                                   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                        <span class="heading">Nội dung liên hệ</span>
+                                        <div class="form">
+                                             <input name="ctl00$plMainContainer$txtFullName" type="text" maxlength="256" id="ctl00_plMainContainer_txtFullName" class="txt" placeholder="Name *">
+                                             <span id="ctl00_plMainContainer_RequiredFieldValidator4" style="color:Red;display:none;"></span>
+                                             <input name="ctl00$plMainContainer$txtPhone" type="text" maxlength="32" id="ctl00_plMainContainer_txtPhone" class="txt" placeholder="Tel *">
+                                             <span id="ctl00_plMainContainer_RequiredFieldValidator3" style="color:Red;display:none;"></span>
+                                             <input name="ctl00$plMainContainer$txtEmail" type="text" maxlength="128" id="ctl00_plMainContainer_txtEmail" class="txt" placeholder="Email">
+                                             <span id="ctl00_plMainContainer_RegularExpressionValidator1" style="color:Red;display:none;">(*)</span>
+
+                                             <textarea name="ctl00$plMainContainer$txtContent" rows="2" cols="20" id="ctl00_plMainContainer_txtContent" class="txt" placeholder="Content *" style="height:135px;"></textarea>
+                                             <input type="submit" name="ctl00$plMainContainer$btnSend" value="Send" onclick="ValidData();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$plMainContainer$btnSend&quot;, &quot;&quot;, true, &quot;sub&quot;, &quot;&quot;, false, false))" id="ctl00_plMainContainer_btnSend" class="btn btn-default btn-wide btn-180">
+                                        </div>
+                                   </div>
+                                   <!-- QR code -->
+                                   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                        <span class="heading">&nbsp;</span>
+                                        <img src="/IMG/qrcode.png" alt="QR code VietMax watches" class="feedback-img">
+                                   </div>
+                                   <!-- Map -->
+                                   <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                        <span class="heading">&nbsp;</span>
+                                        <iframe class="feedback-img" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.589661248045!2d106.667899!3d10.766074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeafd545dc3bb1ea3!2zxJDhu5NuZyBo4buTIGhp4buHdSAtIEx1eHNob3BwaW5nLnZu!5e0!3m2!1svi!2s!4v1401629898582" frameborder="0" style="border: 0"></iframe>
+                                   </div>
+                              </div>
+                              <!-- content last -->
+                              <!-- <div class="row subscribe">
+                                  info instruction
+                                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 lh100"><div class="find-us">
+                                      <strong>
+                                          Info Intruction</strong>
+                                      <a class="facebook" href="https://www.facebook.com/luxshopping.vn" target="_blank"></a><a class="rss" href="javascript:void(0);"></a></div>
+                                  </div>
+                                  About Us
+                                  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                      <h3>About Us | Luxury Shopping | Luxury watches</h3>
+                                          Genuine imported products, free replacement of the battery life, free nationwide shipping and payment after delivery.
+                                          <br>
+                                          Product warranty company, a global warranty.
+                                  </div>
+                              </div> -->
+                         </div>
+                    </form>
+               </div>
+          </div>
+     </div>
+</div>
+

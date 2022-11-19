@@ -1,0 +1,16 @@
+.bg-watch-hot{
+    background-image: url('IMG/Theme_danhmuc/man_watch_theme.png');
+}
+
+.brand-area .hero {
+    margin-bottom: 0px !important;
+}
+
+.margin-auto{
+    margin:0 auto;
+    float:none;
+}
+
+.clear{
+    clear:both;
+}

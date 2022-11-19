@@ -1,0 +1,69 @@
+﻿@{
+     ViewBag.Title = "ThemSp";
+     Layout = "~/Areas/Admin/Views/Shared/AdminMaster.cshtml";
+}
+@model VietMaxWatches.Models.SanPham
+<h1 class="page-header">
+     <a href="/Admin/QLSanPham/Index" class="btn btn-outline btn-primary">Quay lại</a>
+</h1>
+<div class="row" style="margin-bottom: 50px">
+
+     <div class="col-md-12">
+          @using (Html.BeginForm("ThemSp", "QLSanPham", FormMethod.Post, new { enctype = "multipart/form-data", id = "frmThem" }))
+          {
+               <div class="form-group input-group" style="display: block;">
+                    <label>Tên sản phẩm</label>
+                    @Html.TextBoxFor(m => m.MaSanPham, new { @class = "form-control", placeholder = "Tên sản phẩm", required = "required" })
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Thương Hiệu</label>
+                    @Html.DropDownListFor(m => m.MaThuongHieu, (List<SelectListItem>)ViewBag.Hang, "Chọn Thương Hiệu", new { @class = "form-control ", required = "required" })
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Danh Mục</label>
+                    @Html.DropDownListFor(m => m.MaDanhMuc, (List<SelectListItem>)ViewBag.Hang, "Chọn danh mục", new { @class = "form-control ", required = "required" })
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Số lượng</label>
+                    @Html.TextBoxFor(m => m.SoLuong, new { @class = "form-control", type = "number", placeholder = "Số lượng", required = "required" })
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Giá</label>
+                    @Html.TextBoxFor(m => m.Gia, new { @class = "form-control", type = "number", placeholder = "Giá", required = "required" })
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Giá Ưu đãi</label>
+                    @Html.TextBoxFor(m => m.GiaUuDai, new { @class = "form-control", type = "number", placeholder = "Giá Ưu Đãi", required = "required" })
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Ảnh</label>
+                    <input type="file" name="file" class="form-control" />
+                    <input type="hidden" name="img" class="form-control" value="/@Model.Anh" />
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Mô tả</label>
+                    @Html.TextBoxFor(m => m.MoTa, new { @class = "form-control", placeholder = "Mô tả" })
+               </div>
+               @*<div class="form-group input-group" style="display: block;">
+                    <label>Thông tin chi tiết</label>
+                    @Html.TextBoxFor(m => m.ThongTinChiTiet, new { @class = "form-control", placeholder = "Thông tin chi tiết" })
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Thông tin thêm</label>
+                    @Html.TextAreaFor(m => m.ThongTinThem, new { @class = "form-control", placeholder = "Thông tin thêm" })
+               </div>*@
+               <div style="float: left">
+                    <input type="submit" class="btn btn-outline btn-primary" value="Thêm" />
+                    <input type="reset" class="btn btn-outline btn-primary" value="Làm lại" />
+               </div>
+          }
+     </div>
+
+</div>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/ckeditor/ckeditor.js"></script>
+<script src="~/ckfinder/ckfinder.js"></script>
+<Script>
+    CKEDITOR.replace('chitiet');
+</Script>
+

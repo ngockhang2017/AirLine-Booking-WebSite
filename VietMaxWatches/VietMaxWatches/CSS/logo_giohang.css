@@ -1,0 +1,16 @@
+.col-md-3 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 25%;
+}
+
+.header-right {
+    padding: 0;
+    width: 28%;
+    float: left;
+    width: 35%;
+    width: 40%;
+}

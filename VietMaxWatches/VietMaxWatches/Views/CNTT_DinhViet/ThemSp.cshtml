@@ -1,0 +1,61 @@
+﻿@{
+     ViewBag.Title = "ThemSp";
+     Layout = "~/Areas/Admin/Views/Shared/AdminMaster.cshtml";
+}
+@model VietMaxWatches.Models.SanPham
+<h1 class="page-header">
+     <a href="/Admin/QLSanPham/Index" class="btn btn-outline btn-primary">Quay lại</a>
+</h1>
+<div class="row" style="margin-bottom: 50px">
+
+     <div class="col-md-12">
+          @using (Html.BeginForm("ThemSp", "CNTT_DinhViet", FormMethod.Post, new { enctype = "multipart/form-data", id = "frmThem" }))
+          {
+               <div class="form-group input-group" style="display: block;">
+                    <label>Mã sản phẩm</label>
+                    @Html.TextBoxFor(m => m.MaSanPham, new { @class = "form-control", placeholder = "Mã sản phẩm", required = "required" })
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Tên sản phẩm</label>
+                    @Html.TextBoxFor(m => m.TenSanPham, new { @class = "form-control", placeholder = "Tên sản phẩm", required = "required" })
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Danh Mục</label>
+                    @Html.TextBoxFor(m => m.MaDanhMuc, new { @class = "form-control", placeholder = "Danh Mục", required = "required" })
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Thương Hiệu</label>
+                    @Html.TextBoxFor(m => m.MaThuongHieu, new { @class = "form-control", placeholder = "Thương Hiệu", required = "required" })
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Số lượng</label>
+                    @Html.TextBoxFor(m => m.SoLuong, new { @class = "form-control", placeholder = "Số lượng", required = "required" })
+               </div>
+               <div class="form-group input-group" style="display: block;">
+                    <label>Giá</label>
+                    @Html.TextBoxFor(m => m.Gia, new { @class = "form-control", placeholder = "Giá", required = "required" })
+               </div>
+
+               <div class="form-group input-group" style="display: block;">
+                    <label>Ảnh</label>
+                    <input type="file" name="file" class="form-control" />
+                    <input type="hidden" name="img" class="form-control" value="/@Model.Anh" />
+               </div>
+
+
+               <div style="float: left">
+                    <input type="submit" class="btn btn-outline btn-primary" value="Thêm" />
+                    <input type="reset" class="btn btn-outline btn-primary" value="Làm lại" />
+               </div>
+          }
+     </div>
+
+</div>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/ckeditor/ckeditor.js"></script>
+<script src="~/ckfinder/ckfinder.js"></script>
+<Script>
+    CKEDITOR.replace('chitiet');
+</Script>
+
+

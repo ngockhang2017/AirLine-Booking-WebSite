@@ -1,0 +1,123 @@
+﻿
+@{
+     ViewBag.Title = "TimKiem";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using PagedList
+@using PagedList.Mvc
+@using VietMaxWatches.Models
+@model IPagedList<SanPham>
+
+<link href="~/CSS/media.css" rel="stylesheet" />
+<link href="~/CSS/style2.css" rel="stylesheet" />
+<link href="~/CSS/style3.css" rel="stylesheet" />
+<link href="~/CSS/jquery.carousel-3d.default.css" rel="stylesheet" />
+
+<script src="~/JS/jcarousel.brands.js"></script>
+<script src="~/JS/jquery.resize.js"></script>
+<script src="~/JS/jquery.waitforimages.js"></script>
+<script src="~/JS/modernizr.js"></script>
+<script src="~/JS/jquery.carousel-3d.js"></script>
+
+<!-- =====background image===== -->
+<div class="slides-outer-container" style="height: 516px;">
+
+     <div class="slides">
+          <div class="slide active" id="slide0" style="display:block; opacity:1;" data-slide-id="0">
+               <a href="#">
+                    <img src="../IMG/Main-Topic/2000-midseason-sale2020-1-.png" alt="Vietmax" class="back img-responsive">
+               </a>
+          </div>
+     </div>
+
+     <div class="slide-navigation">
+
+     </div>
+</div>
+
+
+<!-- show watches -->
+<div class="white-background">
+     <div class="container">
+          <div class="row">
+               <div class="col-xs-12">
+                    <div class="picks">
+                         <!-- header: San Pham Moi -->
+                         <div class="brands-heading">
+                              <span class="title">
+                                   <i class="strike hidden-xs"></i>
+                                   Sản phẩm cho kết quả "@ViewBag.KQ"
+                                   <i class="strike hidden-xs"></i>
+                              </span>
+                         </div>
+                         <!-- show watches -->
+                         <div class="jcarousel-wrapper">
+                              <div class="jcarousel" data-jcarousel="true" data-jcarouselautoscroll="true">
+                                   <!-- list watches show -->
+
+                                   <ul class="product-list">
+                                        @foreach (var item in Model)
+                                        {
+                                             <li class="product" style="width: 280px;">
+                                                  <div class="slight-zoom-hover">
+
+                                                       <div class="product-info">
+                                                            <!-- image -->
+                                                            <div class="image-constrainer">
+                                                                 <a class="product-image" href="/Home/ChiTietSanPham/@item.MaSanPham">
+                                                                      <img src="/@item.Anh" alt="@item.MaThuongHieu" class="img-responsive">
+                                                                 </a>
+                                                            </div>
+                                                            <!-- information of watch -->
+                                                            <h2 class="product-name">
+                                                                 <a href="/Home/ChiTietSanPham/@item.MaSanPham" title="@item.MaThuongHieu" style="text-decoration:none;">
+                                                                      <span class="msp">MSP: @item.MaSanPham</span>
+                                                                      <br>@item.TenSanPham
+                                                                 </a>
+                                                            </h2>
+                                                       </div>
+
+                                                       <!-- price -->
+                                                       <span class="product-price">@double.Parse(@item.Gia.ToString()).ToString("##,###")</span>
+                                                       <!-- button of watch -->
+                                                       <div class="buttons">
+                                                            <a href="/Home/ChiTietSanPham/@item.MaSanPham" class="btn adjust btn-default btn-float btn-120">Chi tiết</a>
+                                                            <a rel="nofollow" class="btn adjust btn-orange-basic btn-float btn-120 btn-nudge-back item_add" href="javascript:;" onclick="ThemGioHang(@item.MaSanPham)">Đặt hàng</a>
+                                                       </div>
+                                                  </div>
+                                             </li>
+                                        }
+
+                                   </ul>
+                              </div>
+                              <!-- con tro dieu huong -->
+                              <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">&nbsp;</a>
+                              <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">&nbsp;</a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+<script type="text/javascript">
+
+     function ThemGioHang(masp) {
+
+          $.ajax({
+               url: '/GioHang/ThemVaoGioHang/?id=' + masp + '&soLuong=' + 1 + '',
+               type: 'POST',
+               dataType: 'json',
+               success: function (data) {
+                    var json = JSON.parse(data);
+                    alert(json);
+                    window.location.reload();
+               },
+               error: function (err) {
+                    alert("Đã xảy ra lỗi" + err.responseText);
+               }
+          });
+     };
+</script>
+
