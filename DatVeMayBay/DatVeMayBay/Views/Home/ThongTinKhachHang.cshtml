@@ -1,4 +1,4 @@
-﻿
+﻿@model DatVeMayBay.Models.ChuyenBay
 @{
     Layout = "~/Views/Shared/Layout2.cshtml";
 }
@@ -50,7 +50,7 @@
                             </label>
                             <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
                                 @*<input aria-invalid="false" placeholder="Ví dụ: Nguyen Van A" type="text" class="MuiInputBase-input jss1048" value="" name="TenKH1" />*@
-                                <input class="form-control text-box single-line" data-val="true"  id="TenKH1" name="TenKH1" type="text" value="">
+                                <input class="form-control text-box single-line" placeholder="Ví dụ: Nguyen Van A" data-val="true" id="TenKH1" name="TenKH1" type="text" value="">
                             </div>
                             <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
                         </div>
@@ -68,7 +68,7 @@
                                     <!-- button -->
                                     <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
                                         <span class="MuiIconButton-label">
-                                            <input class="jss1094" type="radio" value="Ông"  name="DanhXung1" />
+                                            <input class="jss1094" type="radio" value="Ông" name="DanhXung1" />
                                         </span>
                                         <span class="MuiTouchRipple-root"></span>
                                     </span>
@@ -84,7 +84,7 @@
                                     <!-- button -->
                                     <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
                                         <span class="MuiIconButton-label">
-                                            <input class="jss1094" type="radio" value="Bà"  name="DanhXung1" />
+                                            <input class="jss1094" type="radio" value="Bà" name="DanhXung1" />
                                         </span>
                                         <span class="MuiTouchRipple-root"></span>
                                     </span>
@@ -126,7 +126,7 @@
                                 <label class="MuiFormControlLabel-root">
                                     <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
                                         <span class="MuiIconButton-label">
-                                            <input class="jss1094" type="radio" value="Ong"  name="DanhXung2" />
+                                            <input class="jss1094" type="radio" value="Ong" name="DanhXung2" />
                                         </span>
                                         <span class="MuiTouchRipple-root"></span>
                                     </span>
@@ -140,7 +140,7 @@
                                 <label class="MuiFormControlLabel-root">
                                     <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
                                         <span class="MuiIconButton-label">
-                                            <input class="jss1094" type="radio" value="Bà"  name="DanhXung2" />
+                                            <input class="jss1094" type="radio" value="Bà" name="DanhXung2" />
                                         </span>
                                         <span class="MuiTouchRipple-root"></span>
                                     </span>
@@ -214,7 +214,7 @@
                                 <label class="MuiFormControlLabel-root">
                                     <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
                                         <span class="MuiIconButton-label">
-                                            <input class="jss1094" type="radio" value="Chau Trai"  name="DanhXung3" />
+                                            <input class="jss1094" type="radio" value="Chau Trai" name="DanhXung3" />
                                         </span>
                                         <span class="MuiTouchRipple-root"></span>
                                     </span>
@@ -225,7 +225,7 @@
                                 <label class="MuiFormControlLabel-root">
                                     <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
                                         <span class="MuiIconButton-label">
-                                            <input class="jss1094" type="radio" value="Chau Gai"  name="DanhXung3" />
+                                            <input class="jss1094" type="radio" value="Chau Gai" name="DanhXung3" />
                                         </span>
                                         <span class="MuiTouchRipple-root"></span>
                                     </span>
@@ -281,7 +281,7 @@
                             <label class="MuiFormControlLabel-root">
                                 <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
                                     <span class="MuiIconButton-label">
-                                        <input class="jss1094" type="radio" value="Ông"  name="DanhXungX" />
+                                        <input class="jss1094" type="radio" value="Ông" name="DanhXungX" />
                                     </span>
                                     <span class="MuiTouchRipple-root"></span>
                                 </span>
@@ -294,7 +294,7 @@
                             <label class="MuiFormControlLabel-root">
                                 <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
                                     <span class="MuiIconButton-label">
-                                        <input class="jss1094" type="radio" value="Bà"  name="DanhXungX" />
+                                        <input class="jss1094" type="radio" value="Bà" name="DanhXungX" />
                                     </span>
                                     <span class="MuiTouchRipple-root"></span>
                                 </span>
@@ -884,11 +884,11 @@
 
             <div class="information">
                 <p>Thời gian giữ vé: 6h</p>
-                <p><i class="fas fa-plane"></i> Chiều đi - 24/11/2020</p>
+                <p><i class="fas fa-plane"></i> Chiều đi - @Model.NgayCatCanh</p>
                 <div class="time mb-3">
                     <div class="info">
-                        <p>05:35   Hà Nội (HAN)</p>
-                        <p>07:45     Thành phố Hồ Chí Minh (SGN)</p>
+                        <p>05:35   Hà Nội (@Model.ChangBay.SanBay_CatCanh)</p>
+                        <p>07:45     Thành phố Hồ Chí Minh (@Model.ChangBay.SanBay_HaCanh)</p>
                     </div>
 
                     <a href=""><img src="../Asset/img/VNA_logo_notext.png" alt="" class="img-fluid"></a>
@@ -905,10 +905,10 @@
                 <h6>Chi tiết giá</h6>
                 <div class="detail_ticket">
                     <div class="sub_detail">
-                        <p>Giá vé người lớn</p><span>2 x 5,218,000 đ</span>
+                        <p>Giá vé người lớn</p><span>@(2 * Model.GiaNguoiLon) đ</span>
                     </div>
                     <div class="sub_detail">
-                        <p>Giá vé trẻ em</p><span>1 x 5,218,000 đ</span>
+                        <p>Giá vé trẻ em</p><span> @Model.GiaTreEm đ</span>
                     </div>
                     <div class="sub_detail">
                         <p>Thuế và phí</p><span>3,994,000 đ</span>
@@ -923,7 +923,7 @@
                     </div>
                     <div class="all_money">
                         <div class="sub_detail">
-                            <p style="font-size: 16px;font-weight: 600;">Tổng tiền thanh toán</p><span style="font-size: 16px;color: #139029;font-weight: 600;">19,918,000 đ</span>
+                            <p style="font-size: 16px;font-weight: 600;">Tổng tiền thanh toán</p><span style="font-size: 16px;color: #139029;font-weight: 600;"> @(2 * Convert.ToInt32(Model.GiaNguoiLon) + Convert.ToInt32(Model.GiaTreEm) + Int32.Parse("3994000") +Int32.Parse("187000") + Int32.Parse("270000")) đ</span>
                         </div>
 
                         <p style="font-size: 12px;font-weight: 500;" class="text-right">Giá đã bao gồm thuế, phí &amp; hóa đơn VAT</p>
@@ -1219,7 +1219,7 @@
 
     <script type="text/javascript">
 
-        var ten1,ten2,ten3,danhxung1,danhxung2,danhxung3, sdt,email, diachi;
+        var ten1, ten2, ten3, danhxung1, danhxung2, danhxung3, sdt, email, diachi;
 
         function save_info() {
 
@@ -1228,13 +1228,13 @@
             price = document.getElementById('the_id_of_the_textbox').value;
 
             alert(price); //just for information
-    }
+        }
     </script>
 
-        <style>
-            #layout-1505891501864, #wrap-cart-button-1492688272087 {
-                display: none;
-            }
-        </style>
-</div >
+    <style>
+        #layout-1505891501864, #wrap-cart-button-1492688272087 {
+            display: none;
+        }
+    </style>
+</div>
 

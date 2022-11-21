@@ -90,10 +90,45 @@ namespace DatVeMayBay.Controllers
          
 
         [HttpGet]
-        public ActionResult ThongTinKhachHang()
+        public ActionResult ThongTinKhachHang(int id)
         {
-      
-            return View();
+       
+            List<ChuyenBay> chuyenbay = model.ChuyenBays.ToList();
+            List<ChangBay> changbay = model.ChangBays.ToList();
+            List<SanBay> sanbay = model.SanBays.ToList();
+
+            if (id == 0)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var chuyen_bay = (from s in chuyenbay
+                                where s.MaChuyenBay == id
+                                select s);
+            ChuyenBay cb = chuyen_bay.First();
+
+
+
+            //var thongtincb = (from x in chuyenbay
+            //                   join y in changbay on x.machangbay equals y.machangbay
+            //                   join h in sanbay on y.sanbay_catcanh equals h.masanbay
+            //                   select new thongtincb
+            //                   {
+            //                       manguoidung = n.manguoidung,
+            //                       hoten = n.hoten,
+            //                       ngaydat = p.ngaydat,
+            //                       thanhtien = h.thanhtien,
+
+            //                   }).orderby(x => x.ngaydat);
+
+            if (cb == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.TTcb = new SelectList(model.ChangBays, "Cat_Canh", "Ha_Canh",cb.MaChangBay);
+            ViewBag.TTsb = new SelectList(model.SanBays, "Cat_Canh", "Ha_Canh",cb.MaChangBay);
+            return View(cb);
+
+           
         }
 
         //public static List<string> tenkh = new List<string>();
@@ -111,17 +146,21 @@ namespace DatVeMayBay.Controllers
         public ActionResult KiemTraThongTin(string TenKH1, string DanhXung1, string TenKH2, string DanhXung2,string DanhXung3, string TenKH3, string SDT, string DiaChi, string ngaysinh, string MaHanhLy)
         {
             List<KhachHang> khach = new List<KhachHang>();
-            KhachHang KH1 = new KhachHang();
-            KH1.TenKH = TenKH1;
-            KH1.DanhXung = DanhXung1;
-            KH1.SDT = SDT;
-            KH1.DiaChi = DiaChi;
+            KhachHang KH1 = new KhachHang
+            {
+                TenKH = TenKH1,
+                DanhXung = DanhXung1,
+                SDT = SDT,
+                DiaChi = DiaChi
+            };
             khach.Add(KH1);
-       
-            KhachHang KH2 = new KhachHang(); 
-            KH2.TenKH = TenKH2;
-            KH2.DanhXung = DanhXung2;
-            KH2.DiaChi = DiaChi;
+
+            KhachHang KH2 = new KhachHang
+            {
+                TenKH = TenKH2,
+                DanhXung = DanhXung2,
+                DiaChi = DiaChi
+            };
             khach.Add(KH2);
 
             KhachHang KH3 = new KhachHang();
