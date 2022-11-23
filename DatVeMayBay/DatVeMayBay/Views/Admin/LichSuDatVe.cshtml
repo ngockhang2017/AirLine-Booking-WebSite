@@ -1,0 +1,75 @@
+﻿<!-- Thêm thư viện phân trang -->
+@*@model PagedList.IPagedList<Final_APP.Entities.LichSuDatVe>
+@using PagedList.Mvc;*@
+<!-- Kết thúc-->
+@*@model IEnumerable<Final_APP.Entities.LichSuDatVe>*@
+@{ ViewBag.Title = "LichSuDatVe";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+
+
+
+<!-- /Search -->
+<form action="~/Admin/LichSuDatVe" method="post">
+
+    <div class="form-group">
+        <div class="col-md-10 py-2">
+            <input class="form-control text-box single-line" type="text" name="timkiem"
+                   value="@ViewBag.timkiem" placeholder="Search...">
+
+        </div>
+    </div>
+    @*    <div class="form-group">
+            <div class="col-md-offset-2 col-md-10 py-4">
+                <input type="submit" value="Tìm kiếm" class="btn btn-outline-info">
+            </div>
+        </div>*@
+
+</form>
+<br />
+<h2>Lịch sử đặt vé</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Mã người dùng</th>
+            <th scope="col">Họ và tên</th>
+            <th scope="col">Ngày đặt</th>
+            <th scope="col">Thành tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaNguoiDung</td>
+                <td>@item.HoTen</td>
+                <td>@item.NgayDat.ToString().Split(' ')[0]</td>
+                <td>@item.ThanhTien</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Thêm mã phân trang -->
+<br />
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("LichSuDatVe",
+    new { page }),
+    new PagedListRenderOptions()
+    {
+        LiElementClasses = new List<string> { "page-link" }
+    })
+<!-- Kết thúc -->
+<script src="~/assets/js/JavaScript.js"></script>
+<script>
+    var tables = document.getElementsByTagName('table');
+    var table = tables[tables.length - 1];
+    var rows = table.rows;
+    for (var i = 1, td; i < rows.length; i++) {
+        td = document.createElement('td');
+        td.appendChild(document.createTextNode(i));
+        rows[i].insertBefore(td, rows[i].firstChild);
+    }
+</script>

@@ -1,0 +1,62 @@
+﻿<!-- Thêm thư viện phân trang -->
+@*@model PagedList.IPagedList<Final_APP.Entities.TaiKhoan>
+@using PagedList.Mvc;*@
+<!-- Kết thúc-->
+@*@model List<Final_APP.Entities.TaiKhoan>*@
+
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+<h2 class="m-5">Danh sách tài khoản </h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Tên đăng nhập</th>
+            <th scope="col">Mật khẩu</th>
+
+        </tr>
+    </thead>
+    <tbody class=" = " py-2">
+        @foreach (var item in Model)
+        {
+            if (item.Quyen == false)
+            {
+<tr>
+    <td>@item.TenDangNhap</td>
+
+    <td>@item.MatKhau</td>
+    <td>
+        <a href="~/Admin/DeleteAccount?TenDangNhap=@item.TenDangNhap" class="btn btn-outline-dark">
+            Xóa
+        </a>
+    </td>
+</tr>
+}
+
+
+}
+
+    </tbody>
+</table>
+
+<!-- Thêm mã phân trang -->
+<br />
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+@*@Html.PagedListPager(Model, page => Url.Action("UserAccount",
+    new { page }),
+    new PagedListRenderOptions()
+    {
+        LiElementClasses = new List<string> { "page-link" }
+    })*@
+<!-- Kết thúc -->
+<!-- Kết thúc -->
+<script src="~/assets/js/JavaScript.js"></script>
+<script>var tables = document.getElementsByTagName('table');
+    var table = tables[tables.length - 1];
+    var rows = table.rows;
+    for (var i = 1, td; i < rows.length; i++) {
+        td = document.createElement('td');
+        td.appendChild(document.createTextNode(i));
+        rows[i].insertBefore(td, rows[i].firstChild);
+    }</script>

@@ -1,6 +1,16 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
+@{
+    ViewBag.Title = "Home Page";
+
+    ViewBag.Title = "Trang chủ";
+    ViewBag.Title1 = "Trang chủ";
+    ViewBag.Title2 = "";
+}
+
 
 <!--Search-->
 <div id="wp-content">
@@ -155,7 +165,7 @@
                     <div class="d-flex justify-content-between">
 
                         <ul class="list-unstyled mr-3 ">
-                            <h2 class="text-danger" style="font-size: 1.5rem;">Miền Bắc</h2>                       
+                            <h2 class="text-danger" style="font-size: 1.5rem;">Miền Bắc</h2>
                             <li class="aircode"><a code="HAN" typeflight="0" airportcode="HAN"><b>Hà Nội </b><span>(HAN)</span></a></li>
                             <li class="aircode"><a code="HPH" typeflight="0" airportcode="HPH"><b>Hải Phòng </b><span>(HPH)</span></a></li>
                             <li class="aircode"><a code="DIN" typeflight="0" airportcode="DIN"><b>Điện Biên </b><span>(DIN)</span></a></li>
@@ -765,7 +775,7 @@
                         <a href="#" class="ml-2">Làm thế nào để tôi tìm được vé máy bay giá rẻ nhất?</a><br>
                         <a href="#" class="ml-2">Khi đi máy bay tôi có được mang theo rượu và nước mắm không?</a><br>
                         <a href="#" class="ml-2"> Tôi cần có mặt ở sân bay trước bao nhiêu lâu để làm thủ tục bay?</a><br>
-                        
+
                     </div>
                 </div>
                 <!--END Câu hỏi thường gặp-->

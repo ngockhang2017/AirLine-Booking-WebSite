@@ -1,4 +1,4 @@
-﻿@model DatVeMayBay.Models.ChuyenBay
+﻿@model DatVeMayBay.Models.CB_Detail
 @{
     Layout = "~/Views/Shared/Layout2.cshtml";
 }
@@ -29,79 +29,237 @@
         <form autocomplete="off" style="flex: 1 1 0%; margin-right: 24px" method="POST" action="/Home/KiemTraThongTin">
             <!-- Thông tin khách hàng -->
             <h6 class="MuiTypography-root MuiTypography-h6" id="travellersInfo" style="margin-bottom: 16px">
-                Thông tin khách hàng
-                <span class="MuiTypography-root note-text MuiTypography-caption">
-                    Nhập tiếng Việt không dấu, không có ký tự đặc biệt. Nhập thông tin trùng khớp với giấy tờ cá nhân.
-                </span>
+                Thông tin chuyến bay
             </h6>
-            <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded" style="padding: 12px 16px">
-                <!-- Người lớn 1 -->
-                <div class="sc-ifAKCX dakLHt">
-                    <h6 class="MuiTypography-root MuiTypography-subtitle1" style="margin-bottom: 16px">1.Người lớn 1</h6>
-                    <div class="sc-bxivhb gepbvZ" style="flex-wrap: wrap">
-                        <!-- Họ tên -->
-                        <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; width: 280px">
-                            <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
-                                Họ và tên
-                                <span>
+            <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
+ 
+                    <span>
+                        &nbsp;
+                        <span style="color: rgb(222, 2, 98)">*</span>
+                    </span>
+                
+                <input typeof="hidden" data-val="true" id="id" name="id" type="text" value=@Model.MaChuyenBay>
+            </div>
+                <!-- Thông tin khách hàng -->
+                <h6 class="MuiTypography-root MuiTypography-h6" id="travellersInfo" style="margin-bottom: 16px">
+                    Thông tin khách hàng
+                    <span class="MuiTypography-root note-text MuiTypography-caption">
+                        Nhập tiếng Việt không dấu, không có ký tự đặc biệt. Nhập thông tin trùng khớp với giấy tờ cá nhân.
+                    </span>
+                </h6>
+                <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded" style="padding: 12px 16px">
+                    <!-- Người lớn 1 -->
+                    <div class="sc-ifAKCX dakLHt">
+                        <h6 class="MuiTypography-root MuiTypography-subtitle1" style="margin-bottom: 16px">1.Người lớn 1</h6>
+                        <div class="sc-bxivhb gepbvZ" style="flex-wrap: wrap">
+                            <!-- Họ tên -->
+                            <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; width: 280px">
+                                <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
+                                    Họ và tên
+                                    <span>
+                                        &nbsp;
+                                        <span style="color: rgb(222, 2, 98)">*</span>
+                                    </span>
+                                </label>
+
+                                <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
+                                    @*<input aria-invalid="false" placeholder="Ví dụ: Nguyen Van A" type="text" class="MuiInputBase-input jss1048" value="" name="TenKH1" />*@
+
+                                    <input class="form-control text-box single-line" data-val="true" placeholder="Ví dụ: Nguyen Van A" id="TenKH1" name="TenKH1" type="text" value="">
+                                </div>
+                                <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
+                            </div>
+
+                            <!-- Giới tính -->
+                            <div class="MuiFormControl-root">
+                                <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
+                                    Giới tính
                                     &nbsp;
                                     <span style="color: rgb(222, 2, 98)">*</span>
-                                </span>
-                            </label>
-                            <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
-                                @*<input aria-invalid="false" placeholder="Ví dụ: Nguyen Van A" type="text" class="MuiInputBase-input jss1048" value="" name="TenKH1" />*@
-                                <input class="form-control text-box single-line" placeholder="Ví dụ: Nguyen Van A" data-val="true" id="TenKH1" name="TenKH1" type="text" value="">
+                                </label>
+                                <div class="MuiFormGroup-root MuiFormGroup-row" role="radiogroup" style="padding-bottom: 16px">
+                                    <!-- Nam -->
+                                    <label class="MuiFormControlLabel-root">
+                                        <!-- button -->
+                                        <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
+                                            <span class="MuiIconButton-label">
+                                                <input class="jss1094" type="radio" value="Ông" name="DanhXung1" />
+                                            </span>
+                                            <span class="MuiTouchRipple-root"></span>
+                                        </span>
+
+                                        <!-- text -->
+                                        <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
+                                            <p class="MuiTypography-root MuiTypography-body2">Ông</p>
+                                        </span>
+                                    </label>
+
+                                    <!-- Nữ -->
+                                    <label class="MuiFormControlLabel-root">
+                                        <!-- button -->
+                                        <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
+                                            <span class="MuiIconButton-label">
+                                                <input class="jss1094" type="radio" value="Bà" name="DanhXung1" />
+                                            </span>
+                                            <span class="MuiTouchRipple-root"></span>
+                                        </span>
+
+                                        <!-- text -->
+                                        <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
+                                            <p class="MuiTypography-root MuiTypography-body2">Bà</p>
+                                        </span>
+                                    </label>
+                                </div>
                             </div>
-                            <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
                         </div>
+                    </div>
 
-                        <!-- Giới tính -->
-                        <div class="MuiFormControl-root">
-                            <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
-                                Giới tính
-                                &nbsp;
-                                <span style="color: rgb(222, 2, 98)">*</span>
-                            </label>
-                            <div class="MuiFormGroup-root MuiFormGroup-row" role="radiogroup" style="padding-bottom: 16px">
-                                <!-- Nam -->
-                                <label class="MuiFormControlLabel-root">
-                                    <!-- button -->
-                                    <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
-                                        <span class="MuiIconButton-label">
-                                            <input class="jss1094" type="radio" value="Ông" name="DanhXung1" />
-                                        </span>
-                                        <span class="MuiTouchRipple-root"></span>
-                                    </span>
+                    <!-- Người lớn 2 -->
+                    <div class="sc-ifAKCX dakLHt">
+                        <h6 class="MuiTypography-root MuiTypography-subtitle1" style="margin-bottom: 16px">2.Người lớn 2</h6>
+                        <div class="sc-bxivhb gepbvZ" style="flex-wrap: wrap">
+                            <!-- Họ tên -->
+                            <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; width: 280px">
+                                <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
+                                    Họ và tên
+                                    <span>&nbsp;<span style="color: rgb(222, 2, 98)">*</span></span>
+                                </label>
+                                <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
+                                    <input aria-invalid="false" placeholder="Ví dụ: Nguyen Van A" type="text" class="MuiInputBase-input jss1048" value="" name="TenKH2" />
+                                </div>
+                                <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
+                            </div>
 
-                                    <!-- text -->
-                                    <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
-                                        <p class="MuiTypography-root MuiTypography-body2">Ông</p>
-                                    </span>
+                            <!-- Giới tính -->
+                            <div class="MuiFormControl-root">
+                                <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
+                                    Giới tính &nbsp;<span style="color: rgb(222, 2, 98)">*</span>
                                 </label>
 
-                                <!-- Nữ -->
-                                <label class="MuiFormControlLabel-root">
-                                    <!-- button -->
-                                    <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
-                                        <span class="MuiIconButton-label">
-                                            <input class="jss1094" type="radio" value="Bà" name="DanhXung1" />
+                                <div class="MuiFormGroup-root MuiFormGroup-row" role="radiogroup" style="padding-bottom: 16px">
+                                    <!-- Nam -->
+                                    <label class="MuiFormControlLabel-root">
+                                        <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
+                                            <span class="MuiIconButton-label">
+                                                <input class="jss1094" type="radio" value="Ong" name="DanhXung2" />
+                                            </span>
+                                            <span class="MuiTouchRipple-root"></span>
                                         </span>
-                                        <span class="MuiTouchRipple-root"></span>
-                                    </span>
+                                        </span>
+                                        <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
+                                            <p class="MuiTypography-root MuiTypography-body2">Ông</p>
+                                        </span>
+                                    </label>
 
-                                    <!-- text -->
-                                    <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
-                                        <p class="MuiTypography-root MuiTypography-body2">Bà</p>
-                                    </span>
+                                    <!-- Nữ -->
+                                    <label class="MuiFormControlLabel-root">
+                                        <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
+                                            <span class="MuiIconButton-label">
+                                                <input class="jss1094" type="radio" value="Bà" name="DanhXung2" />
+                                            </span>
+                                            <span class="MuiTouchRipple-root"></span>
+                                        </span>
+                                        <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
+                                            <p class="MuiTypography-root MuiTypography-body2">Bà</p>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trẻ em -->
+                    <div class="sc-ifAKCX dakLHt" style="margin-bottom: 12px; margin-top: 16px">
+                        <h6 class="MuiTypography-root MuiTypography-subtitle1" style="margin-bottom: 16px">3.Trẻ em 1</h6>
+                        <div class="sc-bxivhb gepbvZ" style="flex-wrap: wrap; display: flex;">
+                            <!-- Họ và tên -->
+                            <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; width: 280px">
+                                <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
+                                    Họ và tên
+                                    <span> &nbsp;<span style="color: rgb(222, 2, 98)">*</span></span>
                                 </label>
+                                <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
+                                    <input aria-invalid="false" placeholder="Ví dụ: Nguyen Van A" type="text" class="MuiInputBase-input jss1048" value="" name="TenKH3" />
+                                </div>
+                                <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
+                            </div>
+
+                            <!-- Ngày sinh -->
+                            <div>
+                                <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; width: 280px">
+                                    <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true" for="birthday">
+                                        <span class="MuiTypography-root MuiTypography-subtitle2">
+                                            Ngày sinh
+                                            &nbsp;
+                                            <span class="MuiTypography-root MuiTypography-caption">(≥24 tháng và &lt;12 tuổi)</span>
+                                        </span>
+                                        <span>&nbsp;<span style="color: rgb(222, 2, 98)">*</span></span>
+                                    </label>
+                                    <div class="MuiInputBase-root jss1047 MuiInputBase-formControl MuiInputBase-adornedEnd" style="background: white; width: 280px">
+                                        <input aria-invalid="false" id="birthday" type="text" class="MuiInputBase-input jss1048 MuiInputBase-inputAdornedEnd" placeholder="  dd/mm/yyyy" value="" style="width: 100%" />
+                                        <div class="MuiInputAdornment-root MuiInputAdornment-positionEnd" style="margin-right: 8px">
+                                            <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiIconButton-edgeStart" tabindex="-1" type="button">
+                                                <span class="MuiIconButton-label">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M20.15 4.77H17.42V3H15.6V8.41H17.42V6.59H20.15V20.23H3.79V6.59H5.6V4.77H3.79C3.31252 4.77787 2.85727 4.97309 2.52242 5.31356C2.18756 5.65402 1.99994 6.11246 2 6.59V20.23C2.01282 20.6988 2.20614 21.1446 2.53964 21.4744C2.87313 21.8041 3.32106 21.9924 3.79 22H20.15C20.6293 22.0081 21.0925 21.8267 21.4389 21.4953C21.7853 21.1639 21.9869 20.7092 22 20.23V6.59C22 6.34845 21.952 6.10931 21.8586 5.88652C21.7653 5.66373 21.6286 5.46174 21.4564 5.29234C21.2842 5.12294 21.08 4.98951 20.8557 4.89983C20.6314 4.81015 20.3915 4.76602 20.15 4.77V4.77Z" fill="#16161D"></path>
+                                                        <path d="M8.33001 6.59002H14.69V4.77002H8.33001V2.96002H6.51001V8.41002H8.33001V6.59002Z" fill="#16161D"></path>
+                                                        <path d="M9.23998 10.23H5.59998V13.87H9.23998V10.23Z" fill="#16161D"></path>
+                                                        <path d="M13.79 10.23H10.15V13.87H13.79V10.23Z" fill="#16161D"></path>
+                                                        <path d="M18.33 10.23H14.69V13.87H18.33V10.23Z" fill="#16161D"></path>
+                                                        <path d="M9.23998 14.77H5.59998V18.41H9.23998V14.77Z" fill="#16161D"></path>
+                                                        <path d="M13.79 14.77H10.15V18.41H13.79V14.77Z" fill="#16161D"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="MuiTouchRipple-root"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p class="MuiFormHelperText-root" id="birthday" style="min-height: 20px"></p>
+                                </div>
+                            </div>
+
+                            <!-- Giới tính -->
+                            <div class="MuiFormControl-root">
+                                <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
+                                    Giới tính
+                                    &nbsp;
+                                    <span style="color: rgb(222, 2, 98)">*</span>
+                                </label>
+                                <div class="MuiFormGroup-root MuiFormGroup-row" role="radiogroup" style="padding-bottom: 16px">
+                                    <label class="MuiFormControlLabel-root">
+                                        <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
+                                            <span class="MuiIconButton-label">
+                                                <input class="jss1094" type="radio" value="Chau Trai" name="DanhXung3" />
+                                            </span>
+                                            <span class="MuiTouchRipple-root"></span>
+                                        </span>
+                                        <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
+                                            <p class="MuiTypography-root MuiTypography-body2">Cháu Trai</p>
+                                        </span>
+                                    </label>
+                                    <label class="MuiFormControlLabel-root">
+                                        <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
+                                            <span class="MuiIconButton-label">
+                                                <input class="jss1094" type="radio" value="Chau Gai" name="DanhXung3" />
+                                            </span>
+                                            <span class="MuiTouchRipple-root"></span>
+                                        </span>
+                                        <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
+                                            <p class="MuiTypography-root MuiTypography-body2">Cháu Gái</p>
+                                        </span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Người lớn 2 -->
-                <div class="sc-ifAKCX dakLHt">
-                    <h6 class="MuiTypography-root MuiTypography-subtitle1" style="margin-bottom: 16px">2.Người lớn 2</h6>
+                <!-- Thông tin liên hệ -->
+                <h6 class="MuiTypography-root MuiTypography-h6" id="contactInfo" style="margin: 24px 0px 16px">
+                    Thông tin liên hệ
+                    <span class="MuiTypography-root note-text MuiTypography-caption"> Xác nhận tức thì! Mã đặt chỗ sẽ được gửi theo thông tin liên hệ dưới đây.</span>
+                </h6>
+                <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded" style="padding: 12px 16px; margin-top: 16px">
                     <div class="sc-bxivhb gepbvZ" style="flex-wrap: wrap">
                         <!-- Họ tên -->
                         <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; width: 280px">
@@ -110,7 +268,19 @@
                                 <span>&nbsp;<span style="color: rgb(222, 2, 98)">*</span></span>
                             </label>
                             <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
-                                <input aria-invalid="false" placeholder="Ví dụ: Nguyen Van A" type="text" class="MuiInputBase-input jss1048" value="" name="TenKH2" />
+                                <input aria-invalid="false" placeholder="Ví dụ: Nguyen Van A" type="text" class="MuiInputBase-input jss1048" value="" />
+                            </div>
+                            <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
+                        </div>
+
+                        <!-- Điện thoại -->
+                        <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; width: 280px">
+                            <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
+                                Số điện thoại
+                                <span>&nbsp;<span style="color: rgb(222, 2, 98)">*</span></span>
+                            </label>
+                            <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
+                                <input aria-invalid="false" placeholder="Ví dụ: 090123456" type="text" class="MuiInputBase-input jss1048" value="" name="SDT" />
                             </div>
                             <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
                         </div>
@@ -118,21 +288,20 @@
                         <!-- Giới tính -->
                         <div class="MuiFormControl-root">
                             <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
-                                Giới tính &nbsp;<span style="color: rgb(222, 2, 98)">*</span>
+                                Giới tính &nbsp;
+                                <span style="color: rgb(222, 2, 98)">*</span>
                             </label>
-
                             <div class="MuiFormGroup-root MuiFormGroup-row" role="radiogroup" style="padding-bottom: 16px">
                                 <!-- Nam -->
                                 <label class="MuiFormControlLabel-root">
                                     <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
                                         <span class="MuiIconButton-label">
-                                            <input class="jss1094" type="radio" value="Ong" name="DanhXung2" />
+                                            <input class="jss1094" type="radio" value="Ông" name="DanhXungX" />
                                         </span>
                                         <span class="MuiTouchRipple-root"></span>
                                     </span>
-                                    </span>
                                     <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
-                                        <p class="MuiTypography-root MuiTypography-body2">Ông</p>
+                                        <p class="MuiTypography-root MuiTypography-body2">Nam</p>
                                     </span>
                                 </label>
 
@@ -140,739 +309,585 @@
                                 <label class="MuiFormControlLabel-root">
                                     <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
                                         <span class="MuiIconButton-label">
-                                            <input class="jss1094" type="radio" value="Bà" name="DanhXung2" />
+                                            <input class="jss1094" type="radio" value="Bà" name="DanhXungX" />
                                         </span>
                                         <span class="MuiTouchRipple-root"></span>
                                     </span>
                                     <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
-                                        <p class="MuiTypography-root MuiTypography-body2">Bà</p>
+                                        <p class="MuiTypography-root MuiTypography-body2">Nữ</p>
                                     </span>
                                 </label>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Trẻ em -->
-                <div class="sc-ifAKCX dakLHt" style="margin-bottom: 12px; margin-top: 16px">
-                    <h6 class="MuiTypography-root MuiTypography-subtitle1" style="margin-bottom: 16px">3.Trẻ em 1</h6>
-                    <div class="sc-bxivhb gepbvZ" style="flex-wrap: wrap; display: flex;">
-                        <!-- Họ và tên -->
+                        <!-- Email -->
                         <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; width: 280px">
                             <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
-                                Họ và tên
-                                <span> &nbsp;<span style="color: rgb(222, 2, 98)">*</span></span>
+                                <h6 class="MuiTypography-root MuiTypography-subtitle2">
+                                    Email&nbsp;
+                                    <span class="MuiTypography-root MuiTypography-caption">(Không bắt buộc)</span>
+                                </h6>
                             </label>
                             <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
-                                <input aria-invalid="false" placeholder="Ví dụ: Nguyen Van A" type="text" class="MuiInputBase-input jss1048" value="" name="TenKH3" />
+                                <input aria-invalid="false" placeholder="Ví dụ: email@gmail.com" type="text" class="MuiInputBase-input jss1048" value="" />
                             </div>
                             <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
                         </div>
 
-                        <!-- Ngày sinh -->
-                        <div>
-                            <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; width: 280px">
-                                <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true" for="birthday">
-                                    <span class="MuiTypography-root MuiTypography-subtitle2">
-                                        Ngày sinh
-                                        &nbsp;
-                                        <span class="MuiTypography-root MuiTypography-caption">(≥24 tháng và &lt;12 tuổi)</span>
-                                    </span>
-                                    <span>&nbsp;<span style="color: rgb(222, 2, 98)">*</span></span>
-                                </label>
-                                <div class="MuiInputBase-root jss1047 MuiInputBase-formControl MuiInputBase-adornedEnd" style="background: white; width: 280px">
-                                    <input aria-invalid="false" id="birthday" type="text" class="MuiInputBase-input jss1048 MuiInputBase-inputAdornedEnd" placeholder="  dd/mm/yyyy" value="" style="width: 100%" />
-                                    <div class="MuiInputAdornment-root MuiInputAdornment-positionEnd" style="margin-right: 8px">
-                                        <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiIconButton-edgeStart" tabindex="-1" type="button">
-                                            <span class="MuiIconButton-label">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path d="M20.15 4.77H17.42V3H15.6V8.41H17.42V6.59H20.15V20.23H3.79V6.59H5.6V4.77H3.79C3.31252 4.77787 2.85727 4.97309 2.52242 5.31356C2.18756 5.65402 1.99994 6.11246 2 6.59V20.23C2.01282 20.6988 2.20614 21.1446 2.53964 21.4744C2.87313 21.8041 3.32106 21.9924 3.79 22H20.15C20.6293 22.0081 21.0925 21.8267 21.4389 21.4953C21.7853 21.1639 21.9869 20.7092 22 20.23V6.59C22 6.34845 21.952 6.10931 21.8586 5.88652C21.7653 5.66373 21.6286 5.46174 21.4564 5.29234C21.2842 5.12294 21.08 4.98951 20.8557 4.89983C20.6314 4.81015 20.3915 4.76602 20.15 4.77V4.77Z" fill="#16161D"></path>
-                                                    <path d="M8.33001 6.59002H14.69V4.77002H8.33001V2.96002H6.51001V8.41002H8.33001V6.59002Z" fill="#16161D"></path>
-                                                    <path d="M9.23998 10.23H5.59998V13.87H9.23998V10.23Z" fill="#16161D"></path>
-                                                    <path d="M13.79 10.23H10.15V13.87H13.79V10.23Z" fill="#16161D"></path>
-                                                    <path d="M18.33 10.23H14.69V13.87H18.33V10.23Z" fill="#16161D"></path>
-                                                    <path d="M9.23998 14.77H5.59998V18.41H9.23998V14.77Z" fill="#16161D"></path>
-                                                    <path d="M13.79 14.77H10.15V18.41H13.79V14.77Z" fill="#16161D"></path>
-                                                </svg>
-                                            </span>
-                                            <span class="MuiTouchRipple-root"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <p class="MuiFormHelperText-root" id="birthday" style="min-height: 20px"></p>
-                            </div>
-                        </div>
-
-                        <!-- Giới tính -->
-                        <div class="MuiFormControl-root">
+                        <!-- Địa chỉ -->
+                        <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; flex: 1 1 0%">
                             <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
-                                Giới tính
-                                &nbsp;
-                                <span style="color: rgb(222, 2, 98)">*</span>
+                                <h6 class="MuiTypography-root MuiTypography-subtitle2">
+                                    Địa chỉ&nbsp;
+                                    <span class="MuiTypography-root MuiTypography-caption">(Không bắt buộc)</span>
+                                </h6>
                             </label>
-                            <div class="MuiFormGroup-root MuiFormGroup-row" role="radiogroup" style="padding-bottom: 16px">
-                                <label class="MuiFormControlLabel-root">
-                                    <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
-                                        <span class="MuiIconButton-label">
-                                            <input class="jss1094" type="radio" value="Chau Trai" name="DanhXung3" />
-                                        </span>
-                                        <span class="MuiTouchRipple-root"></span>
-                                    </span>
-                                    <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
-                                        <p class="MuiTypography-root MuiTypography-body2">Cháu Trai</p>
-                                    </span>
-                                </label>
-                                <label class="MuiFormControlLabel-root">
-                                    <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
-                                        <span class="MuiIconButton-label">
-                                            <input class="jss1094" type="radio" value="Chau Gai" name="DanhXung3" />
-                                        </span>
-                                        <span class="MuiTouchRipple-root"></span>
-                                    </span>
-                                    <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
-                                        <p class="MuiTypography-root MuiTypography-body2">Cháu Gái</p>
-                                    </span>
-                                </label>
+                            <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
+                                <input aria-invalid="false" placeholder="Nhập địa chỉ" type="text" class="MuiInputBase-input jss1048" value="" name="DiaChi" />
                             </div>
+                            <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Thông tin liên hệ -->
-            <h6 class="MuiTypography-root MuiTypography-h6" id="contactInfo" style="margin: 24px 0px 16px">
-                Thông tin liên hệ
-                <span class="MuiTypography-root note-text MuiTypography-caption"> Xác nhận tức thì! Mã đặt chỗ sẽ được gửi theo thông tin liên hệ dưới đây.</span>
-            </h6>
-            <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded" style="padding: 12px 16px; margin-top: 16px">
-                <div class="sc-bxivhb gepbvZ" style="flex-wrap: wrap">
-                    <!-- Họ tên -->
-                    <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; width: 280px">
-                        <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
-                            Họ và tên
-                            <span>&nbsp;<span style="color: rgb(222, 2, 98)">*</span></span>
-                        </label>
-                        <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
-                            <input aria-invalid="false" placeholder="Ví dụ: Nguyen Van A" type="text" class="MuiInputBase-input jss1048" value="" />
-                        </div>
-                        <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
-                    </div>
+                <!-- Mua thêm hành lý -->
+                <h6 class="MuiTypography-root MuiTypography-h6" style="margin: 24px 0px 16px">
+                    Mua thêm hành lý
+                    <span class="MuiTypography-root note-text MuiTypography-caption">
+                        Tiết kiệm tiền bằng cách thêm hành lý của bạn ngay bây giờ. Hãng thường tính phí cao hơn khi mua sau.
+                    </span>
+                </h6>
+                <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded" style="padding: 12px 16px; margin-top: 16px">
+                    <!-- Người lớn 1 -->
+                    <div class="sc-ifAKCX dakLHt">
+                        <h6 class="MuiTypography-root MuiTypography-subtitle1" style="margin-bottom: 8px">1.Người lớn 1</h6>
+                        <div class="sc-bxivhb gepbvZ">
+                            <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%; margin-right: 30px">
+                                <p class="MuiTypography-root MuiTypography-body2">Chiều đi</p>
 
-                    <!-- Điện thoại -->
-                    <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; width: 280px">
-                        <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
-                            Số điện thoại
-                            <span>&nbsp;<span style="color: rgb(222, 2, 98)">*</span></span>
-                        </label>
-                        <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
-                            <input aria-invalid="false" placeholder="Ví dụ: 090123456" type="text" class="MuiInputBase-input jss1048" value="" name="SDT" />
-                        </div>
-                        <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
-                    </div>
+                                <div class="select-box1">
+                                    <div class="options-container1">
+                                        <div class="option1">
+                                            <input type="radio" class="radio" id="HL1" name="MaHanhLy" />
+                                            <label for="automobiles">Không,cảm ơn - 0đ</label>
+                                        </div>
 
-                    <!-- Giới tính -->
-                    <div class="MuiFormControl-root">
-                        <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
-                            Giới tính &nbsp;
-                            <span style="color: rgb(222, 2, 98)">*</span>
-                        </label>
-                        <div class="MuiFormGroup-root MuiFormGroup-row" role="radiogroup" style="padding-bottom: 16px">
-                            <!-- Nam -->
-                            <label class="MuiFormControlLabel-root">
-                                <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
-                                    <span class="MuiIconButton-label">
-                                        <input class="jss1094" type="radio" value="Ông" name="DanhXungX" />
-                                    </span>
-                                    <span class="MuiTouchRipple-root"></span>
-                                </span>
-                                <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
-                                    <p class="MuiTypography-root MuiTypography-body2">Nam</p>
-                                </span>
-                            </label>
+                                        <div class="option1">
+                                            <input type="radio" class="radio" id="HL2" name="MaHanhLy" />
+                                            <label for="film">Gói(Bag) 5kg - 77,000đ</label>
+                                        </div>
 
-                            <!-- Nữ -->
-                            <label class="MuiFormControlLabel-root">
-                                <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiRadio-root MuiRadio-colorSecondary jss1092 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false">
-                                    <span class="MuiIconButton-label">
-                                        <input class="jss1094" type="radio" value="Bà" name="DanhXungX" />
-                                    </span>
-                                    <span class="MuiTouchRipple-root"></span>
-                                </span>
-                                <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
-                                    <p class="MuiTypography-root MuiTypography-body2">Nữ</p>
-                                </span>
-                            </label>
-                        </div>
-                    </div>
+                                        <div class="option1">
+                                            <input type="radio" class="radio" id="HL3" name="MaHanhLy" />
+                                            <label for="science">Gói(Bag) 10kg - 132,000đ</label>
+                                        </div>
 
-                    <!-- Email -->
-                    <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; width: 280px">
-                        <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
-                            <h6 class="MuiTypography-root MuiTypography-subtitle2">
-                                Email&nbsp;
-                                <span class="MuiTypography-root MuiTypography-caption">(Không bắt buộc)</span>
-                            </h6>
-                        </label>
-                        <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
-                            <input aria-invalid="false" placeholder="Ví dụ: email@gmail.com" type="text" class="MuiInputBase-input jss1048" value="" />
-                        </div>
-                        <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
-                    </div>
+                                        <div class="option1">
+                                            <input type="radio" class="radio" id="HL4" name="MaHanhLy" />
+                                            <label for="art">Gói(Bag) 15kg - 171,000đ</label>
+                                        </div>
 
-                    <!-- Địa chỉ -->
-                    <div class="MuiFormControl-root jss1019 MuiFormControl-fullWidth" style="min-width: 155px; flex: 1 1 0%">
-                        <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true">
-                            <h6 class="MuiTypography-root MuiTypography-subtitle2">
-                                Địa chỉ&nbsp;
-                                <span class="MuiTypography-root MuiTypography-caption">(Không bắt buộc)</span>
-                            </h6>
-                        </label>
-                        <div class="MuiInputBase-root jss1047 MuiInputBase-formControl">
-                            <input aria-invalid="false" placeholder="Nhập địa chỉ" type="text" class="MuiInputBase-input jss1048" value="" name="DiaChi" />
-                        </div>
-                        <p class="MuiFormHelperText-root" style="min-height: 20px"></p>
-                    </div>
-                </div>
-            </div>
+                                        <div class="option1">
+                                            <input type="radio" class="radio" id="HL5" name="MaHanhLy" />
+                                            <label for="music">Gói(Bag) 20kg - 198,000đ</label>
+                                        </div>
 
-            <!-- Mua thêm hành lý -->
-            <h6 class="MuiTypography-root MuiTypography-h6" style="margin: 24px 0px 16px">
-                Mua thêm hành lý
-                <span class="MuiTypography-root note-text MuiTypography-caption">
-                    Tiết kiệm tiền bằng cách thêm hành lý của bạn ngay bây giờ. Hãng thường tính phí cao hơn khi mua sau.
-                </span>
-            </h6>
-            <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded" style="padding: 12px 16px; margin-top: 16px">
-                <!-- Người lớn 1 -->
-                <div class="sc-ifAKCX dakLHt">
-                    <h6 class="MuiTypography-root MuiTypography-subtitle1" style="margin-bottom: 8px">1.Người lớn 1</h6>
-                    <div class="sc-bxivhb gepbvZ">
-                        <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%; margin-right: 30px">
-                            <p class="MuiTypography-root MuiTypography-body2">Chiều đi</p>
-
-                            <div class="select-box1">
-                                <div class="options-container1">
-                                    <div class="option1">
-                                        <input type="radio" class="radio" id="HL1" name="MaHanhLy" />
-                                        <label for="automobiles">Không,cảm ơn - 0đ</label>
                                     </div>
 
-                                    <div class="option1">
-                                        <input type="radio" class="radio" id="HL2" name="MaHanhLy" />
-                                        <label for="film">Gói(Bag) 5kg - 77,000đ</label>
+                                    <div class="selected1">
+                                        -- Khối lượng hành lý --
                                     </div>
-
-                                    <div class="option1">
-                                        <input type="radio" class="radio" id="HL3" name="MaHanhLy" />
-                                        <label for="science">Gói(Bag) 10kg - 132,000đ</label>
-                                    </div>
-
-                                    <div class="option1">
-                                        <input type="radio" class="radio" id="HL4" name="MaHanhLy" />
-                                        <label for="art">Gói(Bag) 15kg - 171,000đ</label>
-                                    </div>
-
-                                    <div class="option1">
-                                        <input type="radio" class="radio" id="HL5" name="MaHanhLy" />
-                                        <label for="music">Gói(Bag) 20kg - 198,000đ</label>
-                                    </div>
-
                                 </div>
 
-                                <div class="selected1">
-                                    -- Khối lượng hành lý --
-                                </div>
-                            </div>
+                                <style>
 
-                            <style>
+                                    .select-box1 {
+                                        display: flex;
+                                        width: 250px;
+                                        flex-direction: column;
+                                    }
 
-                                .select-box1 {
-                                    display: flex;
-                                    width: 250px;
-                                    flex-direction: column;
-                                }
+                                        .select-box1 .options-container1 {
+                                            background: #2db5df;
+                                            color: #f5f6fa;
+                                            max-height: 0;
+                                            width: 100%;
+                                            opacity: 0;
+                                            transition: all 0.4s;
+                                            border-radius: 8px;
+                                            overflow: hidden;
+                                            order: 1;
+                                        }
 
-                                    .select-box1 .options-container1 {
-                                        background: #2db5df;
-                                        color: #f5f6fa;
-                                        max-height: 0;
-                                        width: 100%;
-                                        opacity: 0;
-                                        transition: all 0.4s;
+                                    .selected1 {
+                                        background: rgb(238, 233, 233);
                                         border-radius: 8px;
-                                        overflow: hidden;
-                                        order: 1;
+                                        margin-bottom: 8px;
+                                        color: black;
+                                        position: relative;
+                                        order: 0;
                                     }
 
-                                .selected1 {
-                                    background: rgb(238, 233, 233);
-                                    border-radius: 8px;
-                                    margin-bottom: 8px;
-                                    color: black;
-                                    position: relative;
-                                    order: 0;
-                                }
+                                        .selected1::after {
+                                            content: "";
+                                            background: url("img/arrow-down.svg");
+                                            background-size: contain;
+                                            background-repeat: no-repeat;
+                                            position: absolute;
+                                            height: 100%;
+                                            width: 32px;
+                                            right: 10px;
+                                            top: 5px;
+                                            transition: all 0.4s;
+                                        }
 
-                                    .selected1::after {
-                                        content: "";
-                                        background: url("img/arrow-down.svg");
-                                        background-size: contain;
-                                        background-repeat: no-repeat;
-                                        position: absolute;
-                                        height: 100%;
-                                        width: 32px;
-                                        right: 10px;
-                                        top: 5px;
-                                        transition: all 0.4s;
+                                    .select-box1 .options-container1.active {
+                                        max-height: 240px;
+                                        opacity: 1;
+                                        overflow-y: scroll;
                                     }
 
-                                .select-box1 .options-container1.active {
-                                    max-height: 240px;
-                                    opacity: 1;
-                                    overflow-y: scroll;
-                                }
+                                        .select-box1 .options-container1.active + .selected1::after {
+                                            transform: rotateX(180deg);
+                                            top: -6px;
+                                        }
 
-                                    .select-box1 .options-container1.active + .selected1::after {
-                                        transform: rotateX(180deg);
-                                        top: -6px;
+                                    .select-box1 .options-container1::-webkit-scrollbar {
+                                        width: 8px;
+                                        background: #0d141f;
+                                        border-radius: 0 8px 8px 0;
                                     }
 
-                                .select-box1 .options-container1::-webkit-scrollbar {
-                                    width: 8px;
-                                    background: #0d141f;
-                                    border-radius: 0 8px 8px 0;
-                                }
-
-                                .select-box1 .options-container1::-webkit-scrollbar-thumb {
-                                    background: #525861;
-                                    border-radius: 0 8px 8px 0;
-                                }
-
-                                .select-box1 .option1,
-                                .selected1 {
-                                    padding: 12px 24px;
-                                    cursor: pointer;
-                                }
-
-                                    .select-box1 .option1:hover {
-                                        background: #414b57;
+                                    .select-box1 .options-container1::-webkit-scrollbar-thumb {
+                                        background: #525861;
+                                        border-radius: 0 8px 8px 0;
                                     }
 
-                                .select-box1 label {
-                                    cursor: pointer;
-                                }
+                                    .select-box1 .option1,
+                                    .selected1 {
+                                        padding: 12px 24px;
+                                        cursor: pointer;
+                                    }
 
-                                .select-box1 .option1 .radio {
-                                    display: none;
-                                }
-                            </style>
+                                        .select-box1 .option1:hover {
+                                            background: #414b57;
+                                        }
 
-                            <script>
-                                const selected1 = document.querySelector(".selected1");
-                                const optionsContainer1 = document.querySelector(".options-container1");
-                                const optionsList1 = document.querySelectorAll(".option1");
-                                selected1.addEventListener("click", () => {
-                                    optionsContainer1.classList.toggle("active");
-                                });
+                                    .select-box1 label {
+                                        cursor: pointer;
+                                    }
 
-                                optionsList1.forEach(o => {
-                                    o.addEventListener("click", () => {
-                                        selected1.innerHTML = o.querySelector("label").innerHTML;
-                                        optionsContainer1.classList.remove("active");
+                                    .select-box1 .option1 .radio {
+                                        display: none;
+                                    }
+                                </style>
+
+                                <script>
+                                    const selected1 = document.querySelector(".selected1");
+                                    const optionsContainer1 = document.querySelector(".options-container1");
+                                    const optionsList1 = document.querySelectorAll(".option1");
+                                    selected1.addEventListener("click", () => {
+                                        optionsContainer1.classList.toggle("active");
                                     });
-                                });
-                            </script>
-                        </div>
-                        <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%">
-                            <p class="MuiTypography-root MuiTypography-body2">Chiều về</p>
-                            <div style="min-height: 64px; padding-top: 14px; box-sizing: border-box;">
-                                <p class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary">Không hỗ trợ mua thêm hành lý</p>
+
+                                    optionsList1.forEach(o => {
+                                        o.addEventListener("click", () => {
+                                            selected1.innerHTML = o.querySelector("label").innerHTML;
+                                            optionsContainer1.classList.remove("active");
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%">
+                                <p class="MuiTypography-root MuiTypography-body2">Chiều về</p>
+                                <div style="min-height: 64px; padding-top: 14px; box-sizing: border-box;">
+                                    <p class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary">Không hỗ trợ mua thêm hành lý</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Người lớn 2 -->
-                <div class="sc-ifAKCX dakLHt">
-                    <h6 class="MuiTypography-root MuiTypography-subtitle1" style="margin-bottom: 8px">2.Người lớn 2</h6>
-                    <div class="sc-bxivhb gepbvZ">
-                        <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%; margin-right: 30px">
-                            <p class="MuiTypography-root MuiTypography-body2">Chiều đi</p>
-                            <div class="select-box2">
-                                <div class="options-container2">
-                                    <div class="option2">
-                                        <input type="radio" class="radio" id="HL1" name="MaHanhLy" />
-                                        <label for="automobiles">Không,cảm ơn - 0đ</label>
+                    <!-- Người lớn 2 -->
+                    <div class="sc-ifAKCX dakLHt">
+                        <h6 class="MuiTypography-root MuiTypography-subtitle1" style="margin-bottom: 8px">2.Người lớn 2</h6>
+                        <div class="sc-bxivhb gepbvZ">
+                            <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%; margin-right: 30px">
+                                <p class="MuiTypography-root MuiTypography-body2">Chiều đi</p>
+                                <div class="select-box2">
+                                    <div class="options-container2">
+                                        <div class="option2">
+                                            <input type="radio" class="radio" id="HL1" name="MaHanhLy" />
+                                            <label for="automobiles">Không,cảm ơn - 0đ</label>
+                                        </div>
+
+                                        <div class="option2">
+                                            <input type="radio" class="radio" id="HL2" name="MaHanhLy" />
+                                            <label for="film">Gói(Bag) 5kg - 77,000đ</label>
+                                        </div>
+
+                                        <div class="option2">
+                                            <input type="radio" class="radio" id="HL3" name="MaHanhLy" />
+                                            <label for="science">Gói(Bag) 10kg - 132,000đ</label>
+                                        </div>
+
+                                        <div class="option2">
+                                            <input type="radio" class="radio" id="HL4" name="MaHanhLy" />
+                                            <label for="art">Gói(Bag) 15kg - 171,000đ</label>
+                                        </div>
+
+                                        <div class="option2">
+                                            <input type="radio" class="radio" id="HL5" name="MaHanhLy" />
+                                            <label for="music">Gói(Bag) 20kg - 198,000đ</label>
+                                        </div>
+
                                     </div>
 
-                                    <div class="option2">
-                                        <input type="radio" class="radio" id="HL2" name="MaHanhLy" />
-                                        <label for="film">Gói(Bag) 5kg - 77,000đ</label>
+                                    <div class="selected2">
+                                        -- Khối lượng hành lý --
                                     </div>
-
-                                    <div class="option2">
-                                        <input type="radio" class="radio" id="HL3" name="MaHanhLy" />
-                                        <label for="science">Gói(Bag) 10kg - 132,000đ</label>
-                                    </div>
-
-                                    <div class="option2">
-                                        <input type="radio" class="radio" id="HL4" name="MaHanhLy" />
-                                        <label for="art">Gói(Bag) 15kg - 171,000đ</label>
-                                    </div>
-
-                                    <div class="option2">
-                                        <input type="radio" class="radio" id="HL5" name="MaHanhLy" />
-                                        <label for="music">Gói(Bag) 20kg - 198,000đ</label>
-                                    </div>
-
                                 </div>
 
-                                <div class="selected2">
-                                    -- Khối lượng hành lý --
-                                </div>
-                            </div>
+                                <style>
 
-                            <style>
+                                    .select-box2 {
+                                        display: flex;
+                                        width: 250px;
+                                        flex-direction: column;
+                                    }
 
-                                .select-box2 {
-                                    display: flex;
-                                    width: 250px;
-                                    flex-direction: column;
-                                }
+                                        .select-box2 .options-container2 {
+                                            background: #2db5df;
+                                            color: #f5f6fa;
+                                            max-height: 0;
+                                            width: 100%;
+                                            opacity: 0;
+                                            transition: all 0.4s;
+                                            border-radius: 8px;
+                                            overflow: hidden;
+                                            order: 1;
+                                        }
 
-                                    .select-box2 .options-container2 {
-                                        background: #2db5df;
-                                        color: #f5f6fa;
-                                        max-height: 0;
-                                        width: 100%;
-                                        opacity: 0;
-                                        transition: all 0.4s;
+                                    .selected2 {
+                                        background: rgb(238, 233, 233);
                                         border-radius: 8px;
-                                        overflow: hidden;
-                                        order: 1;
+                                        margin-bottom: 8px;
+                                        color: black;
+                                        position: relative;
+                                        order: 0;
                                     }
 
-                                .selected2 {
-                                    background: rgb(238, 233, 233);
-                                    border-radius: 8px;
-                                    margin-bottom: 8px;
-                                    color: black;
-                                    position: relative;
-                                    order: 0;
-                                }
+                                        .selected2::after {
+                                            content: "";
+                                            background: url("img/arrow-down.svg");
+                                            background-size: contain;
+                                            background-repeat: no-repeat;
+                                            position: absolute;
+                                            height: 100%;
+                                            width: 32px;
+                                            right: 10px;
+                                            top: 5px;
+                                            transition: all 0.4s;
+                                        }
 
-                                    .selected2::after {
-                                        content: "";
-                                        background: url("img/arrow-down.svg");
-                                        background-size: contain;
-                                        background-repeat: no-repeat;
-                                        position: absolute;
-                                        height: 100%;
-                                        width: 32px;
-                                        right: 10px;
-                                        top: 5px;
-                                        transition: all 0.4s;
+                                    .select-box2 .options-container2.active {
+                                        max-height: 240px;
+                                        opacity: 1;
+                                        overflow-y: scroll;
                                     }
 
-                                .select-box2 .options-container2.active {
-                                    max-height: 240px;
-                                    opacity: 1;
-                                    overflow-y: scroll;
-                                }
+                                        .select-box2 .options-container2.active + .selected2::after {
+                                            transform: rotateX(180deg);
+                                            top: -6px;
+                                        }
 
-                                    .select-box2 .options-container2.active + .selected2::after {
-                                        transform: rotateX(180deg);
-                                        top: -6px;
+                                    .select-box2 .options-container2::-webkit-scrollbar {
+                                        width: 8px;
+                                        background: #0d141f;
+                                        border-radius: 0 8px 8px 0;
                                     }
 
-                                .select-box2 .options-container2::-webkit-scrollbar {
-                                    width: 8px;
-                                    background: #0d141f;
-                                    border-radius: 0 8px 8px 0;
-                                }
-
-                                .select-box2 .options-container2::-webkit-scrollbar-thumb {
-                                    background: #525861;
-                                    border-radius: 0 8px 8px 0;
-                                }
-
-                                .select-box2 .option2,
-                                .selected2 {
-                                    padding: 12px 24px;
-                                    cursor: pointer;
-                                }
-
-                                    .select-box2 .option2:hover {
-                                        background: #414b57;
+                                    .select-box2 .options-container2::-webkit-scrollbar-thumb {
+                                        background: #525861;
+                                        border-radius: 0 8px 8px 0;
                                     }
 
-                                .select-box2 label {
-                                    cursor: pointer;
-                                }
+                                    .select-box2 .option2,
+                                    .selected2 {
+                                        padding: 12px 24px;
+                                        cursor: pointer;
+                                    }
 
-                                .select-box2 .option2 .radio {
-                                    display: none;
-                                }
-                            </style>
+                                        .select-box2 .option2:hover {
+                                            background: #414b57;
+                                        }
 
-                            <script>
-                                const selected2 = document.querySelector(".selected2");
-                                const optionsContainer2 = document.querySelector(".options-container2");
-                                const optionsList2 = document.querySelectorAll(".option2");
-                                selected2.addEventListener("click", () => {
-                                    optionsContainer2.classList.toggle("active");
-                                });
+                                    .select-box2 label {
+                                        cursor: pointer;
+                                    }
 
-                                optionsList2.forEach(p => {
-                                    p.addEventListener("click", () => {
-                                        selected2.innerHTML = p.querySelector("label").innerHTML;
-                                        optionsContainer2.classList.remove("active");
+                                    .select-box2 .option2 .radio {
+                                        display: none;
+                                    }
+                                </style>
+
+                                <script>
+                                    const selected2 = document.querySelector(".selected2");
+                                    const optionsContainer2 = document.querySelector(".options-container2");
+                                    const optionsList2 = document.querySelectorAll(".option2");
+                                    selected2.addEventListener("click", () => {
+                                        optionsContainer2.classList.toggle("active");
                                     });
-                                });
-                            </script>
-                        </div>
-                        <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%">
-                            <p class="MuiTypography-root MuiTypography-body2">Chiều về</p>
-                            <div style="min-height: 64px; padding-top: 14px; box-sizing: border-box;">
-                                <p class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary">Không hỗ trợ mua thêm hành lý</p>
+
+                                    optionsList2.forEach(p => {
+                                        p.addEventListener("click", () => {
+                                            selected2.innerHTML = p.querySelector("label").innerHTML;
+                                            optionsContainer2.classList.remove("active");
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%">
+                                <p class="MuiTypography-root MuiTypography-body2">Chiều về</p>
+                                <div style="min-height: 64px; padding-top: 14px; box-sizing: border-box;">
+                                    <p class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary">Không hỗ trợ mua thêm hành lý</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Trẻ em -->
-                <div class="sc-ifAKCX dakLHt">
-                    <h6 class="MuiTypography-root MuiTypography-subtitle1" style="margin-bottom: 8px">3.Trẻ em</h6>
-                    <div class="sc-bxivhb gepbvZ">
-                        <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%; margin-right: 30px">
-                            <p class="MuiTypography-root MuiTypography-body2">Chiều đi</p>
-                            <div class="select-box3">
-                                <div class="options-container3">
-                                    <div class="option3">
-                                        <input type="radio" class="radio" id="HL1" name="MaHanhLy" />
-                                        <label for="automobiles">Không,cảm ơn - 0đ</label>
+                    <!-- Trẻ em -->
+                    <div class="sc-ifAKCX dakLHt">
+                        <h6 class="MuiTypography-root MuiTypography-subtitle1" style="margin-bottom: 8px">3.Trẻ em</h6>
+                        <div class="sc-bxivhb gepbvZ">
+                            <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%; margin-right: 30px">
+                                <p class="MuiTypography-root MuiTypography-body2">Chiều đi</p>
+                                <div class="select-box3">
+                                    <div class="options-container3">
+                                        <div class="option3">
+                                            <input type="radio" class="radio" id="HL1" name="MaHanhLy" />
+                                            <label for="automobiles">Không,cảm ơn - 0đ</label>
+                                        </div>
+
+                                        <div class="option3">
+                                            <input type="radio" class="radio" id="HL2" name="MaHanhLy" />
+                                            <label for="film">Gói(Bag) 5kg - 77,000đ</label>
+                                        </div>
+
+                                        <div class="option3">
+                                            <input type="radio" class="radio" id="HL3" name="MaHanhLy" />
+                                            <label for="science">Gói(Bag) 10kg - 132,000đ</label>
+                                        </div>
+
+                                        <div class="option3">
+                                            <input type="radio" class="radio" id="HL4" name="MaHanhLy" />
+                                            <label for="art">Gói(Bag) 15kg - 171,000đ</label>
+                                        </div>
+
+                                        <div class="option3">
+                                            <input type="radio" class="radio" id="HL5" name="MaHanhLy" />
+                                            <label for="music">Gói(Bag) 20kg - 198,000đ</label>
+                                        </div>
+
                                     </div>
 
-                                    <div class="option3">
-                                        <input type="radio" class="radio" id="HL2" name="MaHanhLy" />
-                                        <label for="film">Gói(Bag) 5kg - 77,000đ</label>
+                                    <div class="selected3">
+                                        -- Khối lượng hành lý --
                                     </div>
-
-                                    <div class="option3">
-                                        <input type="radio" class="radio" id="HL3" name="MaHanhLy" />
-                                        <label for="science">Gói(Bag) 10kg - 132,000đ</label>
-                                    </div>
-
-                                    <div class="option3">
-                                        <input type="radio" class="radio" id="HL4" name="MaHanhLy" />
-                                        <label for="art">Gói(Bag) 15kg - 171,000đ</label>
-                                    </div>
-
-                                    <div class="option3">
-                                        <input type="radio" class="radio" id="HL5" name="MaHanhLy" />
-                                        <label for="music">Gói(Bag) 20kg - 198,000đ</label>
-                                    </div>
-
                                 </div>
 
-                                <div class="selected3">
-                                    -- Khối lượng hành lý --
-                                </div>
-                            </div>
+                                <style>
 
-                            <style>
+                                    .select-box3 {
+                                        display: flex;
+                                        width: 250px;
+                                        flex-direction: column;
+                                    }
 
-                                .select-box3 {
-                                    display: flex;
-                                    width: 250px;
-                                    flex-direction: column;
-                                }
+                                        .select-box3 .options-container3 {
+                                            background: #2db5df;
+                                            color: #f5f6fa;
+                                            max-height: 0;
+                                            width: 100%;
+                                            opacity: 0;
+                                            transition: all 0.4s;
+                                            border-radius: 8px;
+                                            overflow: hidden;
+                                            order: 1;
+                                        }
 
-                                    .select-box3 .options-container3 {
-                                        background: #2db5df;
-                                        color: #f5f6fa;
-                                        max-height: 0;
-                                        width: 100%;
-                                        opacity: 0;
-                                        transition: all 0.4s;
+                                    .selected3 {
+                                        background: rgb(238, 233, 233);
                                         border-radius: 8px;
-                                        overflow: hidden;
-                                        order: 1;
+                                        margin-bottom: 8px;
+                                        color: black;
+                                        position: relative;
+                                        order: 0;
                                     }
 
-                                .selected3 {
-                                    background: rgb(238, 233, 233);
-                                    border-radius: 8px;
-                                    margin-bottom: 8px;
-                                    color: black;
-                                    position: relative;
-                                    order: 0;
-                                }
+                                        .selected3::after {
+                                            content: "";
+                                            background: url("img/arrow-down.svg");
+                                            background-size: contain;
+                                            background-repeat: no-repeat;
+                                            position: absolute;
+                                            height: 100%;
+                                            width: 32px;
+                                            right: 10px;
+                                            top: 5px;
+                                            transition: all 0.4s;
+                                        }
 
-                                    .selected3::after {
-                                        content: "";
-                                        background: url("img/arrow-down.svg");
-                                        background-size: contain;
-                                        background-repeat: no-repeat;
-                                        position: absolute;
-                                        height: 100%;
-                                        width: 32px;
-                                        right: 10px;
-                                        top: 5px;
-                                        transition: all 0.4s;
+                                    .select-box3 .options-container3.active {
+                                        max-height: 240px;
+                                        opacity: 1;
+                                        overflow-y: scroll;
                                     }
 
-                                .select-box3 .options-container3.active {
-                                    max-height: 240px;
-                                    opacity: 1;
-                                    overflow-y: scroll;
-                                }
+                                        .select-box3 .options-container3.active + .selected3::after {
+                                            transform: rotateX(180deg);
+                                            top: -6px;
+                                        }
 
-                                    .select-box3 .options-container3.active + .selected3::after {
-                                        transform: rotateX(180deg);
-                                        top: -6px;
+                                    .select-box3 .options-container3::-webkit-scrollbar {
+                                        width: 8px;
+                                        background: #0d141f;
+                                        border-radius: 0 8px 8px 0;
                                     }
 
-                                .select-box3 .options-container3::-webkit-scrollbar {
-                                    width: 8px;
-                                    background: #0d141f;
-                                    border-radius: 0 8px 8px 0;
-                                }
-
-                                .select-box3 .options-container3::-webkit-scrollbar-thumb {
-                                    background: #525861;
-                                    border-radius: 0 8px 8px 0;
-                                }
-
-                                .select-box3 .option3,
-                                .selected3 {
-                                    padding: 12px 24px;
-                                    cursor: pointer;
-                                }
-
-                                    .select-box3 .option3:hover {
-                                        background: #414b57;
+                                    .select-box3 .options-container3::-webkit-scrollbar-thumb {
+                                        background: #525861;
+                                        border-radius: 0 8px 8px 0;
                                     }
 
-                                .select-box3 label {
-                                    cursor: pointer;
-                                }
+                                    .select-box3 .option3,
+                                    .selected3 {
+                                        padding: 12px 24px;
+                                        cursor: pointer;
+                                    }
 
-                                .select-box3 .option3 .radio {
-                                    display: none;
-                                }
-                            </style>
+                                        .select-box3 .option3:hover {
+                                            background: #414b57;
+                                        }
 
-                            <script>
-                                const selected3 = document.querySelector(".selected3");
-                                const optionsContainer3 = document.querySelector(".options-container3");
-                                const optionsList3 = document.querySelectorAll(".option3");
-                                selected3.addEventListener("click", () => {
-                                    optionsContainer3.classList.toggle("active");
-                                });
+                                    .select-box3 label {
+                                        cursor: pointer;
+                                    }
 
-                                optionsList3.forEach(z => {
-                                    z.addEventListener("click", () => {
-                                        selected3.innerHTML = z.querySelector("label").innerHTML;
-                                        optionsContainer3.classList.remove("active");
+                                    .select-box3 .option3 .radio {
+                                        display: none;
+                                    }
+                                </style>
+
+                                <script>
+                                    const selected3 = document.querySelector(".selected3");
+                                    const optionsContainer3 = document.querySelector(".options-container3");
+                                    const optionsList3 = document.querySelectorAll(".option3");
+                                    selected3.addEventListener("click", () => {
+                                        optionsContainer3.classList.toggle("active");
                                     });
-                                });
-                            </script>
-                        </div>
-                        <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%">
-                            <p class="MuiTypography-root MuiTypography-body2">Chiều về</p>
-                            <div style="min-height: 64px; padding-top: 14px; box-sizing: border-box;">
-                                <p class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary">Không hỗ trợ mua thêm hành lý</p>
+
+                                    optionsList3.forEach(z => {
+                                        z.addEventListener("click", () => {
+                                            selected3.innerHTML = z.querySelector("label").innerHTML;
+                                            optionsContainer3.classList.remove("active");
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <div class="sc-ifAKCX dakLHt" style="flex: 1 1 0%">
+                                <p class="MuiTypography-root MuiTypography-body2">Chiều về</p>
+                                <div style="min-height: 64px; padding-top: 14px; box-sizing: border-box;">
+                                    <p class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary">Không hỗ trợ mua thêm hành lý</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Bảo hiểm du lịch -->
-            <h6 class="MuiTypography-root MuiTypography-h6" style="margin: 24px 0px 16px;">Bảo hiểm du lịch</h6>
-            <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded" style="padding: 12px 16px; margin-top: 16px">
-                <!-- button + Logo BIDV -->
-                <div class="sc-bxivhb gepbvZ" style="align-items: flex-start; display: flex;height: 40px;">
-                    <label class="MuiFormControlLabel-root" style="padding-bottom: 8px">
-                        <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiCheckbox-root MuiCheckbox-colorSecondary MuiIconButton-colorSecondary" aria-disabled="false">
-                            <span class="MuiIconButton-label">
-                                <input type="checkbox" id="check" checked="checked" style="height: 20px;width: 20px">
+                <!-- Bảo hiểm du lịch -->
+                <h6 class="MuiTypography-root MuiTypography-h6" style="margin: 24px 0px 16px;">Bảo hiểm du lịch</h6>
+                <div class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded" style="padding: 12px 16px; margin-top: 16px">
+                    <!-- button + Logo BIDV -->
+                    <div class="sc-bxivhb gepbvZ" style="align-items: flex-start; display: flex;height: 40px;">
+                        <label class="MuiFormControlLabel-root" style="padding-bottom: 8px">
+                            <span class="MuiButtonBase-root MuiIconButton-root jss1091 MuiCheckbox-root MuiCheckbox-colorSecondary MuiIconButton-colorSecondary" aria-disabled="false">
+                                <span class="MuiIconButton-label">
+                                    <input type="checkbox" id="check" checked="checked" style="height: 20px;width: 20px">
+                                </span>
+                                <span class="MuiTouchRipple-root"></span>
                             </span>
-                            <span class="MuiTouchRipple-root"></span>
-                        </span>
-                        <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
-                            <h6 class="MuiTypography-root MuiTypography-subtitle2" style="font-size: 16px;">Mua bảo hiểm</h6>
-                        </span>
-                    </label>
-                    <div class="sc-ifAKCX dakLHt" style="text-align: end; align-items: flex-end; flex: 1 1 0%">
-                        <img alt="" src='../Asset/img/BIC_png.png' style="height: 36px; width: 80px; object-fit: cover" />
-                        <!-- <span class="MuiTypography-root MuiTypography-caption">Được cung cấp bởi Tổng công ty bảo hiểm</span> -->
-                    </div>
-                </div>
-
-                <!-- Giá -->
-                <div class="sc-bxivhb gepbvZ">
-                    <p class="MuiTypography-root final-price MuiTypography-body1" style="color: #139029;flex: 1 1 0%; text-align: end">54,000 đ/Người </p>
-                </div>
-
-                <!-- Content -->
-                <span class="MuiTypography-root MuiTypography-caption" style="font-size: 14px;">
-                    <span>
-                        <span>Lựa chọn tham gia bảo hiểm BIC bạn có thể được hưởng các quyền lợi hấp dẫn:</span>
-                        <br />
-                        <span style="font-size: 12px; color: grey">(Độ tuổi đủ điều kiện tham gia bảo hiểm: từ 06 tháng đến 80 tuổi)</span>
-                        <div style=" display: flex; flex-direction: column; padding-left: 16px; margin-block-start: 0px;">
-                            <div style="display: flex">
-                                <span style="font-size: 12px; min-width: 20px">➤</span>
-                                Lên đến 2 tỷ đồng cho quyền lợi tai nạn cá nhân
-                            </div>
-                            <div style="display: flex">
-                                <span style="font-size: 12px; min-width: 20px">➤</span>
-                                Lên đến 1 tỷ đồng cho quyền lợi chi phí y tế
-                            </div>
-                            <div style="display: flex">
-                                <span style="font-size: 12px; min-width: 20px">➤</span>
-                                Lên đến 51 triệu đồng cho quyền lợi Hủy chuyến bay và 6,3 triệu đồng cho quyền lợi hoãn chuyến bay
-                            </div>
-                            <div style="display: flex">
-                                <span style="font-size: 12px; min-width: 20px">➤</span>
-                                Lên đến 2.1 triệu đồng cho quyền lợi mất giấy tờ thông hành mang theo
-                            </div>
-                            <div style="display: flex">
-                                <span style="font-size: 12px; min-width: 20px">➤</span>
-                                Và các quyền lợi khác
-                            </div>
+                            <span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">
+                                <h6 class="MuiTypography-root MuiTypography-subtitle2" style="font-size: 16px;">Mua bảo hiểm</h6>
+                            </span>
+                        </label>
+                        <div class="sc-ifAKCX dakLHt" style="text-align: end; align-items: flex-end; flex: 1 1 0%">
+                            <img alt="" src='../Asset/img/BIC_png.png' style="height: 36px; width: 80px; object-fit: cover" />
+                            <!-- <span class="MuiTypography-root MuiTypography-caption">Được cung cấp bởi Tổng công ty bảo hiểm</span> -->
                         </div>
+                    </div>
+
+                    <!-- Giá -->
+                    <div class="sc-bxivhb gepbvZ">
+                        <p class="MuiTypography-root final-price MuiTypography-body1" style="color: #139029;flex: 1 1 0%; text-align: end">54,000 đ/Người </p>
+                    </div>
+
+                    <!-- Content -->
+                    <span class="MuiTypography-root MuiTypography-caption" style="font-size: 14px;">
                         <span>
-                            <span>
-                                Với việc lựa chọn Bảo hiểm BIC tôi đã hiểu và đồng ý với tất cả
-                                <a href="/Quy tac & Quyen loi bao hiem du lich BIC.pdf" target="_blank" style="text-decoration: none">
-                                    <font color="#4FC3F7"> <span>Quy tắc</span> </font>
-                                </a>
-                                và
-                                <a href="/Quy tac & Quyen loi bao hiem du lich BIC.pdf" target="_blank" style="text-decoration: none">
-                                    <font color="#4FC3F7"> <span>Quyền lợi</span> </font>
-                                </a>
-                                do BIC quy định. Chi tiết liên hệ: 19009456
-                            </span>
+                            <span>Lựa chọn tham gia bảo hiểm BIC bạn có thể được hưởng các quyền lợi hấp dẫn:</span>
                             <br />
+                            <span style="font-size: 12px; color: grey">(Độ tuổi đủ điều kiện tham gia bảo hiểm: từ 06 tháng đến 80 tuổi)</span>
+                            <div style=" display: flex; flex-direction: column; padding-left: 16px; margin-block-start: 0px;">
+                                <div style="display: flex">
+                                    <span style="font-size: 12px; min-width: 20px">➤</span>
+                                    Lên đến 2 tỷ đồng cho quyền lợi tai nạn cá nhân
+                                </div>
+                                <div style="display: flex">
+                                    <span style="font-size: 12px; min-width: 20px">➤</span>
+                                    Lên đến 1 tỷ đồng cho quyền lợi chi phí y tế
+                                </div>
+                                <div style="display: flex">
+                                    <span style="font-size: 12px; min-width: 20px">➤</span>
+                                    Lên đến 51 triệu đồng cho quyền lợi Hủy chuyến bay và 6,3 triệu đồng cho quyền lợi hoãn chuyến bay
+                                </div>
+                                <div style="display: flex">
+                                    <span style="font-size: 12px; min-width: 20px">➤</span>
+                                    Lên đến 2.1 triệu đồng cho quyền lợi mất giấy tờ thông hành mang theo
+                                </div>
+                                <div style="display: flex">
+                                    <span style="font-size: 12px; min-width: 20px">➤</span>
+                                    Và các quyền lợi khác
+                                </div>
+                            </div>
+                            <span>
+                                <span>
+                                    Với việc lựa chọn Bảo hiểm BIC tôi đã hiểu và đồng ý với tất cả
+                                    <a href="/Quy tac & Quyen loi bao hiem du lich BIC.pdf" target="_blank" style="text-decoration: none">
+                                        <font color="#4FC3F7"> <span>Quy tắc</span> </font>
+                                    </a>
+                                    và
+                                    <a href="/Quy tac & Quyen loi bao hiem du lich BIC.pdf" target="_blank" style="text-decoration: none">
+                                        <font color="#4FC3F7"> <span>Quyền lợi</span> </font>
+                                    </a>
+                                    do BIC quy định. Chi tiết liên hệ: 19009456
+                                </span>
+                                <br />
+                            </span>
                         </span>
                     </span>
-                </span>
-            </div>
+                </div>
 
-            <!-- button "Tiếp tục-Quay lại" -->
-            <div class="sc-bxivhb gepbvZ" style="justify-content: center; margin-top: 24px; margin-left: 20px;">
-                <button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation" tabindex="0" type="button" id="flightBookingInfo.back" style="margin-right: 24px; min-width: 160px">
-                    <span class="MuiButton-label"> <a href="/Home/Index" style="color: black;text-decoration: unset;">Quay lại</a></span>
-                    <span class="MuiTouchRipple-root"></span>
-                </button>
-                <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-containedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation" tabindex="0" type="submit" id="flightBookingInfo.next" style="min-width: 160px">
-                    <span class="MuiButton-label"><a href="/Home/KiemTraThongTin" style="color: white;text-decoration: unset;" onclick="save_info">Tiếp tục</a></span>
-                    <span class="MuiTouchRipple-root"></span>
-                </button>
-            </div>
+                <!-- button "Tiếp tục-Quay lại" -->
+                <div class="sc-bxivhb gepbvZ" style="justify-content: center; margin-top: 24px; margin-left: 20px;">
+                    <button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation" tabindex="0" type="button" id="flightBookingInfo.back" style="margin-right: 24px; min-width: 160px">
+                        <span class="MuiButton-label"> <a href="/Home/Index" style="color: black;text-decoration: unset;">Quay lại</a></span>
+                        <span class="MuiTouchRipple-root"></span>
+                    </button>
+                    <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-containedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation" tabindex="0" type="submit" id="flightBookingInfo.next" style="min-width: 160px">
+                        <span class="MuiButton-label"><a href="/Home/KiemTraThongTin" style="color: white;text-decoration: unset;" onclick="save_info">Tiếp tục</a></span>
+                        <span class="MuiTouchRipple-root"></span>
+                    </button>
+                </div>
         </form>
         <!--END Form điền Thông tin-->
         <!-- Thông tin chuyến bay -->
@@ -887,17 +902,17 @@
                 <p><i class="fas fa-plane"></i> Chiều đi - @Model.NgayCatCanh</p>
                 <div class="time mb-3">
                     <div class="info">
-                        <p>05:35   Hà Nội (@Model.ChangBay.SanBay_CatCanh)</p>
-                        <p>07:45     Thành phố Hồ Chí Minh (@Model.ChangBay.SanBay_HaCanh)</p>
+                        <p>@Model.GioCatCanh   @ViewBag.CC.ViTri (@Model.SanBay_CatCanh)</p>
+                        <p>@(Model.GioCatCanh + Model.ThoiGianBay)     @ViewBag.HC.ViTri (@Model.SanBay_HaCanh)</p>
                     </div>
 
                     <a href=""><img src="../Asset/img/VNA_logo_notext.png" alt="" class="img-fluid"></a>
                 </div>
-                <p><i class="fas fa-plane back"></i> Chiều về - 28/11/2020</p>
+                <p><i class="fas fa-plane back"></i> Chiều về - @Model.NgayCatCanh</p>
                 <div class="time mb-3">
                     <div class="info">
-                        <p>18:15   Thành phố Hồ Chí Minh (SGN)</p>
-                        <p>20:25    Hà Nội (HAN)</p>
+                        <p>  @Model.GioCatCanh  @ViewBag.HC.ViTri (@Model.SanBay_HaCanh)</p>
+                        <p> @(Model.GioCatCanh + Model.ThoiGianBay)   @ViewBag.CC.ViTri (@Model.SanBay_CatCanh)</p>
                     </div>
 
                     <a href=""><img src="../Asset/img/VNA_logo_notext.png" alt="" class="img-fluid"></a>
@@ -908,22 +923,22 @@
                         <p>Giá vé người lớn</p><span>@(2 * Model.GiaNguoiLon) đ</span>
                     </div>
                     <div class="sub_detail">
-                        <p>Giá vé trẻ em</p><span> @Model.GiaTreEm đ</span>
+                        <p>Giá vé trẻ em</p><span>@Model.GiaTreEm đ</span>
                     </div>
                     <div class="sub_detail">
-                        <p>Thuế và phí</p><span>3,994,000 đ</span>
+                        <p>Thuế và phí</p><span>30000.0 đ</span>
                     </div>
                     <div class="baggage sub_detail">
                         <p>Mua thêm hành lý</p>
-                        <span>187,000 đ</span>
+                        <span>18700.0 đ</span>
                     </div>
                     <div class="protect sub_detail">
                         <p>Bảo hiểm du lịch</p>
-                        <span>3 x 90,000 đ</span>
+                        <span>3 x 9000.0 đ</span>
                     </div>
                     <div class="all_money">
                         <div class="sub_detail">
-                            <p style="font-size: 16px;font-weight: 600;">Tổng tiền thanh toán</p><span style="font-size: 16px;color: #139029;font-weight: 600;"> @(2 * Convert.ToInt32(Model.GiaNguoiLon) + Convert.ToInt32(Model.GiaTreEm) + Int32.Parse("3994000") +Int32.Parse("187000") + Int32.Parse("270000")) đ</span>
+                            <p style="font-size: 16px;font-weight: 600;">Tổng tiền thanh toán</p><span style="font-size: 16px;color: #139029;font-weight: 600;">@(Convert.ToDecimal(2) *Model.GiaNguoiLon +Model.GiaTreEm + Convert.ToDecimal(30000.0) + Convert.ToDecimal(18700.0) + Convert.ToDecimal(27000.0))đ</span>
                         </div>
 
                         <p style="font-size: 12px;font-weight: 500;" class="text-right">Giá đã bao gồm thuế, phí &amp; hóa đơn VAT</p>
@@ -975,12 +990,12 @@
                                         <div class="time_planet">
                                             <div class="go">
                                                 <div class="time_sce">
-                                                    <h6>23:05</h6>
-                                                    <span>17/11/2020</span>
+                                                    <h6>@Model.GioCatCanh</h6>
+                                                    <span>@Model.NgayCatCanh</span>
                                                 </div>
                                                 <div class="where">
-                                                    <h6>Hà Nội (HAN)</h6>
-                                                    <span>Nội Bài</span>
+                                                    <h6>@ViewBag.CC.ViTri (@Model.SanBay_CatCanh)</h6>
+                                                    <span>@ViewBag.CC.TenSanBay</span>
                                                 </div>
                                             </div>
                                             <div class="sub_time">
@@ -988,12 +1003,12 @@
                                             </div>
                                             <div class="back">
                                                 <div class="time_sce">
-                                                    <h6>01:10</h6>
-                                                    <span>18/11/2020</span>
+                                                    <h6>@(Model.GioCatCanh + Model.ThoiGianBay)</h6>
+                                                    <span>@Model.NgayCatCanh</span>
                                                 </div>
                                                 <div class="where">
-                                                    <h6>Thành phố Hồ Chí Minh (SGN)</h6>
-                                                    <span>Tân Sơn Nhất</span>
+                                                    <h6>@ViewBag.HC.ViTri (@Model.SanBay_HaCanh)</h6>
+                                                    <span>@ViewBag.HC.TenSanBay</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1006,7 +1021,7 @@
                                     </div>
                                 </div>
                                 <!--Máy bay 2-->
-                                <div class="detail_planet" style="border-bottom: unset;">
+                                <div class="detail_planet">
                                     <div class="band">
                                         <img src="../Asset/img/VNA_logo_notext.png" alt="">
                                         <p style="margin-bottom: 0px">VN261</p>
@@ -1018,17 +1033,16 @@
                                             <i class="fas fa-plane-departure"></i>
                                             <div style="border-left: 1px solid rgb(136, 136, 136); height: 70%;"></div>
                                             <i class="fas fa-plane-arrival"></i>
-
                                         </div>
                                         <div class="time_planet">
                                             <div class="go">
                                                 <div class="time_sce">
-                                                    <h6>23:05</h6>
-                                                    <span>17/11/2020</span>
+                                                    <h6>@Model.GioCatCanh</h6>
+                                                    <span>@Model.NgayCatCanh</span>
                                                 </div>
                                                 <div class="where">
-                                                    <h6>Hà Nội (HAN)</h6>
-                                                    <span>Nội Bài</span>
+                                                    <h6>@ViewBag.HC.ViTri (@Model.SanBay_HaCanh)</h6>
+                                                    <span>@ViewBag.HC.TenSanBay</span>
                                                 </div>
                                             </div>
                                             <div class="sub_time">
@@ -1036,12 +1050,12 @@
                                             </div>
                                             <div class="back">
                                                 <div class="time_sce">
-                                                    <h6>01:10</h6>
-                                                    <span>18/11/2020</span>
+                                                    <h6>@(Model.GioCatCanh + Model.ThoiGianBay)</h6>
+                                                    <span>@Model.NgayCatCanh</span>
                                                 </div>
                                                 <div class="where">
-                                                    <h6>Thành phố Hồ Chí Minh (SGN)</h6>
-                                                    <span>Tân Sơn Nhất</span>
+                                                    <h6>@ViewBag.CC.ViTri (@Model.SanBay_CatCanh)</h6>
+                                                    <span>@ViewBag.CC.TenSanBay</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1053,188 +1067,185 @@
                                         <p class="return_money"><i class="fas fa-undo-alt"></i> Phí hoàn vé 300.000VND</p>
                                     </div>
                                 </div>
+                                <!--END Chi tiết chuyến bay-->
+                                <!--Chi tiết giá-->
+                                <div class="tab-pane show fade" id="tab-step-2">
+                                    <div class="detail_money">
+                                        <!--Chiều đi-->
+                                        <div class="detail_go">
+                                            <h6>Giá chiều đi</h6>
+                                            <div class="sub_detail">
+                                                <p>Giá vé người lớn </p><span>@(2 * Model.GiaNguoiLon) đ</span>
+                                            </div>
+                                            <div class="sub_detail">
+                                                <p>Giá vé trẻ em </p><span>@Model.GiaTreEm  đ</span>
+                                            </div>
+                                            <div class="sub_detail">
+                                                <p>Thuế và phí </p><span>30000.0 đ</span>
+                                            </div>
+                                            <div class="sub_detail">
+                                                <p>Mua thêm hành lý </p><span>18700.0 đ</span>
+                                            </div>
+                                            <div class="sub_detail">
+                                                <p>Tổng giá chiều đi </p><span>@(Convert.ToDecimal(2) *Model.GiaNguoiLon +Model.GiaTreEm + Convert.ToDecimal(30000.0) + Convert.ToDecimal(18700.0) ) đ </span>
+                                            </div>
+                                        </div>
+                                        <!--Chiều về-->
+                                        <div class="detail_go">
+                                            <h6>Giá chiều về</h6>
+                                            <div class="sub_detail">
+                                                <p>Giá vé người lớn </p><span>@(2 * Model.GiaNguoiLon) đ</span>
+                                            </div>
+                                            <div class="sub_detail">
+                                                <p>Giá vé trẻ em </p><span>@Model.GiaTreEm  đ</span>
+                                            </div>
+                                            <div class="sub_detail">
+                                                <p>Thuế và phí </p><span>30000.0 đ</span>
+                                            </div>
+                                            <div class="sub_detail">
+                                                <p>Mua thêm hành lý </p><span>18700.0 đ</span>
+                                            </div>
+                                            <div class="sub_detail">
+                                                <p>Tổng giá chiều về </p><span>@(Convert.ToDecimal(2) *Model.GiaNguoiLon +Model.GiaTreEm + Convert.ToDecimal(30000.0) + Convert.ToDecimal(18700.0) ) đ </span>
+                                            </div>
+                                        </div>
+                                        <!--Tổng tiền-->
+                                        <div class="all_money">
+                                            <div class="sub_detail">
+                                                <p style="font-size: 14px">Bảo hiểm du lịch </p><span>3 x 36,000 đ</span>
+                                            </div>
+                                            <div class="sub_detail">
+                                                <p style="font-size: 16px;font-weight: 600">Tổng tiền thanh toán</p><span style="font-size: 16px;color: #139029;font-weight: 600;">@(Convert.ToDecimal(2) * (Convert.ToDecimal(2) *Model.GiaNguoiLon +Model.GiaTreEm + Convert.ToDecimal(30000.0) + Convert.ToDecimal(18700.0) + Convert.ToDecimal(27000.0) )) đ  đ</span>
+                                            </div>
+                                            <p class="text-right" style="font-size: 12px;">Giá đã bao gồm thuế, phí & hóa đơn VAT</p>
+                                        </div>
+                                    </div>
+                                    <!--END Chi tiết giá-->
+                                </div>
                             </div>
+                            <!--END modal-body-->
+
+                            <div class="modal-footer"></div>
                         </div>
-                        <!--END Chi tiết chuyến bay-->
-                        <!--Chi tiết giá-->
-                        <div class="tab-pane show fade" id="tab-step-2">
-                            <div class="detail_money">
-                                <!--Chiều đi-->
-                                <div class="detail_go">
-                                    <h6>Giá chiều đi</h6>
-                                    <div class="sub_detail">
-                                        <p>Giá vé người lớn </p><span>2 x 4,509,000 đ</span>
-                                    </div>
-                                    <div class="sub_detail">
-                                        <p>Giá vé trẻ em </p><span>1 x 4,509,000 đ</span>
-                                    </div>
-                                    <div class="sub_detail">
-                                        <p>Thuế và phí </p><span>2,358,000 đ</span>
-                                    </div>
-                                    <div class="sub_detail">
-                                        <p>Mua thêm hành lý </p><span>187,000 đ</span>
-                                    </div>
-                                    <div class="sub_detail">
-                                        <p>Tổng giá chiều đi </p><span>15,885,000 đ</span>
-                                    </div>
-                                </div>
-                                <!--Chiều về-->
-                                <div class="detail_back">
-                                    <h6>Giá chiều về</h6>
-                                    <div class="sub_detail">
-                                        <p>Giá vé người lớn </p><span>2 x 4,509,000 đ</span>
-                                    </div>
-                                    <div class="sub_detail">
-                                        <p>Giá vé trẻ em </p><span>1 x 4,509,000 đ</span>
-                                    </div>
-                                    <div class="sub_detail">
-                                        <p>Thuế và phí </p><span>2,358,000 đ</span>
-                                    </div>
-                                    <div class="sub_detail">
-                                        <p>Mua thêm hành lý </p><span>187,000 đ</span>
-                                    </div>
-                                    <div class="sub_detail">
-                                        <p>Tổng giá chiều về </p><span>15,885,000 đ</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Tổng tiền-->
-                            <div class="all_money">
-                                <div class="sub_detail">
-                                    <p style="font-size: 14px">Bảo hiểm du lịch </p><span>3 x 36,000 đ</span>
-                                </div>
-                                <div class="sub_detail">
-                                    <p style="font-size: 16px;font-weight: 600">Tổng tiền thanh toán</p><span style="font-size: 16px;color: #139029;font-weight: 600;">15,993,000 đ</span>
-                                </div>
-                                <p class="text-right" style="font-size: 12px;">Giá đã bao gồm thuế, phí & hóa đơn VAT</p>
-                            </div>
-                        </div>
-                        <!--END Chi tiết giá-->
                     </div>
                 </div>
-                <!--END modal-body-->
+                <!-- het modal cua xem chi tiet -->
+                <style>
+                    .select-box {
+                        display: flex;
+                        width: 250px;
+                        flex-direction: column;
+                    }
 
-                <div class="modal-footer"></div>
+                        .select-box .options-container {
+                            background: #2db5df;
+                            color: #f5f6fa;
+                            max-height: 0;
+                            width: 100%;
+                            opacity: 0;
+                            transition: all 0.4s;
+                            border-radius: 8px;
+                            overflow: hidden;
+                            order: 1;
+                        }
+
+                    .selected {
+                        background: rgb(238, 233, 233);
+                        border-radius: 8px;
+                        margin-bottom: 8px;
+                        color: black;
+                        position: relative;
+                        order: 0;
+                    }
+
+                        .selected::after {
+                            content: "";
+                            background: url("img/arrow-down.svg");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            position: absolute;
+                            height: 100%;
+                            width: 32px;
+                            right: 10px;
+                            top: 5px;
+                            transition: all 0.4s;
+                        }
+
+                    .select-box .options-container.active {
+                        max-height: 240px;
+                        opacity: 1;
+                        overflow-y: scroll;
+                    }
+
+                        .select-box .options-container.active + .selected::after {
+                            transform: rotateX(180deg);
+                            top: -6px;
+                        }
+
+                    .select-box .options-container::-webkit-scrollbar {
+                        width: 8px;
+                        background: #0d141f;
+                        border-radius: 0 8px 8px 0;
+                    }
+
+                    .select-box .options-container::-webkit-scrollbar-thumb {
+                        background: #525861;
+                        border-radius: 0 8px 8px 0;
+                    }
+
+                    .select-box .option,
+                    .selected {
+                        padding: 12px 24px;
+                        cursor: pointer;
+                    }
+
+                        .select-box .option:hover {
+                            background: #414b57;
+                        }
+
+                    .select-box label {
+                        cursor: pointer;
+                    }
+
+                    .select-box .option .radio {
+                        display: none;
+                    }
+                </style>
+
+                <script>
+                    const selected = document.querySelector(".selected");
+                    const optionsContainer = document.querySelector(".options-container");
+                    const optionsList = document.querySelectorAll(".option");
+                    selected.addEventListener("click", () => {
+                        optionsContainer.classList.toggle("active");
+                    });
+
+                    optionsList.forEach(o => {
+                        o.addEventListener("click", () => {
+                            selected.innerHTML = o.querySelector("label").innerHTML;
+                            optionsContainer.classList.remove("active");
+                        });
+                    });
+                </script>
+
+                <script type="text/javascript">
+
+                    var ten1, ten2, ten3, danhxung1, danhxung2, danhxung3, sdt, email, diachi;
+
+                    function save_info() {
+
+                        alert("started_1"); //just for information
+
+                        price = document.getElementById('the_id_of_the_textbox').value;
+
+                        alert(price); //just for information
+                    }
+                </script>
+
+                <style>
+                    #layout-1505891501864, #wrap-cart-button-1492688272087 {
+                        display: none;
+                    }
+                </style>
             </div>
-        </div>
-    </div>
-    <!-- het modal cua xem chi tiet -->
-    <style>
-        .select-box {
-            display: flex;
-            width: 250px;
-            flex-direction: column;
-        }
-
-            .select-box .options-container {
-                background: #2db5df;
-                color: #f5f6fa;
-                max-height: 0;
-                width: 100%;
-                opacity: 0;
-                transition: all 0.4s;
-                border-radius: 8px;
-                overflow: hidden;
-                order: 1;
-            }
-
-        .selected {
-            background: rgb(238, 233, 233);
-            border-radius: 8px;
-            margin-bottom: 8px;
-            color: black;
-            position: relative;
-            order: 0;
-        }
-
-            .selected::after {
-                content: "";
-                background: url("img/arrow-down.svg");
-                background-size: contain;
-                background-repeat: no-repeat;
-                position: absolute;
-                height: 100%;
-                width: 32px;
-                right: 10px;
-                top: 5px;
-                transition: all 0.4s;
-            }
-
-        .select-box .options-container.active {
-            max-height: 240px;
-            opacity: 1;
-            overflow-y: scroll;
-        }
-
-            .select-box .options-container.active + .selected::after {
-                transform: rotateX(180deg);
-                top: -6px;
-            }
-
-        .select-box .options-container::-webkit-scrollbar {
-            width: 8px;
-            background: #0d141f;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .select-box .options-container::-webkit-scrollbar-thumb {
-            background: #525861;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .select-box .option,
-        .selected {
-            padding: 12px 24px;
-            cursor: pointer;
-        }
-
-            .select-box .option:hover {
-                background: #414b57;
-            }
-
-        .select-box label {
-            cursor: pointer;
-        }
-
-        .select-box .option .radio {
-            display: none;
-        }
-    </style>
-
-    <script>
-        const selected = document.querySelector(".selected");
-        const optionsContainer = document.querySelector(".options-container");
-        const optionsList = document.querySelectorAll(".option");
-        selected.addEventListener("click", () => {
-            optionsContainer.classList.toggle("active");
-        });
-
-        optionsList.forEach(o => {
-            o.addEventListener("click", () => {
-                selected.innerHTML = o.querySelector("label").innerHTML;
-                optionsContainer.classList.remove("active");
-            });
-        });
-    </script>
-
-    <script type="text/javascript">
-
-        var ten1, ten2, ten3, danhxung1, danhxung2, danhxung3, sdt, email, diachi;
-
-        function save_info() {
-
-            alert("started_1"); //just for information
-
-            price = document.getElementById('the_id_of_the_textbox').value;
-
-            alert(price); //just for information
-        }
-    </script>
-
-    <style>
-        #layout-1505891501864, #wrap-cart-button-1492688272087 {
-            display: none;
-        }
-    </style>
-</div>
 
