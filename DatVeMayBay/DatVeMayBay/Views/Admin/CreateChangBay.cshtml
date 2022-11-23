@@ -1,0 +1,57 @@
+﻿@model DatVeMayBay.Models.ChangBay
+
+@{ ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+
+<h2>Thêm chặng bay</h2>
+@Html.AntiForgeryToken()
+@if (TempData["AlertMessage"] != null)
+{
+<div id="AlertBox" class="alert @TempData["AlertType"] hide" role="alert">
+    @TempData["AlertMessage"]
+</div>}
+
+@using (Html.BeginForm())
+{
+
+<div class="form-horizontal">
+
+    <hr />
+
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <br />
+    <div class="form-group">
+        <label class="control-label col-md-2" for="SanBay_CatCanh">Sân bay cất cánh</label>
+        <div class="col-md-10">
+            @Html.DropDownList("SanBay_CatCanh", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.SanBay_CatCanh, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <label class="control-label col-md-2" for="SanBay_HaCanh">Sân bay hạ cánh</label>
+        <div class="col-md-10">
+            @Html.DropDownList("SanBay_HaCanh", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.SanBay_HaCanh, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Thêm" class="btn btn-outline-info" />
+        </div>
+    </div>
+</div>}
+<br />
+<div>
+    @Html.ActionLink("Quay lại", "IndexChangBay")
+</div>
+
+@*tạo message box*@
+
+<script>$(function () {
+        $('#AlertBox').removeClass('hide');
+        $('#AlertBox').delay(2000).slideUp(500);
+    });</script>
+

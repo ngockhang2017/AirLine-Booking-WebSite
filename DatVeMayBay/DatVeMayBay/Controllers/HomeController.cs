@@ -44,20 +44,20 @@ namespace DatVeMayBay.Controllers
         //}
 
         private Model1 model = new Model1();
-        
+
         public ActionResult Index()
         {
             //string url = string.Format("SanBay?{0}", "Miền Bắc");
             //var sanbayMB = APIHelper.SendGetRequest<List<SanBay>>(url);
             //ViewBag.sbMB = sanbayMB;
-            
+
             return View();
         }
 
         //[HttpGet]
         //public ActionResult TimKiemChuyenBay()
         //{
-         
+
         //    return View();
 
         //}
@@ -65,7 +65,7 @@ namespace DatVeMayBay.Controllers
         public ActionResult TimKiemChuyenBay(string SanBay_CatCanh, string SanBay_HaCanh, string NgayCatCanh)
         {
 
-             SanBay_CatCanh = SanBay_CatCanh.Substring(SanBay_CatCanh.Length - 4, 3);
+            SanBay_CatCanh = SanBay_CatCanh.Substring(SanBay_CatCanh.Length - 4, 3);
             SanBay_HaCanh = SanBay_HaCanh.Substring(SanBay_HaCanh.Length - 4, 3);
             //string CatCanh = Request.Form["SanBay_CatCanh"].ToString();
             //string HaCanh = Request.Form["SanBay_HaCanh"].ToString();
@@ -87,80 +87,160 @@ namespace DatVeMayBay.Controllers
 
             return View(chuyenbaya);
         }
-         
+
 
         [HttpGet]
         public ActionResult ThongTinKhachHang(int id)
         {
-       
-            List<ChuyenBay> chuyenbay = model.ChuyenBays.ToList();
-            List<ChangBay> changbay = model.ChangBays.ToList();
-            List<SanBay> sanbay = model.SanBays.ToList();
+            CB_Detail detail = new CB_Detail();
+            List<ChuyenBay> cb = model.ChuyenBays.ToList();
+            List<ChangBay> chb = model.ChangBays.ToList();
+            List<SanBay> sb = model.SanBays.ToList();
 
-            if (id == 0)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var chuyen_bay = (from s in chuyenbay
-                                where s.MaChuyenBay == id
-                                select s);
-            ChuyenBay cb = chuyen_bay.First();
+            detail = (from c in cb
+                      join chab in chb on c.MaChangBay equals chab.MaChangBay
+                      where c.MaChuyenBay == id
+                      select new CB_Detail
+                      {
+                          MaChuyenBay = c.MaChuyenBay,
+                          NgayCatCanh = c.NgayCatCanh,
+                          GioCatCanh = c.GioCatCanh,
+                          GiaNguoiLon = c.GiaNguoiLon,
+                          ThoiGianBay = c.ThoiGianBay,
+                          SanBay_CatCanh = chab.SanBay_CatCanh,
+                          SanBay_HaCanh = chab.SanBay_HaCanh
+
+
+                      }).ToList().FirstOrDefault();
+
+            ViewBag.CC = (from chab in chb
+                          join s in sb on chab.SanBay_CatCanh equals s.MaSanBay
+                          where chab.SanBay_CatCanh == detail.SanBay_CatCanh
+                          where chab.SanBay_HaCanh == detail.SanBay_HaCanh
+                          select new CB_Detail
+                          {
+                              SanBay_CatCanh = chab.SanBay_CatCanh,
+                              ViTri = s.ViTri
 
 
 
-            //var thongtincb = (from x in chuyenbay
-            //                   join y in changbay on x.machangbay equals y.machangbay
-            //                   join h in sanbay on y.sanbay_catcanh equals h.masanbay
-            //                   select new thongtincb
-            //                   {
-            //                       manguoidung = n.manguoidung,
-            //                       hoten = n.hoten,
-            //                       ngaydat = p.ngaydat,
-            //                       thanhtien = h.thanhtien,
+                          }).ToList().FirstOrDefault();
+            ViewBag.HC = (from chab in chb
+                          join s in sb on chab.SanBay_HaCanh equals s.MaSanBay
+                          where chab.SanBay_CatCanh == detail.SanBay_CatCanh
+                          where chab.SanBay_HaCanh == detail.SanBay_HaCanh
+                          select new CB_Detail
+                          {
+                              SanBay_HaCanh = chab.SanBay_HaCanh,
+                              ViTri = s.ViTri
 
-            //                   }).orderby(x => x.ngaydat);
 
-            if (cb == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.TTcb = new SelectList(model.ChangBays, "Cat_Canh", "Ha_Canh",cb.MaChangBay);
-            ViewBag.TTsb = new SelectList(model.SanBays, "Cat_Canh", "Ha_Canh",cb.MaChangBay);
-            return View(cb);
 
-           
+                          }).ToList().FirstOrDefault();
+            return View(detail);
         }
 
-        //public static List<string> tenkh = new List<string>();
-        public ActionResult KiemTraThongTin()
-        {
-           
-           
-            
 
+        [HttpPost]
+        public ActionResult ThongTinKhachHang()
+        {
             return View();
         }
 
+
+        //public static List<string> tenkh = new List<string>();
+        //[HttpGet]
+        //public ActionResult KiemTraThongTin(int id)
+        //{
+        //    CB_Detail detail = new CB_Detail();
+        //    List<ChuyenBay> cb = model.ChuyenBays.ToList();
+        //    List<ChangBay> chb = model.ChangBays.ToList();
+        //    List<SanBay> sb = model.SanBays.ToList();
+
+        //    detail = (from c in cb
+        //                      join chab in chb on c.MaChangBay equals chab.MaChangBay
+        //                      where c.MaChuyenBay == id
+        //                      select new CB_Detail
+        //                      {
+        //                          MaChuyenBay = c.MaChuyenBay,
+        //                          NgayCatCanh = c.NgayCatCanh,
+        //                          GioCatCanh = c.GioCatCanh,
+        //                          GiaNguoiLon = c.GiaNguoiLon,
+        //                          ThoiGianBay = c.ThoiGianBay,
+        //                          SanBay_CatCanh = chab.SanBay_CatCanh,
+        //                          SanBay_HaCanh = chab.SanBay_HaCanh
+
+
+        //                      }).ToList().FirstOrDefault();
+
+
+        //    return View(detail);
+        //}
+        
+
         [HttpPost]
 
-        public ActionResult KiemTraThongTin(string TenKH1, string DanhXung1, string TenKH2, string DanhXung2,string DanhXung3, string TenKH3, string SDT, string DiaChi, string ngaysinh, string MaHanhLy)
+        public ActionResult KiemTraThongTin(string TenKH1, string DanhXung1, string TenKH2, string DanhXung2, string DanhXung3, string TenKH3, string SDT, string DiaChi, string ngaysinh, string MaHanhLy, int id)
         {
+            CB_Detail detail = new CB_Detail();
+            List<ChuyenBay> cb = model.ChuyenBays.ToList();
+            List<ChangBay> chb = model.ChangBays.ToList();
+            List<SanBay> sb = model.SanBays.ToList();
+
+            detail = (from c in cb
+                      join chab in chb on c.MaChangBay equals chab.MaChangBay
+                      where c.MaChuyenBay == id
+                      select new CB_Detail
+                      {
+                          MaChuyenBay = c.MaChuyenBay,
+                          NgayCatCanh = c.NgayCatCanh,
+                          GioCatCanh = c.GioCatCanh,
+                          GiaNguoiLon = c.GiaNguoiLon,
+                          ThoiGianBay = c.ThoiGianBay,
+                          SanBay_CatCanh = chab.SanBay_CatCanh,
+                          SanBay_HaCanh = chab.SanBay_HaCanh
+
+
+                      }).ToList().FirstOrDefault();
+            ViewBag.CC = (from chab in chb
+                          join s in sb on chab.SanBay_CatCanh equals s.MaSanBay
+                          where chab.SanBay_CatCanh == detail.SanBay_CatCanh
+                          where chab.SanBay_HaCanh == detail.SanBay_HaCanh
+                          select new CB_Detail
+                          {
+                              SanBay_CatCanh = chab.SanBay_CatCanh,
+                              ViTri = s.ViTri
+
+
+
+                          }).ToList().FirstOrDefault();
+            ViewBag.HC = (from chab in chb
+                          join s in sb on chab.SanBay_HaCanh equals s.MaSanBay
+                          where chab.SanBay_CatCanh == detail.SanBay_CatCanh
+                          where chab.SanBay_HaCanh == detail.SanBay_HaCanh
+                          select new CB_Detail
+                          {
+                              SanBay_HaCanh = chab.SanBay_HaCanh,
+                              ViTri = s.ViTri
+
+
+
+                          }).ToList().FirstOrDefault();
+
+
+            //-------------------------------------------
             List<KhachHang> khach = new List<KhachHang>();
-            KhachHang KH1 = new KhachHang
-            {
-                TenKH = TenKH1,
-                DanhXung = DanhXung1,
-                SDT = SDT,
-                DiaChi = DiaChi
-            };
+            KhachHang KH1 = new KhachHang();
+            KH1.TenKH = TenKH1;
+            KH1.DanhXung = DanhXung1;
+            KH1.SDT = SDT;
+            KH1.DiaChi = DiaChi;
             khach.Add(KH1);
 
-            KhachHang KH2 = new KhachHang
-            {
-                TenKH = TenKH2,
-                DanhXung = DanhXung2,
-                DiaChi = DiaChi
-            };
+            KhachHang KH2 = new KhachHang();
+            KH2.TenKH = TenKH2;
+            KH2.DanhXung = DanhXung2;
+            KH2.DiaChi = DiaChi;
             khach.Add(KH2);
 
             KhachHang KH3 = new KhachHang();
@@ -174,6 +254,7 @@ namespace DatVeMayBay.Controllers
             ViewBag.kh = khach;
 
 
+
             APIHelper.SendPostRequest<KhachHang>("KhachHangs/", KH1);
             APIHelper.SendPostRequest<KhachHang>("KhachHangs/", KH2);
             APIHelper.SendPostRequest<KhachHang>("KhachHangs/", KH3);
@@ -184,22 +265,59 @@ namespace DatVeMayBay.Controllers
             phieuDat.MaChuyenBay = Convert.ToInt32(Request.Form["MaChuyenBay"]);
             phieuDat.MaLoaiVe = "MC";
             APIHelper.SendPostRequest<PhieuDatVe>("PhieuDatVes/", phieuDat);
-            return View();
+            return View(detail);
         }
-        //public ActionResult KiemTraThongTin()
-        //{
-        //    //List<KhachHang> khachs = model.KhachHangs.ToList();
-        //    //var khachhang = (from s in khachs
-        //    //                where s.TenKH == tenKhachHang
-        //    //                select s);
-        //    //ViewBag.ttKhachHang = khachhang;
-        //    return View();
-        //}
 
 
-        public ActionResult ThanhToan()
+        [HttpGet]
+        public ActionResult ThanhToan(int id)
         {
-            return View();
+            CB_Detail detail = new CB_Detail();
+            List<ChuyenBay> cb = model.ChuyenBays.ToList();
+            List<ChangBay> chb = model.ChangBays.ToList();
+            List<SanBay> sb = model.SanBays.ToList();
+
+            detail = (from c in cb
+                      join chab in chb on c.MaChangBay equals chab.MaChangBay
+                      where c.MaChuyenBay == id
+                      select new CB_Detail
+                      {
+                          MaChuyenBay = c.MaChuyenBay,
+                          NgayCatCanh = c.NgayCatCanh,
+                          GioCatCanh = c.GioCatCanh,
+                          GiaNguoiLon = c.GiaNguoiLon,
+                          ThoiGianBay = c.ThoiGianBay,
+                          SanBay_CatCanh = chab.SanBay_CatCanh,
+                          SanBay_HaCanh = chab.SanBay_HaCanh
+
+
+                      }).ToList().FirstOrDefault();
+            ViewBag.CC = (from chab in chb
+                          join s in sb on chab.SanBay_CatCanh equals s.MaSanBay
+                          where chab.SanBay_CatCanh == detail.SanBay_CatCanh
+                          where chab.SanBay_HaCanh == detail.SanBay_HaCanh
+                          select new CB_Detail
+                          {
+                              SanBay_CatCanh = chab.SanBay_CatCanh,
+                              ViTri = s.ViTri
+
+
+
+                          }).ToList().FirstOrDefault();
+            ViewBag.HC = (from chab in chb
+                          join s in sb on chab.SanBay_HaCanh equals s.MaSanBay
+                          where chab.SanBay_CatCanh == detail.SanBay_CatCanh
+                          where chab.SanBay_HaCanh == detail.SanBay_HaCanh
+                          select new CB_Detail
+                          {
+                              SanBay_HaCanh = chab.SanBay_HaCanh,
+                              ViTri = s.ViTri
+
+
+
+                          }).ToList().FirstOrDefault();
+
+            return View(detail);
         }
 
         public ActionResult XacNhanThanhToan()
@@ -223,5 +341,29 @@ namespace DatVeMayBay.Controllers
         {
             return View();
         }
+        public ActionResult LienHe1()
+        {
+            return View();
+        }
+        public ActionResult DiemDenYeuThich()
+        {
+            return View();
+        }
+
+        public ActionResult CamNangDL()
+        {
+            return View();
+        }
+
+        public ActionResult KM()
+        {
+            return View();
+        }
+        public ActionResult GioiThieu()
+        {
+            return View();
+        }
+
+
     }
 }

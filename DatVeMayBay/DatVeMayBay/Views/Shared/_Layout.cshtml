@@ -45,70 +45,108 @@
     <div id="loader" class="center"></div>
     <div id="wrapper">
         <!-- HEADER -->
-        <div id="header">
-            <div id="login-header">
-                <div class="" id="wp-menu-header">
-                    <div class="" id="menu-header">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <nav class="navbar navbar-light navbar-expand-xl">
-                                        <a href="index.html" class="navbar-brand">
-                                            <img src="../Asset/img/adada.png" alt="" style="height: 65px;">
-                                        </a>
-                                        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
-                                            <span class="navbar-toggler-icon"></span>
-                                        </button>
-                                        <div class="collapse navbar-collapse" id="main-nav">
-                                            <ul class="navbar-nav mr-auto" style="width: 740px;">
-                                                <li class="nav-item">
-                                                    <a href="~/Home/Index" class="nav-link">Trang chủ</a>
-                                                </li>
-
-                                                <li class="nav-item">
-                                                    <a href="/Home/ThanhToan" class="nav-link">Thanh toán vé</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="/Home/HoanDoiVe" class="nav-link">Hoán đổi vé</a>
-                                                </li>
-                                                <li class="nav-item hd">
-                                                    <a href="/Home/HuongDan?queue=Hướng dẫn đặt vé" class="nav-link">Hướng dẫn</a>
-                                                    <div class="dropdown-hd ">
-                                                        <ul class="list-unstyled ml-2">
-                                                            <li>
-                                                                <a href="/Home/HuongDan?queue=Hướng dẫn mua vé máy bay" class=" nav-link font-weight-bold">Hướng dẫn mua vé máy bay</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/Home/HuongDan?queue=Hướng dẫn thanh toán vé máy bay" class="nav-link font-weight-bold">Hướng dẫn thanh toán vé máy bay</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/Home/HuongDan?queue=Các trường hợp hành khách bị cấm bay" class="nav-link font-weight-bold">Các trường hợp hành khách bị cấm bay</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/Home/HuongDan?queue=Các quy định đặt vé" class="nav-link font-weight-bold">Các quy định đặt vé</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="/Home/HuongDan?queue=Các thông tin cần biết" class="nav-link font-weight-bold">Các thông tin cần biết</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="/Home/LienHe" class="nav-link">Liên hệ</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </nav>
-                                </div>
-                            </div>
+        <!-- Topbar Start KHANG HUYNH-->
+        <div class="container-fluid bg-dark pt-3 d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 text-center text-white text-lg-left mb-2 mb-lg-0">
+                        <div class="d-inline-flex align-items-center">
+                            <p style="color: #D9a404"><i class="fa fa-envelope mr-2" style="color:#D9a404"></i>Banana@airline.com</p>
+                            <p class="text-body px-3">|</p>
+                            <p style="color: #D9a404"><i class="fa fa-phone-alt mr-2" style="color: #D9a404"></i>+012 345 6789</p>
                         </div>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-right">
+
+                        @if (TempData["User"] != null)
+                        {
+                            <h5 class="card-title text-primary">Xin chào , @TempData["User"].ToString() </h5>
+
+                            <a href="~/Login/Login" class="btn btn-primary mt-2 ">
+                                Đăng xuất
+                            </a>
+                        }
+
+
+                        else
+                        { <div class="d-inline-flex align-items-center">
+                                <a class="text-primary px-3" href="https://www.facebook.com/Banana-Airlines-109535575252958">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a class="text-primary px-3" href="">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a class="text-primary px-3" href="">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a class="text-primary px-3" href="">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a class="text-primary px-3" href="">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                            <a href="~/Login/Login" class="btn btn-primary mt-2 ">
+                                Đăng nhập / Đăng ký
+                            </a>
+                        }
 
                     </div>
+
                 </div>
             </div>
         </div>
+        <!-- Topbar End -->
+        <!-- Navbar Start -->
+        <div class="container-fluid position-relative nav-bar p-0">
+            <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                    <a href="~/Home/Index" class="navbar-brand pl-2">
+                        <h1 class="m-0 text-primary"><span class="text-dark">BANANA</span> AIRLINES <img class="img-fluid w-10  bg-white " src="/Content/anh/logo2.jpg" alt=""></h1>
 
+                    </a>
+
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between px-0" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="~/Home/Gioithieu" class="nav-item nav-link strong ">Giới Thiệu</a>
+                            <a href="~/Home/LienHe" class="nav-item nav-link strong">Liên Hệ</a>
+                            <a href="~/Home/KhuyenMai" class="nav-item nav-link strong">KM</a>
+                            <div class="nav-item dropdown ">
+                                <a href="#" class="nav-link dropdown-toggle strong" data-toggle="dropdown">Khác</a>
+                                <div class="dropdown-menu ">
+                                    <a href="~/Home/Diemdenyeuthich" class="dropdown-item ">Điểm đến yêu thích</a>
+                                    <a href="~/Home/CamNangDL" class="dropdown-item">Cẩm nang du lịch</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
         <!-- END HEADER -->
+        <!-- Workflow @@==-->
+        <div class="container typeword">
+            <div class="my-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb rounded-0 px-0 py-2">
+                        <li class="breadcrumb-item" aria-current="page">
+                            <a href="./index"
+                               class="text-truncate text-info fondsize"
+                               title="@ViewBag.Title1">@ViewBag.Title1</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <a href="./gioithieu"
+                               class="cam-color fondsize"
+                               title="@ViewBag.Title2">@ViewBag.Title2</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
         <!--BODY-->
         <div>
             @RenderBody()
@@ -385,6 +423,7 @@
             </div>
         </div>
         <!-- END SUBCRIBE -->
+
         <div id="customer-comment" class="container mb-3">
             <div class="row">
                 <div class="col-md-12">
@@ -448,125 +487,123 @@
             </div>
         </div>
         <!-- FOOTER -->
-        <div id="wp-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <a href="">
-                            <img src="../Asset/img/adada.png" alt="">
-                        </a>
+        <!-- Footer start KHANG HUỲNH-->
+        <section id="end-page">
+            <div class="footer py-5 bg-dark">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-4">
+
+                            <a href="#" class="navbar-brand">
+                                <h2 class="m-0 text-primary"><span class="text-white">BANANA</span> AIRLINES  </h2>
+                            </a>
+                            <br> <br>
+                            <p class="text-white">
+                                Chúng tôi cam kết mang lại những trải nghiệm tuyệt vời đến các bạn.
+
+                            </p>
+
+                            <p class="text-white">
+                                Xin trân trọng cám ơn sự đồng hành của Qúy khách!
+                            </p>
+                            <div class="d-flex justify-content-start mt-4">
+                                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                                   style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                                   style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                                   style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                                   style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="ml-auto d-md-block d-none">
+
+
+                            <span class="ti-search search-icon text-light"></span>
+                        </div>
+
+
+
+
+                        <div class="col-md-3">
+                            <h4 class="text-white">Thông tin thêm</h4>
+                            <nav class="nav flex-column my-3 footer-web-info">
+                                <a style="color: #ffffff;"
+                                   href="#"
+                                   title="Điều khoản sử dụng">Điều khoản sử dụng</a>
+                                <a style="color: #ffffff;"
+                                   href="#"
+                                   title="Chính sách bảo mật">Chính sách bảo mật</a>
+                                <a style="color: #ffffff;"
+                                   href="#"
+                                   title="Hướng dẫn đặt vé">Hướng dẫn đặt vé</a>
+                                <a style="color: #ffffff;"
+                                   href="#"
+                                   title="Hướng dẫn đặt vé">Hướng dẫn thanh toán</a>
+                            </nav>
+                        </div>
+
+                        <div class="col-md-2">
+                            <h4 class="text-white">Hỗ trợ</h4>
+                            <nav class="nav flex-column my-3 footer-web-info">
+                                <a style="color: #ffffff;"
+                                   href="javascript:void 0"
+                                   title="Phản hồi">Phản hồi</a>
+                                <a style="color: #ffffff;"
+                                   href="#"
+                                   title="Câu hỏi thường gặp">Câu hỏi thường gặp</a>
+                                <a style="color: #ffffff;"
+                                   href="#"
+                                   title="Tư vấn hỗ trợ đặt vé">Tư vấn hỗ trợ đặt vé</a>
+                            </nav>
+                        </div>
+                        <div class="col-md-3">
+                            <h4 class="text-white">Liên hệ với chúng tôi</h4>
+                            <br>
+                            <div class="d-flex">
+                                <h4 class="fa fa-map-marker-alt text-primary"></h4>
+                                <div class="pl-3">
+                                    <h5 style="color: #D9a404;">Địa chỉ</h5>
+                                    <p style="color: #ffffff;">236, Hoàng Quốc Việt, Bắc Từ Liêm, Hà Nội</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <h4 class="fa fa-envelope text-primary"></h4>
+                                <div class="pl-3">
+                                    <h5 style="color: #D9a404;">Email</h5>
+                                    <p style="color: #ffffff;">customer@banana_airline.com</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <h4 class="fa fa-phone-alt text-primary"></h4>
+                                <div class="pl-3">
+                                    <h5 style="color: #D9a404;">Hotline</h5>
+                                    <p style="color: #ffffff;">+012 345 67890</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="footer_topic">
-                            Công ty TNHH Banana Airlines Việt Nam
-                        </div>
-                        <div class="footer_content">
-                            <ul>
-                                <li>Hà Nội: 024 7109 9999</li>
-                                <li>Hồ Chí Minh: 028 7109 9998</li>
-                                <li>Email: admin@322AirLines.vn</li>
-                                <li>Văn phòng Hà Nội: Tầng 11, Tòa Peakview, 36 Hoàng Cầu, Đống Đa</li>
-
-                                <li>Văn phòng HCM: Tầng 6, Tòa Nhà Central Park, 117 Nguyễn Du, Q.1</li>
-
-                                <br>
-                                <li>Số ĐKKD: 0105983269 cấp ngày 30/08/2012</li>
-                                <li>Nơi cấp: Sở kế hoạch và Đầu tư thành phố Hà Nội</li>
-                                <li>Lĩnh vực kinh doanh: Đại lý du lịch</li>
-                                <li>Địa chỉ tên miền: 322AirLines.vn</li>
-                                <br>
-                                <li>Tài khoản ngân hàng số: 19027493250015</li>
-                                <li>Techcombank Chi nhánh Hội Sở</li>
-                                <li>Chủ tài khoản: Công ty TNHH Banana Airlines Việt Nam</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="footer_topic text-uppercase">
-                            Quy định dành cho Website TMĐT Bán hàng – Dịch vụ đặt phòng
-                        </div>
-                        <div class="footer_content">
-                            <ul>
-                                <li><a href="">Chính sách và quy định chung</a></li>
-                                <li><a href="">Quy định về thanh toán</a></li>
-                                <li><a href="">Quy định về xác nhận thông tin đặt phòng</a></li>
-                                <li><a href="">Chính sách về hủy đặt phòng và hoàn trả tiền</a></li>
-                                <li><a href="">Chính sách bảo mật thông tin</a></li>
-                                <li>
-                                    <a href=""><img src="../Asset/img/logo-dathongbao-bocongthuong-w165.png" alt=""></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer_topic text-uppercase">
-                            Quy định cho sàn GDTMĐT – Dịch vụ đặt phòng và dịch vụ đặt tour du lịch
-                        </div>
-                        <div class="footer_content">
-                            <ul>
-                                <li><a href="">Quy chế hoạt động</a></li>
-                                <li><a href="">Chính sách bảo mật</a></li>
-                                <li><a href="">Quy trình giải quyết tranh chấp khiếu nại</a></li>
-
-                                <li>
-                                    <a href=""><img src="../Asset/img/logo-congthuong-w165.png" alt=""></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="footer_topic text-uppercase">
-                            Khách sạn tại Việt Nam
-                        </div>
-                        <div class="footer_content">
-                            <ul>
-                                <li><a href="">A</a> - <a href="">B</a> - <a href="">C</a> - <a href="">D</a> - <a href="">E</a> - <a href="">F</a> - <a href="">G</a> - <a href="">H</a> - <a href="">I</a> - <a href="">J</a> - <a href="">K</a> - <a href="">L</a>                                - <a href="">M</a> - <a href="">N</a> - <a href="">O</a> - <a href="">P</a> - <a href="">Q</a> - <a href="">R</a> - <a href="">S</a> - <a href="">T</a> - <a href="">U</a> - <a href="">V</a> - <a href="">W</a> - <a href="">X</a>                                - <a href="">Y</a> - <a href="">Z</a> - Khách sạn theo khu vực</li>
-
-                            </ul>
-                        </div>
-                        <div class="footer_topic">
-                            Khách hàng và đối tác
-                        </div>
-                        <div class="footer_content">
-                            <ul>
-
-                                <li><a href="">Tích lũy Vpoint</a></li>
-                                <li><a href="">Đăng nhập</a></li>
-                                <li><a href="">Đăng ký</a></li>
-                                <li><a href="">Đăng nhập HMS</a></li>
-                            </ul>
-                        </div>
-
-
-                        <div class="footer_topic text-uppercase">
-                            Tải Mobile app 322AirLines.vn
-                        </div>
-                        <div class="footer_content">
-                            <a href=""><img style="width: 130px" src="../Asset/img/btn-app-apple.png" alt=""></a>
-                            <a href=""><img style="width: 130px" src="../Asset/img/btn-app-android.png" alt=""></a>
-                        </div>
-                        <div class="footer_topic text-uppercase mt-4">
-                            Kết nối với 322AirLines.vn
-                        </div>
-                        <div class="footer_content">
-                            <a href=""><i style="font-size: 25px;margin-right: 30px;color: #4c66a4;" class="fab fa-facebook-square"></i></a>
-                            <a href=""><i style="font-size: 25px;margin-right: 30px;color: #D50F25;" class="fab fa-google-plus-square"></i></a>
-                            <a href=""><i style="font-size: 25px;margin-right: 30px;color: #bf3566;" class="fab fa-instagram"></i></a>
-                        </div>
-
-                    </div>
-
+                <hr color="white" align="right" size="5px">
+                <div class="container-fluid p-0 " style="color: #20211F;">
+                    <p class="text-center" style="color: #ffffff">
+                        <a>Công ty TNHH BANANA AIRLINE</a> <br>
+                        <a>Coppyright</a>&copy;<a class="text-primary font-weight-bold" href="#"> 2022 BANANA </a> <br>
+                    </p>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="about.html" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
         <!-- END FOOTER -->
     </div>
 
-    <p class="lunar-depart" data-toggle="popover" data-placement="right" tittle="Thông tin thêm" data-html="true" data-trigger="hover" data-popover-content="#info-date-depart">Âm lịch: Ngày 28/9/2020</p>
-    <p class="lunar-return" data-toggle="popover" data-placement="right" tittle="Thông tin thêm" data-html="true" data-trigger="hover" data-popover-content="#info-date-return">Âm lịch: Ngày 29/9/2020</p>
+    @*<p class="lunar-depart" data-toggle="popover" data-placement="right" tittle="Thông tin thêm" data-html="true" data-trigger="hover" data-popover-content="#info-date-depart">Âm lịch: Ngày 28/9/2020</p>
+    <p class="lunar-return" data-toggle="popover" data-placement="right" tittle="Thông tin thêm" data-html="true" data-trigger="hover" data-popover-content="#info-date-return">Âm lịch: Ngày 29/9/2020</p>*@
     <input type="hidden" id="ngaydi_flag" value="1">
     <input type="hidden" id="fl_type" value="1">
     <input type="hidden" id="currentMonth" value="11">

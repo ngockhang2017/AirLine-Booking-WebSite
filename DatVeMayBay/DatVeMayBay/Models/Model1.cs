@@ -29,6 +29,7 @@ namespace DatVeMayBay.Models
         public virtual List<SanBay> SanBays { get { return APIHelper.SendGetRequest<List<SanBay>>("SanBays?number"); } }
         public virtual List<ThongTinXuatHoaDon> ThongTinXuatHoaDons { get { return APIHelper.SendGetRequest<List<ThongTinXuatHoaDon>>("ThongTinXuatHoaDons?number"); } }
         public virtual List<Ve> Ves { get { return APIHelper.SendGetRequest<List<Ve>>("Ves?number"); } }
+        public virtual List<KhachHang_DatVe> KhachHang_DatVes { get { return APIHelper.SendGetRequest<List<KhachHang_DatVe>>("KhachHang_DatVes?number"); } }
 
     }
 }

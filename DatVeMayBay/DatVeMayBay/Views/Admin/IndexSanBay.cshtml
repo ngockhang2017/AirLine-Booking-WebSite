@@ -1,0 +1,66 @@
+﻿@*@model IEnumerable<Final_APP.Entities.SanBay>*@
+<!-- Thêm thư viện phân trang -->
+@*@model PagedList.IPagedList<Final_APP.Entities.SanBay>
+@using PagedList.Mvc;*@
+<!-- Kết thúc-->
+
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+
+<h2>Danh sách sân bay</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Mã sân bay
+        </th>
+        <th>
+            Tên sân bay
+        </th>
+        <th>
+            Vị trí
+        </th>
+        <th>
+            Khu vực
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaSanBay)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenSanBay)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ViTri)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.KhuVuc)
+    </td>
+    <td>
+        <a href="~/Admin/DeleteSanBay?id=@item.MaSanBay" class=" btn btn-outline-dark">
+            Xóa
+        </a>
+        <a href="~/Admin/EditSanBay?id=@item.MaSanBay" class=" btn btn-outline-dark">
+            Sửa
+        </a>
+    </td>
+</tr>}
+
+</table>
+<!-- Thêm mã phân trang -->
+<br />
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("LichSuDatVe",
+    new { page }),
+    new PagedListRenderOptions()
+    {
+        LiElementClasses = new List<string> { "page-link" }
+    })
+<!-- Kết thúc -->

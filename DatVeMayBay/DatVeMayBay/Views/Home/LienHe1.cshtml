@@ -1,0 +1,393 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS lib -->
+    <link rel="stylesheet" href="../Asset/css/reset.css">
+    <link rel="stylesheet" href="../Asset/css/global.css">
+    <link rel="stylesheet" href="../Asset/css/style.css">
+    <!-- Font-Awesome lib -->
+    <link rel="stylesheet" href="../lib/Fontawesome/css/all.css">
+    <!-- Bootstrap CSS + JS-->
+    <link rel="stylesheet" href="../lib/bootstrap-4.5.0-dist/css/bootstrap.css">
+    <script src="../lib/bootstrap-4.5.0-dist/js/jquery 3.5.0.js"></script>
+    <script src="../lib/bootstrap-4.5.0-dist/js/popper.min.js"></script>
+    <script src="../lib/bootstrap-4.5.0-dist/js/bootstrap.js"></script>
+    <!-- jQuery -->
+    <script src="../Asset/js/style.js"></script>
+
+    <title>Liên hệ</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url(/Asset/img/bg_col.png);
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 1920px 1024px;
+            background-attachment: fixed;
+            margin-top: 62px;
+            /* min-height: 2000px; */
+        }
+
+        #wrapper {
+            background: transparent;
+        }
+
+        #content {
+            margin-top: 95px;
+            background-color: white;
+        }
+
+        .step-queue {
+            margin-top: 2rem;
+        }
+    </style>
+
+    <style scoped="" type="text/css">
+        #comments,
+        .post_meta,
+        #blog-pager {
+            display: none
+        }
+
+        form {
+            color: #666
+        }
+
+        form.payforpal {
+            margin: auto;
+            text-align: center
+        }
+
+        #kontak-arlina {
+            margin: auto;
+            max-width: 640px
+        }
+
+        #ContactForm1_contact-form-name,
+        #ContactForm1_contact-form-email {
+            display: inline-block;
+            width: 45%;
+            height: auto;
+            background: #fff;
+            margin: 20px auto;
+            padding: 15px 12px;
+            color: #000;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            float: left;
+            transition: all 0.2s
+        }
+
+        #ContactForm1_contact-form-email {
+            float: right
+        }
+
+        #ContactForm1_contact-form-email-message {
+            width: 100%;
+            height: 175px;
+            margin: 5px 0 20px 0;
+            padding: 15px 12px;
+            background: #fff;
+            color: #000;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            resize: none;
+            transition: all 0.3s
+        }
+
+        #kontak-arlina br {
+            display: none
+        }
+
+        #ContactForm1_contact-form-name:focus,
+        #ContactForm1_contact-form-email:focus,
+        #ContactForm1_contact-form-email-message:focus {
+            outline: none;
+            background: #fff;
+            color: #000;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        #ContactForm1_contact-form-submit {
+            float: left;
+            background: #28a745;
+            color: #fff;
+            margin: auto;
+            vertical-align: middle;
+            cursor: pointer;
+            padding: 16px 20px;
+            font-size: 15px;
+            text-align: center;
+            letter-spacing: .5px;
+            border: 0;
+            width: 100%;
+            font-weight: 500;
+            transition: all .2s
+        }
+
+        #ContactForm1_contact-form-submit:hover,
+        #ContactForm1_contact-form-submit:focus {
+            background: #28a765;
+            color: #fff;
+        }
+
+        #ContactForm1_contact-form-error-message,
+        #ContactForm1_contact-form-success-message {
+            width: 100%;
+            margin-top: 35px
+        }
+
+        .contact-form-error-message-with-border {
+            background: #f47669;
+            border: 0;
+            box-shadow: none;
+            color: #fff;
+            padding: 5px 0;
+            border-radius: 3px
+        }
+
+        .contact-form-success-message {
+            background: #4fc3f7;
+            border: 0;
+            box-shadow: none;
+            color: #fff;
+            border-radius: 3px
+        }
+
+        img.contact-form-cross {
+            line-height: 40px;
+            margin-left: 5px
+        }
+
+        .post-body input {
+            width: initial
+        }
+    </style>
+    <script type="text/javascript">
+            //<![CDATA[ if (window.jstiming) window.jstiming.load.tick(‘widgetJsBefore’); //]]>
+    </script>
+    <script src="https://www.blogger.com/static/v1/widgets/2271878333-widgets.js" type="text/javascript"></script>
+    <script type=”text/javascript”>
+        //<![CDATA[ if (typeof(BLOG_attachCsiOnload) != ‘undefined’ && BLOG_attachCsiOnload != null) { window[‘blogger_templates_experiment_id’] = “templatesV1”;window[‘blogger_blog_id’] = ‘5996935446171071211‘;BLOG_attachCsiOnload(”); }_WidgetManager._Init(‘//www.blogger.com/rearrange?blogIDx3d5996935446171071211‘,’//www.tranbadat.com/’,’5996935446171071211‘); _WidgetManager._RegisterWidget(‘_ContactFormView’, new _WidgetInfo(‘ContactForm1’, ‘footer1’, null, document.getElementById(‘ContactForm1’), {‘contactFormMessageSendingMsg’: ‘Đang gửi…’, ‘contactFormMessageSentMsg’: ‘Tin nhắn của bạn đã được gửi.’, ‘contactFormMessageNotSentMsg’: ‘Tin nhắn của bạn chưa được gửi. Vui lòng thử lại sau.’, ‘contactFormInvalidEmailMsg’: ‘Vui lòng thêm địa chỉ email hợp lệ.’, ‘contactFormEmptyMessageMsg’: ‘Nội dung không được để trống.’, ‘title’: ‘Mẫu liên hệ’, ‘blogId’: ‘5996935446171071211‘, ‘contactFormNameMsg’: ‘Tên’, ‘contactFormEmailMsg’: ‘Email’, ‘contactFormMessageMsg’: ‘Nội dung’, ‘contactFormSendMsg’: ‘Gửi tin nhắn’, ‘submitUrl’: ‘https://www.blogger.com/contact-form.do’}, ‘displayModeFull’)); //]]>
+    </script>
+    <div id="loader" class="center"></div>
+    <div id="wrapper">
+        <!-- HEADER -->
+        <div id="header">
+            <div id="login-header">
+                <div class="" id="wp-menu-header">
+                    <div class="" id="menu-header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <nav class="navbar navbar-light navbar-expand-xl">
+                                        <a href="index.html" class="navbar-brand">
+                                            <img src="../Asset/img/adada.png" alt="" style="height: 65px;">
+                                        </a>
+                                        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="main-nav">
+                                            <ul class="navbar-nav mr-auto" style="width: 740px;">
+                                                <li class="nav-item">
+                                                    <a href="Index.html" class="nav-link">Trang chủ</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="timkiem.html" class="nav-link">Vé máy bay</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="payment.html" class="nav-link">Thanh toán vé</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="Hoan-Doi-Ve.html" class="nav-link">Hoán đổi vé</a>
+                                                </li>
+                                                <li class="nav-item hd">
+                                                    <a href="HuongDan.html?queue=Hướng dẫn đặt vé" class="nav-link">Hướng dẫn</a>
+                                                    <div class="dropdown-hd ">
+                                                        <ul class="list-unstyled ml-2">
+                                                            <li>
+                                                                <a href="HuongDan.html?queue=Hướng dẫn mua vé máy bay" class=" nav-link font-weight-bold">Hướng dẫn mua vé máy bay</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="HuongDan.html?queue=Hướng dẫn thanh toán vé máy bay" class="nav-link font-weight-bold">Hướng dẫn thanh toán vé máy bay</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="HuongDan.html?queue=Các trường hợp hành khách bị cấm bay" class="nav-link font-weight-bold">Các trường hợp hành khách bị cấm bay</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="HuongDan.html?queue=Các quy định đặt vé" class="nav-link font-weight-bold">Các quy định đặt vé</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="HuongDan.html?queue=Các thông tin cần biết" class="nav-link font-weight-bold">Các thông tin cần biết</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="lien-he.html" class="nav-link">Liên hệ</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END HEADER -->
+        <div id="content" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="font-weight-bold text-success mt-3">Liên hệ với chúng tôi</h4>
+                    <div class="separator" style="clear: both; text-align: center;">
+                        <!--<img alt='Liên hệ Trần Bá Đạt' height='230' src="../Asset/img/adada.png" style="border-image: none; border: medium;" title="Liên hệ Trần Bá Đạt" width="640" />-->
+                    </div>
+                    Chúng tôi sẽ rất vui lòng nếu nhận được sự phản hồi của các bạn. Nếu có gì chưa chính xác, hay nếu muốn đề xuất nội dung được viết trên <a href="../pages/index.html">Banana Airlines.vn</a> thì hãy gửi yêu cầu đến chúng tôi. Chúng tôi sẽ
+                    cố gắng hỗ trợ các bạn một cách nhanh nhất và tốt nhất. Cảm ơn!
+                    <br />
+                    <form id="kontak-arlina" name="contact-form">
+                        <input id="ContactForm1_contact-form-name" name="name" placeholder="Tên *" size="30" type="text" value="" />
+                        <input id="ContactForm1_contact-form-email" name="email" placeholder="Email *" size="30" type="text" value="" />
+                        <textarea cols="25" id="ContactForm1_contact-form-email-message" name="email-message" placeholder="Nội dung *" rows="5"></textarea>
+                        <input id="ContactForm1_contact-form-submit" type="button" value="Gửi tin nhắn" />
+                        <br />
+                        <div style="max-width: 100%; text-align: center; width: 100%;">
+                            <div id="ContactForm1_contact-form-error-message"> </div>
+                            <div id="ContactForm1_contact-form-success-message"> </div>
+                        </div>
+                    </form>
+                    <br />
+                </div>
+            </div>
+
+        </div>
+        <!-- FOOTER -->
+        <div id="wp-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="">
+                            <img src="../Asset/img/adada.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer_topic">
+                            Công ty TNHH Banana Airlines Việt Nam
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li>Hà Nội: 024 7109 9999</li>
+                                <li>Hồ Chí Minh: 028 7109 9998</li>
+                                <li>Email: admin@Banana Airlines.vn</li>
+                                <li>Văn phòng Hà Nội: Tầng 11, Tòa Peakview, 36 Hoàng Cầu, Đống Đa</li>
+
+                                <li>Văn phòng HCM: Tầng 6, Tòa Nhà Central Park, 117 Nguyễn Du, Q.1</li>
+
+                                <br>
+                                <li>Số ĐKKD: 0105983269 cấp ngày 30/08/2012</li>
+                                <li>Nơi cấp: Sở kế hoạch và Đầu tư thành phố Hà Nội</li>
+                                <li>Lĩnh vực kinh doanh: Đại lý du lịch</li>
+                                <li>Địa chỉ tên miền: Banana Airlines.vn</li>
+                                <br>
+                                <li>Tài khoản ngân hàng số: 19027493250015</li>
+                                <li>Techcombank Chi nhánh Hội Sở</li>
+                                <li>Chủ tài khoản: Công ty TNHH Banana Airlines Việt Nam</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer_topic text-uppercase">
+                            Quy định dành cho Website TMĐT Bán hàng – Dịch vụ đặt phòng
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li><a href="">Chính sách và quy định chung</a></li>
+                                <li><a href="">Quy định về thanh toán</a></li>
+                                <li><a href="">Quy định về xác nhận thông tin đặt phòng</a></li>
+                                <li><a href="">Chính sách về hủy đặt phòng và hoàn trả tiền</a></li>
+                                <li><a href="">Chính sách bảo mật thông tin</a></li>
+                                <li>
+                                    <a href=""><img src="../Asset/img/logo-dathongbao-bocongthuong-w165.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer_topic text-uppercase">
+                            Quy định cho sàn GDTMĐT – Dịch vụ đặt phòng và dịch vụ đặt tour du lịch
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li><a href="">Quy chế hoạt động</a></li>
+                                <li><a href="">Chính sách bảo mật</a></li>
+                                <li><a href="">Quy trình giải quyết tranh chấp khiếu nại</a></li>
+
+                                <li>
+                                    <a href=""><img src="../Asset/img/logo-congthuong-w165.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer_topic text-uppercase">
+                            Khách sạn tại Việt Nam
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+                                <li><a href="">A</a> - <a href="">B</a> - <a href="">C</a> - <a href="">D</a> - <a href="">E</a> - <a href="">F</a> - <a href="">G</a> - <a href="">H</a> - <a href="">I</a> - <a href="">J</a> - <a href="">K</a> - <a href="">L</a>                                    - <a href="">M</a> - <a href="">N</a> - <a href="">O</a> - <a href="">P</a> - <a href="">Q</a> - <a href="">R</a> - <a href="">S</a> - <a href="">T</a> - <a href="">U</a> - <a href="">V</a> - <a href="">W</a> - <a href="">X</a>                                    - <a href="">Y</a> - <a href="">Z</a> - Khách sạn theo khu vực</li>
+
+                            </ul>
+                        </div>
+                        <div class="footer_topic">
+                            Khách hàng và đối tác
+                        </div>
+                        <div class="footer_content">
+                            <ul>
+
+                                <li><a href="">Tích lũy Vpoint</a></li>
+                                <li><a href="">Đăng nhập</a></li>
+                                <li><a href="">Đăng ký</a></li>
+                                <li><a href="">Đăng nhập HMS</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="footer_topic text-uppercase">
+                            Tải Mobile app Banana Airlines.vn
+                        </div>
+                        <div class="footer_content">
+                            <a href=""><img style="width: 130px" src="../Asset/img/btn-app-apple.png" alt=""></a>
+                            <a href=""><img style="width: 130px" src="../Asset/img/btn-app-android.png" alt=""></a>
+                        </div>
+                        <div class="footer_topic text-uppercase mt-4">
+                            Kết nối với Banana Airlines.vn
+                        </div>
+                        <div class="footer_content">
+                            <a href=""><i style="font-size: 25px;margin-right: 30px;color: #4c66a4;" class="fab fa-facebook-square"></i></a>
+                            <a href=""><i style="font-size: 25px;margin-right: 30px;color: #D50F25;" class="fab fa-google-plus-square"></i></a>
+                            <a href=""><i style="font-size: 25px;margin-right: 30px;color: #bf3566;" class="fab fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <a id="back-to-top" href="#" class="btn btn-danger btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+        <!-- END FOOTER -->
+</body>
+
+</html>
+

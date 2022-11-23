@@ -1,0 +1,87 @@
+﻿@*@model IEnumerable<Final_APP.Entities.HoaDon>*@
+@*@model PagedList.IPagedList<Final_APP.Entities.HoaDon>
+@using PagedList.Mvc;*@
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+
+<!-- /Search -->
+<form action="~/Admin/IndexHoaDon" method="post">
+
+    <div class="form-group">
+        <div class="col-md-10 py-2">
+            <input class="form-control text-box single-line" type="text" name="timkiem"
+                   value="@ViewBag.timkiem" placeholder="Search...">
+
+        </div>
+    </div>
+    @*    <div class="form-group">
+            <div class="col-md-offset-2 col-md-10 py-4">
+                <input type="submit" value="Tìm kiếm" class="btn btn-outline-info">
+            </div>
+        </div>*@
+
+</form>
+<br />
+
+<h2>Danh sách hóa đơn</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            STT
+        </th>
+        <th>
+            Mã hóa đơn
+        </th>
+        <th>
+            Ngày xuất đơn
+        </th>
+        <th>
+            Thành tiền
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaHoaDon)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NgayXuatDon)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ThanhTien)
+    </td>
+    <td>
+        <a href="~/Admin/DetailHoaDon?id=@item.MaHoaDon" class="btn btn-outline-dark">
+            Chi tiết
+        </a>
+    </td>
+</tr>}
+
+</table>
+<!-- Thêm mã phân trang -->
+<br />
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("UserAccount",
+    new { page }),
+    new PagedListRenderOptions()
+    {
+        LiElementClasses = new List<string> { "page-link" }
+    })
+<!-- Kết thúc -->
+
+<script src="~/assets/js/JavaScript.js"></script>
+<script>var tables = document.getElementsByTagName('table');
+    var table = tables[tables.length - 1];
+    var rows = table.rows;
+    for (var i = 1, td; i < rows.length; i++) {
+        td = document.createElement('td');
+        td.appendChild(document.createTextNode(i));
+        rows[i].insertBefore(td, rows[i].firstChild);
+    }</script>
