@@ -1,6 +1,6 @@
 ﻿@*@model IEnumerable<Final_APP.Entities.KhuyenMai>*@
-@*@model PagedList.IPagedList<Final_APP.Entities.KhuyenMai>
-@using PagedList.Mvc;*@
+@model PagedList.IPagedList<DatVeMayBay.Models.KhuyenMai>
+@using PagedList.Mvc;
 @{ ViewBag.Title = "IndexKhuyenMai";
     Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
 
@@ -17,6 +17,9 @@
         </th>
         <th>
             Tên khuyến mãi
+        </th>
+        <th>
+            Thông tin khuyến mãi
         </th>
         <th>
             Phần trăm khuyến mãi
@@ -39,9 +42,13 @@
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.TenKhuyenMai)
+
     </td>
     <td>
-        @(((double)item.PhanTramSale * 100)) %
+        @item.ThongTinChiTiet
+    </td>
+    <td>
+        @(item.PhanTramSale) %
     </td>
     <td>
         @item.ThoiGianBD
@@ -50,7 +57,7 @@
         @item.ThoiGianKT
     </td>
     <td>
-        <button type="button" class="btn btn-outline-danger" title="Delete" id="@item.MaKhuyenMai" onclick="Delete('@item.MaKhuyenMai')">Xóa</button>
+        <button type="button" class="btn btn-outline-danger" title="Xóa" id="@item.MaKhuyenMai" onclick="Delete('@item.MaKhuyenMai')">Xóa</button>
     </td>
 </tr>}
 

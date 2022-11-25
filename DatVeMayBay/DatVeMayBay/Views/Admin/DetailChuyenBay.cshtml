@@ -1,7 +1,7 @@
 ﻿@model DatVeMayBay.Models.ChuyenBay
 
 @{ ViewBag.Title = "Details";
-                Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
 
 <h2>Chi tiết chuyến bay</h2>
 
@@ -18,11 +18,11 @@
         </dd>
 
         <dt>
-            Thời gian bay
+            Giờ Cất Cánh
         </dt>
 
         <dd>
-            @Model.TGbay
+            @Model.GioCatCanh
         </dd>
 
         <dt>
@@ -31,15 +31,15 @@
 
         <dd>
 
-            @Model.NgayBay
+            @Model.NgayCatCanh
         </dd>
 
         <dt>
-            Giờ bay
+            Thời gian bay
         </dt>
 
         <dd>
-            @Model.GioBay
+            @Model.ThoiGianBay
         </dd>
 
         <dt>
@@ -47,7 +47,7 @@
         </dt>
 
         <dd>
-            @Model.Gia
+            @Model.GiaNguoiLon
         </dd>
 
         <dt>
@@ -55,15 +55,15 @@
         </dt>
 
         <dd>
-            @(((double)Model.Gia * Model.SaleTreEm))
+            @Model.GiaTreEm
         </dd>
 
         <dt>
-            Giá vé em bé
+            Loại máy bay
         </dt>
 
         <dd>
-            @(((double)Model.Gia * Model.SaleEmBe))
+            @Model.LoaiMayBay
         </dd>
 
         <dt>
@@ -73,7 +73,7 @@
         <dd>
             @foreach (var item in Model.ChangBay.SanBay_CatCanh)
             {
-@item            }
+                @item       }
         </dd>
         <dt>
             Sân bay hạ cánh
@@ -81,7 +81,7 @@
         <dd>
             @foreach (var item in Model.ChangBay.SanBay_HaCanh)
             {
-@item            }
+                @item       }
         </dd>
 
     </dl>

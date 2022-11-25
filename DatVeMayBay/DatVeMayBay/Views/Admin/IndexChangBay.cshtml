@@ -1,6 +1,6 @@
 ﻿@*@model IEnumerable<Final_APP.Entities.ChangBay>*@
-@*@model PagedList.IPagedList<Final_APP.Entities.ChangBay>
-@using PagedList.Mvc;*@
+@model PagedList.IPagedList<DatVeMayBay.Models.ChangBay>
+@using PagedList.Mvc;
 @{ ViewBag.Title = "IndexChangBay";
     Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
 
@@ -10,7 +10,6 @@
     <thead>
         <tr>
             <th scope="col">STT</th>
-            <th scope="col">Mã chặng bay</th>
             <th scope="col">Sân bay cất cánh</th>
             <th scope="col">Sân bay hạ cánh</th>
 
@@ -19,18 +18,18 @@
     <tbody>
         @foreach (var item in Model)
         {
-<tr>
-    <td>@item.MaChangBay</td>
-    <td>@item.SanBay_CatCanh</td>
-    <td>@item.SanBay_HaCanh</td>
-    <td>
-        <a href="~/Admin/EditChangBay?id=@item.MaChangBay" class=" btn btn-outline-dark">
-            Sửa
-        </a>
-    </td>
+            <tr>
 
-</tr>
-}
+                <td>@item.SanBay_CatCanh</td>
+                <td>@item.SanBay_HaCanh</td>
+                <td>
+                    <a href="~/Admin/EditChangBay?id=@item.MaChangBay" class=" btn btn-outline-dark">
+                        Sửa
+                    </a>
+                </td>
+
+            </tr>
+        }
 
     </tbody>
 </table>
@@ -38,18 +37,18 @@
 <!-- Thêm mã phân trang -->
 <br />
 Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
-
-@*@Html.PagedListPager(Model, page => Url.Action("IndexChangBay",
+@Html.PagedListPager(Model, page => Url.Action("IndexChangBay",
     new { page }),
     new PagedListRenderOptions()
     {
         LiElementClasses = new List<string> { "page-link" }
-    })*@
+    })
 <!-- Kết thúc -->
 
 <br />
 <script src="~/assets/js/JavaScript.js"></script>
-<script>var tables = document.getElementsByTagName('table');
+<script>
+    var tables = document.getElementsByTagName('table');
     var table = tables[tables.length - 1];
     var rows = table.rows;
     for (var i = 1, td; i < rows.length; i++) {
@@ -69,18 +68,27 @@ Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.Page
     <tbody>
         @foreach (var i in ViewBag.SanBay)
         {
-<tr>
-    <td>@i.MaSanBay</td>
-    <td class="px-3">@i.TenSanBay</td>
-</tr>
-}
+            <tr>
+                <td>@i.MaSanBay</td>
+                <td class="px-3">@i.TenSanBay</td>
+            </tr>
+        }
 
     </tbody>
 </table>
+<br />
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("IndexChangBay",
+    new { page }),
+    new PagedListRenderOptions()
+    {
+        LiElementClasses = new List<string> { "page-link" }
+    })
 
 
 <script src="~/assets/js/JavaScript.js"></script>
-<script>var tables = document.getElementsByTagName('table');
+<script>
+    var tables = document.getElementsByTagName('table');
     var table = tables[tables.length - 1];
     var rows = table.rows;
     for (var i = 1, td; i < rows.length; i++) {
@@ -88,3 +96,4 @@ Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.Page
         td.appendChild(document.createTextNode(i));
         rows[i].insertBefore(td, rows[i].firstChild);
     }</script>
+

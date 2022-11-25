@@ -1,0 +1,58 @@
+﻿@model DatVeMayBay.Models.Admin
+@{ ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+@using (Html.BeginForm("Register", "Login", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true) @*<form method="post" action="/Login/Register">*@
+<form>
+    <div class="mb-3">
+        <label for="hoten" class="form-label">Họ và Tên</label>
+        @*@Html.TextBoxFor(m => m.TenDangNhap, new { @class = "form-control", @placeholder = "Vui lòng nhập tên đăng nhập" })
+            @Html.ValidationMessageFor(m => m.TenDangNhap, "", new { @class = "badge badge-danger" })*@
+        <input type="text" name="hoten" class="form-control" id="hoten" value="@ViewBag.tendn" />
+    </div>
+    <div class="mb-3">
+        <label for="tendn" class="form-label">Tên đăng nhập</label>
+        @*@Html.TextBoxFor(m => m.TenDangNhap, new { @class = "form-control", @placeholder = "Vui lòng nhập tên đăng nhập" })
+            @Html.ValidationMessageFor(m => m.TenDangNhap, "", new { @class = "badge badge-danger" })*@
+        <input type="text" name="tendn" class="form-control" id="tendn" value="@ViewBag.tendn" />
+    </div>
+    <div class="mb-3 form-password-toggle">
+        <label class="form-label" for="password1">Mật khẩu</label>
+        <div class="input-group input-group-merge">
+            @*@Html.PasswordFor(m => m.MatKhau, new { @class = "form-control", @placeholder = "*******************" })
+                @Html.ValidationMessageFor(m => m.MatKhau, "", new { @class = "badge badge-danger" })*@
+            <input type="password" name="mk1" class="form-control" id="password1" value="@ViewBag.mk1" />
+            <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+        </div>
+    </div>
+    <div class="mb-3 form-password-toggle">
+        <label class="form-label" for="password2"> Nhập lại mật khẩu</label>
+        <div class="input-group input-group-merge">
+            @*@Html.PasswordFor(m => m.MatKhau, new { @class = "form-control", @placeholder = "Confim Password" })
+                @Html.ValidationMessageFor(m => m.MatKhau, "", new { @class = "badge badge-danger" })*@
+            <input type="password" name="mk2" class="form-control" id="password2" value="@ViewBag.mk2" />
+            <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
+            <label class="form-check-label" for="terms-conditions">
+                I agree to
+                <a href="javascript:void(0);">privacy policy & terms</a>
+            </label>
+        </div>
+    </div>
+    <button class="btn btn-primary d-grid w-100">Sign up</button>
+</form>
+}
+<p class="text-center">
+    <span>Already have an account?</span>
+    <a href="auth-login-basic.html">
+        <span>Sign in instead</span>
+    </a>
+</p>

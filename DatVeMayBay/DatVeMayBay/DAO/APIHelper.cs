@@ -51,35 +51,51 @@ namespace DatVeMayBay.Dao
             return objectOut;
         }
         // PUT
-        public static T SendPutRequest<T>(string path, T p)
+        public static T SendPutRequest<T>(string path, int id, T p)
         {
             T objectOut = default(T);
             using (var client = new HttpClient())
             {
-                var data = JsonConvert.SerializeObject(p);
+                //var data = JsonConvert.SerializeObject(p);
                 client.BaseAddress = new Uri(restfull);
-                var res = client.PutAsync(path + data, null).Result;
+                var res = client.PutAsJsonAsync(path + "?id=" + id.ToString(), p).Result;
                 if (res.IsSuccessStatusCode)
                 {
                     var result = res.Content.ReadAsStringAsync().Result;
-                    objectOut = JsonConvert.DeserializeObject<T>(result);
+                    //objectOut = JsonConvert.DeserializeObject<T>(result);
                     return objectOut;
                 }
             }
             return objectOut;
         }
         // DELETE
-        public static bool SendDeleteRequest(string path, int id)
+        public static bool SendDeleteRequest(string path, int t)
         {
             bool objectOut = false;
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(restfull);
-                var res = client.DeleteAsync(path + "?id=" + id).Result;
+                var res = client.DeleteAsync(path + "?id=" + t.ToString()).Result;
                 if (res.IsSuccessStatusCode)
                 {
                     var result = res.Content.ReadAsStringAsync().Result;
-                    objectOut = JsonConvert.DeserializeObject<bool>(result);
+                    //objectOut = JsonConvert.DeserializeObject<bool>(result);
+                    return objectOut;
+                }
+            }
+            return objectOut;
+        }
+        public static bool SendDeleteRequestString(string path, string t)
+        {
+            bool objectOut = false;
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(restfull);
+                var res = client.DeleteAsync(path + "?id=" + t).Result;
+                if (res.IsSuccessStatusCode)
+                {
+                    var result = res.Content.ReadAsStringAsync().Result;
+                    //objectOut = JsonConvert.DeserializeObject<bool>(result);
                     return objectOut;
                 }
             }

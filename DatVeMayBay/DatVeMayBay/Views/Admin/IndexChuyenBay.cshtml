@@ -1,6 +1,6 @@
 ﻿@*@model IEnumerable<Final_APP.Entities.ChuyenBay>*@
 <!-- Thêm thư viện phân trang -->
-@model PagedList.IPagedList<Final_APP.Entities.ChuyenBay>
+@model PagedList.IPagedList<DatVeMayBay.Models.ChuyenBay>
 @using PagedList.Mvc;
 <!-- Kết thúc-->
 @{ ViewBag.Title = "IndexChangBay";
@@ -13,10 +13,9 @@
     <thead>
         <tr>
             <th scope="col">STT</th>
-            <th scope="col">Mã chuyến bay</th>
             <th scope="col">Ngày bay</th>
+            <th scope="col">Giờ cất cánh</th>
             <th scope="col">Thời gian bay</th>
-            <th scope="col">Giờ bay</th>
             <th scope="col">Giá vé</th>
 
 
@@ -25,28 +24,29 @@
     <tbody>
         @foreach (var item in Model)
         {
-<tr>
-    <td>@item.MaChuyenBay</td>
-    <td>@item.NgayBay.ToString().Split(' ')[0]</td>
-    <td>@item.TGbay</td>
-    <td>@item.GioBay</td>
-    <td>@item.Gia</td>
+            <tr>
+
+                <td>@item.NgayCatCanh.ToString().Split(' ')[0]</td>
+                <td>@item.GioCatCanh</td>
+                <td>@item.ThoiGianBay</td>
+                <td>@item.GiaNguoiLon</td>
 
 
-    <td>
-        <a href="~/Admin/DetailChuyenBay?id=@item.MaChuyenBay" class="btn btn-outline-dark">
-            Chi tiết
-        </a>
-        <a href="~/Admin/EditChuyenBay?id=@item.MaChuyenBay" class="btn btn-outline-dark">
-            Sửa
-        </a>
+                <td>
+                    <a href="~/Admin/DetailChuyenBay?id=@item.MaChuyenBay" class="btn btn-outline-dark">
+                        Chi tiết
+                    </a>
+                    <a href="~/Admin/EditChuyenBay?id=@item.MaChuyenBay" class="btn btn-outline-dark">
+                        Sửa
+                    </a>
 
-        <button type="button" class="btn btn-outline-danger" title="Delete" id="@item.MaChuyenBay" onclick="Delete('@item.MaChuyenBay')">Xóa</button>
+                    <button type="button" class="btn btn-outline-danger" title="Delete" id="@item.MaChuyenBay" onclick="Delete('@item.MaChuyenBay')">Xóa</button>
 
-    </td>
+                </td>
 
 
-</tr>}
+            </tr>
+}
 
     </tbody>
 </table>
@@ -54,20 +54,21 @@
 
 <!-- Thêm mã phân trang -->
 <br />
-@*Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
 
 @Html.PagedListPager(Model, page => Url.Action("IndexChuyenBay",
     new { page }),
     new PagedListRenderOptions()
     {
         LiElementClasses = new List<string> { "page-link" }
-    })*@
+    })
 <!-- Kết thúc -->
 
 
 
 <script src="~/assets/js/JavaScript.js"></script>
-<script>var tables = document.getElementsByTagName('table');
+<script>
+    var tables = document.getElementsByTagName('table');
     var table = tables[tables.length - 1];
     var rows = table.rows;
     for (var i = 1, td; i < rows.length; i++) {
@@ -113,7 +114,7 @@
                             Swal.fire({
                                 icon: 'success',
                                 title: 'SUCCESSFUL',
-                                timer: 2000,
+                                timer: 20000,
                                 text: 'Delete successfully!',
                             })
                             setTimeout(window.location.reload(), 10000);

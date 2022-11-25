@@ -1,8 +1,9 @@
 ﻿<!-- Thêm thư viện phân trang -->
-@*@model PagedList.IPagedList<Final_APP.Entities.TaiKhoan>
-@using PagedList.Mvc;*@
+@model PagedList.IPagedList<DatVeMayBay.Models.KhachHang>
+@using PagedList.Mvc;
+
 <!-- Kết thúc-->
-@*@model List<Final_APP.Entities.TaiKhoan>*@
+@*@model IList<DatVeMayBay.Models.KhachHang>*@
 
 @{ ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
@@ -19,22 +20,21 @@
     <tbody class=" = " py-2">
         @foreach (var item in Model)
         {
-            if (item.Quyen == false)
-            {
-<tr>
-    <td>@item.TenDangNhap</td>
 
-    <td>@item.MatKhau</td>
-    <td>
-        <a href="~/Admin/DeleteAccount?TenDangNhap=@item.TenDangNhap" class="btn btn-outline-dark">
-            Xóa
-        </a>
-    </td>
-</tr>
-}
+            <tr>
+                <td>@item.TaiKhoan</td>
+
+                <td>@item.MatKhau</td>
+                <td>
+                    <a href="~/Admin/DeleteAccount?id=@item.MaKH" class="btn btn-outline-dark">
+                        Xóa
+                    </a>
+                </td>
+            </tr>
 
 
-}
+
+        }
 
     </tbody>
 </table>
@@ -43,16 +43,17 @@
 <br />
 Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
 
-@*@Html.PagedListPager(Model, page => Url.Action("UserAccount",
-    new { page }),
-    new PagedListRenderOptions()
-    {
-        LiElementClasses = new List<string> { "page-link" }
-    })*@
+@Html.PagedListPager(Model, page => Url.Action("UserAccount",
+  new { page }),
+  new PagedListRenderOptions()
+  {
+      LiElementClasses = new List<string> { "page-link" }
+  })
 <!-- Kết thúc -->
 <!-- Kết thúc -->
 <script src="~/assets/js/JavaScript.js"></script>
-<script>var tables = document.getElementsByTagName('table');
+<script>
+    var tables = document.getElementsByTagName('table');
     var table = tables[tables.length - 1];
     var rows = table.rows;
     for (var i = 1, td; i < rows.length; i++) {

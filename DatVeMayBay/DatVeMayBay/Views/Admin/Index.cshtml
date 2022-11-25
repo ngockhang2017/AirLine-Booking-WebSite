@@ -17,7 +17,11 @@
                             <div class="card-body">
                                 @if (Session["Admin"] != null)
                                 {
-                    <h5 class="card-title text-primary">Chào mừng trở lại, @Session["Admin"].ToString() </h5>}
+                                    <h5 class="card-title text-primary">Chào mừng trở lại, @Session["Admin"].ToString() </h5>}
+                                @if (TempData["Hoten"] != null)
+                                {
+                                <h5 class="card-title text-primary">Chào mừng trở lại, @Session["Admin"].ToString() </h5>}
+                                }
                                 <p class="mb-4">
 
                                 </p>

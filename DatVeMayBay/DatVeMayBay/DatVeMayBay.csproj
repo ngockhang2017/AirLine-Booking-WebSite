@@ -52,9 +52,17 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Services" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -143,6 +151,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="DAO\APIHelper.cs" />
     <Compile Include="DAO\ChangBayDAO.cs" />
     <Compile Include="DAO\ChuyenBayDAO.cs" />
@@ -532,6 +541,7 @@
     <Content Include="Content\dataTables.bootstrap.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\metisMenu.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\sb-admin-2.css" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
@@ -1691,6 +1701,9 @@
     <Content Include="Views\Admin\IndexKhuyenMai.cshtml" />
     <Content Include="Views\Admin\IndexNganHang.cshtml" />
     <Content Include="Views\Admin\IndexSanBay.cshtml" />
+    <Content Include="Views\Shared\_LoginLayout.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

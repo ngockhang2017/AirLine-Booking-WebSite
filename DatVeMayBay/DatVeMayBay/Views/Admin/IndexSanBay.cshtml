@@ -1,7 +1,7 @@
 ﻿@*@model IEnumerable<Final_APP.Entities.SanBay>*@
 <!-- Thêm thư viện phân trang -->
-@*@model PagedList.IPagedList<Final_APP.Entities.SanBay>
-@using PagedList.Mvc;*@
+@model PagedList.IPagedList<DatVeMayBay.Models.SanBay>
+@using PagedList.Mvc;
 <!-- Kết thúc-->
 
 @{ ViewBag.Title = "Index";
@@ -12,6 +12,9 @@
 
 <table class="table">
     <tr>
+        <th>
+            STT
+        </th>
         <th>
             Mã sân bay
         </th>
@@ -29,38 +32,109 @@
 
     @foreach (var item in Model)
     {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.MaSanBay)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.TenSanBay)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ViTri)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.KhuVuc)
-    </td>
-    <td>
-        <a href="~/Admin/DeleteSanBay?id=@item.MaSanBay" class=" btn btn-outline-dark">
-            Xóa
-        </a>
-        <a href="~/Admin/EditSanBay?id=@item.MaSanBay" class=" btn btn-outline-dark">
-            Sửa
-        </a>
-    </td>
-</tr>}
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaSanBay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSanBay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViTri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KhuVuc)
+            </td>
+            <td>
+                <button type="button" class="btn btn-outline-danger" title="Xóa" id="@item.MaSanBay" onclick="Delete('@item.MaSanBay')">Xóa</button>
+                @*<a href="~/Admin/EditSanBay?id=@item.MaSanBay" class=" btn btn-outline-dark">
+                    Sửa
+                </a>*@
+            </td>
+        </tr>
+}
 
 </table>
 <!-- Thêm mã phân trang -->
 <br />
 Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
 
-@Html.PagedListPager(Model, page => Url.Action("LichSuDatVe",
+@Html.PagedListPager(Model, page => Url.Action("IndexSanBay",
     new { page }),
     new PagedListRenderOptions()
     {
         LiElementClasses = new List<string> { "page-link" }
     })
 <!-- Kết thúc -->
+<script src="~/assets/js/JavaScript.js"></script>
+<script>
+    var tables = document.getElementsByTagName('table');
+    var table = tables[tables.length - 1];
+    var rows = table.rows;
+    for (var i = 1, td; i < rows.length; i++) {
+        td = document.createElement('td');
+        td.appendChild(document.createTextNode(i));
+        rows[i].insertBefore(td, rows[i].firstChild);
+    }
+
+
+
+    var deleteLinks = document.querySelectorAll('.delete');
+
+    for (var i = 0; i < deleteLinks.length; i++) {
+        deleteLinks[i].addEventListener('click', function (event) {
+            event.preventDefault();
+
+            var choice = confirm(this.getAttribute('data-confirm'));
+
+            if (choice) {
+                window.location.href = this.getAttribute('href');
+            }
+        });
+    }
+
+    function Delete(ID) {
+        Swal.fire({
+            title: 'Bạn có chắc chắn muốn xóa ?',
+            text: "Khi xóa bản ghi này sẽ không thể hoàn tác!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Xóa!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: "/Admin/DeleteSanBay",
+                    type: "POST",
+                    data: { id: ID },
+                    success: function (response) {
+                        console.log(response);
+                        if (response.message == "Success!") {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'SUCCESSFUL',
+                                timer: 20000,
+                                text: 'Delete successfully!',
+                            })
+                            setTimeout(window.location.reload(), 10000);
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'OOPS',
+                                text: 'Something went wrong!'
+                            })
+                        }
+                    },
+                    error: function (err) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'OOPS',
+                            text: err
+                        })
+                    }
+                });
+            }
+        })
+    }</script>
+

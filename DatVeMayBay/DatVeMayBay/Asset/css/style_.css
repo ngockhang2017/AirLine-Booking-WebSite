@@ -944,7 +944,7 @@ div#contentmain .pad2 .right {
     font-weight: bold;
     height: 40px;
     line-height: 40px;
-    margin-top: 2p;
+    margin-top: 2px;
     outline: medium none;
     padding-bottom: 5px;
     text-align: center;
@@ -953,6 +953,9 @@ div#contentmain .pad2 .right {
 
 .sign button:hover {
     color: #ffed00;
+}
+.text-primary {
+    color: #d9a404 !important;
 }
 
 .social p {

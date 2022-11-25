@@ -24,10 +24,10 @@
                     </div>
 
                     <div class="form-group">
-                        @Html.LabelFor(model => model.MaHinhThucTT, "MaHinhThucTT", htmlAttributes: new { @class = "control-label col-md-2" })
+                        @Html.LabelFor(ViewBag.HTTT => ViewBag.HTTT., "MaHinhThucTT", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
                             <div class="col-md-10">
-                                <div class="form-control" id="MaHinhThucTT" name="MaHinhThucTT value=" ATM"">
+                                <div class="form-control" id="MaHinhThucTT" name="MaHinhThucTT" value=" ATM">
                                     Thẻ ATM nội địa
                                 </div>
                                 @Html.ValidationMessageFor(model => model.MaHinhThucTT, "", new { @class = "text-danger" })
